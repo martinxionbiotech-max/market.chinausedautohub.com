@@ -1,0 +1,118 @@
+---
+import BaseLayout from "../../../shared/components/BaseLayout.astro";
+import { MARKET_SITE_URL } from "../../../shared/config/config";
+import { countries, rules } from "../../lib/market";
+
+const siteTitle = "China Used Car Export Markets";
+
+const pageUrl = MARKET_SITE_URL + "/vehicle-age-rules/";
+const title = "Vehicle Age Rules by Country — Comparison";
+const description =
+  "Side-by-side comparison of used-vehicle age limits across tracked import markets, with sources, confidence levels and review status. Verify with official customs.";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: title,
+  description,
+  url: pageUrl,
+};
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Markets", item: MARKET_SITE_URL + "/" },
+    { "@type": "ListItem", position: 2, name: "Vehicle age rules", item: pageUrl },
+  ],
+};
+
+const confLabel: Record<string, string> = {
+  low: "Low", medium: "Medium", high: "High", unknown: "Unknown",
+};
+const confClass: Record<string, string> = {
+  low: "badge-low", medium: "badge-medium", high: "badge-high", unknown: "badge-unknown",
+};
+
+const ageRules = rules.filter((r) => r.category === "vehicle_age");
+const countryById = Object.fromEntries(countries.map((c) => [c.country_id, c]));
+---
+
+<BaseLayout
+  siteTitle={siteTitle}
+  siteUrl={MARKET_SITE_URL}
+  currentSection="market"
+  title={title}
+  description={description}
+  canonical="/vehicle-age-rules/"
+  jsonLd={[jsonLd, breadcrumbLd]}
+  breadcrumbs={[
+    { name: "Markets", url: "/" },
+    { name: "Vehicle age rules", url: "/vehicle-age-rules/" },
+  ]}
+>
+  <h1>Vehicle Age Rules by Country</h1>
+  <p class="lede">
+    Used-vehicle age limits recorded across {ageRules.length} markets, compared side
+    by side. Age rules are high-risk regulatory data.
+  </p>
+
+  <p class="review-hint">
+    <strong>Confirm with official customs before trading.</strong> Age limits change
+    and are enforced by each country's authorities.
+  </p>
+
+  {ageRules.length > 0 ? (
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Country</th>
+          <th>Rule</th>
+          <th>Detail</th>
+          <th>Source</th>
+          <th>Confidence</th>
+          <th>Review</th>
+          <th>Last checked</th>
+        </tr>
+      </thead>
+      <tbody>
+        {ageRules.map((r) => {
+          const c = countryById[r.country_id];
+          return (
+            <tr>
+              <td>
+                {c ? (
+                  <a href={`/countries/${c.country_id}/`}>{c.name}</a>
+                ) : (
+                  r.country_id
+                )}
+              </td>
+              <td>{r.title}</td>
+              <td>{r.rule_text}</td>
+              <td>{r.source_url ? <a href={r.source_url} rel="noopener">{r.source}</a> : r.source}</td>
+              <td><span class={"badge " + (confClass[r.confidence] ?? "badge-unknown")}>{confLabel[r.confidence] ?? r.confidence}</span></td>
+              <td>{r.needs_review ? <span class="badge-review">Review</span> : "—"}</td>
+              <td>{r.last_checked}</td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  ) : (
+    <p>No data yet.</p>
+  )}
+
+  <section>
+    <h2>Related</h2>
+    <ul>
+      <li><a href="/import-guides/">All import guides</a></li>
+      <li><a href="/countries/">Country index</a></li>
+    </ul>
+  </section>
+
+  <style>
+    .lede { font-size: 17px; color: var(--color-text-soft); max-width: 68ch; }
+    .review-hint { background: var(--color-bg-alt); border-left: 3px solid var(--color-warning); padding: var(--space-3); font-size: 14px; }
+    .badge-review { display: inline-block; background: #fbe9e7; color: var(--color-danger); padding: 2px 8px; border-radius: var(--radius-sm); font-size: 12px; font-weight: 600; }
+    section { margin-top: var(--space-6); }
+  </style>
+</BaseLayout>

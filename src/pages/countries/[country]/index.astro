@@ -41,6 +41,23 @@ const otherTax = tax.filter((t) => t.tax_type !== "import_duty");
 const destPorts = getDestPorts(countryId);
 const shippingRoutes = getRoutesForCountry(countryId);
 
+// Official Sources: dedupe source names from this country's rules + taxrules, count citations.
+const sourceMap = new Map<string, { urls: string[]; count: number }>();
+for (const item of [...rules, ...tax]) {
+  const key = item.source || "Unknown source";
+  const entry = sourceMap.get(key) ?? { urls: [] as string[], count: 0 };
+  entry.count += 1;
+  if (item.source_url && !entry.urls.includes(item.source_url)) {
+    entry.urls.push(item.source_url);
+  }
+  sourceMap.set(key, entry);
+}
+const officialSources = [...sourceMap.entries()].map(([source, e]) => ({
+  source,
+  urls: e.urls,
+  count: e.count,
+}));
+
 const driveSide = country.drive_side === "lhd" ? "Left-hand drive (LHD)" : "Right-hand drive (RHD)";
 const taxTypeLabel: Record<string, string> = {
   import_duty: "Import duty",
@@ -94,6 +111,11 @@ const breadcrumbLd = {
   <h1>{country.name} <span class="zh">{country.name_zh}</span></h1>
   <p class="meta-line">
     {regionMeta[country.region]?.label} · {driveSide} · Currency {country.currency}
+  </p>
+
+  <p class="disclaimer">
+    Rules may change. Verify current requirements with official authorities before
+    trading.
   </p>
 
   <!-- 1. Market Overview -->
@@ -215,6 +237,31 @@ const breadcrumbLd = {
       </tbody>
     </table>
     <p class="checked">Tax data last checked: 2026-10-04</p>
+  </section>
+
+  <!-- Official Sources -->
+  <section>
+    <h2>Official Sources</h2>
+    <p class="review-hint">
+      Official authorities cited for {country.name}'s import rules and tax rules.
+      Verify current requirements with these sources before trading.
+    </p>
+    {officialSources.length > 0 ? (
+      <ul class="source-list">
+        {officialSources.map((s) => (
+          <li>
+            {s.urls.length > 0 ? (
+              <a href={s.urls[0]} rel="noopener">{s.source}</a>
+            ) : (
+              <span>{s.source}</span>
+            )}
+            <span class="src-count"> — {s.count} rule{s.count === 1 ? "" : "s"}</span>
+          </li>
+        ))}
+      </ul>
+    ) : (
+      <p>No source URLs recorded for this market.</p>
+    )}
   </section>
 
   <!-- 7. EV Rules -->
@@ -350,19 +397,27 @@ const breadcrumbLd = {
     <h2>Related Tools</h2>
     <ul>
       <li><a href={TOOLS_SITE_URL + "/landed-cost-calculator/"}>Import Cost Calculator</a></li>
+      <li><a href={TOOLS_SITE_URL + "/import-duty-calculator/"}>Import Duty Calculator</a></li>
       <li><a href={TOOLS_SITE_URL + "/currency-converter/"}>Currency Converter</a></li>
       <li><a href={TOOLS_SITE_URL + "/vehicle-comparison/"}>Vehicle Comparison</a></li>
     </ul>
   </section>
 
-  <!-- 16. Related Vehicles -->
+  <!-- 16. Available Vehicles & Request -->
   <section>
-    <h2>Related Vehicles</h2>
-    <ul>
+    <h2>Available Vehicles</h2>
+    <p>
+      Browse current stock and inquire about vehicles available for export to
+      {country.name}.
+    </p>
+    <ul class="cta-list">
+      <li><a class="cta" href={MAIN_SITE_URL + "/"}>Browse available vehicles →</a></li>
+      <li><a class="cta cta-alt" href={MAIN_SITE_URL + "/"}>Request a vehicle →</a></li>
+    </ul>
+    <ul class="related-links">
       <li><a href={DATA_SITE_URL + "/vehicle-types/suv/"}>Browse SUVs</a></li>
       <li><a href={DATA_SITE_URL + "/vehicle-types/sedan/"}>Browse Sedans</a></li>
       <li><a href={DATA_SITE_URL + "/vehicle-types/ev/"}>Browse EVs</a></li>
-      <li><a href={MAIN_SITE_URL + "/"}>Browse available vehicles</a></li>
     </ul>
   </section>
 
@@ -378,6 +433,11 @@ const breadcrumbLd = {
       ))}
     </div>
   </section>
+
+  <p class="disclaimer">
+    Rules may change. Verify current requirements with official authorities before
+    trading.
+  </p>
 
   <style>
     .zh { color: var(--color-text-soft); font-size: 0.85em; margin-left: var(--space-2); }
@@ -396,6 +456,15 @@ const breadcrumbLd = {
     .brand-list { column-count: 2; }
     .faq summary { cursor: pointer; font-weight: 600; }
     .faq p { margin: var(--space-2) 0 var(--space-3); color: var(--color-text-soft); }
+    .disclaimer { background: #fff7e6; border: 1px solid var(--color-warning); border-left: 4px solid var(--color-warning); padding: var(--space-3) var(--space-4); font-size: 14px; font-weight: 600; margin: var(--space-4) 0; }
+    .source-list { list-style: none; padding: 0; }
+    .source-list li { padding: var(--space-2) 0; border-bottom: 1px solid var(--color-border); }
+    .src-count { color: var(--color-text-soft); font-size: 0.9em; }
+    .cta-list { list-style: none; padding: 0; display: flex; gap: var(--space-3); flex-wrap: wrap; }
+    .cta { display: inline-block; background: var(--color-primary); color: #fff; padding: var(--space-2) var(--space-4); border-radius: var(--radius-md); font-weight: 600; }
+    .cta:hover { text-decoration: none; opacity: 0.92; }
+    .cta-alt { background: var(--color-accent); }
+    .related-links { margin-top: var(--space-3); }
     @media (max-width: 600px) { .brand-list { column-count: 1; } }
   </style>
 </BaseLayout>

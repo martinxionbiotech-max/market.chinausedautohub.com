@@ -66,6 +66,21 @@ const driveLabel = (s: string) => (s === "lhd" ? "LHD" : "RHD");
     </section>
   ))}
 
+  <section class="guides">
+    <h2>Market Guides &amp; Indexes</h2>
+    <ul class="guide-list">
+      <li><a href="/countries/">All countries</a></li>
+      <li><a href="/regions/">Regions</a></li>
+      <li><a href="/shipping-routes/">Shipping routes</a></li>
+      <li><a href="/import-guides/">Import guides</a></li>
+      <li><a href="/vehicle-age-rules/">Vehicle age rules</a></li>
+      <li><a href="/ev-import/">EV import</a></li>
+      <li><a href="/duties-taxes/">Duties &amp; taxes</a></li>
+      <li><a href="/documents/">Documents</a></li>
+      <li><a href="/ports/">Ports</a></li>
+    </ul>
+  </section>
+
   <style>
     .lede { font-size: 18px; color: var(--color-text-soft); max-width: 68ch; }
     .region { margin-top: var(--space-6); }
@@ -79,5 +94,8 @@ const driveLabel = (s: string) => (s === "lhd" ? "LHD" : "RHD");
     dl div { display: flex; justify-content: space-between; padding: 2px 0; }
     dt { color: var(--color-text-soft); }
     dd { margin: 0; font-weight: 600; }
+    .guides { margin-top: var(--space-6); }
+    .guides h2 { border-bottom: 1px solid var(--color-border); padding-bottom: var(--space-2); }
+    .guide-list { display: flex; flex-wrap: wrap; gap: var(--space-3); list-style: none; padding: 0; }
   </style>
 </BaseLayout>

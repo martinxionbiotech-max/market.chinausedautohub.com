@@ -1,0 +1,115 @@
+---
+import BaseLayout from "../../../shared/components/BaseLayout.astro";
+import { MARKET_SITE_URL } from "../../../shared/config/config";
+import { countries, getRules, getTaxRules, getDestPorts } from "../../lib/market";
+import { regionMeta } from "../../lib/content";
+
+const siteTitle = "China Used Car Export Markets";
+const regionOrder = ["middle-east", "africa", "central-asia"];
+
+const pageUrl = MARKET_SITE_URL + "/countries/";
+const title = "All Import Markets — Country Index";
+const description =
+  "Complete index of export markets for used cars from China — import rules, duties, ports and shipping for 7 countries across the Middle East, Africa and Central Asia.";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: title,
+  description,
+  url: pageUrl,
+};
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Markets", item: MARKET_SITE_URL + "/" },
+    { "@type": "ListItem", position: 2, name: "Countries", item: pageUrl },
+  ],
+};
+
+const driveLabel = (s: string) => (s === "lhd" ? "LHD" : "RHD");
+
+const sorted = [...countries].sort(
+  (a, b) => regionOrder.indexOf(a.region) - regionOrder.indexOf(b.region)
+);
+const rows = sorted.map((c) => ({
+  country: c,
+  ruleCount: getRules(c.country_id).length,
+  taxCount: getTaxRules(c.country_id).length,
+  portCount: getDestPorts(c.country_id).length,
+}));
+---
+
+<BaseLayout
+  siteTitle={siteTitle}
+  siteUrl={MARKET_SITE_URL}
+  currentSection="market"
+  title={title}
+  description={description}
+  canonical="/countries/"
+  jsonLd={[jsonLd, breadcrumbLd]}
+  breadcrumbs={[
+    { name: "Markets", url: "/" },
+    { name: "Countries", url: "/countries/" },
+  ]}
+>
+  <h1>Import Markets — Country Index</h1>
+  <p class="lede">
+    All {countries.length} export markets tracked for used cars from China. Counts
+    below are derived from the shared data set (import rules, tax rules and
+    destination ports). Every figure carries a source and confidence level on its
+    detail page — verify with official customs before trading.
+  </p>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Country</th>
+        <th>Region</th>
+        <th>Drive side</th>
+        <th>Currency</th>
+        <th>Rules tracked</th>
+        <th>Tax rules</th>
+        <th>Ports</th>
+      </tr>
+    </thead>
+    <tbody>
+      {rows.map(({ country, ruleCount, taxCount, portCount }) => (
+        <tr>
+          <td>
+            <a href={`/countries/${country.country_id}/`}>{country.name}</a>
+            <span class="zh">{country.name_zh}</span>
+          </td>
+          <td>{regionMeta[country.region]?.label ?? country.region}</td>
+          <td>{driveLabel(country.drive_side)}</td>
+          <td>{country.currency}</td>
+          <td>{ruleCount}</td>
+          <td>{taxCount}</td>
+          <td>{portCount}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+
+  <p class="review-hint">
+    Rules may change. Verify current requirements with official authorities before
+    trading.
+  </p>
+
+  <section>
+    <h2>Browse by region</h2>
+    <ul>
+      {regionOrder.map((r) => (
+        <li><a href={`/regions/#${r}`}>{regionMeta[r].label}</a></li>
+      ))}
+    </ul>
+  </section>
+
+  <style>
+    .lede { font-size: 17px; color: var(--color-text-soft); max-width: 68ch; }
+    .zh { color: var(--color-text-soft); font-size: 0.85em; margin-left: var(--space-2); }
+    .review-hint { background: var(--color-bg-alt); border-left: 3px solid var(--color-warning); padding: var(--space-3); font-size: 14px; }
+    section { margin-top: var(--space-6); }
+  </style>
+</BaseLayout>

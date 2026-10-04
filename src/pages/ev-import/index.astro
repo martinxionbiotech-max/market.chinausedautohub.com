@@ -1,0 +1,145 @@
+---
+import BaseLayout from "../../../shared/components/BaseLayout.astro";
+import SourceNote from "../../../shared/components/SourceNote.astro";
+import { MARKET_SITE_URL } from "../../../shared/config/config";
+import { countries, rules, getTaxRules } from "../../lib/market";
+
+const siteTitle = "China Used Car Export Markets";
+
+const pageUrl = MARKET_SITE_URL + "/ev-import/";
+const title = "EV Import Rules & Incentives by Country";
+const description =
+  "Electric-vehicle import policy and incentives across tracked markets, plus a link to each country's EV guide. Verify with official customs before trading.";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: title,
+  description,
+  url: pageUrl,
+};
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Markets", item: MARKET_SITE_URL + "/" },
+    { "@type": "ListItem", position: 2, name: "EV import", item: pageUrl },
+  ],
+};
+
+const evRules = rules.filter((r) => r.category === "ev_policy");
+const countryById = Object.fromEntries(countries.map((c) => [c.country_id, c]));
+
+const evTaxByCountry = countries.map((c) => ({
+  country: c,
+  evTax: getTaxRules(c.country_id).filter((t) =>
+    t.label.toLowerCase().includes("electric")
+  ),
+}));
+---
+
+<BaseLayout
+  siteTitle={siteTitle}
+  siteUrl={MARKET_SITE_URL}
+  currentSection="market"
+  title={title}
+  description={description}
+  canonical="/ev-import/"
+  jsonLd={[jsonLd, breadcrumbLd]}
+  breadcrumbs={[
+    { name: "Markets", url: "/" },
+    { name: "EV import", url: "/ev-import/" },
+  ]}
+>
+  <h1>EV Import Rules &amp; Incentives</h1>
+  <p class="lede">
+    Electric-vehicle policy and duty treatment recorded across {evRules.length} markets.
+    EV-specific duty is changing quickly in many countries.
+  </p>
+
+  <p class="review-hint">
+    <strong>Confirm with official customs before trading.</strong> EV incentives and
+    duty relief are frequently revised.
+  </p>
+
+  <section>
+    <h2>EV Policy by Country</h2>
+    {evRules.length > 0 ? (
+      evRules.map((r) => (
+        <article class="rule">
+          <div class="rule-head">
+            <h3>
+              {countryById[r.country_id] ? (
+                <a href={`/countries/${r.country_id}/ev/`}>{countryById[r.country_id].name}</a>
+              ) : (
+                r.country_id
+              )}
+            </h3>
+            {r.needs_review && <span class="badge-review">Needs review</span>}
+          </div>
+          <p class="rule-title">{r.title}</p>
+          <p>{r.rule_text}</p>
+          <SourceNote source={r.source} sourceUrl={r.source_url} sourceDate={r.source_date} confidence={r.confidence} />
+          <p class="checked">Last checked: {r.last_checked}</p>
+        </article>
+      ))
+    ) : (
+      <p>No data yet.</p>
+    )}
+  </section>
+
+  <section>
+    <h2>EV Duty Treatment</h2>
+    <table class="data-table">
+      <thead>
+        <tr><th>Country</th><th>Duty entry</th><th>Rate</th><th>Basis</th><th>Review</th></tr>
+      </thead>
+      <tbody>
+        {evTaxByCountry.flatMap(({ country, evTax }) =>
+          evTax.length > 0
+            ? evTax.map((t) => (
+                <tr>
+                  <td><a href={`/countries/${country.country_id}/ev/`}>{country.name}</a></td>
+                  <td>{t.label}</td>
+                  <td>{t.rate_pct}%</td>
+                  <td>{t.basis}</td>
+                  <td>{t.needs_review ? <span class="badge-review">Review</span> : "—"}</td>
+                </tr>
+              ))
+            : [
+                <tr>
+                  <td><a href={`/countries/${country.country_id}/ev/`}>{country.name}</a></td>
+                  <td>No EV-specific duty recorded</td>
+                  <td>—</td>
+                  <td>—</td>
+                  <td>—</td>
+                </tr>,
+              ]
+        )}
+      </tbody>
+    </table>
+    <p class="checked">EVs without a recorded entry generally follow standard duty rates — verify with official customs.</p>
+  </section>
+
+  <section>
+    <h2>Country EV Guides</h2>
+    <ul>
+      {countries.map((c) => (
+        <li><a href={`/countries/${c.country_id}/ev/`}>{c.name} EV guide</a></li>
+      ))}
+    </ul>
+  </section>
+
+  <style>
+    .lede { font-size: 17px; color: var(--color-text-soft); max-width: 68ch; }
+    .review-hint { background: var(--color-bg-alt); border-left: 3px solid var(--color-warning); padding: var(--space-3); font-size: 14px; }
+    section { margin-top: var(--space-6); }
+    section h2 { border-bottom: 1px solid var(--color-border); padding-bottom: var(--space-2); }
+    .rule { border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-4); margin: var(--space-3) 0; }
+    .rule-head { display: flex; align-items: center; gap: var(--space-2); flex-wrap: wrap; }
+    .rule-head h3 { margin: 0; font-size: 16px; }
+    .rule-title { font-weight: 600; margin: var(--space-2) 0 0; }
+    .badge-review { display: inline-block; background: #fbe9e7; color: var(--color-danger); padding: 2px 8px; border-radius: var(--radius-sm); font-size: 12px; font-weight: 600; }
+    .checked { font-size: 12px; color: var(--color-text-soft); margin: var(--space-2) 0 0; }
+  </style>
+</BaseLayout>

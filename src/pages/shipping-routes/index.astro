@@ -1,0 +1,109 @@
+---
+import BaseLayout from "../../../shared/components/BaseLayout.astro";
+import { MARKET_SITE_URL } from "../../../shared/config/config";
+import { routes, portName } from "../../lib/market";
+
+const siteTitle = "China Used Car Export Markets";
+
+const pageUrl = MARKET_SITE_URL + "/shipping-routes/";
+const title = "Shipping Routes from China — Transit Estimates";
+const description =
+  "Estimated shipping routes from Chinese ports to key used-car import markets, with origin port, destination port, transit-day ranges and shipping method. Estimates only — verify with carriers.";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: title,
+  description,
+  url: pageUrl,
+};
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Markets", item: MARKET_SITE_URL + "/" },
+    { "@type": "ListItem", position: 2, name: "Shipping routes", item: pageUrl },
+  ],
+};
+
+const methodLabel = (m: string, source: string) =>
+  (m === "roro" ? "RoRo" : "Container") + (source.includes("rail") ? " (rail transit)" : "");
+
+const confLabel: Record<string, string> = {
+  low: "Low", medium: "Medium", high: "High", unknown: "Unknown",
+};
+const confClass: Record<string, string> = {
+  low: "badge-low", medium: "badge-medium", high: "badge-high", unknown: "badge-unknown",
+};
+---
+
+<BaseLayout
+  siteTitle={siteTitle}
+  siteUrl={MARKET_SITE_URL}
+  currentSection="market"
+  title={title}
+  description={description}
+  canonical="/shipping-routes/"
+  jsonLd={[jsonLd, breadcrumbLd]}
+  breadcrumbs={[
+    { name: "Markets", url: "/" },
+    { name: "Shipping routes", url: "/shipping-routes/" },
+  ]}
+>
+  <h1>Shipping Routes from China</h1>
+  <p class="lede">
+    All {routes.length} recorded shipping routes from Chinese origin ports to key
+    import markets, with estimated transit-day ranges and shipping method.
+  </p>
+
+  <p class="estimates">
+    <strong>Estimates</strong> — transit days are industry estimates, not
+    guarantees. Actual schedules and rates vary by carrier, season and routing.
+    Verify with your freight forwarder or carrier before booking.
+  </p>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Origin port</th>
+        <th>Destination port</th>
+        <th>Est. days</th>
+        <th>Method</th>
+        <th>Confidence</th>
+        <th>Last checked</th>
+      </tr>
+    </thead>
+    <tbody>
+      {routes.map((r) => (
+        <tr>
+          <td>{portName(r.origin_port_id)}</td>
+          <td>{portName(r.destination_port_id)}</td>
+          <td>{r.est_days_min}–{r.est_days_max}</td>
+          <td>{methodLabel(r.shipping_method, r.source)}</td>
+          <td><span class={"badge " + (confClass[r.confidence] ?? "badge-unknown")}>{confLabel[r.confidence] ?? r.confidence}</span></td>
+          <td>{r.last_checked}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+
+  <p class="review-hint">
+    Estimates may change. Confirm current schedules and rates with carriers before
+    trading.
+  </p>
+
+  <section>
+    <h2>Related</h2>
+    <ul>
+      <li><a href="/ports/">Ports &amp; border crossings</a></li>
+      <li><a href="/countries/">Country index</a></li>
+    </ul>
+  </section>
+
+  <style>
+    .lede { font-size: 17px; color: var(--color-text-soft); max-width: 68ch; }
+    .estimates { background: var(--color-accent-soft); border-left: 3px solid var(--color-accent); padding: var(--space-3); font-size: 14px; }
+    .review-hint { background: var(--color-bg-alt); border-left: 3px solid var(--color-warning); padding: var(--space-3); font-size: 14px; }
+    section { margin-top: var(--space-6); }
+  </style>
+</BaseLayout>

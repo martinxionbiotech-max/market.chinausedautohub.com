@@ -1,0 +1,33 @@
+---
+import BaseLayout from "../../shared/components/BaseLayout.astro";
+import { MARKET_SITE_URL } from "../../shared/config/config";
+
+const siteTitle = "China Used Car Export Markets";
+const title = "Page Not Found — China Used Car Export Markets";
+---
+
+<BaseLayout
+  siteTitle={siteTitle}
+  siteUrl={MARKET_SITE_URL}
+  currentSection="market"
+  title={title}
+  description="The page you are looking for could not be found."
+  canonical="/404/"
+>
+  <div class="notfound">
+    <h1>Page not found</h1>
+    <p class="lede">
+      The page you're looking for doesn't exist or may have moved.
+    </p>
+    <ul>
+      <li><a href="/">Back to the Markets home</a></li>
+      <li><a href="/countries/">Browse the country index</a></li>
+    </ul>
+  </div>
+
+  <style>
+    .notfound { padding: var(--space-7) 0; max-width: 60ch; }
+    .notfound h1 { font-size: 28px; }
+    .lede { color: var(--color-text-soft); font-size: 17px; }
+  </style>
+</BaseLayout>

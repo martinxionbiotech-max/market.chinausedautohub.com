@@ -1,0 +1,105 @@
+---
+import BaseLayout from "../../../shared/components/BaseLayout.astro";
+import { MARKET_SITE_URL } from "../../../shared/config/config";
+import { countries, taxrules } from "../../lib/market";
+
+const siteTitle = "China Used Car Export Markets";
+
+const pageUrl = MARKET_SITE_URL + "/duties-taxes/";
+const title = "Import Duties & Taxes by Country — Comparison";
+const description =
+  "Import duty, VAT and excise rates by country for used vehicles from China, with rate basis, source, source date and review status. Verify with official customs.";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: title,
+  description,
+  url: pageUrl,
+};
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Markets", item: MARKET_SITE_URL + "/" },
+    { "@type": "ListItem", position: 2, name: "Duties & taxes", item: pageUrl },
+  ],
+};
+
+const taxTypeLabel: Record<string, string> = {
+  import_duty: "Import duty",
+  vat: "VAT",
+  excise: "Excise",
+  other: "Other",
+};
+
+const grouped = countries.map((c) => ({
+  country: c,
+  countryTax: taxrules.filter((t) => t.country_id === c.country_id),
+}));
+---
+
+<BaseLayout
+  siteTitle={siteTitle}
+  siteUrl={MARKET_SITE_URL}
+  currentSection="market"
+  title={title}
+  description={description}
+  canonical="/duties-taxes/"
+  jsonLd={[jsonLd, breadcrumbLd]}
+  breadcrumbs={[
+    { name: "Markets", url: "/" },
+    { name: "Duties & taxes", url: "/duties-taxes/" },
+  ]}
+>
+  <h1>Import Duties &amp; Taxes by Country</h1>
+  <p class="lede">
+    {taxrules.length} recorded tax rules across {countries.length} markets — import
+    duty, VAT and excise, with rate basis and sources.
+  </p>
+
+  <p class="review-hint">
+    <strong>Confirm with official customs before trading.</strong> Rates change and
+    the applicable rate depends on vehicle type, age, value and origin.
+  </p>
+
+  {grouped.map(({ country, countryTax }) => (
+    <section>
+      <h2>
+        <a href={`/countries/${country.country_id}/`}>{country.name}</a>
+        <span class="zh">{country.name_zh}</span>
+      </h2>
+      {countryTax.length > 0 ? (
+        <table class="data-table">
+          <thead>
+            <tr><th>Type</th><th>Label</th><th>Rate</th><th>Basis</th><th>Source</th><th>Source date</th><th>Review</th></tr>
+          </thead>
+          <tbody>
+            {countryTax.map((t) => (
+              <tr>
+                <td>{taxTypeLabel[t.tax_type] ?? t.tax_type}</td>
+                <td>{t.label}</td>
+                <td>{t.rate_pct}%</td>
+                <td>{t.basis}</td>
+                <td>{t.source_url ? <a href={t.source_url} rel="noopener">{t.source}</a> : t.source}</td>
+                <td>{t.source_date ?? "—"}</td>
+                <td>{t.needs_review ? <span class="badge-review">Review</span> : "—"}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      ) : (
+        <p>No data yet.</p>
+      )}
+    </section>
+  ))}
+
+  <style>
+    .lede { font-size: 17px; color: var(--color-text-soft); max-width: 68ch; }
+    .zh { color: var(--color-text-soft); font-size: 0.85em; margin-left: var(--space-2); }
+    .review-hint { background: var(--color-bg-alt); border-left: 3px solid var(--color-warning); padding: var(--space-3); font-size: 14px; }
+    section { margin-top: var(--space-6); }
+    section h2 { border-bottom: 1px solid var(--color-border); padding-bottom: var(--space-2); }
+    .badge-review { display: inline-block; background: #fbe9e7; color: var(--color-danger); padding: 2px 8px; border-radius: var(--radius-sm); font-size: 12px; font-weight: 600; }
+  </style>
+</BaseLayout>

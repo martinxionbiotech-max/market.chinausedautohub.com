@@ -1,0 +1,113 @@
+---
+import BaseLayout from "../../../shared/components/BaseLayout.astro";
+import { MARKET_SITE_URL } from "../../../shared/config/config";
+import { countries, ports } from "../../lib/market";
+
+const siteTitle = "China Used Car Export Markets";
+
+const pageUrl = MARKET_SITE_URL + "/ports/";
+const title = "Ports & Border Crossings for Used-Car Export";
+const description =
+  "Chinese origin ports and destination ports/border crossings for used-car export, grouped by country. Includes land/rail transit notes for Central Asia.";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: title,
+  description,
+  url: pageUrl,
+};
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Markets", item: MARKET_SITE_URL + "/" },
+    { "@type": "ListItem", position: 2, name: "Ports", item: pageUrl },
+  ],
+};
+
+const originPorts = ports.filter((p) => p.type === "origin");
+const destinationPorts = ports.filter((p) => p.type === "destination");
+const countryById = Object.fromEntries(countries.map((c) => [c.country_id, c]));
+
+const destByCountry = countries
+  .map((c) => ({
+    country: c,
+    ports: destinationPorts.filter((p) => p.country_id === c.country_id),
+  }))
+  .filter((g) => g.ports.length > 0);
+---
+
+<BaseLayout
+  siteTitle={siteTitle}
+  siteUrl={MARKET_SITE_URL}
+  currentSection="market"
+  title={title}
+  description={description}
+  canonical="/ports/"
+  jsonLd={[jsonLd, breadcrumbLd]}
+  breadcrumbs={[
+    { name: "Markets", url: "/" },
+    { name: "Ports", url: "/ports/" },
+  ]}
+>
+  <h1>Ports &amp; Border Crossings</h1>
+  <p class="lede">
+    {ports.length} recorded ports: {originPorts.length} Chinese origin ports and{" "}
+    {destinationPorts.length} destination ports/border crossings across the import
+    markets.
+  </p>
+
+  <section>
+    <h2>Chinese Origin Ports</h2>
+    <ul>
+      {originPorts.map((p) => (
+        <li>{p.name}</li>
+      ))}
+    </ul>
+  </section>
+
+  <section>
+    <h2>Destination Ports by Country</h2>
+    {destByCountry.map(({ country, ports: countryPorts }) => (
+      <div class="dest-group">
+        <h3>
+          <a href={`/countries/${country.country_id}/`}>{country.name}</a>
+          <span class="zh">{country.name_zh}</span>
+        </h3>
+        <ul>
+          {countryPorts.map((p) => (
+            <li>
+              {p.name}
+              {p.note && <span class="port-note"> — {p.note}</span>}
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </section>
+
+  <p class="review-hint">
+    Rules may change. Verify current requirements with official authorities before
+    trading.
+  </p>
+
+  <section>
+    <h2>Related</h2>
+    <ul>
+      <li><a href="/shipping-routes/">Shipping routes</a></li>
+      <li><a href="/countries/">Country index</a></li>
+    </ul>
+  </section>
+
+  <style>
+    .lede { font-size: 17px; color: var(--color-text-soft); max-width: 68ch; }
+    .zh { color: var(--color-text-soft); font-size: 0.85em; margin-left: var(--space-2); }
+    section { margin-top: var(--space-6); }
+    section h2 { border-bottom: 1px solid var(--color-border); padding-bottom: var(--space-2); }
+    .dest-group { margin: var(--space-3) 0; }
+    .dest-group h3 { margin: 0 0 var(--space-1); font-size: 16px; }
+    .port-note { color: var(--color-text-soft); font-size: 0.9em; }
+    .review-hint { background: var(--color-bg-alt); border-left: 3px solid var(--color-warning); padding: var(--space-3); font-size: 14px; margin-top: var(--space-6); }
+  </style>
+</BaseLayout>
