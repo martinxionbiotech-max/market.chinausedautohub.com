@@ -18,6 +18,11 @@ import {
   getModel,
   brands,
   models,
+  confidenceLabel,
+  confidenceClass,
+  jurisdictionFor,
+  applicabilityForCategory,
+  applicabilityForTaxType,
 } from "../../../lib/market";
 import { countryContent, regionMeta } from "../../../lib/content";
 
@@ -44,6 +49,8 @@ const evModels = models
 const destPorts = getDestPorts(countryId);
 const shippingRoutes = getRoutesForCountry(countryId);
 
+const jurisdiction = jurisdictionFor(countryId);
+
 // Official Sources: dedupe source names from this country's rules + taxrules, count citations.
 const sourceMap = new Map<string, { urls: string[]; count: number }>();
 for (const item of [...rules, ...tax]) {
@@ -62,12 +69,6 @@ const officialSources = [...sourceMap.entries()].map(([source, e]) => ({
 }));
 
 const driveSide = country.drive_side === "lhd" ? "Left-hand drive (LHD)" : "Right-hand drive (RHD)";
-const taxTypeLabel: Record<string, string> = {
-  import_duty: "Import duty",
-  vat: "VAT",
-  excise: "Excise",
-  other: "Other",
-};
 const methodLabel = (m: string, source: string) =>
   (m === "roro" ? "RoRo" : "Container") + (source.includes("rail") ? " (rail transit)" : "");
 
@@ -76,18 +77,26 @@ const popularModels = (content.popularModelIds || [])
   .filter(Boolean);
 const cnBrands = brands.filter((b) => b.origin_country === "CN");
 
-// P3.5 additions (evidence-backed only)
 const docsRules = rulesByCategory(countryId, "import_eligibility");
 const segmentTypes = [...new Set(popularModels.map((m) => m.body_type))];
-const needsReviewCount = rules.filter((r) => r.needs_review).length;
-const totalRules = rules.length;
-const confHigh = rules.filter((r) => r.confidence === "high").length;
-const confMedium = rules.filter((r) => r.confidence === "medium").length;
-const confLow = rules.filter((r) => r.confidence === "low").length;
+
+// Confidence distribution using the PHASE 6 five-level labels.
+const allDeclarations = [...rules, ...tax];
+const confCounts = {
+  Confirmed: 0,
+  "Source-backed": 0,
+  "Needs verification": 0,
+  Estimated: 0,
+  Unknown: 0,
+} as Record<string, number>;
+for (const item of allDeclarations) {
+  confCounts[confidenceLabel(item)] += 1;
+}
+const totalDeclarations = allDeclarations.length;
 const lastChecked = rules.length > 0 ? rules[0].last_checked : "Not available";
 
 const pageUrl = MARKET_SITE_URL + `/countries/${country.country_id}/`;
-const description = `Importing used cars from China to ${country.name}: drive side, vehicle age rules, import duty and VAT, ports and shipping routes — with sources and confidence levels.`;
+const description = `Importing used cars from China to ${country.name}: drive side, vehicle age rules, import duty and VAT, ports and shipping routes — each statement with source, date checked, jurisdiction, applicability and confidence level.`;
 
 const articleLd = {
   "@context": "https://schema.org",
@@ -106,6 +115,24 @@ const breadcrumbLd = {
     { "@type": "ListItem", position: 2, name: country.name, item: pageUrl },
   ],
 };
+
+// Per-rule metadata block reused across sections.
+const ruleMeta = (r: any) => ({
+  label: confidenceLabel(r),
+  jurisdiction,
+  applicability: applicabilityForCategory(r.category),
+  caveat: r.needs_review
+    ? "Verify with the official authority before trading."
+    : r.notes ?? undefined,
+});
+const taxMeta = (t: any) => ({
+  label: confidenceLabel(t),
+  jurisdiction,
+  applicability: applicabilityForTaxType(t.tax_type),
+  caveat: t.needs_review
+    ? "Verify with the official authority before trading."
+    : t.notes ?? undefined,
+});
 ---
 
 <BaseLayout
@@ -123,7 +150,7 @@ const breadcrumbLd = {
 >
   <h1>{country.name} <span class="zh">{country.name_zh}</span></h1>
   <p class="meta-line">
-    {regionMeta[country.region]?.label} · {driveSide} · Currency {country.currency}
+    {regionMeta[country.region]?.label} · {driveSide} · Currency {country.currency} · Jurisdiction {jurisdiction}
   </p>
 
   <p class="disclaimer">
@@ -132,6 +159,22 @@ const breadcrumbLd = {
     tax and transport authorities) before trading. Rules may change; verify current
     requirements with official authorities.
   </p>
+
+  <!-- Confidence legend (PHASE 6 five-level labels) -->
+  <section>
+    <h2>How to Read the Confidence Labels</h2>
+    <p class="review-hint">
+      Every rule and tax statement on this page carries a confidence label plus its
+      source, date checked, jurisdiction, applicability and caveat.
+    </p>
+    <ul class="legend">
+      <li><span class="badge badge-high">Source-backed</span> — cited to an official government, customs or transport source URL.</li>
+      <li><span class="badge badge-medium">Needs verification</span> — not yet confirmed against a current official source; verify before trading.</li>
+      <li><span class="badge badge-low">Estimated</span> — an estimate or a figure that changes frequently.</li>
+      <li><span class="badge badge-unknown">Unknown</span> — no reliable source recorded.</li>
+      <li><span class="badge badge-muted">Confirmed</span> — independently verified against an official document. No statement on this page currently meets this bar.</li>
+    </ul>
+  </section>
 
   <!-- 1. Market Overview -->
   <section>
@@ -144,28 +187,33 @@ const breadcrumbLd = {
     <h2>Import Eligibility</h2>
     <p class="review-hint">
       This is <strong>not legal advice</strong> — consult destination-country
-      authorities. Regulations are high-risk data. Every rule below carries a source
-      and confidence level. <strong>Confirm with official customs before trading</strong>.
+      authorities. Regulations are high-risk data. Every rule below carries a source,
+      date checked, jurisdiction, applicability and confidence level.{" "}
+      <strong>Confirm with official customs before trading</strong>.
     </p>
     <div class="rule-list">
-      {rules.map((r) => (
-        <article class="rule">
-          <div class="rule-head">
-            <h3>{r.title}</h3>
-            {r.needs_review && <span class="badge-review">Needs review</span>}
-          </div>
-          <p>{r.rule_text}</p>
-          <SourceNote
-            source={r.source}
-            sourceUrl={r.source_url}
-            sourceDate={r.source_date}
-            confidence={r.confidence}
-            effectiveDate={r.effective_date}
-            notes={r.notes}
-          />
-          <p class="checked">Last checked: {r.last_checked}</p>
-        </article>
-      ))}
+      {rules.map((r) => {
+        const m = ruleMeta(r);
+        return (
+          <article class="rule">
+            <div class="rule-head">
+              <h3>{r.title}</h3>
+              {r.needs_review && <span class="badge-review">Needs review</span>}
+            </div>
+            <p>{r.rule_text}</p>
+            <SourceNote
+              source={r.source}
+              sourceUrl={r.source_url}
+              sourceDate={r.last_checked}
+              confidenceLabel={m.label}
+              effectiveDate={r.effective_date}
+              jurisdiction={m.jurisdiction}
+              applicability={m.applicability}
+              caveat={m.caveat}
+            />
+          </article>
+        );
+      })}
     </div>
   </section>
 
@@ -173,17 +221,28 @@ const breadcrumbLd = {
   <section>
     <h2>Vehicle Age Rules</h2>
     {ageRules.length > 0 ? (
-      ageRules.map((r) => (
-        <div class="rule">
-          <div class="rule-head">
-            <h3>{r.title}</h3>
-            {r.needs_review && <span class="badge-review">Needs review</span>}
+      ageRules.map((r) => {
+        const m = ruleMeta(r);
+        return (
+          <div class="rule">
+            <div class="rule-head">
+              <h3>{r.title}</h3>
+              {r.needs_review && <span class="badge-review">Needs review</span>}
+            </div>
+            <p>{r.rule_text}</p>
+            <SourceNote
+              source={r.source}
+              sourceUrl={r.source_url}
+              sourceDate={r.last_checked}
+              confidenceLabel={m.label}
+              effectiveDate={r.effective_date}
+              jurisdiction={m.jurisdiction}
+              applicability={m.applicability}
+              caveat={m.caveat}
+            />
           </div>
-          <p>{r.rule_text}</p>
-          <SourceNote source={r.source} sourceUrl={r.source_url} sourceDate={r.source_date} confidence={r.confidence} effectiveDate={r.effective_date} notes={r.notes} />
-          <p class="checked">Last checked: {r.last_checked}</p>
-        </div>
-      ))
+        );
+      })
     ) : (
       <p>No specific age rule recorded. Verify age limits with official customs.</p>
     )}
@@ -193,69 +252,94 @@ const breadcrumbLd = {
   <section>
     <h2>Drive Side</h2>
     <p class="drive-callout">{driveSide}</p>
-    {driveRules.map((r) => (
-      <div class="rule">
-        <div class="rule-head">
-          <h3>{r.title}</h3>
-          {r.needs_review && <span class="badge-review">Needs review</span>}
+    {driveRules.map((r) => {
+      const m = ruleMeta(r);
+      return (
+        <div class="rule">
+          <div class="rule-head">
+            <h3>{r.title}</h3>
+            {r.needs_review && <span class="badge-review">Needs review</span>}
+          </div>
+          <p>{r.rule_text}</p>
+          <SourceNote
+            source={r.source}
+            sourceUrl={r.source_url}
+            sourceDate={r.last_checked}
+            confidenceLabel={m.label}
+            effectiveDate={r.effective_date}
+            jurisdiction={m.jurisdiction}
+            applicability={m.applicability}
+            caveat={m.caveat}
+          />
         </div>
-        <p>{r.rule_text}</p>
-        <SourceNote source={r.source} sourceUrl={r.source_url} sourceDate={r.source_date} confidence={r.confidence} effectiveDate={r.effective_date} notes={r.notes} />
-        <p class="checked">Last checked: {r.last_checked}</p>
-      </div>
-    ))}
+      );
+    })}
   </section>
 
   <!-- 5. Import Duties -->
   <section>
     <h2>Import Duties</h2>
     <p class="review-hint">
-      Rates come from <code>taxrules.json</code> and may change. <strong>Confirm with
-      official customs before trading</strong>.
+      Rates come from <code>taxrules.json</code> and may change.{" "}
+      <strong>Confirm with official customs before trading</strong>.
     </p>
-    <table class="data-table">
-      <thead>
-        <tr><th>Type</th><th>Label</th><th>Rate</th><th>Basis</th><th>Source</th><th>Source date</th><th>Review</th><th>Notes</th></tr>
-      </thead>
-      <tbody>
-        {dutyRules.map((t) => (
-          <tr>
-            <td>{taxTypeLabel[t.tax_type] ?? t.tax_type}</td>
-            <td>{t.label}</td>
-            <td>{t.rate_pct}%</td>
-            <td>{t.basis}</td>
-            <td>{t.source_url ? <a href={t.source_url} rel="noopener">{t.source}</a> : t.source}</td>
-            <td>{t.source_date ?? "—"}</td>
-            <td>{t.needs_review ? <span class="badge-review">Review</span> : "—"}</td>
-            <td>{t.notes ?? "—"}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+    {dutyRules.length > 0 ? (
+      dutyRules.map((t) => {
+        const m = taxMeta(t);
+        return (
+          <div class="rule">
+            <div class="rule-head">
+              <h3>{t.label} — {t.rate_pct}%</h3>
+              {t.needs_review && <span class="badge-review">Review</span>}
+            </div>
+            <p>Basis: {t.basis}</p>
+            <SourceNote
+              source={t.source}
+              sourceUrl={t.source_url}
+              sourceDate={t.source_date ?? t.last_checked}
+              confidenceLabel={m.label}
+              effectiveDate={t.effective_date}
+              jurisdiction={m.jurisdiction}
+              applicability={m.applicability}
+              caveat={m.caveat}
+            />
+          </div>
+        );
+      })
+    ) : (
+      <p>No import duty recorded for this market.</p>
+    )}
   </section>
 
   <!-- 6. VAT & Taxes -->
   <section>
     <h2>VAT &amp; Taxes</h2>
-    <table class="data-table">
-      <thead>
-        <tr><th>Type</th><th>Label</th><th>Rate</th><th>Basis</th><th>Source</th><th>Source date</th><th>Review</th><th>Notes</th></tr>
-      </thead>
-      <tbody>
-        {otherTax.map((t) => (
-          <tr>
-            <td>{taxTypeLabel[t.tax_type] ?? t.tax_type}</td>
-            <td>{t.label}</td>
-            <td>{t.rate_pct}%</td>
-            <td>{t.basis}</td>
-            <td>{t.source_url ? <a href={t.source_url} rel="noopener">{t.source}</a> : t.source}</td>
-            <td>{t.source_date ?? "—"}</td>
-            <td>{t.needs_review ? <span class="badge-review">Review</span> : "—"}</td>
-            <td>{t.notes ?? "—"}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+    {otherTax.length > 0 ? (
+      otherTax.map((t) => {
+        const m = taxMeta(t);
+        return (
+          <div class="rule">
+            <div class="rule-head">
+              <h3>{t.label} — {t.rate_pct}%</h3>
+              {t.needs_review && <span class="badge-review">Review</span>}
+            </div>
+            <p>Basis: {t.basis}</p>
+            <SourceNote
+              source={t.source}
+              sourceUrl={t.source_url}
+              sourceDate={t.source_date ?? t.last_checked}
+              confidenceLabel={m.label}
+              effectiveDate={t.effective_date}
+              jurisdiction={m.jurisdiction}
+              applicability={m.applicability}
+              caveat={m.caveat}
+            />
+          </div>
+        );
+      })
+    ) : (
+      <p>No VAT or additional tax recorded for this market.</p>
+    )}
     <p class="checked">Tax data last checked: 2026-10-04</p>
   </section>
 
@@ -289,39 +373,56 @@ const breadcrumbLd = {
     <h2>EV Rules</h2>
     {content.evNote && <p>{content.evNote}</p>}
     {evRules.length > 0 ? (
-      evRules.map((r) => (
-        <div class="rule">
-          <div class="rule-head">
-            <h3>{r.title}</h3>
-            {r.needs_review && <span class="badge-review">Needs review</span>}
+      evRules.map((r) => {
+        const m = ruleMeta(r);
+        return (
+          <div class="rule">
+            <div class="rule-head">
+              <h3>{r.title}</h3>
+              {r.needs_review && <span class="badge-review">Needs review</span>}
+            </div>
+            <p>{r.rule_text}</p>
+            <SourceNote
+              source={r.source}
+              sourceUrl={r.source_url}
+              sourceDate={r.last_checked}
+              confidenceLabel={m.label}
+              effectiveDate={r.effective_date}
+              jurisdiction={m.jurisdiction}
+              applicability={m.applicability}
+              caveat={m.caveat}
+            />
           </div>
-          <p>{r.rule_text}</p>
-          <SourceNote source={r.source} sourceUrl={r.source_url} sourceDate={r.source_date} confidence={r.confidence} effectiveDate={r.effective_date} notes={r.notes} />
-          <p class="checked">Last checked: {r.last_checked}</p>
-        </div>
-      ))
+        );
+      })
     ) : (
       <p>No EV-specific rules recorded for this market.</p>
     )}
 
     <h3>EV Duty &amp; Tax Treatment</h3>
     {evTax.length > 0 ? (
-      <table class="data-table">
-        <thead>
-          <tr><th>Label</th><th>Rate</th><th>Basis</th><th>Source</th><th>Review</th></tr>
-        </thead>
-        <tbody>
-          {evTax.map((t) => (
-            <tr>
-              <td>{t.label}</td>
-              <td>{t.rate_pct}%</td>
-              <td>{t.basis}</td>
-              <td>{t.source_url ? <a href={t.source_url} rel="noopener">{t.source}</a> : t.source}</td>
-              <td>{t.needs_review ? <span class="badge-review">Review</span> : "—"}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      evTax.map((t) => {
+        const m = taxMeta(t);
+        return (
+          <div class="rule">
+            <div class="rule-head">
+              <h3>{t.label} — {t.rate_pct}%</h3>
+              {t.needs_review && <span class="badge-review">Review</span>}
+            </div>
+            <p>Basis: {t.basis}</p>
+            <SourceNote
+              source={t.source}
+              sourceUrl={t.source_url}
+              sourceDate={t.source_date ?? t.last_checked}
+              confidenceLabel={m.label}
+              effectiveDate={t.effective_date}
+              jurisdiction={m.jurisdiction}
+              applicability={m.applicability}
+              caveat={m.caveat}
+            />
+          </div>
+        );
+      })
     ) : (
       <p>No EV-specific duty entries recorded — EV imports generally follow standard duty rates. Verify with official customs.</p>
     )}
@@ -346,17 +447,28 @@ const breadcrumbLd = {
   <section>
     <h2>Required Documents</h2>
     {docsRules.length > 0 ? (
-      docsRules.map((r) => (
-        <div class="rule">
-          <div class="rule-head">
-            <h3>{r.title}</h3>
-            {r.needs_review && <span class="badge-review">Needs review</span>}
+      docsRules.map((r) => {
+        const m = ruleMeta(r);
+        return (
+          <div class="rule">
+            <div class="rule-head">
+              <h3>{r.title}</h3>
+              {r.needs_review && <span class="badge-review">Needs review</span>}
+            </div>
+            <p>{r.rule_text}</p>
+            <SourceNote
+              source={r.source}
+              sourceUrl={r.source_url}
+              sourceDate={r.last_checked}
+              confidenceLabel={m.label}
+              effectiveDate={r.effective_date}
+              jurisdiction={m.jurisdiction}
+              applicability={m.applicability}
+              caveat={m.caveat}
+            />
           </div>
-          <p>{r.rule_text}</p>
-          <SourceNote source={r.source} sourceUrl={r.source_url} sourceDate={r.source_date} confidence={r.confidence} effectiveDate={r.effective_date} notes={r.notes} />
-          <p class="checked">Last checked: {r.last_checked}</p>
-        </div>
-      ))
+        );
+      })
     ) : (
       <p>No specific document or certification requirements recorded. Verify current requirements with official authorities before trading.</p>
     )}
@@ -397,6 +509,9 @@ const breadcrumbLd = {
         ))}
       </tbody>
     </table>
+    <p class="checked">
+      Transit estimates are not confirmed schedules — treat them as indicative (Estimated confidence).
+    </p>
   </section>
 
   <!-- 11. Popular Vehicle Types -->
@@ -519,16 +634,17 @@ const breadcrumbLd = {
     <h2>Verification Date &amp; Evidence Status</h2>
     <p class="checked">Rule and tax data on this page last checked: {lastChecked}</p>
     <ul>
-      <li>{totalRules} import rules recorded for {country.name}.</li>
-      <li>{needsReviewCount} rule{needsReviewCount === 1 ? "" : "s"} flagged for review (uncertain / changes frequently).</li>
+      <li>{totalDeclarations} rule and tax statements recorded for {country.name}.</li>
       <li>
-        Confidence: {confHigh} high · {confMedium} medium · {confLow} low.
+        Confidence: {confCounts["Confirmed"]} Confirmed · {confCounts["Source-backed"]} Source-backed ·{" "}
+        {confCounts["Needs verification"]} Needs verification · {confCounts["Estimated"]} Estimated ·{" "}
+        {confCounts["Unknown"]} Unknown.
       </li>
     </ul>
     <p class="review-hint">
-      Confidence reflects how strongly each rule is evidenced by its cited source, not a
-      guarantee of current accuracy. Re-verify rates and rules with official customs
-      before trading.
+      Confidence reflects how strongly each statement is evidenced by its cited source,
+      not a guarantee of current accuracy. Re-verify rates and rules with official
+      customs before trading.
     </p>
   </section>
 
@@ -560,6 +676,14 @@ const breadcrumbLd = {
     .source-list { list-style: none; padding: 0; }
     .source-list li { padding: var(--space-2) 0; border-bottom: 1px solid var(--color-border); }
     .src-count { color: var(--color-text-soft); font-size: 0.9em; }
+    .legend { list-style: none; padding: 0; }
+    .legend li { margin: var(--space-2) 0; font-size: 14px; color: var(--color-text-soft); }
+    .badge { display: inline-block; padding: 2px 8px; border-radius: var(--radius-sm); font-size: 12px; font-weight: 600; margin-right: var(--space-1); }
+    .badge-high { background: #e6f4ea; color: #1e7d32; }
+    .badge-medium { background: #fbe9e7; color: #b34700; }
+    .badge-low { background: #fff4e5; color: #8a5a00; }
+    .badge-unknown { background: #eceff1; color: #546e7a; }
+    .badge-muted { background: #f3e5f5; color: #6a1b9a; }
     .cta-list { list-style: none; padding: 0; display: flex; gap: var(--space-3); flex-wrap: wrap; }
     .cta { display: inline-block; background: var(--color-primary); color: #fff; padding: var(--space-2) var(--space-4); border-radius: var(--radius-md); font-weight: 600; }
     .cta:hover { text-decoration: none; opacity: 0.92; }
