@@ -34,8 +34,6 @@ const rules = getRules(countryId);
 const ageRules = rulesByCategory(countryId, "vehicle_age");
 const driveRules = rulesByCategory(countryId, "drive_side");
 const evRules = rulesByCategory(countryId, "ev_policy");
-const regRules = rulesByCategory(countryId, "registration")
-  .concat(rulesByCategory(countryId, "import_eligibility"));
 const tax = getTaxRules(countryId);
 const dutyRules = tax.filter((t) => t.tax_type === "import_duty");
 const otherTax = tax.filter((t) => t.tax_type !== "import_duty");
@@ -77,6 +75,16 @@ const popularModels = (content.popularModelIds || [])
   .map((id) => getModel(id))
   .filter(Boolean);
 const cnBrands = brands.filter((b) => b.origin_country === "CN");
+
+// P3.5 additions (evidence-backed only)
+const docsRules = rulesByCategory(countryId, "import_eligibility");
+const segmentTypes = [...new Set(popularModels.map((m) => m.body_type))];
+const needsReviewCount = rules.filter((r) => r.needs_review).length;
+const totalRules = rules.length;
+const confHigh = rules.filter((r) => r.confidence === "high").length;
+const confMedium = rules.filter((r) => r.confidence === "medium").length;
+const confLow = rules.filter((r) => r.confidence === "low").length;
+const lastChecked = rules.length > 0 ? rules[0].last_checked : "Not available";
 
 const pageUrl = MARKET_SITE_URL + `/countries/${country.country_id}/`;
 const description = `Importing used cars from China to ${country.name}: drive side, vehicle age rules, import duty and VAT, ports and shipping routes — with sources and confidence levels.`;
@@ -129,9 +137,9 @@ const breadcrumbLd = {
     <p>{content.overview}</p>
   </section>
 
-  <!-- 2. Import Regulations -->
+  <!-- 2. Import Eligibility -->
   <section>
-    <h2>Import Regulations</h2>
+    <h2>Import Eligibility</h2>
     <p class="review-hint">
       Regulations are high-risk data. Every rule below carries a source and confidence
       level. <strong>Confirm with official customs before trading</strong>.
@@ -331,11 +339,11 @@ const breadcrumbLd = {
     )}
   </section>
 
-  <!-- 8. Registration -->
+  <!-- 8. Registration / Required Documents -->
   <section>
-    <h2>Registration</h2>
-    {regRules.length > 0 ? (
-      regRules.map((r) => (
+    <h2>Required Documents</h2>
+    {docsRules.length > 0 ? (
+      docsRules.map((r) => (
         <div class="rule">
           <div class="rule-head">
             <h3>{r.title}</h3>
@@ -347,7 +355,7 @@ const breadcrumbLd = {
         </div>
       ))
     ) : (
-      <p>Registration is handled by the national licensing authority after import. Verify requirements with local authorities.</p>
+      <p>No specific document or certification requirements recorded. Verify current requirements with official authorities before trading.</p>
     )}
   </section>
 
@@ -401,6 +409,20 @@ const breadcrumbLd = {
     </ul>
   </section>
 
+  <!-- 11b. Vehicle Segment Fit -->
+  <section>
+    <h2>Vehicle Segment Fit</h2>
+    {segmentTypes.length > 0 ? (
+      <p>
+        Popular models in this market are predominantly{" "}
+        {segmentTypes.map((t) => t.toUpperCase()).join(" and ")} segments.
+        {content.suvNote && <span class="segment-note"> {content.suvNote}</span>}
+      </p>
+    ) : (
+      <p>No vehicle segment data recorded for this market.</p>
+    )}
+  </section>
+
   <!-- 12. Chinese Vehicle Brands -->
   <section>
     <h2>Chinese Vehicle Brands</h2>
@@ -445,6 +467,19 @@ const breadcrumbLd = {
     </ul>
   </section>
 
+  <!-- 15b. Related Guides -->
+  <section>
+    <h2>Related Guides</h2>
+    <ul>
+      <li><a href={MAIN_SITE_URL + "/guides/how-to-buy-used-car-from-china/"}>How to Buy a Used Car from China</a></li>
+      <li><a href={MAIN_SITE_URL + "/guides/china-used-car-export-process/"}>China Used Car Export Process</a></li>
+      <li><a href={MAIN_SITE_URL + "/guides/export-documents/"}>Export Documents</a></li>
+      <li><a href={MAIN_SITE_URL + "/guides/shipping/"}>Shipping</a></li>
+      <li><a href={MAIN_SITE_URL + "/guides/landed-cost/"}>Landed Cost</a></li>
+      <li><a href={MAIN_SITE_URL + "/guides/vehicle-inspection/"}>Vehicle Inspection</a></li>
+    </ul>
+  </section>
+
   <!-- 16. Available Vehicles & Request -->
   <section>
     <h2>Available Vehicles</h2>
@@ -476,6 +511,24 @@ const breadcrumbLd = {
     </div>
   </section>
 
+  <!-- 18. Verification Date & Evidence Status -->
+  <section>
+    <h2>Verification Date &amp; Evidence Status</h2>
+    <p class="checked">Rule and tax data on this page last checked: {lastChecked}</p>
+    <ul>
+      <li>{totalRules} import rules recorded for {country.name}.</li>
+      <li>{needsReviewCount} rule{needsReviewCount === 1 ? "" : "s"} flagged for review (uncertain / changes frequently).</li>
+      <li>
+        Confidence: {confHigh} high · {confMedium} medium · {confLow} low.
+      </li>
+    </ul>
+    <p class="review-hint">
+      Confidence reflects how strongly each rule is evidenced by its cited source, not a
+      guarantee of current accuracy. Re-verify rates and rules with official customs
+      before trading.
+    </p>
+  </section>
+
   <p class="disclaimer">
     Rules may change. Verify current requirements with official authorities before
     trading.
@@ -495,6 +548,7 @@ const breadcrumbLd = {
     .checked { font-size: 12px; color: var(--color-text-soft); margin: var(--space-2) 0 0; }
     .drive-callout { font-size: 18px; font-weight: 700; color: var(--color-primary); }
     .port-note { color: var(--color-text-soft); font-size: 0.9em; }
+    .segment-note { color: var(--color-text-soft); }
     .brand-list { column-count: 2; }
     .faq summary { cursor: pointer; font-weight: 600; }
     .faq p { margin: var(--space-2) 0 var(--space-3); color: var(--color-text-soft); }
