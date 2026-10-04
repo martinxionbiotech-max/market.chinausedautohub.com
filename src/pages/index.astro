@@ -1,0 +1,83 @@
+---
+import BaseLayout from "../../shared/components/BaseLayout.astro";
+import { MARKET_SITE_URL } from "../../shared/config/config";
+import { countries, getRules } from "../lib/market";
+import { regionMeta } from "../lib/content";
+
+const siteTitle = "China Used Car Export Markets";
+const regionOrder = ["middle-east", "africa", "central-asia"];
+
+const byRegion: Record<string, typeof countries> = {};
+for (const c of countries) {
+  (byRegion[c.region] ||= []).push(c);
+}
+
+const pageUrl = MARKET_SITE_URL + "/";
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "China Used Car Export Markets",
+  description:
+    "Country market intelligence for exporting used cars from China — import regulations, duties, ports and shipping routes for key markets.",
+  url: pageUrl,
+};
+const driveLabel = (s: string) => (s === "lhd" ? "LHD" : "RHD");
+---
+
+<BaseLayout
+  siteTitle={siteTitle}
+  siteUrl={MARKET_SITE_URL}
+  currentSection="market"
+  title="China Used Car Export Markets"
+  description="Country market intelligence for exporting used cars from China — import regulations, duties, ports and shipping routes for UAE, Saudi Arabia, Kenya, Tanzania, Nigeria, Kazakhstan and Uzbekistan."
+  canonical="/"
+  jsonLd={jsonLd}
+  breadcrumbs={[{ name: "Home", url: "/" }]}
+>
+  <h1>China Used Car Export Markets</h1>
+  <p class="lede">
+    What you need to know before exporting a used car from China to a specific
+    country: import rules, duties, drive side, ports and shipping routes. Every
+    regulatory claim carries a source and confidence level — verify with official
+    customs before trading.
+  </p>
+
+  {regionOrder.map((region) => (
+    <section class="region">
+      <h2>
+        {regionMeta[region].label}
+        <span class="zh">{regionMeta[region].label_zh}</span>
+      </h2>
+      <div class="grid">
+        {byRegion[region]?.map((c) => {
+          const ruleCount = getRules(c.country_id).length;
+          return (
+            <a class="card" href={`/countries/${c.country_id}/`}>
+              <h3>{c.name}<span class="zh">{c.name_zh}</span></h3>
+              <dl>
+                <div><dt>Drive side</dt><dd>{driveLabel(c.drive_side)}</dd></div>
+                <div><dt>Currency</dt><dd>{c.currency}</dd></div>
+                <div><dt>Rules tracked</dt><dd>{ruleCount}</dd></div>
+              </dl>
+            </a>
+          );
+        })}
+      </div>
+    </section>
+  ))}
+
+  <style>
+    .lede { font-size: 18px; color: var(--color-text-soft); max-width: 68ch; }
+    .region { margin-top: var(--space-6); }
+    .region h2 { border-bottom: 1px solid var(--color-border); padding-bottom: var(--space-2); }
+    .zh { color: var(--color-text-soft); font-size: 0.85em; margin-left: var(--space-2); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: var(--space-4); }
+    .card { border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-4); display: block; color: var(--color-text); }
+    .card:hover { border-color: var(--color-accent); text-decoration: none; }
+    .card h3 { margin: 0 0 var(--space-2); }
+    dl { margin: 0; font-size: 14px; }
+    dl div { display: flex; justify-content: space-between; padding: 2px 0; }
+    dt { color: var(--color-text-soft); }
+    dd { margin: 0; font-weight: 600; }
+  </style>
+</BaseLayout>

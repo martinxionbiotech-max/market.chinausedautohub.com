@@ -1,0 +1,133 @@
+---
+import BaseLayout from "../../../../shared/components/BaseLayout.astro";
+import SourceNote from "../../../../shared/components/SourceNote.astro";
+import {
+  MARKET_SITE_URL,
+  DATA_SITE_URL,
+  TOOLS_SITE_URL,
+} from "../../../../shared/config/config";
+import {
+  countries,
+  rulesByCategory,
+  modelsByBodyType,
+} from "../../../lib/market";
+import { countryContent } from "../../../lib/content";
+
+export function getStaticPaths() {
+  const suvCountries = ["kenya", "nigeria"];
+  return countries
+    .filter((c) => suvCountries.includes(c.country_id))
+    .map((c) => ({ params: { country: c.country_id } }));
+}
+
+const { country: countryId } = Astro.params;
+const country = countries.find((c) => c.country_id === countryId);
+const content = countryContent[countryId];
+
+const ageRules = rulesByCategory(countryId, "vehicle_age");
+const driveRules = rulesByCategory(countryId, "drive_side");
+const suvModels = modelsByBodyType("suv").slice(0, 6);
+
+const pageUrl = MARKET_SITE_URL + `/countries/${country.country_id}/suv/`;
+const title = `Importing SUVs to ${country.name} — Demand & Requirements`;
+const description = `SUV demand and import requirements for exporting SUVs from China to ${country.name}.`;
+
+const articleLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: title,
+  description,
+  url: pageUrl,
+  dateModified: "2026-10-04",
+  inLanguage: "en",
+};
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Markets", item: MARKET_SITE_URL + "/" },
+    { "@type": "ListItem", position: 2, name: country.name, item: MARKET_SITE_URL + `/countries/${country.country_id}/` },
+    { "@type": "ListItem", position: 3, name: "SUV guide", item: pageUrl },
+  ],
+};
+---
+
+<BaseLayout
+  siteTitle="China Used Car Export Markets"
+  siteUrl={MARKET_SITE_URL}
+  currentSection="market"
+  title={title}
+  description={description}
+  canonical={`/countries/${country.country_id}/suv/`}
+  jsonLd={[articleLd, breadcrumbLd]}
+  breadcrumbs={[
+    { name: "Markets", url: "/" },
+    { name: country.name, url: `/countries/${country.country_id}/` },
+    { name: "SUV guide", url: `/countries/${country.country_id}/suv/` },
+  ]}
+>
+  <h1>Importing SUVs to {country.name}</h1>
+  <p><a href={`/countries/${country.country_id}/`}>← Back to {country.name} market guide</a></p>
+
+  <section>
+    <h2>Overview</h2>
+    <p>{content.suvNote}</p>
+  </section>
+
+  <section>
+    <h2>Popular SUVs</h2>
+    <ul>
+      {suvModels.map((m) => (
+        <li>
+          <a href={DATA_SITE_URL + "/models/"}>{m.name}</a>
+          <span class="zh">{m.name_zh}</span>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section>
+    <h2>Import Considerations</h2>
+    {driveRules.map((r) => (
+      <div class="rule">
+        <div class="rule-head">
+          <h3>{r.title}</h3>
+          {r.needs_review && <span class="badge-review">Needs review</span>}
+        </div>
+        <p>{r.rule_text}</p>
+        <SourceNote source={r.source} sourceUrl={r.source_url} sourceDate={r.source_date} confidence={r.confidence} />
+        <p class="checked">Last checked: {r.last_checked}</p>
+      </div>
+    ))}
+    {ageRules.map((r) => (
+      <div class="rule">
+        <div class="rule-head">
+          <h3>{r.title}</h3>
+          {r.needs_review && <span class="badge-review">Needs review</span>}
+        </div>
+        <p>{r.rule_text}</p>
+        <SourceNote source={r.source} sourceUrl={r.source_url} sourceDate={r.source_date} confidence={r.confidence} />
+        <p class="checked">Last checked: {r.last_checked}</p>
+      </div>
+    ))}
+  </section>
+
+  <section>
+    <h2>Estimate Costs</h2>
+    <p>
+      Use the <a href={TOOLS_SITE_URL + "/landed-cost-calculator/"}>import cost calculator</a> to
+      estimate landed cost for an SUV import.
+    </p>
+  </section>
+
+  <style>
+    .zh { color: var(--color-text-soft); font-size: 0.85em; margin-left: var(--space-2); }
+    section { margin-top: var(--space-6); }
+    section h2 { border-bottom: 1px solid var(--color-border); padding-bottom: var(--space-2); }
+    .rule { border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-4); margin: var(--space-3) 0; }
+    .rule-head { display: flex; align-items: center; gap: var(--space-2); flex-wrap: wrap; }
+    .rule-head h3 { margin: 0; font-size: 16px; }
+    .badge-review { display: inline-block; background: #fbe9e7; color: var(--color-danger); padding: 2px 8px; border-radius: var(--radius-sm); font-size: 12px; font-weight: 600; }
+    .checked { font-size: 12px; color: var(--color-text-soft); margin: var(--space-2) 0 0; }
+  </style>
+</BaseLayout>
