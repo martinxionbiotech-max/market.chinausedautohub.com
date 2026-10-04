@@ -70,7 +70,7 @@ const evTaxByCountry = countries.map((c) => ({
           <div class="rule-head">
             <h3>
               {countryById[r.country_id] ? (
-                <a href={`/countries/${r.country_id}/ev/`}>{countryById[r.country_id].name}</a>
+                <a href={`/countries/${r.country_id}/#ev-rules`}>{countryById[r.country_id].name}</a>
               ) : (
                 r.country_id
               )}
@@ -99,7 +99,7 @@ const evTaxByCountry = countries.map((c) => ({
           evTax.length > 0
             ? evTax.map((t) => (
                 <tr>
-                  <td><a href={`/countries/${country.country_id}/ev/`}>{country.name}</a></td>
+                  <td><a href={`/countries/${country.country_id}/#ev-rules`}>{country.name}</a></td>
                   <td>{t.label}</td>
                   <td>{t.rate_pct}%</td>
                   <td>{t.basis}</td>
@@ -108,7 +108,7 @@ const evTaxByCountry = countries.map((c) => ({
               ))
             : [
                 <tr>
-                  <td><a href={`/countries/${country.country_id}/ev/`}>{country.name}</a></td>
+                  <td><a href={`/countries/${country.country_id}/#ev-rules`}>{country.name}</a></td>
                   <td>No EV-specific duty recorded</td>
                   <td>—</td>
                   <td>—</td>
@@ -125,7 +125,7 @@ const evTaxByCountry = countries.map((c) => ({
     <h2>Country EV Guides</h2>
     <ul>
       {countries.map((c) => (
-        <li><a href={`/countries/${c.country_id}/ev/`}>{c.name} EV guide</a></li>
+        <li><a href={`/countries/${c.country_id}/#ev-rules`}>{c.name} EV rules</a></li>
       ))}
     </ul>
   </section>

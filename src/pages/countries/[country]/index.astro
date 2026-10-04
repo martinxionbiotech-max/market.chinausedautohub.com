@@ -17,6 +17,7 @@ import {
   portName,
   getModel,
   brands,
+  models,
 } from "../../../lib/market";
 import { countryContent, regionMeta } from "../../../lib/content";
 
@@ -38,6 +39,10 @@ const regRules = rulesByCategory(countryId, "registration")
 const tax = getTaxRules(countryId);
 const dutyRules = tax.filter((t) => t.tax_type === "import_duty");
 const otherTax = tax.filter((t) => t.tax_type !== "import_duty");
+const evTax = tax.filter((t) => t.label.toLowerCase().includes("electric"));
+const evModels = models
+  .filter((m) => m.generations.some((g) => g.trims.some((t) => ["ev", "phev"].includes(t.powertrain))))
+  .slice(0, 5);
 const destPorts = getDestPorts(countryId);
 const shippingRoutes = getRoutesForCountry(countryId);
 
@@ -269,8 +274,9 @@ const breadcrumbLd = {
   </section>
 
   <!-- 7. EV Rules -->
-  <section>
+  <section id="ev-rules">
     <h2>EV Rules</h2>
+    {content.evNote && <p>{content.evNote}</p>}
     {evRules.length > 0 ? (
       evRules.map((r) => (
         <div class="rule">
@@ -286,10 +292,42 @@ const breadcrumbLd = {
     ) : (
       <p>No EV-specific rules recorded for this market.</p>
     )}
-    {content.evNote && (
-      <p>
-        <a href={`/countries/${country.country_id}/ev/`}>Read the {country.name} EV guide →</a>
-      </p>
+
+    <h3>EV Duty &amp; Tax Treatment</h3>
+    {evTax.length > 0 ? (
+      <table class="data-table">
+        <thead>
+          <tr><th>Label</th><th>Rate</th><th>Basis</th><th>Source</th><th>Review</th></tr>
+        </thead>
+        <tbody>
+          {evTax.map((t) => (
+            <tr>
+              <td>{t.label}</td>
+              <td>{t.rate_pct}%</td>
+              <td>{t.basis}</td>
+              <td>{t.source_url ? <a href={t.source_url} rel="noopener">{t.source}</a> : t.source}</td>
+              <td>{t.needs_review ? <span class="badge-review">Review</span> : "—"}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    ) : (
+      <p>No EV-specific duty entries recorded — EV imports generally follow standard duty rates. Verify with official customs.</p>
+    )}
+    <p class="review-hint">Confirm current EV duty treatment with official customs before trading. For a cross-country comparison, see the <a href="/ev-import/">EV import center</a>.</p>
+
+    <h3>Popular EV &amp; PHEV Models</h3>
+    {evModels.length > 0 ? (
+      <ul>
+        {evModels.map((m) => (
+          <li>
+            <a href={DATA_SITE_URL + "/models/" + m.model_id + "/"}>{m.name}</a>
+            <span class="zh">{m.name_zh}</span> — {m.body_type.toUpperCase()}
+          </li>
+        ))}
+      </ul>
+    ) : (
+      <p>No EV or PHEV models recorded for this market yet.</p>
     )}
   </section>
 

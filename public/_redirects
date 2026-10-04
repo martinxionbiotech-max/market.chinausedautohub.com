@@ -1,0 +1,5 @@
+/countries/*/ev/  /countries/:splat/  301
+/countries/*/suv/  /countries/:splat/  301
+/regions/  /  301
+/import-guides/  /countries/  301
+/documents/  /countries/  301

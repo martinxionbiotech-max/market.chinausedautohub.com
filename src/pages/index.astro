@@ -43,7 +43,7 @@ const driveLabel = (s: string) => (s === "lhd" ? "LHD" : "RHD");
   </p>
 
   {regionOrder.map((region) => (
-    <section class="region">
+    <section id={region} class="region">
       <h2>
         {regionMeta[region].label}
         <span class="zh">{regionMeta[region].label_zh}</span>
@@ -70,13 +70,10 @@ const driveLabel = (s: string) => (s === "lhd" ? "LHD" : "RHD");
     <h2>Market Guides &amp; Indexes</h2>
     <ul class="guide-list">
       <li><a href="/countries/">All countries</a></li>
-      <li><a href="/regions/">Regions</a></li>
       <li><a href="/shipping-routes/">Shipping routes</a></li>
-      <li><a href="/import-guides/">Import guides</a></li>
       <li><a href="/vehicle-age-rules/">Vehicle age rules</a></li>
       <li><a href="/ev-import/">EV import</a></li>
       <li><a href="/duties-taxes/">Duties &amp; taxes</a></li>
-      <li><a href="/documents/">Documents</a></li>
       <li><a href="/ports/">Ports</a></li>
     </ul>
   </section>
