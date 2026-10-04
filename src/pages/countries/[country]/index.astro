@@ -144,6 +144,8 @@ const breadcrumbLd = {
             sourceUrl={r.source_url}
             sourceDate={r.source_date}
             confidence={r.confidence}
+            effectiveDate={r.effective_date}
+            notes={r.notes}
           />
           <p class="checked">Last checked: {r.last_checked}</p>
         </article>
@@ -162,7 +164,7 @@ const breadcrumbLd = {
             {r.needs_review && <span class="badge-review">Needs review</span>}
           </div>
           <p>{r.rule_text}</p>
-          <SourceNote source={r.source} sourceUrl={r.source_url} sourceDate={r.source_date} confidence={r.confidence} />
+          <SourceNote source={r.source} sourceUrl={r.source_url} sourceDate={r.source_date} confidence={r.confidence} effectiveDate={r.effective_date} notes={r.notes} />
           <p class="checked">Last checked: {r.last_checked}</p>
         </div>
       ))
@@ -182,7 +184,7 @@ const breadcrumbLd = {
           {r.needs_review && <span class="badge-review">Needs review</span>}
         </div>
         <p>{r.rule_text}</p>
-        <SourceNote source={r.source} sourceUrl={r.source_url} sourceDate={r.source_date} confidence={r.confidence} />
+        <SourceNote source={r.source} sourceUrl={r.source_url} sourceDate={r.source_date} confidence={r.confidence} effectiveDate={r.effective_date} notes={r.notes} />
         <p class="checked">Last checked: {r.last_checked}</p>
       </div>
     ))}
@@ -197,7 +199,7 @@ const breadcrumbLd = {
     </p>
     <table class="data-table">
       <thead>
-        <tr><th>Type</th><th>Label</th><th>Rate</th><th>Basis</th><th>Source</th><th>Source date</th><th>Review</th></tr>
+        <tr><th>Type</th><th>Label</th><th>Rate</th><th>Basis</th><th>Source</th><th>Source date</th><th>Review</th><th>Notes</th></tr>
       </thead>
       <tbody>
         {dutyRules.map((t) => (
@@ -209,6 +211,7 @@ const breadcrumbLd = {
             <td>{t.source_url ? <a href={t.source_url} rel="noopener">{t.source}</a> : t.source}</td>
             <td>{t.source_date ?? "—"}</td>
             <td>{t.needs_review ? <span class="badge-review">Review</span> : "—"}</td>
+            <td>{t.notes ?? "—"}</td>
           </tr>
         ))}
       </tbody>
@@ -220,7 +223,7 @@ const breadcrumbLd = {
     <h2>VAT &amp; Taxes</h2>
     <table class="data-table">
       <thead>
-        <tr><th>Type</th><th>Label</th><th>Rate</th><th>Basis</th><th>Source</th><th>Source date</th><th>Review</th></tr>
+        <tr><th>Type</th><th>Label</th><th>Rate</th><th>Basis</th><th>Source</th><th>Source date</th><th>Review</th><th>Notes</th></tr>
       </thead>
       <tbody>
         {otherTax.map((t) => (
@@ -232,6 +235,7 @@ const breadcrumbLd = {
             <td>{t.source_url ? <a href={t.source_url} rel="noopener">{t.source}</a> : t.source}</td>
             <td>{t.source_date ?? "—"}</td>
             <td>{t.needs_review ? <span class="badge-review">Review</span> : "—"}</td>
+            <td>{t.notes ?? "—"}</td>
           </tr>
         ))}
       </tbody>
@@ -275,7 +279,7 @@ const breadcrumbLd = {
             {r.needs_review && <span class="badge-review">Needs review</span>}
           </div>
           <p>{r.rule_text}</p>
-          <SourceNote source={r.source} sourceUrl={r.source_url} sourceDate={r.source_date} confidence={r.confidence} />
+          <SourceNote source={r.source} sourceUrl={r.source_url} sourceDate={r.source_date} confidence={r.confidence} effectiveDate={r.effective_date} notes={r.notes} />
           <p class="checked">Last checked: {r.last_checked}</p>
         </div>
       ))
@@ -300,7 +304,7 @@ const breadcrumbLd = {
             {r.needs_review && <span class="badge-review">Needs review</span>}
           </div>
           <p>{r.rule_text}</p>
-          <SourceNote source={r.source} sourceUrl={r.source_url} sourceDate={r.source_date} confidence={r.confidence} />
+          <SourceNote source={r.source} sourceUrl={r.source_url} sourceDate={r.source_date} confidence={r.confidence} effectiveDate={r.effective_date} notes={r.notes} />
           <p class="checked">Last checked: {r.last_checked}</p>
         </div>
       ))
@@ -352,7 +356,7 @@ const breadcrumbLd = {
     <ul>
       {popularModels.map((m) => (
         <li>
-          <a href={DATA_SITE_URL + "/models/"}>{m.name}</a>
+          <a href={DATA_SITE_URL + "/models/" + m.model_id + "/"}>{m.name}</a>
           <span class="zh">{m.name_zh}</span> — {m.body_type.toUpperCase()}
         </li>
       ))}
@@ -365,7 +369,7 @@ const breadcrumbLd = {
     <ul class="brand-list">
       {cnBrands.map((b) => (
         <li>
-          <a href={DATA_SITE_URL + "/brands/"}>{b.name}</a>
+          <a href={DATA_SITE_URL + "/brands/" + b.brand_id + "/"}>{b.name}</a>
           <span class="zh">{b.name_zh}</span>
         </li>
       ))}
@@ -411,8 +415,8 @@ const breadcrumbLd = {
       {country.name}.
     </p>
     <ul class="cta-list">
-      <li><a class="cta" href={MAIN_SITE_URL + "/"}>Browse available vehicles →</a></li>
-      <li><a class="cta cta-alt" href={MAIN_SITE_URL + "/"}>Request a vehicle →</a></li>
+      <li><a class="cta" href={MAIN_SITE_URL + "/cars/"}>Browse available vehicles →</a></li>
+      <li><a class="cta cta-alt" href={MAIN_SITE_URL + "/contact/"}>Request a vehicle →</a></li>
     </ul>
     <ul class="related-links">
       <li><a href={DATA_SITE_URL + "/vehicle-types/suv/"}>Browse SUVs</a></li>

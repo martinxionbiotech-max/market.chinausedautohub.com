@@ -79,7 +79,7 @@ const breadcrumbLd = {
     <ul>
       {suvModels.map((m) => (
         <li>
-          <a href={DATA_SITE_URL + "/models/"}>{m.name}</a>
+          <a href={DATA_SITE_URL + "/models/" + m.model_id + "/"}>{m.name}</a>
           <span class="zh">{m.name_zh}</span>
         </li>
       ))}

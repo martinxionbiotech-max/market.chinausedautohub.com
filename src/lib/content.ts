@@ -26,7 +26,7 @@ export const countryContent: Record<string, CountryContent> = {
     faq: [
       { q: "Can I import a right-hand-drive vehicle into the UAE?", a: "Generally no — the UAE registers left-hand-drive vehicles only." },
       { q: "Is there an age limit for used cars?", a: "There is no universal age limit, but vehicles must meet GCC specification." },
-      { q: "What duty and VAT apply?", a: "A 5% import duty and 5% VAT are the headline rates — verify with official customs." },
+      { q: "What duty and VAT apply?", a: "Import duty and VAT are listed in the Import Duties and VAT & Taxes tables on this page. Rates change — verify current figures with official customs before purchase." },
       { q: "Which port handles vehicle imports?", a: "Jebel Ali in Dubai is the main entry port." },
     ],
     popularModelIds: ["li-auto-l7", "byd-han", "nio-es6"],
@@ -43,7 +43,7 @@ export const countryContent: Record<string, CountryContent> = {
     ],
     faq: [
       { q: "What is the age limit for imported used cars?", a: "Passenger cars are generally limited to five years of age — verify with ZATCA." },
-      { q: "What taxes apply?", a: "A 5% import duty and 15% VAT are the headline rates — verify with official customs." },
+      { q: "What taxes apply?", a: "Import duty and VAT are listed in the Import Duties and VAT & Taxes tables on this page. Rates change — verify current figures with official customs (ZATCA) before purchase." },
       { q: "Do I need a SABER certificate?", a: "Yes — SASO conformity and SABER registration are required." },
     ],
     popularModelIds: ["geely-monjaro", "changan-cs75-plus", "great-wall-haval-h6"],
@@ -61,7 +61,7 @@ export const countryContent: Record<string, CountryContent> = {
     faq: [
       { q: "What is the vehicle age limit?", a: "Used vehicles must not be older than eight years (KS 1515:2000)." },
       { q: "Is Kenya right-hand drive?", a: "Yes — Kenya is a right-hand-drive (RHD) market." },
-      { q: "What taxes apply?", a: "A 25% import duty, 16% VAT plus excise — verify with KRA." },
+      { q: "What taxes apply?", a: "Import duty, VAT and excise are listed in the Import Duties and VAT & Taxes tables on this page. Rates change — verify current figures with KRA before purchase." },
       { q: "Which port handles imports?", a: "Mombasa." },
     ],
     popularModelIds: ["byd-song-plus", "chery-tiggo-8", "byd-qin-plus"],
