@@ -1,3 +1,4 @@
+/countries/kenya/byd-song-plus/  /countries/kenya/  301
 /countries/*/ev/  /countries/:splat/  301
 /countries/*/suv/  /countries/:splat/  301
 /regions/  /  301
