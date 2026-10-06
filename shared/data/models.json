@@ -1176,6 +1176,538 @@
    "source_url": null,
    "source_date": "2026-10-04",
    "confidence": "medium"
+  },
+  {
+   "model_id": "mg-4",
+   "brand_id": "mg",
+   "name": "MG4 EV",
+   "name_zh": "MG4",
+   "body_type": "hatchback",
+   "status": "active",
+   "generations": [
+    {
+     "generation_id": "mg-4-g1",
+     "name": "First Generation",
+     "production_years": [
+      2022,
+      2025
+     ],
+     "trims": [
+      {
+       "trim_id": "mg-4-g1-ev",
+       "name": "51 kWh Standard Range",
+       "powertrain": "ev",
+       "production_years": [
+        2022,
+        2025
+       ],
+       "specs": {
+        "motor_power_kw": 125,
+        "battery_capacity_kwh": 51,
+        "range_km": 351,
+        "drive_type": "rwd",
+        "seats": 5
+       },
+       "spec_source": "Automotive specifications database",
+       "spec_source_url": "https://www.auto-data.net/en/mg-mg4-ev-i-generation-8990",
+       "spec_source_date": "2026-10-06",
+       "confidence": "medium"
+      }
+     ]
+    }
+   ],
+   "source": "Automotive specifications database",
+   "source_url": "https://www.auto-data.net/en/mg-mg4-ev-i-generation-8990",
+   "source_date": "2026-10-06",
+   "confidence": "medium"
+  },
+  {
+   "model_id": "mg-hs",
+   "brand_id": "mg",
+   "name": "MG HS",
+   "name_zh": "MG HS",
+   "body_type": "suv",
+   "status": "active",
+   "generations": [
+    {
+     "generation_id": "mg-hs-g1",
+     "name": "First Generation",
+     "production_years": [
+      2018,
+      2025
+     ],
+     "trims": [
+      {
+       "trim_id": "mg-hs-g1-ice",
+       "name": "1.5T DCT",
+       "powertrain": "ice",
+       "production_years": [
+        2018,
+        2025
+       ],
+       "specs": {
+        "engine": "1.5T",
+        "engine_displacement_cc": 1490,
+        "transmission": "7-speed DCT",
+        "drive_type": "fwd",
+        "seats": 5
+       },
+       "spec_source": "Automotive specifications database",
+       "spec_source_url": "https://www.auto-data.net/en/mg-hs-i-generation-6860",
+       "spec_source_date": "2026-10-06",
+       "confidence": "medium"
+      }
+     ]
+    }
+   ],
+   "source": "Automotive specifications database",
+   "source_url": "https://www.auto-data.net/en/mg-hs-i-generation-6860",
+   "source_date": "2026-10-06",
+   "confidence": "medium"
+  },
+  {
+   "model_id": "mg-5",
+   "brand_id": "mg",
+   "name": "MG5",
+   "name_zh": "MG5",
+   "body_type": "sedan",
+   "status": "active",
+   "generations": [
+    {
+     "generation_id": "mg-5-g1",
+     "name": "First Generation",
+     "production_years": [
+      2020,
+      2025
+     ],
+     "trims": [
+      {
+       "trim_id": "mg-5-g1-ice",
+       "name": "1.5L CVT",
+       "powertrain": "ice",
+       "production_years": [
+        2020,
+        2025
+       ],
+       "specs": {
+        "engine": "1.5L",
+        "engine_displacement_cc": 1498,
+        "transmission": "CVT",
+        "drive_type": "fwd",
+        "seats": 5
+       },
+       "spec_source": "Automotive specifications database",
+       "spec_source_url": "https://www.auto-data.net/en/mg-mg5-ii-generation-8893",
+       "spec_source_date": "2026-10-06",
+       "confidence": "medium"
+      }
+     ]
+    }
+   ],
+   "source": "Automotive specifications database",
+   "source_url": "https://www.auto-data.net/en/mg-mg5-ii-generation-8893",
+   "source_date": "2026-10-06",
+   "confidence": "medium"
+  },
+  {
+   "model_id": "haval-jolion",
+   "brand_id": "haval",
+   "name": "Jolion",
+   "name_zh": "哈弗初恋",
+   "body_type": "suv",
+   "status": "active",
+   "generations": [
+    {
+     "generation_id": "haval-jolion-g1",
+     "name": "First Generation",
+     "production_years": [
+      2020,
+      2025
+     ],
+     "trims": [
+      {
+       "trim_id": "haval-jolion-g1-ice",
+       "name": "1.5T DCT",
+       "powertrain": "ice",
+       "production_years": [
+        2020,
+        2025
+       ],
+       "specs": {
+        "engine": "1.5T",
+        "engine_displacement_cc": 1497,
+        "transmission": "7-speed DCT",
+        "drive_type": "fwd",
+        "seats": 5
+       },
+       "spec_source": "Automotive specifications database",
+       "spec_source_url": "https://www.auto-data.net/en/haval-jolion-1.5t-150hp-dct-49079",
+       "spec_source_date": "2026-10-06",
+       "confidence": "medium"
+      }
+     ]
+    }
+   ],
+   "source": "Automotive specifications database",
+   "source_url": "https://www.auto-data.net/en/haval-jolion-1.5t-150hp-dct-49079",
+   "source_date": "2026-10-06",
+   "confidence": "medium"
+  },
+  {
+   "model_id": "ora-good-cat",
+   "brand_id": "ora",
+   "name": "Good Cat (Funky Cat)",
+   "name_zh": "好猫",
+   "body_type": "hatchback",
+   "status": "active",
+   "generations": [
+    {
+     "generation_id": "ora-good-cat-g1",
+     "name": "First Generation",
+     "production_years": [
+      2020,
+      2025
+     ],
+     "trims": [
+      {
+       "trim_id": "ora-good-cat-g1-ev",
+       "name": "48 kWh",
+       "powertrain": "ev",
+       "production_years": [
+        2020,
+        2025
+       ],
+       "specs": {
+        "motor_power_kw": 126,
+        "battery_capacity_kwh": 48,
+        "range_km": 193,
+        "transmission": "1-speed automatic",
+        "drive_type": "fwd",
+        "seats": 5
+       },
+       "spec_source": "Automotive specifications database",
+       "spec_source_url": "https://www.auto-data.net/en/ora-funky-cat-48-kwh-171hp-48853",
+       "spec_source_date": "2026-10-06",
+       "confidence": "medium"
+      }
+     ]
+    }
+   ],
+   "source": "Automotive specifications database",
+   "source_url": "https://www.auto-data.net/en/ora-funky-cat-48-kwh-171hp-48853",
+   "source_date": "2026-10-06",
+   "confidence": "medium"
+  },
+  {
+   "model_id": "byd-sealion-6",
+   "brand_id": "byd",
+   "name": "Sealion 6",
+   "name_zh": "海狮06",
+   "body_type": "suv",
+   "status": "active",
+   "generations": [
+    {
+     "generation_id": "byd-sealion-6-g1",
+     "name": "First Generation",
+     "production_years": [
+      2025,
+      2025
+     ],
+     "trims": [
+      {
+       "trim_id": "byd-sealion-6-g1-phev",
+       "name": "DM-i 18.3 kWh",
+       "powertrain": "phev",
+       "production_years": [
+        2025,
+        2025
+       ],
+       "specs": {
+        "engine": "1.5L",
+        "engine_displacement_cc": 1498,
+        "motor_power_kw": 160,
+        "battery_capacity_kwh": 18.3,
+        "range_km": 121,
+        "transmission": "E-CVT",
+        "drive_type": "fwd",
+        "seats": 5
+       },
+       "spec_source": "Automotive specifications database",
+       "spec_source_url": "https://www.auto-data.net/en/byd-sea-lion-06-dm-i-1.5l-18.3-kwh-218hp-plug-in-hybrid-e-cvt-55318",
+       "spec_source_date": "2026-10-06",
+       "confidence": "medium"
+      }
+     ]
+    }
+   ],
+   "source": "Automotive specifications database",
+   "source_url": "https://www.auto-data.net/en/byd-sea-lion-06-dm-i-1.5l-18.3-kwh-218hp-plug-in-hybrid-e-cvt-55318",
+   "source_date": "2026-10-06",
+   "confidence": "medium"
+  },
+  {
+   "model_id": "byd-sealion-07",
+   "brand_id": "byd",
+   "name": "Sealion 07",
+   "name_zh": "海狮07",
+   "body_type": "suv",
+   "status": "active",
+   "generations": [
+    {
+     "generation_id": "byd-sealion-07-g1",
+     "name": "First Generation",
+     "production_years": [
+      2024,
+      2025
+     ],
+     "trims": [
+      {
+       "trim_id": "byd-sealion-07-g1-ev",
+       "name": "Long Range 80.64 kWh",
+       "powertrain": "ev",
+       "production_years": [
+        2024,
+        2025
+       ],
+       "specs": {
+        "motor_power_kw": 230,
+        "battery_capacity_kwh": 80.64,
+        "range_km": 610,
+        "drive_type": "rwd",
+        "seats": 5
+       },
+       "spec_source": "Automotive specifications database",
+       "spec_source_url": "https://www.auto-data.net/en/byd-sea-lion-07-long-range-80.64-kwh-313hp-electric-51804",
+       "spec_source_date": "2026-10-06",
+       "confidence": "medium"
+      }
+     ]
+    }
+   ],
+   "source": "Automotive specifications database",
+   "source_url": "https://www.auto-data.net/en/byd-sea-lion-07-long-range-80.64-kwh-313hp-electric-51804",
+   "source_date": "2026-10-06",
+   "confidence": "medium"
+  },
+  {
+   "model_id": "chery-tiggo-4",
+   "brand_id": "chery",
+   "name": "Tiggo 4",
+   "name_zh": "瑞虎4",
+   "body_type": "suv",
+   "status": "active",
+   "generations": [
+    {
+     "generation_id": "chery-tiggo-4-g1",
+     "name": "First Generation",
+     "production_years": [
+      2017,
+      2025
+     ],
+     "trims": [
+      {
+       "trim_id": "chery-tiggo-4-g1-ice",
+       "name": "1.5T CVT",
+       "powertrain": "ice",
+       "production_years": [
+        2017,
+        2025
+       ],
+       "specs": {
+        "engine": "1.5T",
+        "engine_displacement_cc": 1498,
+        "transmission": "CVT",
+        "drive_type": "fwd",
+        "seats": 5
+       },
+       "spec_source": "Automotive specifications database",
+       "spec_source_url": "https://www.auto-data.net/en/chery-tiggo-4-pro-1.5l-147hp-cvt-54878",
+       "spec_source_date": "2026-10-06",
+       "confidence": "medium"
+      }
+     ]
+    }
+   ],
+   "source": "Automotive specifications database",
+   "source_url": "https://www.auto-data.net/en/chery-tiggo-4-pro-1.5l-147hp-cvt-54878",
+   "source_date": "2026-10-06",
+   "confidence": "medium"
+  },
+  {
+   "model_id": "chery-tiggo-7",
+   "brand_id": "chery",
+   "name": "Tiggo 7",
+   "name_zh": "瑞虎7",
+   "body_type": "suv",
+   "status": "active",
+   "generations": [
+    {
+     "generation_id": "chery-tiggo-7-g1",
+     "name": "First Generation",
+     "production_years": [
+      2016,
+      2025
+     ],
+     "trims": [
+      {
+       "trim_id": "chery-tiggo-7-g1-ice",
+       "name": "1.5T CVT",
+       "powertrain": "ice",
+       "production_years": [
+        2016,
+        2025
+       ],
+       "specs": {
+        "engine": "1.5T",
+        "engine_displacement_cc": 1498,
+        "transmission": "CVT",
+        "drive_type": "fwd",
+        "seats": 5
+       },
+       "spec_source": "Automotive specifications database",
+       "spec_source_url": "https://www.auto-data.net/en/chery-tiggo-7-ii-pro-1.5-tci-145hp-cvt-48734",
+       "spec_source_date": "2026-10-06",
+       "confidence": "medium"
+      }
+     ]
+    }
+   ],
+   "source": "Automotive specifications database",
+   "source_url": "https://www.auto-data.net/en/chery-tiggo-7-ii-pro-1.5-tci-145hp-cvt-48734",
+   "source_date": "2026-10-06",
+   "confidence": "medium"
+  },
+  {
+   "model_id": "geely-coolray",
+   "brand_id": "geely",
+   "name": "Coolray (Binyue)",
+   "name_zh": "缤越",
+   "body_type": "suv",
+   "status": "active",
+   "generations": [
+    {
+     "generation_id": "geely-coolray-g1",
+     "name": "First Generation",
+     "production_years": [
+      2018,
+      2025
+     ],
+     "trims": [
+      {
+       "trim_id": "geely-coolray-g1-ice",
+       "name": "1.5T DCT",
+       "powertrain": "ice",
+       "production_years": [
+        2018,
+        2025
+       ],
+       "specs": {
+        "engine": "1.5T",
+        "engine_displacement_cc": 1499,
+        "transmission": "7-speed DCT",
+        "drive_type": "fwd",
+        "seats": 5
+       },
+       "spec_source": "Automotive specifications database",
+       "spec_source_url": "https://www.auto-data.net/en/geely-coolray-facelift-2023-1.5t-181hp-dct-57697",
+       "spec_source_date": "2026-10-06",
+       "confidence": "medium"
+      }
+     ]
+    }
+   ],
+   "source": "Automotive specifications database",
+   "source_url": "https://www.auto-data.net/en/geely-coolray-facelift-2023-1.5t-181hp-dct-57697",
+   "source_date": "2026-10-06",
+   "confidence": "medium"
+  },
+  {
+   "model_id": "jetour-x70",
+   "brand_id": "jetour",
+   "name": "Jetour X70",
+   "name_zh": "捷途X70",
+   "body_type": "suv",
+   "status": "active",
+   "generations": [
+    {
+     "generation_id": "jetour-x70-g1",
+     "name": "First Generation",
+     "production_years": [
+      2018,
+      2025
+     ],
+     "trims": [
+      {
+       "trim_id": "jetour-x70-g1-ice",
+       "name": "1.5T DCT",
+       "powertrain": "ice",
+       "production_years": [
+        2018,
+        2025
+       ],
+       "specs": {
+        "engine": "1.5T",
+        "engine_displacement_cc": 1498,
+        "transmission": "6-speed DCT",
+        "drive_type": "fwd",
+        "seats": 5
+       },
+       "spec_source": "Automotive specifications database",
+       "spec_source_url": "https://www.auto-data.net/en/jetour-x70-plus-facelift-2024-1.5-tci-156hp-dct-54273",
+       "spec_source_date": "2026-10-06",
+       "confidence": "medium"
+      }
+     ]
+    }
+   ],
+   "source": "Automotive specifications database",
+   "source_url": "https://www.auto-data.net/en/jetour-x70-plus-facelift-2024-1.5-tci-156hp-dct-54273",
+   "source_date": "2026-10-06",
+   "confidence": "medium"
+  },
+  {
+   "model_id": "tank-300",
+   "brand_id": "tank",
+   "name": "Tank 300",
+   "name_zh": "坦克300",
+   "body_type": "suv",
+   "status": "active",
+   "generations": [
+    {
+     "generation_id": "tank-300-g1",
+     "name": "First Generation",
+     "production_years": [
+      2021,
+      2025
+     ],
+     "trims": [
+      {
+       "trim_id": "tank-300-g1-ice",
+       "name": "2.0T 8AT 4WD",
+       "powertrain": "ice",
+       "production_years": [
+        2021,
+        2025
+       ],
+       "specs": {
+        "engine": "2.0T",
+        "engine_displacement_cc": 1967,
+        "transmission": "8-speed automatic",
+        "drive_type": "awd",
+        "seats": 5
+       },
+       "spec_source": "Automotive specifications database",
+       "spec_source_url": "https://www.auto-data.net/en/tank-300-2.0t-227hp-4wd-automatic-8-speed-55405",
+       "spec_source_date": "2026-10-06",
+       "confidence": "medium"
+      }
+     ]
+    }
+   ],
+   "source": "Automotive specifications database",
+   "source_url": "https://www.auto-data.net/en/tank-300-2.0t-227hp-4wd-automatic-8-speed-55405",
+   "source_date": "2026-10-06",
+   "confidence": "medium"
   }
  ]
 }

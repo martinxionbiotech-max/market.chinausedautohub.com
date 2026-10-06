@@ -337,6 +337,94 @@
       "source_url": null,
       "source_date": "2026-10-04",
       "confidence": "medium"
+    },
+    {
+      "brand_id": "mg",
+      "name": "MG",
+      "name_zh": "名爵",
+      "origin_country": "CN",
+      "founded": 1924,
+      "powertrains": [
+        "ev",
+        "ice"
+      ],
+      "vehicle_types": [
+        "hatchback",
+        "sedan",
+        "suv"
+      ],
+      "source": "Official brand history",
+      "source_url": "https://www.mg.co.uk/",
+      "source_date": "2026-10-06",
+      "confidence": "high"
+    },
+    {
+      "brand_id": "haval",
+      "name": "Haval",
+      "name_zh": "哈弗",
+      "origin_country": "CN",
+      "founded": 2013,
+      "powertrains": [
+        "ice"
+      ],
+      "vehicle_types": [
+        "suv"
+      ],
+      "source": "Official brand history",
+      "source_url": "https://www.haval.com.cn/",
+      "source_date": "2026-10-06",
+      "confidence": "high"
+    },
+    {
+      "brand_id": "ora",
+      "name": "Ora",
+      "name_zh": "欧拉",
+      "origin_country": "CN",
+      "founded": 2018,
+      "powertrains": [
+        "ev"
+      ],
+      "vehicle_types": [
+        "hatchback"
+      ],
+      "source": "Official brand history",
+      "source_url": "https://www.oraev.com/",
+      "source_date": "2026-10-06",
+      "confidence": "high"
+    },
+    {
+      "brand_id": "jetour",
+      "name": "Jetour",
+      "name_zh": "捷途",
+      "origin_country": "CN",
+      "founded": 2018,
+      "powertrains": [
+        "ice"
+      ],
+      "vehicle_types": [
+        "suv"
+      ],
+      "source": "Official brand history",
+      "source_url": "https://www.jetourglobal.com/",
+      "source_date": "2026-10-06",
+      "confidence": "high"
+    },
+    {
+      "brand_id": "tank",
+      "name": "Tank",
+      "name_zh": "坦克",
+      "origin_country": "CN",
+      "founded": 2021,
+      "powertrains": [
+        "ice"
+      ],
+      "vehicle_types": [
+        "suv"
+      ],
+      "source": "Official brand history",
+      "source_url": "https://www.tank-global.com/",
+      "source_date": "2026-10-06",
+      "confidence": "high"
     }
   ]
 }

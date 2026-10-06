@@ -1,7 +1,7 @@
 {
   "meta": {
     "name": "Vehicle x Market relationship layer",
-    "batch": "P3.8 (phase2/49- Vehicle x Market Intelligence, batch 2 — vehicle-market-b2)",
+    "batch": "P3.8 (phase2/49- Vehicle x Market Intelligence, batch 3 — vehicle-market-b3)",
     "updated": "2026-10-06",
     "vehicle_source": "data.chinausedautohub.com models.json (read-only reference; model_id join key)",
     "market_source": "market.chinausedautohub.com countries/importrules/taxrules/ports/routes",
@@ -2269,6 +2269,1103 @@
       "source_type": "manufacturer",
       "confidence": "medium",
       "checked_date": "2026-10-06"
+    },
+    {
+      "vehicle_id": "mg-4",
+      "country_id": "kenya",
+      "drive_side_fit": {
+        "status": "needs_conversion",
+        "summary": "Kenya registers RHD only. The MG4 EV is produced in right-hand drive for the UK, Australia, Thailand and Indonesia under SAIC's British MG marque — source a RHD unit rather than converting a China LHD unit.",
+        "source": "MG Motor UK (RHD) + MG Australia (RHD); market sub-site importrules.json (Kenya RHD only)",
+        "source_url": "https://www.mg.co.uk/new-cars/mg4-ev",
+        "source_type": "manufacturer",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "MG4 production began 2022; Kenya's 8-year age limit is satisfied by current-generation units.",
+        "source": "market sub-site importrules.json (8-year age limit, KEBS/KRA)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Battery-electric (EV) — Kenya applies reduced EV import duty (10% vs 25% standard) and excise relief under the EAC CET.",
+        "source": "Data sub-site models.json (export intelligence) + market sub-site importrules/taxrules (joined)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "CCS2 / CHAdeMO",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": true,
+        "notes": "China-market GB/T inlet vs Kenya CCS2/CHAdeMO network — adapter required; UK/Australia RHD export units may carry CCS2 inlets (confirm the sourced unit's inlet).",
+        "source": "Vehicle: GB/T charging standard (Wikipedia); Destination: CHAdeMO (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Pre-Export Verification of Conformity (PVoC)"
+        ],
+        "notes": "PVoC pre-shipment inspection required; EV duty + excise relief applies.",
+        "source": "market sub-site importrules.json (PVoC, KEBS)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "ke-duty",
+        "ev_duty_taxrule_id": "ke-ev-duty",
+        "vat_taxrule_id": "ke-vat",
+        "ev_duty_relief": true,
+        "notes": "EV: 10% (EAC CET reduced) vs 25% standard. Referenced from taxrules.json — verify with KRA.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://www.kra.go.ke",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-ke-mombasa",
+          "cn-shanghai-to-ke-mombasa"
+        ],
+        "notes": "Sea freight to Mombasa (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "MG4 EV is a compact electric hatchback under SAIC's British MG marque; RHD production for the UK/Australia/Thailand makes Kenya sourcing more feasible than for LHD-only China models.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://www.mg.co.uk/new-cars/mg4-ev",
+        "source_type": "manufacturer",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://www.mg.co.uk/new-cars/mg4-ev",
+      "source_type": "manufacturer",
+      "confidence": "medium",
+      "checked_date": "2026-10-06"
+    },
+    {
+      "vehicle_id": "ora-good-cat",
+      "country_id": "kenya",
+      "drive_side_fit": {
+        "status": "needs_conversion",
+        "summary": "Kenya registers RHD only. The Ora Good Cat (Funky Cat) is assembled in right-hand drive at GWM's Thailand (Rayong) and Indonesia (Bogor) plants — source a RHD unit rather than converting a China LHD unit.",
+        "source": "Wikipedia: Ora Good Cat (GWM Thailand Rayong + Indonesia Bogor assembly — RHD); market sub-site importrules.json (Kenya RHD only)",
+        "source_url": "https://en.wikipedia.org/wiki/Ora_Good_Cat",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Good Cat production began 2020; Kenya's 8-year age limit is satisfied by current-generation units.",
+        "source": "market sub-site importrules.json (8-year age limit, KEBS/KRA)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Battery-electric (EV) — Kenya applies reduced EV import duty (10% vs 25% standard) and excise relief under the EAC CET.",
+        "source": "Data sub-site models.json (export intelligence) + market sub-site importrules/taxrules (joined)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "CCS2 / CHAdeMO",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": true,
+        "notes": "China-market GB/T inlet vs Kenya CCS2/CHAdeMO network — adapter required; the Thailand/Indonesia-built RHD units are sold in markets with CCS2/Type 2 networks (confirm the sourced unit's inlet).",
+        "source": "Vehicle: GB/T charging standard (Wikipedia); Destination: CHAdeMO (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Pre-Export Verification of Conformity (PVoC)"
+        ],
+        "notes": "PVoC pre-shipment inspection required; EV duty + excise relief applies.",
+        "source": "market sub-site importrules.json (PVoC, KEBS)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "ke-duty",
+        "ev_duty_taxrule_id": "ke-ev-duty",
+        "vat_taxrule_id": "ke-vat",
+        "ev_duty_relief": true,
+        "notes": "EV: 10% (EAC CET reduced) vs 25% standard. Referenced from taxrules.json — verify with KRA.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://www.kra.go.ke",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-ke-mombasa",
+          "cn-shanghai-to-ke-mombasa"
+        ],
+        "notes": "Sea freight to Mombasa (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "Ora Good Cat (好猫) is a compact EV hatchback from GWM's Ora brand; RHD production in Thailand/Indonesia makes Kenya sourcing viable — confirm whether the sourced unit carries a GB/T or CCS2 inlet.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://en.wikipedia.org/wiki/Ora_Good_Cat",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://en.wikipedia.org/wiki/Ora_Good_Cat",
+      "source_type": "reputable_media",
+      "confidence": "medium",
+      "checked_date": "2026-10-06"
+    },
+    {
+      "vehicle_id": "byd-sealion-6",
+      "country_id": "kenya",
+      "drive_side_fit": {
+        "status": "needs_conversion",
+        "summary": "Kenya registers RHD only. BYD builds the Sealion 6 (Seal U) in right-hand drive for Australia and Thailand — in RHD markets it is offered as a PHEV (DM-i) only, so source a RHD PHEV unit rather than converting a China LHD unit.",
+        "source": "BYD Australia (RHD) + Rever Automotive Thailand (RHD); market sub-site importrules.json (Kenya RHD only)",
+        "source_url": "https://bydautomotive.com.au/sealion-6",
+        "source_type": "manufacturer",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Sealion 6 production began 2025; Kenya's 8-year age limit is satisfied by current-generation units.",
+        "source": "market sub-site importrules.json (8-year age limit, KEBS/KRA)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "PHEV (DM-i) — Kenya's EV/PHEV duty relief (10% vs 25%) and excise relief apply; confirm whether the PHEV DM-i trim qualifies for the reduced EV rate under the EAC CET.",
+        "source": "Data sub-site models.json (export intelligence) + market sub-site importrules/taxrules (joined)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "CCS2 / CHAdeMO",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": true,
+        "notes": "PHEV DM-i charges on AC GB/T (China-market inlet); Kenya CCS2/CHAdeMO network — adapter required; the Australia/Thailand RHD units are sold in CCS2 markets (confirm the sourced unit's inlet).",
+        "source": "Vehicle: GB/T charging standard (Wikipedia); Destination: CHAdeMO (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Pre-Export Verification of Conformity (PVoC)"
+        ],
+        "notes": "PVoC pre-shipment inspection required; EV/PHEV duty + excise relief applies (EAC CET).",
+        "source": "market sub-site importrules.json (PVoC, KEBS)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "ke-duty",
+        "ev_duty_taxrule_id": "ke-ev-duty",
+        "vat_taxrule_id": "ke-vat",
+        "ev_duty_relief": true,
+        "notes": "PHEV (DM-i): reduced 10% (EAC CET) vs 25% standard; PHEV classification may differ — verify with KRA.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://www.kra.go.ke",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-ke-mombasa",
+          "cn-shanghai-to-ke-mombasa"
+        ],
+        "notes": "Sea freight to Mombasa (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "BYD Sealion 6 (海狮06, sold as Seal U in some markets) is a mid-size PHEV SUV; RHD production in Australia/Thailand makes Kenya sourcing viable, and its PHEV-only RHD positioning is a distinct export fact.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://bydautomotive.com.au/sealion-6",
+        "source_type": "manufacturer",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://bydautomotive.com.au/sealion-6",
+      "source_type": "manufacturer",
+      "confidence": "medium",
+      "checked_date": "2026-10-06"
+    },
+    {
+      "vehicle_id": "byd-sealion-07",
+      "country_id": "kenya",
+      "drive_side_fit": {
+        "status": "needs_conversion",
+        "summary": "Kenya registers RHD only. BYD launched the Sealion 7 (Sealion 07) in right-hand drive in Australia (February 2025) — source a RHD unit rather than converting a China LHD unit.",
+        "source": "BYD Australia (RHD, Sealion 7 launch Feb 2025); market sub-site importrules.json (Kenya RHD only)",
+        "source_url": "https://evdrives.com.au/byd-sealion-7/",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Sealion 07 production began 2024; Kenya's 8-year age limit is satisfied by current-generation units.",
+        "source": "market sub-site importrules.json (8-year age limit, KEBS/KRA)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Battery-electric (EV) — Kenya applies reduced EV import duty (10% vs 25% standard) and excise relief under the EAC CET.",
+        "source": "Data sub-site models.json (export intelligence) + market sub-site importrules/taxrules (joined)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "CCS2 / CHAdeMO",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": true,
+        "notes": "China-market GB/T inlet vs Kenya CCS2/CHAdeMO network — adapter required; the Australia RHD units are sold in a CCS2 market (confirm the sourced unit's inlet).",
+        "source": "Vehicle: GB/T charging standard (Wikipedia); Destination: CHAdeMO (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Pre-Export Verification of Conformity (PVoC)"
+        ],
+        "notes": "PVoC pre-shipment inspection required; EV duty + excise relief applies.",
+        "source": "market sub-site importrules.json (PVoC, KEBS)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "ke-duty",
+        "ev_duty_taxrule_id": "ke-ev-duty",
+        "vat_taxrule_id": "ke-vat",
+        "ev_duty_relief": true,
+        "notes": "EV: 10% (EAC CET reduced) vs 25% standard. Referenced from taxrules.json — verify with KRA.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://www.kra.go.ke",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-ke-mombasa",
+          "cn-shanghai-to-ke-mombasa"
+        ],
+        "notes": "Sea freight to Mombasa (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "BYD Sealion 07 (海狮07, sold as Sealion 7 overseas) is a mid-size EV SUV; RHD production for Australia makes Kenya sourcing viable — confirm whether the sourced unit carries a GB/T or CCS2 inlet.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://evdrives.com.au/byd-sealion-7/",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://evdrives.com.au/byd-sealion-7/",
+      "source_type": "reputable_media",
+      "confidence": "medium",
+      "checked_date": "2026-10-06"
+    },
+    {
+      "vehicle_id": "mg-5",
+      "country_id": "kenya",
+      "drive_side_fit": {
+        "status": "needs_conversion",
+        "summary": "Kenya registers RHD only. The MG5 sedan is produced in right-hand drive for the UK, Australia and other RHD markets under SAIC's British MG marque — source a RHD unit rather than converting a China LHD unit.",
+        "source": "Wikipedia: MG5 (SAIC) + MG Australia (RHD); market sub-site importrules.json (Kenya RHD only)",
+        "source_url": "https://en.wikipedia.org/wiki/MG5_(automobile)",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "MG5 production began 2020; Kenya's 8-year age limit is satisfied by current-generation units.",
+        "source": "market sub-site importrules.json (8-year age limit, KEBS/KRA)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Combustion (ICE) — subject to standard 25% import duty; no EV-specific relief.",
+        "source": "Data sub-site models.json (export intelligence) + market sub-site importrules/taxrules (joined)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": null,
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Pre-Export Verification of Conformity (PVoC)"
+        ],
+        "notes": "PVoC pre-shipment inspection required.",
+        "source": "market sub-site importrules.json (PVoC, KEBS)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "ke-duty",
+        "ev_duty_taxrule_id": null,
+        "vat_taxrule_id": "ke-vat",
+        "ev_duty_relief": false,
+        "notes": "ICE: 25% import duty + 16% VAT. Referenced from taxrules.json — verify with KRA.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://www.kra.go.ke",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-ke-mombasa",
+          "cn-shanghai-to-ke-mombasa"
+        ],
+        "notes": "Sea freight to Mombasa (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "MG5 is a compact ICE sedan under SAIC's British MG marque; RHD production for the UK/Australia makes Kenya sourcing more feasible than for LHD-only China sedans.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://en.wikipedia.org/wiki/MG5_(automobile)",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://en.wikipedia.org/wiki/MG5_(automobile)",
+      "source_type": "reputable_media",
+      "confidence": "medium",
+      "checked_date": "2026-10-06"
+    },
+    {
+      "vehicle_id": "mg-hs",
+      "country_id": "tanzania",
+      "drive_side_fit": {
+        "status": "needs_conversion",
+        "summary": "Tanzania registers RHD only. The MG HS is produced in right-hand drive at SAIC's Thailand (Laem Chabang) plant and sold in the UK and Australia — source a RHD unit rather than converting a China LHD unit.",
+        "source": "Wikipedia: MG HS (SAIC, Thailand Laem Chabang assembly — RHD); market sub-site importrules.json (Tanzania RHD only)",
+        "source_url": "https://en.wikipedia.org/wiki/MG_HS",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "age_rule_fit": {
+        "status": "borderline",
+        "summary": "MG HS production began 2018; Tanzania's age limit (~8-10 years) means 2018 units are now ~8 years old (borderline), 2019+ units safer. Verify the exact cut-off with TRA.",
+        "source": "market sub-site importrules.json (age limit ~8-10 years, TRA)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Combustion (ICE) — subject to standard 25% import duty + 18% VAT; no EV-specific relief.",
+        "source": "Data sub-site models.json (export intelligence) + market sub-site importrules/taxrules (joined)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": null,
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Pre-Export Verification of Conformity (PVoC)"
+        ],
+        "notes": "PVoC pre-shipment inspection via the Tanzania Bureau of Standards required.",
+        "source": "market sub-site importrules.json (PVoC, Tanzania Bureau of Standards)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "tz-duty",
+        "ev_duty_taxrule_id": null,
+        "vat_taxrule_id": "tz-vat",
+        "ev_duty_relief": false,
+        "notes": "ICE: 25% import duty + 18% VAT. Referenced from taxrules.json — verify with TRA.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://www.tra.go.tz",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-tz-dar-es-salaam",
+          "cn-shanghai-to-tz-dar-es-salaam"
+        ],
+        "notes": "Sea freight to Dar es Salaam (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "MG HS is a compact crossover SUV under SAIC's British MG marque; RHD production in Thailand/UK makes Tanzania sourcing viable, but the 2018 production start vs the 8-10 year age limit is the key fit question.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://en.wikipedia.org/wiki/MG_HS",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://en.wikipedia.org/wiki/MG_HS",
+      "source_type": "reputable_media",
+      "confidence": "medium",
+      "checked_date": "2026-10-06"
+    },
+    {
+      "vehicle_id": "chery-tiggo-7",
+      "country_id": "tanzania",
+      "drive_side_fit": {
+        "status": "needs_conversion",
+        "summary": "Tanzania registers RHD only. The Chery Tiggo 7 is produced in right-hand drive for South Africa — source a RHD unit rather than converting a China LHD unit.",
+        "source": "Chery South Africa (RHD, Tiggo 7); market sub-site importrules.json (Tanzania RHD only)",
+        "source_url": "https://www.chery.co.za/models/tiggo-7",
+        "source_type": "manufacturer",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "age_rule_fit": {
+        "status": "borderline",
+        "summary": "Tiggo 7 production began 2016; Tanzania's age limit (~8-10 years) means 2016-2017 units are now ~9-10 years old (borderline/over), 2018+ units safer. Verify the exact cut-off with TRA.",
+        "source": "market sub-site importrules.json (age limit ~8-10 years, TRA)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Combustion (ICE) — subject to standard 25% import duty + 18% VAT; no EV-specific relief. A PHEV variant is offered in South Africa but Tanzania records no EV duty rate.",
+        "source": "Data sub-site models.json (export intelligence) + market sub-site importrules/taxrules (joined)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": null,
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Pre-Export Verification of Conformity (PVoC)"
+        ],
+        "notes": "PVoC pre-shipment inspection via the Tanzania Bureau of Standards required.",
+        "source": "market sub-site importrules.json (PVoC, Tanzania Bureau of Standards)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "tz-duty",
+        "ev_duty_taxrule_id": null,
+        "vat_taxrule_id": "tz-vat",
+        "ev_duty_relief": false,
+        "notes": "ICE: 25% import duty + 18% VAT. Referenced from taxrules.json — verify with TRA.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://www.tra.go.tz",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-tz-dar-es-salaam",
+          "cn-shanghai-to-tz-dar-es-salaam"
+        ],
+        "notes": "Sea freight to Dar es Salaam (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "Chery Tiggo 7 (瑞虎7) is an ICE SUV (a PHEV variant is sold in South Africa); RHD production for South Africa makes Tanzania sourcing viable, but the 2016 production start vs the 8-10 year age limit is the key fit question.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://www.chery.co.za/models/tiggo-7",
+        "source_type": "manufacturer",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://www.chery.co.za/models/tiggo-7",
+      "source_type": "manufacturer",
+      "confidence": "medium",
+      "checked_date": "2026-10-06"
+    },
+    {
+      "vehicle_id": "jetour-x70",
+      "country_id": "tanzania",
+      "drive_side_fit": {
+        "status": "needs_conversion",
+        "summary": "Tanzania registers RHD only. The Jetour X70 (Plus) is produced in right-hand drive for South Africa, where Jetour (a Chery Group brand) launched in 2024 — source a RHD unit rather than converting a China LHD unit.",
+        "source": "Jetour South Africa (RHD, X70 Plus launch 2024); market sub-site importrules.json (Tanzania RHD only)",
+        "source_url": "https://jetour.co.za/",
+        "source_type": "manufacturer",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "age_rule_fit": {
+        "status": "borderline",
+        "summary": "Jetour X70 production began 2018; Tanzania's age limit (~8-10 years) means 2018 units are now ~8 years old (borderline), 2019+ units safer. Verify the exact cut-off with TRA.",
+        "source": "market sub-site importrules.json (age limit ~8-10 years, TRA)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Combustion (ICE) — subject to standard 25% import duty + 18% VAT; no EV-specific relief.",
+        "source": "Data sub-site models.json (export intelligence) + market sub-site importrules/taxrules (joined)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": null,
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Pre-Export Verification of Conformity (PVoC)"
+        ],
+        "notes": "PVoC pre-shipment inspection via the Tanzania Bureau of Standards required.",
+        "source": "market sub-site importrules.json (PVoC, Tanzania Bureau of Standards)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "tz-duty",
+        "ev_duty_taxrule_id": null,
+        "vat_taxrule_id": "tz-vat",
+        "ev_duty_relief": false,
+        "notes": "ICE: 25% import duty + 18% VAT. Referenced from taxrules.json — verify with TRA.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://www.tra.go.tz",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-tz-dar-es-salaam",
+          "cn-shanghai-to-tz-dar-es-salaam"
+        ],
+        "notes": "Sea freight to Dar es Salaam (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "Jetour X70 (捷途X70) is a mid-size ICE SUV from Chery Group's Jetour brand; RHD production for South Africa makes Tanzania sourcing viable, but the 2018 production start vs the 8-10 year age limit is the key fit question.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://jetour.co.za/",
+        "source_type": "manufacturer",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://jetour.co.za/",
+      "source_type": "manufacturer",
+      "confidence": "medium",
+      "checked_date": "2026-10-06"
+    },
+    {
+      "vehicle_id": "geely-coolray",
+      "country_id": "tanzania",
+      "drive_side_fit": {
+        "status": "needs_conversion",
+        "summary": "Tanzania registers RHD only. The Geely Coolray (Binyue) is produced in right-hand drive as the Proton X50 in Malaysia and sold in South Africa and Indonesia — source a RHD unit rather than converting a China LHD unit.",
+        "source": "Wikipedia: Geely Binyue (sold overseas as Coolray) + Proton X50 (RHD Malaysia); market sub-site importrules.json (Tanzania RHD only)",
+        "source_url": "https://en.wikipedia.org/wiki/Geely_Binyue",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "age_rule_fit": {
+        "status": "borderline",
+        "summary": "Coolray (Binyue) production began 2018; Tanzania's age limit (~8-10 years) means 2018 units are now ~8 years old (borderline), 2019+ units safer. Verify the exact cut-off with TRA.",
+        "source": "market sub-site importrules.json (age limit ~8-10 years, TRA)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Combustion (ICE) — subject to standard 25% import duty + 18% VAT; no EV-specific relief.",
+        "source": "Data sub-site models.json (export intelligence) + market sub-site importrules/taxrules (joined)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": null,
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Pre-Export Verification of Conformity (PVoC)"
+        ],
+        "notes": "PVoC pre-shipment inspection via the Tanzania Bureau of Standards required.",
+        "source": "market sub-site importrules.json (PVoC, Tanzania Bureau of Standards)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "tz-duty",
+        "ev_duty_taxrule_id": null,
+        "vat_taxrule_id": "tz-vat",
+        "ev_duty_relief": false,
+        "notes": "ICE: 25% import duty + 18% VAT. Referenced from taxrules.json — verify with TRA.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://www.tra.go.tz",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-tz-dar-es-salaam",
+          "cn-shanghai-to-tz-dar-es-salaam"
+        ],
+        "notes": "Sea freight to Dar es Salaam (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "Geely Coolray (缤越, sold overseas as Coolray; rebadged Proton X50 in Malaysia) is a subcompact ICE SUV; RHD production via Proton Malaysia makes Tanzania sourcing viable, but the 2018 production start vs the 8-10 year age limit is the key fit question.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://en.wikipedia.org/wiki/Geely_Binyue",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://en.wikipedia.org/wiki/Geely_Binyue",
+      "source_type": "reputable_media",
+      "confidence": "medium",
+      "checked_date": "2026-10-06"
+    },
+    {
+      "vehicle_id": "chery-tiggo-4",
+      "country_id": "nigeria",
+      "drive_side_fit": {
+        "status": "needs_conversion",
+        "summary": "Nigeria registers RHD only. The Chery Tiggo 4 (Pro) is produced in right-hand drive for South Africa — source a RHD unit rather than converting a China LHD unit.",
+        "source": "Chery South Africa (RHD, Tiggo 4 Pro); market sub-site importrules.json (Nigeria RHD only)",
+        "source_url": "https://www.group1chery.co.za/chery-tiggo-4-pro/",
+        "source_type": "manufacturer",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "age_rule_fit": null,
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Combustion (ICE) — subject to standard 20% import duty + 7.5% VAT; no EV-specific relief.",
+        "source": "Data sub-site models.json (export intelligence) + market sub-site importrules/taxrules (joined)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": null,
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Pre-shipment inspection (SONCAP / Form M)"
+        ],
+        "notes": "Nigeria's import clearance and pre-shipment inspection (SONCAP/Form M) apply; age rules have changed recently — confirm with Nigeria Customs.",
+        "source": "market sub-site importrules.json (SONCAP / Form M)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "ng-duty",
+        "ev_duty_taxrule_id": null,
+        "vat_taxrule_id": "ng-vat",
+        "ev_duty_relief": false,
+        "notes": "ICE: 20% import duty + 7.5% VAT. Referenced from taxrules.json — verify with Nigeria Customs.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://customs.gov.ng",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-ng-lagos",
+          "cn-guangzhou-to-ng-tincan"
+        ],
+        "notes": "Sea freight to Lagos (Apapa / Tin Can Island), RoRo.",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "Chery Tiggo 4 (瑞虎4) is a subcompact ICE SUV; RHD production for South Africa makes Nigeria sourcing more feasible than for LHD-only China models.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://www.group1chery.co.za/chery-tiggo-4-pro/",
+        "source_type": "manufacturer",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://www.group1chery.co.za/chery-tiggo-4-pro/",
+      "source_type": "manufacturer",
+      "confidence": "medium",
+      "checked_date": "2026-10-06"
+    },
+    {
+      "vehicle_id": "haval-jolion",
+      "country_id": "nigeria",
+      "drive_side_fit": {
+        "status": "needs_conversion",
+        "summary": "Nigeria registers RHD only. The Haval Jolion is produced in right-hand drive for Australia and South Africa under GWM — source a RHD unit rather than converting a China LHD unit.",
+        "source": "GWM Australia (RHD) + GWM South Africa (RHD); market sub-site importrules.json (Nigeria RHD only)",
+        "source_url": "https://www.gwmanz.com/au/models/suv/haval-jolion/",
+        "source_type": "manufacturer",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "age_rule_fit": null,
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Combustion (ICE) — subject to standard 20% import duty + 7.5% VAT; no EV-specific relief.",
+        "source": "Data sub-site models.json (export intelligence) + market sub-site importrules/taxrules (joined)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": null,
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Pre-shipment inspection (SONCAP / Form M)"
+        ],
+        "notes": "Nigeria's import clearance and pre-shipment inspection (SONCAP/Form M) apply; age rules have changed recently — confirm with Nigeria Customs.",
+        "source": "market sub-site importrules.json (SONCAP / Form M)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "ng-duty",
+        "ev_duty_taxrule_id": null,
+        "vat_taxrule_id": "ng-vat",
+        "ev_duty_relief": false,
+        "notes": "ICE: 20% import duty + 7.5% VAT. Referenced from taxrules.json — verify with Nigeria Customs.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://customs.gov.ng",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-ng-lagos",
+          "cn-guangzhou-to-ng-tincan"
+        ],
+        "notes": "Sea freight to Lagos (Apapa / Tin Can Island), RoRo.",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "Haval Jolion (哈弗初恋) is a compact ICE SUV from GWM's Haval brand; RHD production for Australia/South Africa makes Nigeria sourcing viable.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://www.gwmanz.com/au/models/suv/haval-jolion/",
+        "source_type": "manufacturer",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://www.gwmanz.com/au/models/suv/haval-jolion/",
+      "source_type": "manufacturer",
+      "confidence": "medium",
+      "checked_date": "2026-10-06"
+    },
+    {
+      "vehicle_id": "tank-300",
+      "country_id": "nigeria",
+      "drive_side_fit": {
+        "status": "needs_conversion",
+        "summary": "Nigeria registers RHD only. The GWM Tank 300 is produced in right-hand drive for Australia (petrol and PHEV Hi4-T variants) — source a RHD unit rather than converting a China LHD unit.",
+        "source": "GWM Australia (RHD, Tank 300 / Hi4-T PHEV); market sub-site importrules.json (Nigeria RHD only)",
+        "source_url": "https://www.gwmanz.com/au/news/gwm-confirms-pricing-and-grades-for-the-all-new-tank-300-hi4-t-phev/",
+        "source_type": "manufacturer",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "age_rule_fit": null,
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Combustion (ICE, 4WD) — subject to standard 20% import duty + 7.5% VAT; no EV-specific relief. A PHEV (Hi4-T) variant exists in RHD markets but Nigeria records no EV duty rate.",
+        "source": "Data sub-site models.json (export intelligence) + market sub-site importrules/taxrules (joined)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": null,
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Pre-shipment inspection (SONCAP / Form M)"
+        ],
+        "notes": "Nigeria's import clearance and pre-shipment inspection (SONCAP/Form M) apply; age rules have changed recently — confirm with Nigeria Customs.",
+        "source": "market sub-site importrules.json (SONCAP / Form M)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "ng-duty",
+        "ev_duty_taxrule_id": null,
+        "vat_taxrule_id": "ng-vat",
+        "ev_duty_relief": false,
+        "notes": "ICE: 20% import duty + 7.5% VAT. Referenced from taxrules.json — verify with Nigeria Customs.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://customs.gov.ng",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-ng-lagos",
+          "cn-guangzhou-to-ng-tincan"
+        ],
+        "notes": "Sea freight to Lagos (Apapa / Tin Can Island), RoRo.",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "Tank 300 (坦克300) is a body-on-frame 4WD SUV from GWM's Tank brand; RHD production for Australia makes Nigeria sourcing viable — a niche off-roader with no Nigeria EV duty anchor recorded.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://www.gwmanz.com/au/news/gwm-confirms-pricing-and-grades-for-the-all-new-tank-300-hi4-t-phev/",
+        "source_type": "manufacturer",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://www.gwmanz.com/au/news/gwm-confirms-pricing-and-grades-for-the-all-new-tank-300-hi4-t-phev/",
+      "source_type": "manufacturer",
+      "confidence": "medium",
+      "checked_date": "2026-10-06"
     }
   ],
   "skipped": [
@@ -2396,6 +3493,91 @@
       "vehicle_id": "byd-dolphin",
       "country_id": "uzbekistan",
       "reason": "EV × LHD — EV-duty delta already represented by byd-seal × uzbekistan; dolphin's distinct RHD increment is covered by byd-dolphin × kenya (avoid)."
+    },
+    {
+      "vehicle_id": "mg-4",
+      "country_id": "tanzania",
+      "reason": "EV × RHD-available; Tanzania records reduced EV excise but no EV duty rate — RHD-availability delta already represented by mg-4 × kenya; defer until Tanzania EV duty data exists."
+    },
+    {
+      "vehicle_id": "mg-4",
+      "country_id": "nigeria",
+      "reason": "EV × RHD; Nigeria EV policy developing (no EV duty rate) — RHD-availability delta already represented by mg-4 × kenya."
+    },
+    {
+      "vehicle_id": "mg-hs",
+      "country_id": "kenya",
+      "reason": "ICE × RHD-available + age-borderline; RHD-availability fact is market-independent and represented by mg-hs × tanzania (Tanzania chosen to fill the 0-coverage RHD market)."
+    },
+    {
+      "vehicle_id": "mg-5",
+      "country_id": "tanzania",
+      "reason": "ICE × RHD delta already represented by mg-5 × kenya — mechanical ICE×RHD cross-product (avoid)."
+    },
+    {
+      "vehicle_id": "haval-jolion",
+      "country_id": "kenya",
+      "reason": "ICE × RHD delta already represented by haval-jolion × nigeria — RHD-availability is market-independent (avoid cross-product)."
+    },
+    {
+      "vehicle_id": "haval-jolion",
+      "country_id": "tanzania",
+      "reason": "ICE × RHD delta already represented by haval-jolion × nigeria — mechanical ICE×RHD cross-product (avoid)."
+    },
+    {
+      "vehicle_id": "chery-tiggo-4",
+      "country_id": "kenya",
+      "reason": "ICE × RHD delta already represented by chery-tiggo-4 × nigeria — mechanical ICE×RHD cross-product (avoid)."
+    },
+    {
+      "vehicle_id": "chery-tiggo-7",
+      "country_id": "kenya",
+      "reason": "ICE × RHD + age delta already represented by chery-tiggo-7 × tanzania — mechanical ICE×RHD cross-product (avoid)."
+    },
+    {
+      "vehicle_id": "tank-300",
+      "country_id": "kenya",
+      "reason": "ICE 4WD × RHD delta already represented by tank-300 × nigeria — mechanical ICE×RHD cross-product (avoid)."
+    },
+    {
+      "vehicle_id": "tank-300",
+      "country_id": "tanzania",
+      "reason": "ICE 4WD × RHD delta already represented by tank-300 × nigeria — mechanical ICE×RHD cross-product (avoid)."
+    },
+    {
+      "vehicle_id": "byd-sealion-6",
+      "country_id": "uzbekistan",
+      "reason": "PHEV × LHD EV-duty classification already represented by byd-song-plus × uzbekistan — mechanical PHEV cross-product (avoid)."
+    },
+    {
+      "vehicle_id": "byd-sealion-07",
+      "country_id": "kazakhstan",
+      "reason": "EV × LHD, EV-duty delta already represented by byd-atto-3 × kazakhstan — mechanical EV cross-product (avoid)."
+    },
+    {
+      "vehicle_id": "denza-d9",
+      "country_id": "uzbekistan",
+      "reason": "PHEV MPV × EV-duty classification already represented by byd-song-plus × uzbekistan — mechanical PHEV cross-product (avoid)."
+    },
+    {
+      "vehicle_id": "deepal-s07",
+      "country_id": "kazakhstan",
+      "reason": "EV × LHD, EV-duty delta already represented by byd-atto-3 × kazakhstan; no distinct market-entry increment (avoid)."
+    },
+    {
+      "vehicle_id": "geely-coolray",
+      "country_id": "kenya",
+      "reason": "ICE × RHD delta already represented by geely-coolray × tanzania — mechanical ICE×RHD cross-product (avoid)."
+    },
+    {
+      "vehicle_id": "jetour-x70",
+      "country_id": "kenya",
+      "reason": "ICE × RHD delta already represented by jetour-x70 × tanzania — mechanical ICE×RHD cross-product (avoid)."
+    },
+    {
+      "vehicle_id": "ora-good-cat",
+      "country_id": "uzbekistan",
+      "reason": "EV × LHD EV-duty delta already represented by byd-seal × uzbekistan; RHD increment covered by ora-good-cat × kenya (avoid)."
     }
   ]
 }
