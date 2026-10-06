@@ -1884,6 +1884,271 @@
    "source_url": "https://carnewschina.com/2025/12/17/li-auto-accelerates-global-expansion-with-entry-into-egypt-kazakhstan-and-azerbaijan/",
    "source_date": "2026-10-06",
    "confidence": "medium"
+  },
+  {
+   "model_id": "tank-500",
+   "brand_id": "tank",
+   "name": "Tank 500",
+   "name_zh": "坦克500",
+   "body_type": "suv",
+   "status": "active",
+   "generations": [
+    {
+     "generation_id": "tank-500-g1",
+     "name": "First Generation",
+     "production_years": [
+      2022,
+      2025
+     ],
+     "trims": [
+      {
+       "trim_id": "tank-500-g1-ice",
+       "name": "3.0T V6 9AT 4WD",
+       "powertrain": "ice",
+       "production_years": [
+        2022,
+        2025
+       ],
+       "specs": {
+        "engine": "3.0T V6",
+        "engine_displacement_cc": 2993,
+        "transmission": "9-speed automatic",
+        "drive_type": "awd",
+        "seats": 7
+       },
+       "spec_source": "Automotive specifications database",
+       "spec_source_url": "https://www.auto-data.net/en/tank-500-3.0t-v6-360hp-mild-hybrid-4wd-automatic-55473",
+       "spec_source_date": "2026-10-06",
+       "confidence": "medium"
+      }
+     ]
+    }
+   ],
+   "source": "Automotive specifications database",
+   "source_url": "https://www.auto-data.net/en/tank-500-3.0t-v6-360hp-mild-hybrid-4wd-automatic-55473",
+   "source_date": "2026-10-06",
+   "confidence": "medium"
+  },
+  {
+   "model_id": "haval-h9",
+   "brand_id": "haval",
+   "name": "H9",
+   "name_zh": "哈弗H9",
+   "body_type": "suv",
+   "status": "active",
+   "generations": [
+    {
+     "generation_id": "haval-h9-g1",
+     "name": "First Generation",
+     "production_years": [
+      2015,
+      2025
+     ],
+     "trims": [
+      {
+       "trim_id": "haval-h9-g1-ice",
+       "name": "2.0T 8AT 4WD",
+       "powertrain": "ice",
+       "production_years": [
+        2015,
+        2025
+       ],
+       "specs": {
+        "engine": "2.0T",
+        "engine_displacement_cc": 1967,
+        "transmission": "8-speed automatic",
+        "drive_type": "awd",
+        "seats": 7
+       },
+       "spec_source": "Automotive specifications database",
+       "spec_source_url": "https://www.auto-data.net/en/haval-h9-ii-2.0t-218hp-4wd-zf-53782",
+       "spec_source_date": "2026-10-06",
+       "confidence": "medium"
+      }
+     ]
+    }
+   ],
+   "source": "Automotive specifications database",
+   "source_url": "https://www.auto-data.net/en/haval-h9-ii-2.0t-218hp-4wd-zf-53782",
+   "source_date": "2026-10-06",
+   "confidence": "medium"
+  },
+  {
+   "model_id": "jetour-dashing",
+   "brand_id": "jetour",
+   "name": "Dashing",
+   "name_zh": "捷途大圣",
+   "body_type": "suv",
+   "status": "active",
+   "generations": [
+    {
+     "generation_id": "jetour-dashing-g1",
+     "name": "First Generation",
+     "production_years": [
+      2022,
+      2025
+     ],
+     "trims": [
+      {
+       "trim_id": "jetour-dashing-g1-ice",
+       "name": "1.6T DCT",
+       "powertrain": "ice",
+       "production_years": [
+        2022,
+        2025
+       ],
+       "specs": {
+        "engine": "1.6T",
+        "engine_displacement_cc": 1598,
+        "transmission": "7-speed DCT",
+        "drive_type": "fwd",
+        "seats": 5
+       },
+       "spec_source": "Automotive specifications database",
+       "spec_source_url": "https://www.auto-data.net/en/jetour-dashing-1.6-tgdi-197hp-dct-54215",
+       "spec_source_date": "2026-10-06",
+       "confidence": "medium"
+      }
+     ]
+    }
+   ],
+   "source": "Automotive specifications database",
+   "source_url": "https://www.auto-data.net/en/jetour-dashing-1.6-tgdi-197hp-dct-54215",
+   "source_date": "2026-10-06",
+   "confidence": "medium"
+  },
+  {
+   "model_id": "aion-y-plus",
+   "brand_id": "aion",
+   "name": "Aion Y Plus",
+   "name_zh": "埃安Y Plus",
+   "body_type": "suv",
+   "status": "active",
+   "generations": [
+    {
+     "generation_id": "aion-y-plus-g1",
+     "name": "First Generation",
+     "production_years": [
+      2022,
+      2025
+     ],
+     "trims": [
+      {
+       "trim_id": "aion-y-plus-g1-ev",
+       "name": "Standard",
+       "powertrain": "ev",
+       "production_years": [
+        2022,
+        2025
+       ],
+       "specs": {
+        "motor_power_kw": 150,
+        "battery_capacity_kwh": 68.2,
+        "range_km": 610,
+        "drive_type": "fwd",
+        "seats": 5
+       },
+       "spec_source": "Reputable media specifications",
+       "spec_source_url": "https://en.wikipedia.org/wiki/Aion_Y",
+       "spec_source_date": "2026-10-06",
+       "confidence": "medium"
+      }
+     ]
+    }
+   ],
+   "source": "Reputable media specifications",
+   "source_url": "https://en.wikipedia.org/wiki/Aion_Y",
+   "source_date": "2026-10-06",
+   "confidence": "medium"
+  },
+  {
+   "model_id": "neta-x",
+   "brand_id": "neta",
+   "name": "Neta X",
+   "name_zh": "哪吒X",
+   "body_type": "suv",
+   "status": "active",
+   "generations": [
+    {
+     "generation_id": "neta-x-g1",
+     "name": "First Generation",
+     "production_years": [
+      2020,
+      2025
+     ],
+     "trims": [
+      {
+       "trim_id": "neta-x-g1-ev",
+       "name": "Standard",
+       "powertrain": "ev",
+       "production_years": [
+        2020,
+        2025
+       ],
+       "specs": {
+        "motor_power_kw": 150,
+        "battery_capacity_kwh": 64,
+        "range_km": 660,
+        "drive_type": "fwd",
+        "seats": 5
+       },
+       "spec_source": "Reputable media specifications",
+       "spec_source_url": "https://en.wikipedia.org/wiki/Neta_U",
+       "spec_source_date": "2026-10-06",
+       "confidence": "medium"
+      }
+     ]
+    }
+   ],
+   "source": "Reputable media specifications",
+   "source_url": "https://en.wikipedia.org/wiki/Neta_U",
+   "source_date": "2026-10-06",
+   "confidence": "medium"
+  },
+  {
+   "model_id": "wuling-bingo",
+   "brand_id": "wuling",
+   "name": "Bingo",
+   "name_zh": "五菱缤果",
+   "body_type": "hatchback",
+   "status": "active",
+   "generations": [
+    {
+     "generation_id": "wuling-bingo-g1",
+     "name": "First Generation",
+     "production_years": [
+      2023,
+      2025
+     ],
+     "trims": [
+      {
+       "trim_id": "wuling-bingo-g1-ev",
+       "name": "Standard",
+       "powertrain": "ev",
+       "production_years": [
+        2023,
+        2025
+       ],
+       "specs": {
+        "motor_power_kw": 50,
+        "battery_capacity_kwh": 37.9,
+        "range_km": 410,
+        "transmission": "Single-speed automatic",
+        "drive_type": "fwd",
+        "seats": 4
+       },
+       "spec_source": "Reputable media specifications",
+       "spec_source_url": "https://en.wikipedia.org/wiki/Wuling_Bingo",
+       "spec_source_date": "2026-10-06",
+       "confidence": "medium"
+      }
+     ]
+    }
+   ],
+   "source": "Reputable media specifications",
+   "source_url": "https://en.wikipedia.org/wiki/Wuling_Bingo",
+   "source_date": "2026-10-06",
+   "confidence": "medium"
   }
  ]
 }

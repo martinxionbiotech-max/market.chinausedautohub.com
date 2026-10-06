@@ -481,6 +481,59 @@
       "source_url": "https://www.denza.com/",
       "source_date": "2026-10-06",
       "confidence": "high"
+    },
+    {
+      "brand_id": "aion",
+      "name": "Aion",
+      "name_zh": "埃安",
+      "origin_country": "CN",
+      "founded": 2017,
+      "powertrains": [
+        "ev"
+      ],
+      "vehicle_types": [
+        "suv",
+        "sedan"
+      ],
+      "source": "Official brand history",
+      "source_url": "https://www.aion.com.cn/",
+      "source_date": "2026-10-06",
+      "confidence": "high"
+    },
+    {
+      "brand_id": "neta",
+      "name": "Neta",
+      "name_zh": "哪吒",
+      "origin_country": "CN",
+      "founded": 2014,
+      "powertrains": [
+        "ev",
+        "erev"
+      ],
+      "vehicle_types": [
+        "suv"
+      ],
+      "source": "Official brand history",
+      "source_url": "https://www.neta.com/",
+      "source_date": "2026-10-06",
+      "confidence": "high"
+    },
+    {
+      "brand_id": "wuling",
+      "name": "Wuling",
+      "name_zh": "五菱",
+      "origin_country": "CN",
+      "founded": 1982,
+      "powertrains": [
+        "ev"
+      ],
+      "vehicle_types": [
+        "hatchback"
+      ],
+      "source": "Official brand history",
+      "source_url": "https://www.wuling.com/",
+      "source_date": "2026-10-06",
+      "confidence": "high"
     }
   ]
 }
