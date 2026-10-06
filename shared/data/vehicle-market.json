@@ -1,7 +1,7 @@
 {
   "meta": {
     "name": "Vehicle x Market relationship layer",
-    "batch": "P3.8 (phase2/49- Vehicle x Market Intelligence, batch 4 — vehicle-market-b4)",
+    "batch": "P3.8 (phase2/49 - Vehicle x Market Intelligence, batch 5 — vehicle-market-b5)",
     "updated": "2026-10-06",
     "vehicle_source": "data.chinausedautohub.com models.json (read-only reference; model_id join key)",
     "market_source": "market.chinausedautohub.com countries/importrules/taxrules/ports/routes",
@@ -4254,6 +4254,943 @@
       "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
       "confidence": "medium",
       "checked_date": "2026-10-06"
+    },
+    {
+      "vehicle_id": "xpeng-g6",
+      "country_id": "kenya",
+      "drive_side_fit": {
+        "status": "needs_conversion",
+        "summary": "Kenya registers RHD only. XPeng produces right-hand-drive units for Australia and Thailand (RHD G6 sales) — source a RHD unit rather than converting a China LHD unit.",
+        "source": "XPeng right-hand-drive production + Australia/Thailand G6 sales (reputable media)",
+        "source_url": "https://chinaevhome.com/2026/01/23/xpengs-german-deliveries-exceed-3000-units-g6-named-annual-bestseller/",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "age_rule_fit": null,
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Battery-electric (EV) — Kenya applies reduced EV import duty (10% vs 25% standard) under the EAC CET, so the EV trim qualifies for the reduced rate.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "CCS2 / CHAdeMO",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": true,
+        "notes": "China-market GB/T inlet vs Kenya CCS2/CHAdeMO network — adapter required; XPeng export units may carry CCS2 inlets (confirm the sourced unit's inlet).",
+        "source": "Vehicle: GB/T charging standard (Wikipedia); Destination: Combined Charging System (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Pre-Export Verification of Conformity (PVoC)"
+        ],
+        "notes": "PVoC pre-shipment inspection required; EV duty + excise relief applies.",
+        "source": "market sub-site importrules.json (PVoC, KEBS)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "ke-duty",
+        "ev_duty_taxrule_id": "ke-ev-duty",
+        "vat_taxrule_id": "ke-vat",
+        "ev_duty_relief": true,
+        "notes": "EV trims: 10% (EAC CET reduced) vs 25% standard. Referenced from taxrules.json — verify with KRA.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://www.kra.go.ke",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-ke-mombasa",
+          "cn-shanghai-to-ke-mombasa"
+        ],
+        "notes": "Sea freight to Mombasa (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "XPeng G6 (小鹏G6) is a compact EV SUV and XPeng's top export model; right-hand-drive availability for Australia/Thailand makes Kenya sourcing viable — confirm the sourced unit's charging inlet.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://chinaevhome.com/2026/01/23/xpengs-german-deliveries-exceed-3000-units-g6-named-annual-bestseller/",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://chinaevhome.com/2026/01/23/xpengs-german-deliveries-exceed-3000-units-g6-named-annual-bestseller/",
+      "source_type": "manufacturer",
+      "confidence": "medium",
+      "checked_date": "2026-10-06"
+    },
+    {
+      "vehicle_id": "xpeng-g6",
+      "country_id": "nigeria",
+      "drive_side_fit": {
+        "status": "needs_conversion",
+        "summary": "Nigeria registers RHD only. XPeng produces right-hand-drive units for Australia and Thailand — source a RHD unit rather than converting a China LHD unit.",
+        "source": "XPeng right-hand-drive production + Australia/Thailand G6 sales (reputable media)",
+        "source_url": "https://chinaevhome.com/2026/01/23/xpengs-german-deliveries-exceed-3000-units-g6-named-annual-bestseller/",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "age_rule_fit": null,
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Battery-electric (EV) — Nigeria's EV policy is still developing and no EV-specific duty rate is recorded, so the EV pays the standard 20% import duty (unlike Kenya's reduced EV rate).",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "CCS2 / CHAdeMO",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": true,
+        "notes": "China-market GB/T inlet vs Nigeria CCS2/CHAdeMO network (early-stage) — adapter required; confirm the sourced unit's inlet.",
+        "source": "Vehicle: GB/T charging standard (Wikipedia); Destination: Combined Charging System (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Pre-shipment inspection (SONCAP / Form M)"
+        ],
+        "notes": "Nigeria's import clearance and pre-shipment inspection (SONCAP/Form M) apply; age rules have changed recently — confirm with Nigeria Customs.",
+        "source": "market sub-site importrules.json (SONCAP / Form M)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "ng-duty",
+        "ev_duty_taxrule_id": null,
+        "vat_taxrule_id": "ng-vat",
+        "ev_duty_relief": false,
+        "notes": "No confirmed EV duty relief — 20% standard import duty + 7.5% VAT. Referenced from taxrules.json — verify with Nigeria Customs.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://customs.gov.ng",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-ng-lagos",
+          "cn-guangzhou-to-ng-tincan"
+        ],
+        "notes": "Sea freight to Lagos (Apapa / Tin Can Island), RoRo.",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "XPeng G6 (小鹏G6) is a compact EV SUV with right-hand-drive availability for Australia/Thailand; Nigeria records no EV duty relief, so the EV gains no duty advantage here.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://chinaevhome.com/2026/01/23/xpengs-german-deliveries-exceed-3000-units-g6-named-annual-bestseller/",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://chinaevhome.com/2026/01/23/xpengs-german-deliveries-exceed-3000-units-g6-named-annual-bestseller/",
+      "source_type": "manufacturer",
+      "confidence": "medium",
+      "checked_date": "2026-10-06"
+    },
+    {
+      "vehicle_id": "zeekr-001",
+      "country_id": "kenya",
+      "drive_side_fit": {
+        "status": "needs_conversion",
+        "summary": "Kenya registers RHD only. Zeekr builds right-hand-drive units for the UK and Australia — source a RHD unit rather than converting a China LHD unit.",
+        "source": "Zeekr/Geely factory right-hand-drive production (industry guide)",
+        "source_url": "https://www.fobev.com/vehicles/rhd-ready/",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "age_rule_fit": null,
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Battery-electric (EV) — Kenya applies reduced EV import duty (10% vs 25% standard) under the EAC CET.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "CCS2 / CHAdeMO",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": true,
+        "notes": "China-market GB/T inlet vs Kenya CCS2/CHAdeMO network — adapter required; Zeekr export units carry CCS2 inlets (confirm the sourced unit).",
+        "source": "Vehicle: GB/T charging standard (Wikipedia); Destination: Combined Charging System (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Pre-Export Verification of Conformity (PVoC)"
+        ],
+        "notes": "PVoC pre-shipment inspection required; EV duty + excise relief applies.",
+        "source": "market sub-site importrules.json (PVoC, KEBS)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "ke-duty",
+        "ev_duty_taxrule_id": "ke-ev-duty",
+        "vat_taxrule_id": "ke-vat",
+        "ev_duty_relief": true,
+        "notes": "EV trims: 10% (EAC CET reduced) vs 25% standard. Referenced from taxrules.json — verify with KRA.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://www.kra.go.ke",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-ke-mombasa",
+          "cn-shanghai-to-ke-mombasa"
+        ],
+        "notes": "Sea freight to Mombasa (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "Zeekr 001 (极氪001) is Geely's flagship shooting-brake EV; factory right-hand-drive for the UK/Australia makes Kenya sourcing viable — confirm the sourced unit's charging inlet.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://richingauto.com/zeekr-export-guide-dealers-middle-east-africa/",
+        "source_type": "industry",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://richingauto.com/zeekr-export-guide-dealers-middle-east-africa/",
+      "source_type": "industry",
+      "confidence": "medium",
+      "checked_date": "2026-10-06"
+    },
+    {
+      "vehicle_id": "zeekr-001",
+      "country_id": "nigeria",
+      "drive_side_fit": {
+        "status": "needs_conversion",
+        "summary": "Nigeria registers RHD only. Zeekr builds right-hand-drive units for the UK and Australia — source a RHD unit rather than converting a China LHD unit.",
+        "source": "Zeekr/Geely factory right-hand-drive production (industry guide)",
+        "source_url": "https://www.fobev.com/vehicles/rhd-ready/",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "age_rule_fit": null,
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Battery-electric (EV) — Nigeria's EV policy is developing and no EV-specific duty rate is recorded, so the EV pays the standard 20% import duty.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "CCS2 / CHAdeMO",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": true,
+        "notes": "China-market GB/T inlet vs Nigeria CCS2/CHAdeMO network (early-stage) — adapter required; confirm the sourced unit's inlet.",
+        "source": "Vehicle: GB/T charging standard (Wikipedia); Destination: Combined Charging System (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Pre-shipment inspection (SONCAP / Form M)"
+        ],
+        "notes": "Nigeria's import clearance and pre-shipment inspection (SONCAP/Form M) apply; age rules have changed recently — confirm with Nigeria Customs.",
+        "source": "market sub-site importrules.json (SONCAP / Form M)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "ng-duty",
+        "ev_duty_taxrule_id": null,
+        "vat_taxrule_id": "ng-vat",
+        "ev_duty_relief": false,
+        "notes": "No confirmed EV duty relief — 20% standard import duty + 7.5% VAT. Referenced from taxrules.json — verify with Nigeria Customs.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://customs.gov.ng",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-ng-lagos",
+          "cn-guangzhou-to-ng-tincan"
+        ],
+        "notes": "Sea freight to Lagos (Apapa / Tin Can Island), RoRo.",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "Zeekr 001 (极氪001) is Geely's flagship EV shooting brake with factory right-hand-drive for the UK/Australia; Nigeria records no EV duty relief.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://richingauto.com/zeekr-export-guide-dealers-middle-east-africa/",
+        "source_type": "industry",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://richingauto.com/zeekr-export-guide-dealers-middle-east-africa/",
+      "source_type": "industry",
+      "confidence": "medium",
+      "checked_date": "2026-10-06"
+    },
+    {
+      "vehicle_id": "deepal-s07",
+      "country_id": "kenya",
+      "drive_side_fit": {
+        "status": "needs_conversion",
+        "summary": "Kenya registers RHD only. Changan ships right-hand-drive Deepal S07 units to Thailand — source a RHD unit rather than converting a China LHD unit.",
+        "source": "Changan first right-hand-drive Deepal S07 shipment to Thailand (reputable media)",
+        "source_url": "https://www.ichongqing.info/2024/01/10/changans-first-right-hand-drive-deepal-models-head-to-thailand/",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "age_rule_fit": null,
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Battery-electric (EV) — Kenya applies reduced EV import duty (10% vs 25% standard) under the EAC CET.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "CCS2 / CHAdeMO",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": true,
+        "notes": "China-market GB/T inlet vs Kenya CCS2/CHAdeMO network — adapter required; confirm the sourced unit's inlet.",
+        "source": "Vehicle: GB/T charging standard (Wikipedia); Destination: Combined Charging System (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Pre-Export Verification of Conformity (PVoC)"
+        ],
+        "notes": "PVoC pre-shipment inspection required; EV duty + excise relief applies.",
+        "source": "market sub-site importrules.json (PVoC, KEBS)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "ke-duty",
+        "ev_duty_taxrule_id": "ke-ev-duty",
+        "vat_taxrule_id": "ke-vat",
+        "ev_duty_relief": true,
+        "notes": "EV trims: 10% (EAC CET reduced) vs 25% standard. Referenced from taxrules.json — verify with KRA.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://www.kra.go.ke",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-ke-mombasa",
+          "cn-shanghai-to-ke-mombasa"
+        ],
+        "notes": "Sea freight to Mombasa (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "Deepal S07 (深蓝S07) is Changan's smart electric SUV with right-hand-drive production for Thailand; Kenya sourcing is viable — confirm the sourced unit's charging inlet.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://www.ichongqing.info/2024/01/10/changans-first-right-hand-drive-deepal-models-head-to-thailand/",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://www.ichongqing.info/2024/01/10/changans-first-right-hand-drive-deepal-models-head-to-thailand/",
+      "source_type": "reputable_media",
+      "confidence": "medium",
+      "checked_date": "2026-10-06"
+    },
+    {
+      "vehicle_id": "deepal-s07",
+      "country_id": "nigeria",
+      "drive_side_fit": {
+        "status": "needs_conversion",
+        "summary": "Nigeria registers RHD only. Changan ships right-hand-drive Deepal S07 units to Thailand — source a RHD unit rather than converting a China LHD unit.",
+        "source": "Changan first right-hand-drive Deepal S07 shipment to Thailand (reputable media)",
+        "source_url": "https://www.ichongqing.info/2024/01/10/changans-first-right-hand-drive-deepal-models-head-to-thailand/",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "age_rule_fit": null,
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Battery-electric (EV) — Nigeria's EV policy is developing and no EV-specific duty rate is recorded, so the EV pays the standard 20% import duty.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "CCS2 / CHAdeMO",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": true,
+        "notes": "China-market GB/T inlet vs Nigeria CCS2/CHAdeMO network (early-stage) — adapter required; confirm the sourced unit's inlet.",
+        "source": "Vehicle: GB/T charging standard (Wikipedia); Destination: Combined Charging System (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Pre-shipment inspection (SONCAP / Form M)"
+        ],
+        "notes": "Nigeria's import clearance and pre-shipment inspection (SONCAP/Form M) apply; age rules have changed recently — confirm with Nigeria Customs.",
+        "source": "market sub-site importrules.json (SONCAP / Form M)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "ng-duty",
+        "ev_duty_taxrule_id": null,
+        "vat_taxrule_id": "ng-vat",
+        "ev_duty_relief": false,
+        "notes": "No confirmed EV duty relief — 20% standard import duty + 7.5% VAT. Referenced from taxrules.json — verify with Nigeria Customs.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://customs.gov.ng",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-ng-lagos",
+          "cn-guangzhou-to-ng-tincan"
+        ],
+        "notes": "Sea freight to Lagos (Apapa / Tin Can Island), RoRo.",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "Deepal S07 (深蓝S07) is Changan's smart electric SUV with right-hand-drive production for Thailand; Nigeria records no EV duty relief.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://www.ichongqing.info/2024/01/10/changans-first-right-hand-drive-deepal-models-head-to-thailand/",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://www.ichongqing.info/2024/01/10/changans-first-right-hand-drive-deepal-models-head-to-thailand/",
+      "source_type": "reputable_media",
+      "confidence": "medium",
+      "checked_date": "2026-10-06"
+    },
+    {
+      "vehicle_id": "denza-d9",
+      "country_id": "kenya",
+      "drive_side_fit": {
+        "status": "needs_conversion",
+        "summary": "Kenya registers RHD only. Denza launched a right-hand-drive D9 in Singapore and Hong Kong — source a RHD unit rather than converting a China LHD unit.",
+        "source": "Denza D9 right-hand-drive launch in Singapore (reputable media)",
+        "source_url": "https://cnevpost.com/2024/10/11/denza-enters-singapore/",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "age_rule_fit": null,
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Plug-in hybrid (PHEV / DM-i) — Kenya applies reduced EV import duty (10% vs 25%) under the EAC CET; confirm whether the reduced EV rate covers PHEV or only battery-electric vehicles.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "CCS2 / CHAdeMO",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": true,
+        "notes": "China-market GB/T inlet vs Kenya CCS2/CHAdeMO network — adapter required; PHEV DM-i charges primarily on AC. Confirm the sourced unit's inlet.",
+        "source": "Vehicle: GB/T charging standard (Wikipedia); Destination: Combined Charging System (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Pre-Export Verification of Conformity (PVoC)"
+        ],
+        "notes": "PVoC pre-shipment inspection required; EV duty + excise relief applies.",
+        "source": "market sub-site importrules.json (PVoC, KEBS)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "ke-duty",
+        "ev_duty_taxrule_id": "ke-ev-duty",
+        "vat_taxrule_id": "ke-vat",
+        "ev_duty_relief": true,
+        "notes": "EV trims: 10% (EAC CET reduced) vs 25% standard. Referenced from taxrules.json — verify with KRA.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://www.kra.go.ke",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-ke-mombasa",
+          "cn-shanghai-to-ke-mombasa"
+        ],
+        "notes": "Sea freight to Mombasa (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "Denza D9 (腾势D9) is BYD's premium MPV (PHEV); the right-hand-drive Singapore/Hong Kong launch confirms RHD availability, but the PHEV-vs-EV duty classification is the key open question for Kenya.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://cnevpost.com/2024/10/11/denza-enters-singapore/",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://cnevpost.com/2024/10/11/denza-enters-singapore/",
+      "source_type": "reputable_media",
+      "confidence": "medium",
+      "checked_date": "2026-10-06"
+    },
+    {
+      "vehicle_id": "denza-d9",
+      "country_id": "nigeria",
+      "drive_side_fit": {
+        "status": "needs_conversion",
+        "summary": "Nigeria registers RHD only. Denza launched a right-hand-drive D9 in Singapore and Hong Kong — source a RHD unit rather than converting a China LHD unit.",
+        "source": "Denza D9 right-hand-drive launch in Singapore (reputable media)",
+        "source_url": "https://cnevpost.com/2024/10/11/denza-enters-singapore/",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "age_rule_fit": null,
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Plug-in hybrid (PHEV / DM-i) — Nigeria's EV policy is developing and no EV-specific duty rate is recorded, so the PHEV pays the standard 20% import duty.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "CCS2 / CHAdeMO",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": true,
+        "notes": "China-market GB/T inlet vs Nigeria CCS2/CHAdeMO network (early-stage) — adapter required; PHEV DM-i charges primarily on AC.",
+        "source": "Vehicle: GB/T charging standard (Wikipedia); Destination: Combined Charging System (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Pre-shipment inspection (SONCAP / Form M)"
+        ],
+        "notes": "Nigeria's import clearance and pre-shipment inspection (SONCAP/Form M) apply; age rules have changed recently — confirm with Nigeria Customs.",
+        "source": "market sub-site importrules.json (SONCAP / Form M)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "ng-duty",
+        "ev_duty_taxrule_id": null,
+        "vat_taxrule_id": "ng-vat",
+        "ev_duty_relief": false,
+        "notes": "No confirmed EV duty relief — 20% standard import duty + 7.5% VAT. Referenced from taxrules.json — verify with Nigeria Customs.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://customs.gov.ng",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-ng-lagos",
+          "cn-guangzhou-to-ng-tincan"
+        ],
+        "notes": "Sea freight to Lagos (Apapa / Tin Can Island), RoRo.",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "Denza D9 (腾势D9) is BYD's premium MPV (PHEV) with a right-hand-drive Singapore/Hong Kong launch; Nigeria records no EV duty relief.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://cnevpost.com/2024/10/11/denza-enters-singapore/",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://cnevpost.com/2024/10/11/denza-enters-singapore/",
+      "source_type": "reputable_media",
+      "confidence": "medium",
+      "checked_date": "2026-10-06"
+    },
+    {
+      "vehicle_id": "li-auto-l9",
+      "country_id": "kazakhstan",
+      "drive_side_fit": {
+        "status": "match",
+        "summary": "China domestic-market production is left-hand drive (LHD); this market registers LHD only — no conversion required.",
+        "source": "Data sub-site models.json (export intelligence) + Left- and right-hand traffic (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/Left-_and_right-hand_traffic",
+        "source_type": "database",
+        "confidence": "high",
+        "checked_date": "2026-10-06"
+      },
+      "age_rule_fit": null,
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Extended-range electric vehicle (EREV) — a distinct class from BEV and PHEV. Li Auto has entered Kazakhstan officially (local assembly with Allur, 2025-2026), the brand's first overseas production base. Kazakhstan's EV customs-duty exemption (0% vs 15%) is typically scoped to battery-electric vehicles — confirm whether an EREV qualifies.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "CCS2 (Combo 2)",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": true,
+        "notes": "EREV charges on AC GB/T (no DC fast-charge inlet on most trims); Kazakhstan CCS2 network — adapter / connector compatibility check required.",
+        "source": "Vehicle: GB/T charging standard (Wikipedia); Destination: Combined Charging System (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "EAEU technical regulations (OTTC) certification"
+        ],
+        "notes": "EAEU certification applies; EV duty exemption eligibility for this class is unconfirmed.",
+        "source": "market sub-site importrules.json (EAEU technical regulations)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "kz-duty",
+        "ev_duty_taxrule_id": "kz-ev-duty",
+        "vat_taxrule_id": "kz-vat",
+        "ev_duty_relief": true,
+        "notes": "EV: 0% (temporary exemption) vs 15% standard; EREV classification to be confirmed. Referenced from taxrules.json — verify with KGD.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://kgd.gov.kz",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-lianyungang-to-kz-khorgos"
+        ],
+        "notes": "Rail transit via Khorgos/Alashankou border crossing (container).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "Li Auto L9 (理想L9) is a full-size EREV SUV; Li Auto's official Kazakhstan entry (local assembly with Allur) is a genuine market-entry fact distinct from parallel-export channels — confirm EREV duty/EV-exemption classification with Kazakhstan customs.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://carnewschina.com/2025/12/17/li-auto-accelerates-global-expansion-with-entry-into-egypt-kazakhstan-and-azerbaijan/",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://carnewschina.com/2025/12/17/li-auto-accelerates-global-expansion-with-entry-into-egypt-kazakhstan-and-azerbaijan/",
+      "source_type": "reputable_media",
+      "confidence": "medium",
+      "checked_date": "2026-10-06"
+    },
+    {
+      "vehicle_id": "zeekr-001",
+      "country_id": "uzbekistan",
+      "drive_side_fit": {
+        "status": "match",
+        "summary": "China domestic-market production is left-hand drive (LHD); this market registers LHD only — no conversion required.",
+        "source": "Data sub-site models.json (export intelligence) + Left- and right-hand traffic (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/Left-_and_right-hand_traffic",
+        "source_type": "database",
+        "confidence": "high",
+        "checked_date": "2026-10-06"
+      },
+      "age_rule_fit": null,
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Battery-electric (EV) — Uzbekistan exempts EVs from import duty and excise (0% vs 30% standard), a large duty-relief delta for this EV class.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "CCS2 (Combo 2)",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": true,
+        "notes": "China-market GB/T inlet vs Uzbekistan CCS2 network — adapter required; Zeekr export units carry CCS2 inlets (confirm the sourced unit).",
+        "source": "Vehicle: GB/T charging standard (Wikipedia); Destination: Combined Charging System (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Customs certification",
+          "Recycling fee"
+        ],
+        "notes": "Uzbekistan applies strict import controls including certification and recycling fees; EV import duty + excise exemption applies (confirm current status).",
+        "source": "market sub-site importrules.json (strict import controls)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "uz-duty",
+        "ev_duty_taxrule_id": "uz-ev-duty",
+        "vat_taxrule_id": "uz-vat",
+        "ev_duty_relief": true,
+        "notes": "EV trims: 0% (import duty + excise exemption) vs 30% standard. Referenced from taxrules.json — verify with the State Customs Committee.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://customs.uz",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-lianyungang-to-uz-tashkent"
+        ],
+        "notes": "Rail transit via Khorgos/Alashankou to Tashkent (container).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "Zeekr 001 (极氪001) is Geely's flagship EV; Zeekr's official Middle East dealer partnerships (UAE/Saudi Arabia) and Central Asia expansion make it a relevant high-value EV for Uzbekistan's 0% EV duty regime.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://richingauto.com/zeekr-export-guide-dealers-middle-east-africa/",
+        "source_type": "industry",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://richingauto.com/zeekr-export-guide-dealers-middle-east-africa/",
+      "source_type": "industry",
+      "confidence": "medium",
+      "checked_date": "2026-10-06"
     }
   ],
   "skipped": [
@@ -4491,6 +5428,46 @@
       "vehicle_id": "toyota-rav4",
       "country_id": "saudi-arabia",
       "reason": "Foreign-brand China-built ICE, 2019 start → 5-year-age ineligible delta already represented by changan-cs75-plus × saudi; not an RHD/EV priority model (avoid)."
+    },
+    {
+      "vehicle_id": "xpeng-g6",
+      "country_id": "uzbekistan",
+      "reason": "EV × LHD — EV-duty delta already represented by byd-seal × uzbekistan; RHD increment covered by xpeng-g6 × kenya/nigeria (avoid mechanical EV cross-product)."
+    },
+    {
+      "vehicle_id": "zeekr-007",
+      "country_id": "uzbekistan",
+      "reason": "EV × LHD — EV-duty delta already represented by byd-seal × uzbekistan; 001 × uzbekistan already covers the Zeekr brand (avoid cross-product)."
+    },
+    {
+      "vehicle_id": "leapmotor-c10",
+      "country_id": "kazakhstan",
+      "reason": "EV × LHD — EV-duty delta already represented by byd-atto-3 × kazakhstan; no distinct market-entry increment (avoid)."
+    },
+    {
+      "vehicle_id": "deepal-s07",
+      "country_id": "uzbekistan",
+      "reason": "EV × LHD — EV-duty delta already represented by byd-seal × uzbekistan; RHD increment covered by deepal-s07 × kenya/nigeria (avoid)."
+    },
+    {
+      "vehicle_id": "li-auto-l9",
+      "country_id": "uzbekistan",
+      "reason": "EREV × LHD — EREV classification already represented by li-auto-l7 × uzbekistan; no additional increment (avoid)."
+    },
+    {
+      "vehicle_id": "xpeng-g6",
+      "country_id": "tanzania",
+      "reason": "EV × RHD — Tanzania records reduced EV excise but no EV duty rate; RHD-availability delta already represented by xpeng-g6 × kenya (defer until Tanzania EV duty data exists)."
+    },
+    {
+      "vehicle_id": "zeekr-001",
+      "country_id": "tanzania",
+      "reason": "EV × RHD — Tanzania records reduced EV excise but no EV duty rate; RHD-availability delta already represented by zeekr-001 × kenya (defer)."
+    },
+    {
+      "vehicle_id": "denza-d9",
+      "country_id": "tanzania",
+      "reason": "PHEV × RHD — Tanzania records reduced EV excise but no EV duty rate; RHD-availability delta already represented by denza-d9 × kenya (defer)."
     }
   ]
 }

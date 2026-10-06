@@ -1708,6 +1708,182 @@
    "source_url": "https://www.auto-data.net/en/tank-300-2.0t-227hp-4wd-automatic-8-speed-55405",
    "source_date": "2026-10-06",
    "confidence": "medium"
+  },
+  {
+   "model_id": "zeekr-001",
+   "brand_id": "zeekr",
+   "name": "Zeekr 001",
+   "name_zh": "极氪001",
+   "body_type": "hatchback",
+   "status": "active",
+   "generations": [
+    {
+     "generation_id": "zeekr-001-g1",
+     "name": "First Generation",
+     "production_years": [
+      2021,
+      2025
+     ],
+     "trims": [
+      {
+       "trim_id": "zeekr-001-g1-ev",
+       "name": "100 kWh Dual Motor AWD",
+       "powertrain": "ev",
+       "production_years": [
+        2021,
+        2025
+       ],
+       "specs": {
+        "motor_power_kw": 400,
+        "battery_capacity_kwh": 100,
+        "range_km": 656,
+        "drive_type": "awd",
+        "seats": 5
+       },
+       "spec_source": "Automotive specifications database",
+       "spec_source_url": "https://www.auto-data.net/en/zeekr-001-100-kwh-544hp-dual-motor-awd-electric-48811",
+       "spec_source_date": "2026-10-06",
+       "confidence": "medium"
+      }
+     ]
+    }
+   ],
+   "source": "Zeekr export guide (industry)",
+   "source_url": "https://richingauto.com/zeekr-export-guide-dealers-middle-east-africa/",
+   "source_date": "2026-10-06",
+   "confidence": "medium"
+  },
+  {
+   "model_id": "deepal-s07",
+   "brand_id": "deepal",
+   "name": "Deepal S07",
+   "name_zh": "深蓝S07",
+   "body_type": "suv",
+   "status": "active",
+   "generations": [
+    {
+     "generation_id": "deepal-s07-g1",
+     "name": "First Generation",
+     "production_years": [
+      2023,
+      2025
+     ],
+     "trims": [
+      {
+       "trim_id": "deepal-s07-g1-ev",
+       "name": "EV Standard Range",
+       "powertrain": "ev",
+       "production_years": [
+        2023,
+        2025
+       ],
+       "specs": {
+        "motor_power_kw": 160,
+        "battery_capacity_kwh": 68.8,
+        "range_km": 520,
+        "drive_type": "rwd",
+        "seats": 5
+       },
+       "spec_source": "Reputable media specifications",
+       "spec_source_url": "https://en.wikipedia.org/wiki/Deepal_S07",
+       "spec_source_date": "2026-10-06",
+       "confidence": "medium"
+      }
+     ]
+    }
+   ],
+   "source": "Changan Deepal S07 Thailand RHD shipment (reputable media)",
+   "source_url": "https://www.ichongqing.info/2024/01/10/changans-first-right-hand-drive-deepal-models-head-to-thailand/",
+   "source_date": "2026-10-06",
+   "confidence": "medium"
+  },
+  {
+   "model_id": "denza-d9",
+   "brand_id": "denza",
+   "name": "D9",
+   "name_zh": "腾势D9",
+   "body_type": "mpv",
+   "status": "active",
+   "generations": [
+    {
+     "generation_id": "denza-d9-g1",
+     "name": "First Generation",
+     "production_years": [
+      2022,
+      2025
+     ],
+     "trims": [
+      {
+       "trim_id": "denza-d9-g1-phev",
+       "name": "DM-i 1.5T 4WD",
+       "powertrain": "phev",
+       "production_years": [
+        2022,
+        2025
+       ],
+       "specs": {
+        "motor_power_kw": 300,
+        "battery_capacity_kwh": 40,
+        "range_km": 190,
+        "drive_type": "awd",
+        "seats": 7
+       },
+       "spec_source": "Automotive specifications database",
+       "spec_source_url": "https://www.auto-data.net/en/denza-d9-dm-i-1.5ti-40-kwh-407hp-plug-in-hybrid-4wd-e-cvt-52280",
+       "spec_source_date": "2026-10-06",
+       "confidence": "medium"
+      }
+     ]
+    }
+   ],
+   "source": "Denza D9 Singapore launch (reputable media)",
+   "source_url": "https://cnevpost.com/2024/10/11/denza-enters-singapore/",
+   "source_date": "2026-10-06",
+   "confidence": "medium"
+  },
+  {
+   "model_id": "li-auto-l9",
+   "brand_id": "li-auto",
+   "name": "L9",
+   "name_zh": "理想L9",
+   "body_type": "suv",
+   "status": "active",
+   "generations": [
+    {
+     "generation_id": "li-auto-l9-g1",
+     "name": "First Generation",
+     "production_years": [
+      2022,
+      2025
+     ],
+     "trims": [
+      {
+       "trim_id": "li-auto-l9-g1-erev",
+       "name": "Pro",
+       "powertrain": "erev",
+       "production_years": [
+        2022,
+        2025
+       ],
+       "specs": {
+        "motor_power_kw": 330,
+        "battery_capacity_kwh": 44.5,
+        "range_km": 1176,
+        "drive_type": "awd",
+        "seats": 6
+       },
+       "spec_source": "Reputable media specifications",
+       "spec_source_url": "https://en.wikipedia.org/wiki/Li_L9",
+       "spec_source_date": "2026-10-06",
+       "confidence": "medium"
+      }
+     ]
+    }
+   ],
+   "source": "Li Auto L9 Kazakhstan / overseas expansion (reputable media)",
+   "source_url": "https://carnewschina.com/2025/12/17/li-auto-accelerates-global-expansion-with-entry-into-egypt-kazakhstan-and-azerbaijan/",
+   "source_date": "2026-10-06",
+   "confidence": "medium"
   }
  ]
 }
