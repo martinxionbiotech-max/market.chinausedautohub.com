@@ -387,6 +387,50 @@
    "confidence": "medium"
   },
   {
+   "model_id": "byd-dolphin",
+   "brand_id": "byd",
+   "name": "Dolphin",
+   "name_zh": "海豚",
+   "body_type": "hatchback",
+   "status": "active",
+   "generations": [
+    {
+     "generation_id": "byd-dolphin-g1",
+     "name": "First Generation",
+     "production_years": [
+      2021,
+      2025
+     ],
+     "trims": [
+      {
+       "trim_id": "byd-dolphin-g1-ev",
+       "name": "60 kWh",
+       "powertrain": "ev",
+       "production_years": [
+        2021,
+        2025
+       ],
+       "specs": {
+        "motor_power_kw": 150,
+        "battery_capacity_kwh": 60,
+        "range_km": 427,
+        "drive_type": "fwd",
+        "seats": 5
+       },
+       "spec_source": "Automotive specifications database",
+       "spec_source_url": "https://www.auto-data.net/en/byd-dolphin-60-kwh-204hp-bev-48450",
+       "spec_source_date": "2026-10-06",
+       "confidence": "medium"
+      }
+     ]
+    }
+   ],
+   "source": "Automotive specifications database",
+   "source_url": "https://www.auto-data.net/en/byd-dolphin-60-kwh-204hp-bev-48450",
+   "source_date": "2026-10-06",
+   "confidence": "medium"
+  },
+  {
    "model_id": "geely-monjaro",
    "brand_id": "geely",
    "name": "Monjaro (Xingyue L)",
