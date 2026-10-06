@@ -20,11 +20,15 @@ import {
   relations,
   getRelation,
   getRelationsForCountry,
+  getRelationsForVehicle,
   incrementTypes,
   passesGate,
   dutyAnchorsFor,
   relConfidenceLabel,
   relConfidenceClass,
+  decisionPoints,
+  keyRisks,
+  checklist,
 } from "../../../../lib/vehicle-market";
 
 export function getStaticPaths() {
@@ -116,6 +120,14 @@ const methodLabel = (m: string) => (m === "roro" ? "RoRo" : "Container");
 const shippingRoutes = getRoutesForCountry(countryId);
 
 const siblingPairs = getRelationsForCountry(countryId).filter((r) => r.vehicle_id !== vehicleId);
+
+// Batch 4 deepening: derived decision elements (each assertion carries a source).
+const decision = rel ? decisionPoints(rel) : null;
+const risks = rel ? keyRisks(rel) : [];
+const checklistItems = rel ? checklist(rel) : [];
+const sameVehicleOtherCountries = rel
+  ? getRelationsForVehicle(vehicleId).filter((r) => r.country_id !== countryId)
+  : [];
 ---
 
 <BaseLayout
@@ -172,6 +184,55 @@ const siblingPairs = getRelationsForCountry(countryId).filter((r) => r.vehicle_i
       </p>
     ) : (
       <p>No independent increment recorded for this pair.</p>
+    )}
+  </section>
+
+  <!-- Buyer decision points (batch 4 deepening) -->
+  <section>
+    <h2>Buyer decision points</h2>
+    {decision && (decision.suitable.length > 0 || decision.notSuitable.length > 0) ? (
+      <>
+        {decision.suitable.length > 0 && (
+          <>
+            <h3 class="dp-head dp-head-yes">Suitable when</h3>
+            <ul class="dp-list">
+              {decision.suitable.map((d) => (
+                <li class="dp dp-yes">
+                  <span class="dp-text">{d.text}</span>
+                  <SourceNote
+                    source={d.source}
+                    sourceUrl={d.source_url}
+                    sourceDate={d.checked_date}
+                    confidenceLabel={relConfidenceLabel(d)}
+                    caveat={d.needs_review ? "Verify with the official authority before trading." : undefined}
+                  />
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+        {decision.notSuitable.length > 0 && (
+          <>
+            <h3 class="dp-head dp-head-no">Not suitable when</h3>
+            <ul class="dp-list">
+              {decision.notSuitable.map((d) => (
+                <li class="dp dp-no">
+                  <span class="dp-text">{d.text}</span>
+                  <SourceNote
+                    source={d.source}
+                    sourceUrl={d.source_url}
+                    sourceDate={d.checked_date}
+                    confidenceLabel={relConfidenceLabel(d)}
+                    caveat={d.needs_review ? "Verify with the official authority before trading." : undefined}
+                  />
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+      </>
+    ) : (
+      <p>No decision points recorded for this pair (Not available).</p>
     )}
   </section>
 
@@ -417,6 +478,56 @@ const siblingPairs = getRelationsForCountry(countryId).filter((r) => r.vehicle_i
     </ul>
   </section>
 
+  <!-- 9b. Key risks (batch 4 deepening) -->
+  <section>
+    <h2>Key risks</h2>
+    {risks.length > 0 ? (
+      <ul class="risk-list">
+        {risks.map((r) => (
+          <li class="risk">
+            <span class="risk-text">{r.text}</span>
+            <SourceNote
+              source={r.source}
+              sourceUrl={r.source_url}
+              sourceDate={r.checked_date}
+              confidenceLabel={relConfidenceLabel(r)}
+              caveat={r.needs_review ? "Verify with the official authority before trading." : undefined}
+            />
+          </li>
+        ))}
+      </ul>
+    ) : (
+      <p>No flagged risks recorded for this pair — still confirm requirements with official authorities (Needs verification).</p>
+    )}
+  </section>
+
+  <!-- 9c. Practical checklist (batch 4 deepening) -->
+  <section>
+    <h2>Practical checklist</h2>
+    <p class="review-hint">
+      Steps to complete before importing — each is evidence-backed for this
+      destination. Verify with the official authority before trading.
+    </p>
+    {checklistItems.length > 0 ? (
+      <ol class="check-list">
+        {checklistItems.map((c) => (
+          <li class="check-item">
+            <span class="check-text">{c.text}</span>
+            <SourceNote
+              source={c.source}
+              sourceUrl={c.source_url}
+              sourceDate={c.checked_date}
+              confidenceLabel={relConfidenceLabel(c)}
+              caveat={c.needs_review ? "Verify with the official authority before trading." : undefined}
+            />
+          </li>
+        ))}
+      </ol>
+    ) : (
+      <p>No destination-specific checklist items recorded (Needs verification).</p>
+    )}
+  </section>
+
   <!-- 10. Sources & confidence -->
   <section>
     <h2>Sources &amp; confidence</h2>
@@ -473,13 +584,30 @@ const siblingPairs = getRelationsForCountry(countryId).filter((r) => r.vehicle_i
   <!-- 12. Related -->
   <section>
     <h2>Related</h2>
+    {sameVehicleOtherCountries.length > 0 && (
+      <>
+        <h3>This vehicle in other countries</h3>
+        <ul>
+          {sameVehicleOtherCountries.map((s) => (
+            <li><a href={"/countries/" + s.country_id + "/" + vehicleId + "/"}>{modelName} in {getCountry(s.country_id)?.name ?? s.country_id}</a></li>
+          ))}
+        </ul>
+      </>
+    )}
+    {siblingPairs.length > 0 && (
+      <>
+        <h3>Other vehicles in {countryName}</h3>
+        <ul>
+          {siblingPairs.map((s) => (
+            <li><a href={"/countries/" + countryId + "/" + s.vehicle_id + "/"}>{getModel(s.vehicle_id)?.name ?? s.vehicle_id} in {countryName}</a></li>
+          ))}
+        </ul>
+      </>
+    )}
     <ul>
       <li><a href={DATA_SITE_URL + "/models/" + vehicleId + "/"}>{modelName} — full model page (DATA site)</a></li>
       <li><a href={DATA_SITE_URL + "/brands/" + model?.brand_id + "/"}>{brandName} — brand page (DATA site)</a></li>
       <li><a href={"/countries/" + countryId + "/"}>{countryName} — market guide (this site)</a></li>
-      {siblingPairs.map((s) => (
-        <li><a href={"/countries/" + countryId + "/" + s.vehicle_id + "/"}>{getModel(s.vehicle_id)?.name ?? s.vehicle_id} in {countryName}</a></li>
-      ))}
       <li><a href={TOOLS_SITE_URL + "/landed-cost-calculator/"}>Import cost calculator (Tools)</a></li>
       <li><a href={TOOLS_SITE_URL + "/import-duty-calculator/"}>Import duty calculator (Tools)</a></li>
       <li><a href={MAIN_SITE_URL + "/guides/export-documents/"}>Export documents guide (main site)</a></li>
@@ -519,5 +647,19 @@ const siblingPairs = getRelationsForCountry(countryId).filter((r) => r.vehicle_i
     .disclaimer { background: #fff7e6; border: 1px solid var(--color-warning); border-left: 4px solid var(--color-warning); padding: var(--space-3) var(--space-4); font-size: 14px; font-weight: 600; margin: var(--space-4) 0; }
     .src-confidence { list-style: none; padding: 0; }
     .src-confidence li { padding: var(--space-2) 0; border-bottom: 1px solid var(--color-border); font-size: 14px; }
+
+    /* Batch 4: decision points / risks / checklist */
+    .dp-head { margin: var(--space-4) 0 var(--space-2); font-size: 15px; }
+    .dp-head-yes { color: var(--color-success); }
+    .dp-head-no { color: var(--color-danger); }
+    .dp-list, .risk-list, .check-list { list-style: none; padding: 0; }
+    .dp, .risk, .check-item { padding: var(--space-3); margin: var(--space-2) 0; border-radius: var(--radius-md); }
+    .dp { border-left: 4px solid var(--color-border); background: var(--color-bg-alt); }
+    .dp-yes { border-left-color: var(--color-success); }
+    .dp-no { border-left-color: var(--color-danger); }
+    .risk { border: 1px solid var(--color-border); }
+    .check-item { border: 1px solid var(--color-border); }
+    .dp-text, .risk-text, .check-text { display: block; font-weight: 600; margin-bottom: var(--space-1); }
+    .related-hint { font-size: 14px; color: var(--color-text-soft); }
   </style>
 </BaseLayout>

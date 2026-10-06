@@ -163,3 +163,159 @@ export function relConfidenceClass(field: RelationField | null): string {
 }
 
 export { getCountry, getTaxRules };
+
+// ---- P3.8 batch 4: decision deepening (buyer decision points / key risks / checklist) ----
+// These are DERIVED from the relation's existing sourced fields so that every
+// assertion carries a source; where a field is absent (no evidence), no item is
+// emitted (zero-fabrication rule).
+
+export interface SourcedPoint {
+  text: string;
+  source?: string;
+  source_url?: string | null;
+  source_type?: string | null;
+  confidence?: string | null;
+  checked_date?: string | null;
+  needs_review?: boolean;
+}
+
+function fieldMeta(f: RelationField | null): Omit<SourcedPoint, "text"> {
+  if (!f) return {};
+  // `source` may be a string (drive/age/duty/eligibility/charging) or an object
+  // (powertrain_fit / model_considerations) — normalise to a string.
+  const src = typeof f.source === "string" ? f.source : (f.source as any)?.source;
+  const url = typeof f.source_url === "string" ? f.source_url : (f.source as any)?.source_url ?? null;
+  return {
+    source: src,
+    source_url: url,
+    source_type: (f.source_type as string) ?? (typeof f.source === "object" ? (f.source as any)?.source_type : undefined),
+    confidence: f.confidence,
+    checked_date: f.checked_date,
+    needs_review: f.needs_review,
+  };
+}
+
+/** Buyer decision points: when this vehicle × market is suitable / not suitable. */
+export function decisionPoints(rel: Relation): {
+  suitable: SourcedPoint[];
+  notSuitable: SourcedPoint[];
+} {
+  const suitable: SourcedPoint[] = [];
+  const notSuitable: SourcedPoint[] = [];
+
+  const ds = rel.drive_side_fit;
+  if (ds?.status === "match") {
+    suitable.push({
+      text: "Left-hand-drive match — a China-market unit can be registered without conversion.",
+      ...fieldMeta(ds),
+    });
+  } else if (ds?.status === "needs_conversion") {
+    suitable.push({
+      text: "Right-hand-drive version is available — source the RHD unit rather than converting a China LHD unit.",
+      ...fieldMeta(ds),
+    });
+  } else if (ds?.status === "mismatch") {
+    notSuitable.push({
+      text: "Drive-side mismatch — a China-market LHD unit cannot be registered as-is in this RHD market.",
+      ...fieldMeta(ds),
+    });
+  }
+
+  const ag = rel.age_rule_fit;
+  if (ag?.status === "eligible") {
+    suitable.push({
+      text: "Age-rule fit — current-generation units satisfy the destination age limit.",
+      ...fieldMeta(ag),
+    });
+  } else if (ag?.status === "borderline") {
+    notSuitable.push({
+      text: "Age-rule borderline — early production units sit near or over the age cut-off; verify the exact date.",
+      ...fieldMeta(ag),
+    });
+  } else if (ag?.status === "ineligible") {
+    notSuitable.push({
+      text: "Age-rule ineligible — the model's production window predates the destination age cut-off.",
+      ...fieldMeta(ag),
+    });
+  }
+
+  if (rel.duty_anchors?.ev_duty_relief) {
+    suitable.push({
+      text: "EV duty relief — the electric trim qualifies for a reduced or zero import-duty rate.",
+      ...fieldMeta(rel.duty_anchors),
+    });
+  }
+
+  if (rel.ev_charging_compat?.needs_adapter) {
+    notSuitable.push({
+      text: "Charging connector mismatch — a GB/T-to-destination adapter is required and should be confirmed.",
+      ...fieldMeta(rel.ev_charging_compat),
+    });
+  }
+
+  return { suitable, notSuitable };
+}
+
+/** Key risks — emitted only when the underlying field is flagged needs-review / low-confidence. */
+export function keyRisks(rel: Relation): SourcedPoint[] {
+  const risks: SourcedPoint[] = [];
+
+  if (rel.duty_anchors?.needs_review) {
+    risks.push({
+      text: "Duty / VAT rates change frequently — verify current figures with official customs before trading.",
+      ...fieldMeta(rel.duty_anchors),
+    });
+  }
+  if (rel.age_rule_fit?.needs_review) {
+    risks.push({
+      text: "Age-limit rules may be adjusted — confirm the current cut-off before sourcing stock.",
+      ...fieldMeta(rel.age_rule_fit),
+    });
+  }
+  if (rel.import_eligibility?.needs_review) {
+    risks.push({
+      text: "Conformity / certification requirements may change — confirm before shipment.",
+      ...fieldMeta(rel.import_eligibility),
+    });
+  }
+  if (rel.ev_charging_compat?.needs_review) {
+    risks.push({
+      text: "Charging-connector compatibility must be confirmed against the destination network.",
+      ...fieldMeta(rel.ev_charging_compat),
+    });
+  }
+
+  return risks;
+}
+
+/** Practical pre-import checklist — only destination-evidenced steps. */
+export function checklist(rel: Relation): SourcedPoint[] {
+  const items: SourcedPoint[] = [];
+
+  if (rel.age_rule_fit) {
+    items.push({
+      text: "Confirm the unit's production / registration date is within the destination age limit.",
+      ...fieldMeta(rel.age_rule_fit),
+    });
+  }
+  if (rel.drive_side_fit && ["mismatch", "needs_conversion"].includes(rel.drive_side_fit.status ?? "")) {
+    items.push({
+      text: "Confirm right-hand-drive availability with the exporter before purchase.",
+      ...fieldMeta(rel.drive_side_fit),
+    });
+  }
+  if (rel.import_eligibility?.requirements?.length) {
+    items.push({
+      text: `Obtain the required conformity / certification: ${rel.import_eligibility.requirements.join(", ")}.`,
+      ...fieldMeta(rel.import_eligibility),
+    });
+  }
+  if (rel.ev_charging_compat?.needs_adapter) {
+    items.push({
+      text: "Confirm charging-adapter availability for the destination connector standard.",
+      ...fieldMeta(rel.ev_charging_compat),
+    });
+  }
+
+  return items;
+}
