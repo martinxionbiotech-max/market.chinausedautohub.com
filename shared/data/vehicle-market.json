@@ -1,0 +1,1296 @@
+{
+  "meta": {
+    "name": "Vehicle x Market relationship layer",
+    "batch": "P3.8 (phase2/49- Vehicle x Market Intelligence, first batch)",
+    "updated": "2026-10-06",
+    "vehicle_source": "data.chinausedautohub.com models.json (read-only reference; model_id join key)",
+    "market_source": "market.chinausedautohub.com countries/importrules/taxrules/ports/routes",
+    "principle": "relation records store only the delta (facts that exist because THIS vehicle meets THIS market). Every field carries source + source_type + confidence + checked_date; unknown fields are null.",
+    "note": "duty_anchors and shipping_route REFERENCE taxrules.json/routes.json by id and do not copy rates; pages resolve them at render time."
+  },
+  "relations": [
+    {
+      "vehicle_id": "byd-atto-3",
+      "country_id": "kazakhstan",
+      "drive_side_fit": {
+        "status": "match",
+        "summary": "China domestic-market production is left-hand drive (LHD); this market registers LHD only — no conversion required.",
+        "source": "Data sub-site models.json (export intelligence) + Left- and right-hand traffic (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/Left-_and_right-hand_traffic",
+        "source_type": "database",
+        "confidence": "high",
+        "checked_date": "2026-10-06"
+      },
+      "age_rule_fit": null,
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Battery-electric (EV) — Kazakhstan's temporary EV customs-duty exemption (0% vs 15% standard) applies to this vehicle class. Confirm current status before trading.",
+        "source": {
+          "source": "Data sub-site models.json (export intelligence)",
+          "source_url": "https://data.chinausedautohub.com/models/",
+          "source_type": "database"
+        },
+        "source_url": null,
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "CCS2 (Combo 2)",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": true,
+        "notes": "China-market GB/T inlet vs Kazakhstan CCS2 network — adapter / connector compatibility check required; some Chinese EVs are also sold with CCS2 export inlets.",
+        "source": "Vehicle: GB/T charging standard (Wikipedia); Destination: Combined Charging System (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "EAEU technical regulations (OTTC) certification"
+        ],
+        "notes": "EVs benefit from a temporary customs-duty and recycling-fee exemption; EAEU certification applies.",
+        "source": "market sub-site importrules.json (EAEU technical regulations)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "kz-duty",
+        "ev_duty_taxrule_id": "kz-ev-duty",
+        "vat_taxrule_id": "kz-vat",
+        "ev_duty_relief": true,
+        "notes": "EV trims: 0% (temporary exemption) vs 15% standard import duty. Referenced from taxrules.json — verify current rates with KGD.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://kgd.gov.kz",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-lianyungang-to-kz-khorgos"
+        ],
+        "notes": "Rail transit via Khorgos/Alashankou border crossing (container).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "BYD Atto 3 (元PLUS) is a compact EV SUV; China-market units use GB/T charging while EU export units use CCS2 — confirm which inlet the sourced unit carries.",
+        "source": {
+          "source": "Data sub-site models.json (export intelligence)",
+          "source_url": "https://data.chinausedautohub.com/models/",
+          "source_type": "database"
+        },
+        "source_url": null,
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://www.byd.com/eu/car/atto3",
+      "source_type": "manufacturer",
+      "confidence": "medium",
+      "checked_date": "2026-10-06"
+    },
+    {
+      "vehicle_id": "byd-seal",
+      "country_id": "uzbekistan",
+      "drive_side_fit": {
+        "status": "match",
+        "summary": "China domestic-market production is left-hand drive (LHD); this market registers LHD only — no conversion required.",
+        "source": "Data sub-site models.json (export intelligence) + Left- and right-hand traffic (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/Left-_and_right-hand_traffic",
+        "source_type": "database",
+        "confidence": "high",
+        "checked_date": "2026-10-06"
+      },
+      "age_rule_fit": null,
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Battery-electric (EV) — Uzbekistan exempts EVs from import duty and excise (0% vs 30% standard). Largest duty-relief delta in the tracked set.",
+        "source": {
+          "source": "Data sub-site models.json (export intelligence)",
+          "source_url": "https://data.chinausedautohub.com/models/",
+          "source_type": "database"
+        },
+        "source_url": null,
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "CCS2 (Combo 2)",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": true,
+        "notes": "China-market GB/T inlet vs Uzbekistan CCS2 network — adapter / connector compatibility check required.",
+        "source": "Vehicle: GB/T charging standard (Wikipedia); Destination: Combined Charging System (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Customs certification",
+          "Recycling fee"
+        ],
+        "notes": "Uzbekistan applies strict import controls including certification and recycling fees; EVs are exempt from import duty and excise (confirm current status).",
+        "source": "market sub-site importrules.json (strict import controls)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "uz-duty",
+        "ev_duty_taxrule_id": "uz-ev-duty",
+        "vat_taxrule_id": "uz-vat",
+        "ev_duty_relief": true,
+        "notes": "EV trims: 0% (import duty + excise exemption) vs 30% standard. Referenced from taxrules.json — verify current rates with the State Customs Committee.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://customs.uz",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-lianyungang-to-uz-tashkent"
+        ],
+        "notes": "Rail transit via Khorgos/Alashankou to Tashkent (container).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "BYD Seal (海豹) is an EV sedan; China-market units use GB/T charging — confirm export-spec inlet.",
+        "source": {
+          "source": "Data sub-site models.json (export intelligence)",
+          "source_url": "https://data.chinausedautohub.com/models/",
+          "source_type": "database"
+        },
+        "source_url": null,
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://www.byd.com/eu/car/seal",
+      "source_type": "manufacturer",
+      "confidence": "medium",
+      "checked_date": "2026-10-06"
+    },
+    {
+      "vehicle_id": "byd-atto-3",
+      "country_id": "kenya",
+      "drive_side_fit": {
+        "status": "mismatch",
+        "summary": "China domestic-market production is left-hand drive (LHD), but this market registers right-hand drive (RHD) only — confirm RHD availability with the exporter or source a converted unit. Kenya is a right-hand-drive market — a China-market LHD Atto 3 cannot be registered as-is.",
+        "source": "Data sub-site models.json (export intelligence) + Left- and right-hand traffic (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/Left-_and_right-hand_traffic",
+        "source_type": "database",
+        "confidence": "high",
+        "checked_date": "2026-10-06"
+      },
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Atto 3 production began 2022; Kenya's 8-year age limit (KS 1515:2000) is satisfied by current-generation units.",
+        "source": "market sub-site importrules.json (8-year age limit, KEBS/KRA)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Battery-electric (EV) — Kenya applies reduced import duty (10% vs 25% standard) and excise relief for EVs under the EAC CET.",
+        "source": {
+          "source": "Data sub-site models.json (export intelligence)",
+          "source_url": "https://data.chinausedautohub.com/models/",
+          "source_type": "database"
+        },
+        "source_url": null,
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "CCS2 / CHAdeMO",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": true,
+        "notes": "China-market GB/T inlet vs Kenya CCS2/CHAdeMO network — adapter required; Kenya's public network is early-stage.",
+        "source": "Vehicle: GB/T charging standard (Wikipedia); Destination: CHAdeMO (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Pre-Export Verification of Conformity (PVoC)"
+        ],
+        "notes": "PVoC pre-shipment inspection required before export; EV duty + excise relief applies.",
+        "source": "market sub-site importrules.json (PVoC, KEBS)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "ke-duty",
+        "ev_duty_taxrule_id": "ke-ev-duty",
+        "vat_taxrule_id": "ke-vat",
+        "ev_duty_relief": true,
+        "notes": "EV trims: 10% (EAC CET reduced) vs 25% standard. Referenced from taxrules.json — verify with KRA.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://www.kra.go.ke",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-ke-mombasa",
+          "cn-shanghai-to-ke-mombasa"
+        ],
+        "notes": "Sea freight to Mombasa (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "BYD Atto 3 is a compact EV SUV; drive-side mismatch (LHD vs Kenya RHD) is the primary blocker — confirm RHD availability or source a converted unit.",
+        "source": {
+          "source": "Data sub-site models.json (export intelligence)",
+          "source_url": "https://data.chinausedautohub.com/models/",
+          "source_type": "database"
+        },
+        "source_url": null,
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://www.byd.com/eu/car/atto3",
+      "source_type": "manufacturer",
+      "confidence": "medium",
+      "checked_date": "2026-10-06"
+    },
+    {
+      "vehicle_id": "byd-song-plus",
+      "country_id": "kenya",
+      "drive_side_fit": {
+        "status": "mismatch",
+        "summary": "China domestic-market production is left-hand drive (LHD), but this market registers right-hand drive (RHD) only — confirm RHD availability with the exporter or source a converted unit. Kenya is RHD — a China-market LHD Song Plus cannot be registered as-is; RHD availability must be confirmed.",
+        "source": "Data sub-site models.json (export intelligence) + Left- and right-hand traffic (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/Left-_and_right-hand_traffic",
+        "source_type": "database",
+        "confidence": "high",
+        "checked_date": "2026-10-06"
+      },
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Song Plus production began 2020; Kenya's 8-year age limit is satisfied by current-generation units.",
+        "source": "market sub-site importrules.json (8-year age limit, KEBS/KRA)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "PHEV (DM-i) and EV trims — Kenya's EV/PHEV duty relief (10% vs 25%) and excise relief apply; confirm whether the PHEV DM-i trim qualifies for the EV rate.",
+        "source": {
+          "source": "Data sub-site models.json (export intelligence)",
+          "source_url": "https://data.chinausedautohub.com/models/",
+          "source_type": "database"
+        },
+        "source_url": null,
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "CCS2 / CHAdeMO",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": true,
+        "notes": "PHEV DM-i charges on AC GB/T; EV trim on GB/T DC. Kenya CCS2/CHAdeMO network — adapter required.",
+        "source": "Vehicle: GB/T charging standard (Wikipedia); Destination: CHAdeMO (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Pre-Export Verification of Conformity (PVoC)"
+        ],
+        "notes": "PVoC pre-shipment inspection required; EV/PHEV duty + excise relief applies (EAC CET).",
+        "source": "market sub-site importrules.json (PVoC, KEBS)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "ke-duty",
+        "ev_duty_taxrule_id": "ke-ev-duty",
+        "vat_taxrule_id": "ke-vat",
+        "ev_duty_relief": true,
+        "notes": "EV/PHEV trims: reduced 10% (EAC CET) vs 25% standard. Referenced from taxrules.json — verify with KRA; PHEV classification may differ.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://www.kra.go.ke",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-ke-mombasa",
+          "cn-shanghai-to-ke-mombasa"
+        ],
+        "notes": "Sea freight to Mombasa (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "BYD Song Plus (宋PLUS) is a compact SUV sold as PHEV (DM-i) and EV; drive-side mismatch is the primary blocker for Kenya (RHD).",
+        "source": {
+          "source": "Data sub-site models.json (export intelligence)",
+          "source_url": "https://data.chinausedautohub.com/models/",
+          "source_type": "database"
+        },
+        "source_url": null,
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://www.byd.com/eu/car/seal-u",
+      "source_type": "manufacturer",
+      "confidence": "medium",
+      "checked_date": "2026-10-06"
+    },
+    {
+      "vehicle_id": "byd-song-plus",
+      "country_id": "uzbekistan",
+      "drive_side_fit": {
+        "status": "match",
+        "summary": "China domestic-market production is left-hand drive (LHD); this market registers LHD only — no conversion required.",
+        "source": "Data sub-site models.json (export intelligence) + Left- and right-hand traffic (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/Left-_and_right-hand_traffic",
+        "source_type": "database",
+        "confidence": "high",
+        "checked_date": "2026-10-06"
+      },
+      "age_rule_fit": null,
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "PHEV (DM-i) and EV trims — Uzbekistan exempts EVs from import duty + excise (0% vs 30%); confirm whether the PHEV DM-i trim qualifies for the EV exemption (typically BEV-only).",
+        "source": {
+          "source": "Data sub-site models.json (export intelligence)",
+          "source_url": "https://data.chinausedautohub.com/models/",
+          "source_type": "database"
+        },
+        "source_url": null,
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "CCS2 (Combo 2)",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": true,
+        "notes": "China-market GB/T inlet vs Uzbekistan CCS2 network — adapter required; PHEV DM-i charges on AC.",
+        "source": "Vehicle: GB/T charging standard (Wikipedia); Destination: Combined Charging System (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Customs certification",
+          "Recycling fee"
+        ],
+        "notes": "Strict import controls incl. certification and recycling fees; EV exemption applies (confirm PHEV eligibility).",
+        "source": "market sub-site importrules.json (strict import controls)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "uz-duty",
+        "ev_duty_taxrule_id": "uz-ev-duty",
+        "vat_taxrule_id": "uz-vat",
+        "ev_duty_relief": true,
+        "notes": "EV trims: 0% (duty + excise exemption) vs 30% standard; PHEV classification to be confirmed. Referenced from taxrules.json.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://customs.uz",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-lianyungang-to-uz-tashkent"
+        ],
+        "notes": "Rail transit via Khorgos/Alashankou to Tashkent (container).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "BYD Song Plus PHEV-vs-EV duty classification is the key open question for Uzbekistan — BEV trims enjoy the exemption, PHEV DM-i may not.",
+        "source": {
+          "source": "Data sub-site models.json (export intelligence)",
+          "source_url": "https://data.chinausedautohub.com/models/",
+          "source_type": "database"
+        },
+        "source_url": null,
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://www.byd.com/eu/car/seal-u",
+      "source_type": "manufacturer",
+      "confidence": "low",
+      "checked_date": "2026-10-06"
+    },
+    {
+      "vehicle_id": "li-auto-l7",
+      "country_id": "uae",
+      "drive_side_fit": {
+        "status": "match",
+        "summary": "China domestic-market production is left-hand drive (LHD); this market registers LHD only — no conversion required.",
+        "source": "Data sub-site models.json (export intelligence) + Left- and right-hand traffic (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/Left-_and_right-hand_traffic",
+        "source_type": "database",
+        "confidence": "high",
+        "checked_date": "2026-10-06"
+      },
+      "age_rule_fit": null,
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "EREV (extended-range electric vehicle) — a distinct class whose EV-incentive / duty treatment differs from BEV and PHEV; UAE records no EV-specific duty, so the increment is charging + incentive eligibility.",
+        "source": {
+          "source": "Data sub-site models.json (export intelligence)",
+          "source_url": "https://data.chinausedautohub.com/models/",
+          "source_type": "database"
+        },
+        "source_url": null,
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "CCS2 / Type 2 (Mennekes)",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": true,
+        "notes": "EREV charges on AC GB/T; UAE uses Type 2 (Mennekes) AC and CCS2 DC — adapter required.",
+        "source": "Vehicle: GB/T charging standard (Wikipedia); Destination: IEC 62196-2 Type 2 connector (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "GCC specification"
+        ],
+        "notes": "UAE requires GCC specification; non-GCC vehicles may need modification before registration. No universal age limit.",
+        "source": "market sub-site importrules.json (GCC specification)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "uae-duty",
+        "ev_duty_taxrule_id": null,
+        "vat_taxrule_id": "uae-vat",
+        "ev_duty_relief": false,
+        "notes": "No EV-specific duty recorded — 5% standard import duty + 5% VAT apply unless EREV qualifies for EV treatment (confirm). Referenced from taxrules.json.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://www.dubaicustoms.gov.ae",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-ae-jebel-ali",
+          "cn-shanghai-to-ae-jebel-ali"
+        ],
+        "notes": "Sea freight to Jebel Ali (Dubai), RoRo.",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "Li Auto L7 (理想L7) is an EREV SUV — the EREV class is under-explained in most import rules; confirm duty/EV-incentive classification with UAE customs.",
+        "source": {
+          "source": "Data sub-site models.json (export intelligence)",
+          "source_url": "https://data.chinausedautohub.com/models/",
+          "source_type": "database"
+        },
+        "source_url": null,
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://en.wikipedia.org/wiki/Li_L7",
+      "source_type": "reputable_media",
+      "confidence": "low",
+      "checked_date": "2026-10-06"
+    },
+    {
+      "vehicle_id": "byd-atto-3",
+      "country_id": "uae",
+      "drive_side_fit": {
+        "status": "match",
+        "summary": "China domestic-market production is left-hand drive (LHD); this market registers LHD only — no conversion required.",
+        "source": "Data sub-site models.json (export intelligence) + Left- and right-hand traffic (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/Left-_and_right-hand_traffic",
+        "source_type": "database",
+        "confidence": "high",
+        "checked_date": "2026-10-06"
+      },
+      "age_rule_fit": null,
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Battery-electric (EV) — UAE offers EV incentives (DEWA Green Charger, toll exemptions in some emirates) but no EV-specific import duty; 5% standard duty + 5% VAT apply.",
+        "source": {
+          "source": "Data sub-site models.json (export intelligence)",
+          "source_url": "https://data.chinausedautohub.com/models/",
+          "source_type": "database"
+        },
+        "source_url": null,
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "CCS2 / Type 2 (Mennekes)",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": true,
+        "notes": "China-market GB/T inlet vs UAE Type 2 / CCS2 network — adapter required.",
+        "source": "Vehicle: GB/T charging standard (Wikipedia); Destination: IEC 62196-2 Type 2 connector (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "GCC specification"
+        ],
+        "notes": "UAE requires GCC specification; no universal age limit. EV incentives (charging/toll) apply in some emirates.",
+        "source": "market sub-site importrules.json (GCC specification)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "uae-duty",
+        "ev_duty_taxrule_id": null,
+        "vat_taxrule_id": "uae-vat",
+        "ev_duty_relief": false,
+        "notes": "No EV-specific duty — 5% standard import duty + 5% VAT. Referenced from taxrules.json — verify with Dubai Customs.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://www.dubaicustoms.gov.ae",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-ae-jebel-ali",
+          "cn-shanghai-to-ae-jebel-ali"
+        ],
+        "notes": "Sea freight to Jebel Ali (Dubai), RoRo.",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "BYD Atto 3 is a compact EV SUV; China-market GB/T vs UAE CCS2/Type 2 charging is the key compatibility question.",
+        "source": {
+          "source": "Data sub-site models.json (export intelligence)",
+          "source_url": "https://data.chinausedautohub.com/models/",
+          "source_type": "database"
+        },
+        "source_url": null,
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://www.byd.com/eu/car/atto3",
+      "source_type": "manufacturer",
+      "confidence": "medium",
+      "checked_date": "2026-10-06"
+    },
+    {
+      "vehicle_id": "geely-monjaro",
+      "country_id": "saudi-arabia",
+      "drive_side_fit": {
+        "status": "match",
+        "summary": "China domestic-market production is left-hand drive (LHD); this market registers LHD only — no conversion required.",
+        "source": "Data sub-site models.json (export intelligence) + Left- and right-hand traffic (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/Left-_and_right-hand_traffic",
+        "source_type": "database",
+        "confidence": "high",
+        "checked_date": "2026-10-06"
+      },
+      "age_rule_fit": {
+        "status": "borderline",
+        "summary": "Monjaro production began 2021; Saudi Arabia restricts used passenger cars to ~5 years — 2021 units are now ~5 years old (borderline), 2022+ units eligible. Verify the exact cut-off with ZATCA.",
+        "source": "market sub-site importrules.json (5-year age limit, ZATCA)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Combustion (ICE) — subject to standard 5% import duty; no EV-specific relief.",
+        "source": {
+          "source": "Data sub-site models.json (export intelligence)",
+          "source_url": "https://data.chinausedautohub.com/models/",
+          "source_type": "database"
+        },
+        "source_url": null,
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": null,
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "SASO conformity",
+          "SABER registration"
+        ],
+        "notes": "SASO conformity and SABER registration required before shipment.",
+        "source": "market sub-site importrules.json (SABER/SASO)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "sa-duty",
+        "ev_duty_taxrule_id": null,
+        "vat_taxrule_id": "sa-vat",
+        "ev_duty_relief": false,
+        "notes": "ICE: 5% import duty + 15% VAT. Referenced from taxrules.json — verify with ZATCA.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://zatca.gov.sa",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-qingdao-to-sa-dammam",
+          "cn-shanghai-to-sa-jeddah"
+        ],
+        "notes": "Sea freight to Dammam or Jeddah (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "Geely Monjaro (星越L) is an ICE SUV; the 5-year age rule vs its 2021 production start is the key fit question.",
+        "source": {
+          "source": "Data sub-site models.json (export intelligence)",
+          "source_url": "https://data.chinausedautohub.com/models/",
+          "source_type": "database"
+        },
+        "source_url": null,
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://en.wikipedia.org/wiki/Geely_Xingyue_L",
+      "source_type": "reputable_media",
+      "confidence": "medium",
+      "checked_date": "2026-10-06"
+    },
+    {
+      "vehicle_id": "great-wall-haval-h6",
+      "country_id": "saudi-arabia",
+      "drive_side_fit": {
+        "status": "match",
+        "summary": "China domestic-market production is left-hand drive (LHD); this market registers LHD only — no conversion required.",
+        "source": "Data sub-site models.json (export intelligence) + Left- and right-hand traffic (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/Left-_and_right-hand_traffic",
+        "source_type": "database",
+        "confidence": "high",
+        "checked_date": "2026-10-06"
+      },
+      "age_rule_fit": {
+        "status": "borderline",
+        "summary": "Haval H6 production began 2020; Saudi Arabia restricts used passenger cars to ~5 years — 2020 units are now ~6 years old (ineligible), 2021+ units eligible. Verify the exact cut-off with ZATCA.",
+        "source": "market sub-site importrules.json (5-year age limit, ZATCA)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Combustion (ICE) — subject to standard 5% import duty; no EV-specific relief.",
+        "source": {
+          "source": "Data sub-site models.json (export intelligence)",
+          "source_url": "https://data.chinausedautohub.com/models/",
+          "source_type": "database"
+        },
+        "source_url": null,
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": null,
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "SASO conformity",
+          "SABER registration"
+        ],
+        "notes": "SASO conformity and SABER registration required before shipment.",
+        "source": "market sub-site importrules.json (SABER/SASO)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "sa-duty",
+        "ev_duty_taxrule_id": null,
+        "vat_taxrule_id": "sa-vat",
+        "ev_duty_relief": false,
+        "notes": "ICE: 5% import duty + 15% VAT. Referenced from taxrules.json — verify with ZATCA.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://zatca.gov.sa",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-qingdao-to-sa-dammam",
+          "cn-shanghai-to-sa-jeddah"
+        ],
+        "notes": "Sea freight to Dammam or Jeddah (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "Haval H6 is an ICE SUV; the 5-year age rule vs its 2020 production start is the key fit question.",
+        "source": {
+          "source": "Data sub-site models.json (export intelligence)",
+          "source_url": "https://data.chinausedautohub.com/models/",
+          "source_type": "database"
+        },
+        "source_url": null,
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://en.wikipedia.org/wiki/Haval_H6",
+      "source_type": "reputable_media",
+      "confidence": "medium",
+      "checked_date": "2026-10-06"
+    },
+    {
+      "vehicle_id": "chery-tiggo-8",
+      "country_id": "kenya",
+      "drive_side_fit": {
+        "status": "mismatch",
+        "summary": "China domestic-market production is left-hand drive (LHD), but this market registers right-hand drive (RHD) only — confirm RHD availability with the exporter or source a converted unit. Kenya is RHD — a China-market LHD Tiggo 8 cannot be registered as-is; RHD availability must be confirmed.",
+        "source": "Data sub-site models.json (export intelligence) + Left- and right-hand traffic (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/Left-_and_right-hand_traffic",
+        "source_type": "database",
+        "confidence": "high",
+        "checked_date": "2026-10-06"
+      },
+      "age_rule_fit": {
+        "status": "borderline",
+        "summary": "Tiggo 8 production began 2018; Kenya's 8-year age limit means 2018 units are now ~8 years old (borderline/over), 2019+ units eligible. Verify with KRA/KEBS.",
+        "source": "market sub-site importrules.json (8-year age limit, KEBS/KRA)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Combustion (ICE) — subject to standard 25% import duty; no EV-specific relief.",
+        "source": {
+          "source": "Data sub-site models.json (export intelligence)",
+          "source_url": "https://data.chinausedautohub.com/models/",
+          "source_type": "database"
+        },
+        "source_url": null,
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": null,
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Pre-Export Verification of Conformity (PVoC)"
+        ],
+        "notes": "PVoC pre-shipment inspection required before export.",
+        "source": "market sub-site importrules.json (PVoC, KEBS)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "ke-duty",
+        "ev_duty_taxrule_id": null,
+        "vat_taxrule_id": "ke-vat",
+        "ev_duty_relief": false,
+        "notes": "ICE: 25% import duty + 16% VAT. Referenced from taxrules.json — verify with KRA.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://www.kra.go.ke",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-ke-mombasa",
+          "cn-shanghai-to-ke-mombasa"
+        ],
+        "notes": "Sea freight to Mombasa (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "Chery Tiggo 8 (瑞虎8) is an ICE SUV; drive-side mismatch (LHD vs Kenya RHD) and the 8-year age rule are the key blockers.",
+        "source": {
+          "source": "Data sub-site models.json (export intelligence)",
+          "source_url": "https://data.chinausedautohub.com/models/",
+          "source_type": "database"
+        },
+        "source_url": null,
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://en.wikipedia.org/wiki/Chery_Tiggo_8",
+      "source_type": "reputable_media",
+      "confidence": "medium",
+      "checked_date": "2026-10-06"
+    },
+    {
+      "vehicle_id": "byd-qin-plus",
+      "country_id": "nigeria",
+      "drive_side_fit": {
+        "status": "mismatch",
+        "summary": "China domestic-market production is left-hand drive (LHD), but this market registers right-hand drive (RHD) only — confirm RHD availability with the exporter or source a converted unit. Nigeria is RHD — a China-market LHD Qin Plus cannot be registered as-is; RHD availability must be confirmed.",
+        "source": "Data sub-site models.json (export intelligence) + Left- and right-hand traffic (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/Left-_and_right-hand_traffic",
+        "source_type": "database",
+        "confidence": "high",
+        "checked_date": "2026-10-06"
+      },
+      "age_rule_fit": null,
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "PHEV (DM-i) and EV trims — Nigeria's EV policy is developing with discussion of duty relief; no confirmed EV-specific duty rate recorded. RHD mismatch is the primary blocker.",
+        "source": {
+          "source": "Data sub-site models.json (export intelligence)",
+          "source_url": "https://data.chinausedautohub.com/models/",
+          "source_type": "database"
+        },
+        "source_url": null,
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "CCS2 / CHAdeMO",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": true,
+        "notes": "China-market GB/T inlet vs Nigeria CCS2/CHAdeMO network (early-stage) — adapter required.",
+        "source": "Vehicle: GB/T charging standard (Wikipedia); Destination: CHAdeMO (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Pre-shipment inspection (SONCAP / Form M)"
+        ],
+        "notes": "Nigeria's import clearance and pre-shipment inspection (SONCAP/Form M) apply; age rules have changed recently — confirm with Nigeria Customs.",
+        "source": "market sub-site importrules.json (SONCAP / Form M)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "ng-duty",
+        "ev_duty_taxrule_id": null,
+        "vat_taxrule_id": "ng-vat",
+        "ev_duty_relief": false,
+        "notes": "No confirmed EV duty relief — 20% standard import duty + 7.5% VAT. Referenced from taxrules.json — verify with Nigeria Customs.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://customs.gov.ng",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-ng-lagos",
+          "cn-guangzhou-to-ng-tincan"
+        ],
+        "notes": "Sea freight to Lagos (Apapa / Tin Can Island), RoRo.",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "BYD Qin Plus (秦PLUS) is a PHEV/EV sedan; RHD mismatch is the primary blocker for Nigeria.",
+        "source": {
+          "source": "Data sub-site models.json (export intelligence)",
+          "source_url": "https://data.chinausedautohub.com/models/",
+          "source_type": "database"
+        },
+        "source_url": null,
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://www.byd.com/eu/car/",
+      "source_type": "manufacturer",
+      "confidence": "low",
+      "checked_date": "2026-10-06"
+    },
+    {
+      "vehicle_id": "byd-han",
+      "country_id": "saudi-arabia",
+      "drive_side_fit": {
+        "status": "match",
+        "summary": "China domestic-market production is left-hand drive (LHD); this market registers LHD only — no conversion required.",
+        "source": "Data sub-site models.json (export intelligence) + Left- and right-hand traffic (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/Left-_and_right-hand_traffic",
+        "source_type": "database",
+        "confidence": "high",
+        "checked_date": "2026-10-06"
+      },
+      "age_rule_fit": {
+        "status": "borderline",
+        "summary": "Han production began 2020; Saudi Arabia restricts used passenger cars to ~5 years — 2020-2021 units are now ~5-6 years old (borderline/over), 2022+ units eligible. Verify with ZATCA.",
+        "source": "market sub-site importrules.json (5-year age limit, ZATCA)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "EV and PHEV (DM-i) trims — Saudi Arabia promotes EV adoption (charging infra, fee exemptions) but records no EV-specific import duty; 5% standard duty + 15% VAT apply.",
+        "source": {
+          "source": "Data sub-site models.json (export intelligence)",
+          "source_url": "https://data.chinausedautohub.com/models/",
+          "source_type": "database"
+        },
+        "source_url": null,
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "CCS2 / Type 2 (Mennekes)",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": true,
+        "notes": "China-market GB/T inlet vs Saudi CCS2/Type 2 network — adapter required.",
+        "source": "Vehicle: GB/T charging standard (Wikipedia); Destination: IEC 62196-2 Type 2 connector (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "SASO conformity",
+          "SABER registration"
+        ],
+        "notes": "SASO conformity and SABER registration required before shipment; SASO maintains EV standards.",
+        "source": "market sub-site importrules.json (SABER/SASO)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "sa-duty",
+        "ev_duty_taxrule_id": null,
+        "vat_taxrule_id": "sa-vat",
+        "ev_duty_relief": false,
+        "notes": "No EV-specific duty — 5% standard import duty + 15% VAT. Referenced from taxrules.json — verify with ZATCA.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://zatca.gov.sa",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-qingdao-to-sa-dammam",
+          "cn-shanghai-to-sa-jeddah"
+        ],
+        "notes": "Sea freight to Dammam or Jeddah (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "BYD Han (汉) is an EV/PHEV sedan; the 5-year age rule and GB/T-vs-CCS2 charging are the key fit questions.",
+        "source": {
+          "source": "Data sub-site models.json (export intelligence)",
+          "source_url": "https://data.chinausedautohub.com/models/",
+          "source_type": "database"
+        },
+        "source_url": null,
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://www.byd.com/eu/car/",
+      "source_type": "manufacturer",
+      "confidence": "medium",
+      "checked_date": "2026-10-06"
+    }
+  ],
+  "skipped": [
+    {
+      "vehicle_id": "geely-monjaro",
+      "country_id": "uae",
+      "reason": "ICE × LHD, no age conflict, no EV relief — pure \"compatible\" pair, no independent increment."
+    },
+    {
+      "vehicle_id": "geely-monjaro",
+      "country_id": "kazakhstan",
+      "reason": "ICE × LHD; Kazakhstan EV duty exemption does not apply to ICE — no increment."
+    },
+    {
+      "vehicle_id": "chery-tiggo-8",
+      "country_id": "uae",
+      "reason": "ICE × LHD, no age conflict — no increment."
+    },
+    {
+      "vehicle_id": "great-wall-haval-h6",
+      "country_id": "uae",
+      "reason": "ICE × LHD, no age conflict — no increment."
+    },
+    {
+      "vehicle_id": "byd-seal",
+      "country_id": "uae",
+      "reason": "EV × LHD with no EV-specific duty recorded; only GB/T→CCS2 charging delta, already represented by byd-atto-3 × uae — mechanical EV cross-product (avoid)."
+    },
+    {
+      "vehicle_id": "byd-han",
+      "country_id": "uae",
+      "reason": "EV/PHEV × LHD, no EV duty relief recorded — charging-only delta already represented; mechanical cross-product (avoid)."
+    },
+    {
+      "vehicle_id": "nio-es6",
+      "country_id": "uae",
+      "reason": "EV × LHD, no EV duty relief recorded — charging-only delta already represented; mechanical cross-product (avoid)."
+    },
+    {
+      "vehicle_id": "changan-cs75-plus",
+      "country_id": "saudi-arabia",
+      "reason": "Third ICE × Saudi 5-year-age pair — mechanical duplicate of geely-monjaro / great-wall-haval-h6."
+    },
+    {
+      "vehicle_id": "gac-gs4",
+      "country_id": "tanzania",
+      "reason": "ICE × RHD drive-side-mismatch delta already represented by chery-tiggo-8 × kenya — mechanical ICE×RHD cross-product (avoid)."
+    },
+    {
+      "vehicle_id": "byd-atto-3",
+      "country_id": "tanzania",
+      "reason": "EV × RHD; Tanzania records reduced EV excise but no EV duty rate — RHD-mismatch delta already represented by byd-atto-3 × kenya; defer until Tanzania EV duty data exists."
+    },
+    {
+      "vehicle_id": "byd-qin-plus",
+      "country_id": "kenya",
+      "reason": "Fourth Kenya pair — PHEV/EV + RHD + EV-duty delta already represented by byd-song-plus × kenya; mechanical duplicate (avoid)."
+    }
+  ]
+}

@@ -1,0 +1,523 @@
+---
+import BaseLayout from "../../../../../shared/components/BaseLayout.astro";
+import SourceNote from "../../../../../shared/components/SourceNote.astro";
+import {
+  MARKET_SITE_URL,
+  DATA_SITE_URL,
+  TOOLS_SITE_URL,
+  MAIN_SITE_URL,
+} from "../../../../../shared/config/config";
+import {
+  getCountry,
+  getModel,
+  getBrand,
+  getRules,
+  rulesByCategory,
+  portName,
+  getRoutesForCountry,
+} from "../../../../lib/market";
+import {
+  relations,
+  getRelation,
+  getRelationsForCountry,
+  incrementTypes,
+  passesGate,
+  dutyAnchorsFor,
+  relConfidenceLabel,
+  relConfidenceClass,
+} from "../../../../lib/vehicle-market";
+
+export function getStaticPaths() {
+  // Only relations that pass the independent-information-increment gate (§3)
+  // get a generated page. Pairs that are pure cross-products or already stated
+  // on the parent pages are excluded here.
+  return relations.filter(passesGate).map((r) => ({
+    params: { country: r.country_id, vehicle: r.vehicle_id },
+  }));
+}
+
+const { country: countryId, vehicle: vehicleId } = Astro.params;
+const country = getCountry(countryId);
+const model = getModel(vehicleId);
+const brand = model ? getBrand(model.brand_id) : undefined;
+const rel = getRelation(vehicleId, countryId);
+
+const increments = rel ? incrementTypes(rel) : [];
+const duty = rel ? dutyAnchorsFor(rel) : null;
+
+const driveRules = rulesByCategory(countryId, "drive_side");
+const ageRules = rulesByCategory(countryId, "vehicle_age");
+const evRules = rulesByCategory(countryId, "ev_policy");
+
+// Powertrain summary from the market models.json trims (referenced, not copied).
+const powertrains = model
+  ? [...new Set(model.generations.flatMap((g) => g.trims.map((t) => t.powertrain)))]
+  : [];
+const powertrainLabel = (p: string) =>
+  ({ ev: "EV (battery-electric)", phev: "PHEV (plug-in hybrid)", erev: "EREV (extended-range)", ice: "ICE (combustion)" } as Record<string, string>)[p] ?? p;
+
+const brandName = brand?.name ?? "Not available";
+const modelName = model?.name ?? vehicleId;
+const countryName = country?.name ?? countryId;
+
+const pageUrl = MARKET_SITE_URL + `/countries/${countryId}/${vehicleId}/`;
+const title = `${modelName} to ${countryName} — export compatibility & cost`;
+const description = `Exporting the ${modelName} (${model?.name_zh ?? ""}) to ${countryName}: drive-side fit, age-rule fit, EV charging compatibility, import requirements and duty anchors — each statement with source, confidence and date checked.`;
+
+const articleLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: title,
+  description,
+  url: pageUrl,
+  dateModified: rel?.checked_date ?? "2026-10-06",
+  inLanguage: "en",
+  about: [
+    { "@type": "Vehicle", name: modelName, brand: { "@type": "Brand", name: brandName } },
+    { "@type": "Country", name: countryName },
+  ],
+};
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Markets", item: MARKET_SITE_URL + "/" },
+    { "@type": "ListItem", position: 2, name: countryName, item: MARKET_SITE_URL + `/countries/${countryId}/` },
+    { "@type": "ListItem", position: 3, name: modelName, item: pageUrl },
+  ],
+};
+
+// At-a-glance verdict
+const verdict =
+  rel?.drive_side_fit?.status === "mismatch"
+    ? "Not eligible as-is"
+    : rel?.age_rule_fit?.status === "ineligible"
+      ? "Not eligible"
+      : rel?.needs_review || rel?.confidence === "low"
+        ? "Needs review"
+        : "Eligible / needs review";
+
+const driveSideLabel = country?.drive_side === "lhd" ? "Left-hand drive (LHD)" : "Right-hand drive (RHD)";
+const driveFitLabel =
+  rel?.drive_side_fit?.status === "match"
+    ? "Match"
+    : rel?.drive_side_fit?.status === "mismatch"
+      ? "Mismatch"
+      : "Not available";
+const ageFitLabel =
+  rel?.age_rule_fit?.status === "eligible"
+    ? "Eligible"
+    : rel?.age_rule_fit?.status === "borderline"
+      ? "Borderline"
+      : rel?.age_rule_fit?.status === "ineligible"
+        ? "Ineligible"
+        : "Not available";
+const methodLabel = (m: string) => (m === "roro" ? "RoRo" : "Container");
+const shippingRoutes = getRoutesForCountry(countryId);
+
+const siblingPairs = getRelationsForCountry(countryId).filter((r) => r.vehicle_id !== vehicleId);
+---
+
+<BaseLayout
+  siteTitle="China Used Car Export Markets"
+  siteUrl={MARKET_SITE_URL}
+  currentSection="market"
+  title={title}
+  description={description}
+  canonical={`/countries/${countryId}/${vehicleId}/`}
+  jsonLd={[articleLd, breadcrumbLd]}
+  breadcrumbs={[
+    { name: "Markets", url: "/" },
+    { name: countryName, url: `/countries/${countryId}/` },
+    { name: modelName, url: `/countries/${countryId}/${vehicleId}/` },
+  ]}
+>
+  <h1>{modelName} <span class="zh">{model?.name_zh}</span> → {countryName}</h1>
+  <p class="meta-line">
+    Export compatibility &amp; cost · Last checked {rel?.checked_date ?? "Not available"}
+  </p>
+
+  <p class="disclaimer">
+    This information is provided for general guidance only and is <strong>not legal
+    advice</strong>. Every assertion below carries a source and confidence level —
+    verify with official authorities before trading.
+  </p>
+
+  <!-- ============ Quick Facts (AIO structured block) ============ -->
+  <section class="quick-facts" aria-label="Quick facts">
+    <h2>Quick Facts</h2>
+    <div class="qf-grid">
+      <div class="qf"><span class="qf-k">Vehicle</span><span class="qf-v">{modelName}</span></div>
+      <div class="qf"><span class="qf-k">Brand</span><span class="qf-v">{brandName}</span></div>
+      <div class="qf"><span class="qf-k">Country</span><span class="qf-v">{countryName}</span></div>
+      <div class="qf"><span class="qf-k">Powertrain</span><span class="qf-v">{powertrains.length ? powertrains.map(powertrainLabel).join(", ") : "Not available"}</span></div>
+      <div class="qf"><span class="qf-k">Drive-side fit</span><span class="qf-v">{driveFitLabel}</span></div>
+      <div class="qf"><span class="qf-k">Age-rule fit</span><span class="qf-v">{ageFitLabel}</span></div>
+      <div class="qf"><span class="qf-k">Import duty range</span><span class="qf-v">{duty ? duty.rangeLabel : "Not available"}</span></div>
+      <div class="qf"><span class="qf-k">Confidence</span><span class="qf-v"><span class={"badge " + relConfidenceClass(rel)}>{relConfidenceLabel(rel)}</span></span></div>
+    </div>
+  </section>
+
+  <!-- At-a-glance verdict -->
+  <section>
+    <h2>At-a-glance verdict</h2>
+    <p class="verdict verdict-{verdict === 'Not eligible as-is' || verdict === 'Not eligible' ? 'bad' : verdict === 'Needs review' ? 'warn' : 'ok'}">
+      {verdict}
+    </p>
+    {increments.length > 0 ? (
+      <p>
+        This page exists because the {modelName} × {countryName} pairing produces
+        knowledge neither parent page states on its own:{" "}
+        <strong>{increments.join(" · ")}</strong>.
+      </p>
+    ) : (
+      <p>No independent increment recorded for this pair.</p>
+    )}
+  </section>
+
+  <!-- 1. Why this vehicle may fit -->
+  <section>
+    <h2>Why this vehicle may fit</h2>
+    {rel?.powertrain_fit ? (
+      <>
+        <p>{rel.powertrain_fit.summary}</p>
+        <SourceNote
+          source={rel.powertrain_fit.source}
+          sourceUrl={rel.powertrain_fit.source_url}
+          sourceDate={rel.powertrain_fit.checked_date}
+          confidenceLabel={relConfidenceLabel(rel.powertrain_fit)}
+          caveat={rel.powertrain_fit.needs_review ? "Verify with the official authority before trading." : undefined}
+        />
+      </>
+    ) : (
+      <p>No model–market fit note recorded (Not available).</p>
+    )}
+  </section>
+
+  <!-- 2. Powertrain -->
+  <section>
+    <h2>Powertrain</h2>
+    {powertrains.length ? (
+      <ul>
+        {powertrains.map((p) => <li>{powertrainLabel(p)}</li>)}
+      </ul>
+    ) : (
+      <p>Powertrain data not available for this model.</p>
+    )}
+    <p class="review-hint">
+      Full generation, trim and specification detail is on the{" "}
+      <a href={DATA_SITE_URL + "/models/" + vehicleId + "/"}>DATA site model page</a> —
+      this page references it rather than duplicating specification values.
+    </p>
+  </section>
+
+  <!-- 3. Drive side -->
+  <section>
+    <h2>Drive side</h2>
+    <p class="drive-callout">{driveSideLabel}</p>
+    {rel?.drive_side_fit ? (
+      <>
+        <p>{rel.drive_side_fit.summary}</p>
+        <SourceNote
+          source={rel.drive_side_fit.source}
+          sourceUrl={rel.drive_side_fit.source_url}
+          sourceDate={rel.drive_side_fit.checked_date}
+          confidenceLabel={relConfidenceLabel(rel.drive_side_fit)}
+          caveat={rel.drive_side_fit.needs_review ? "Verify with the official authority before trading." : undefined}
+        />
+      </>
+    ) : (
+      <p>Drive-side fit not recorded (Not available).</p>
+    )}
+    {driveRules.map((r) => (
+      <div class="rule">
+        <div class="rule-head">
+          <h3>{r.title}</h3>
+          {r.needs_review && <span class="badge-review">Needs review</span>}
+        </div>
+        <p>{r.rule_text}</p>
+        <SourceNote source={r.source} sourceUrl={r.source_url} sourceDate={r.last_checked} confidenceLabel={r.source_url && !r.needs_review ? "Source-backed" : "Needs verification"} />
+      </div>
+    ))}
+  </section>
+
+  <!-- 4. Vehicle age -->
+  <section>
+    <h2>Vehicle age</h2>
+    {rel?.age_rule_fit ? (
+      <>
+        <p>{rel.age_rule_fit.summary}</p>
+        <SourceNote
+          source={rel.age_rule_fit.source}
+          sourceUrl={rel.age_rule_fit.source_url}
+          sourceDate={rel.age_rule_fit.checked_date}
+          confidenceLabel={relConfidenceLabel(rel.age_rule_fit)}
+          caveat={rel.age_rule_fit.needs_review ? "Verify with the official authority before trading." : undefined}
+        />
+      </>
+    ) : (
+      <p>No model–specific age-rule computation recorded (Not available).</p>
+    )}
+    {ageRules.map((r) => (
+      <div class="rule">
+        <div class="rule-head">
+          <h3>{r.title}</h3>
+          {r.needs_review && <span class="badge-review">Needs review</span>}
+        </div>
+        <p>{r.rule_text}</p>
+        <SourceNote source={r.source} sourceUrl={r.source_url} sourceDate={r.last_checked} confidenceLabel={r.source_url && !r.needs_review ? "Source-backed" : "Needs verification"} />
+      </div>
+    ))}
+  </section>
+
+  <!-- 5. Import requirements -->
+  <section>
+    <h2>Import requirements</h2>
+    {rel?.import_eligibility ? (
+      <>
+        <p>{rel.import_eligibility.notes ?? rel.import_eligibility.summary}</p>
+        {rel.import_eligibility.requirements && rel.import_eligibility.requirements.length > 0 && (
+          <ul>
+            {rel.import_eligibility.requirements.map((req) => <li>{req}</li>)}
+          </ul>
+        )}
+        <SourceNote
+          source={rel.import_eligibility.source}
+          sourceUrl={rel.import_eligibility.source_url}
+          sourceDate={rel.import_eligibility.checked_date}
+          confidenceLabel={relConfidenceLabel(rel.import_eligibility)}
+          caveat={rel.import_eligibility.needs_review ? "Verify with the official authority before trading." : undefined}
+        />
+      </>
+    ) : (
+      <p>No import-eligibility summary recorded for this pair (Not available).</p>
+    )}
+  </section>
+
+  <!-- 6. Charging (EV only) -->
+  {rel?.ev_charging_compat ? (
+    <section>
+      <h2>Charging</h2>
+      <p>{rel.ev_charging_compat.notes ?? rel.ev_charging_compat.summary}</p>
+      <table class="data-table">
+        <thead><tr><th>Attribute</th><th>Value</th></tr></thead>
+        <tbody>
+          <tr><td>Vehicle charging standard</td><td>{rel.ev_charging_compat.standard ?? "Not available"}</td></tr>
+          <tr><td>Destination standard</td><td>{rel.ev_charging_compat.destination_standard ?? "Not available"}</td></tr>
+          <tr><td>Adapter needed</td><td>{rel.ev_charging_compat.needs_adapter ? "Yes" : "Not available"}</td></tr>
+          <tr><td>Voltage</td><td>{rel.ev_charging_compat.voltage ?? "Not available"}</td></tr>
+          <tr><td>Frequency</td><td>{rel.ev_charging_compat.frequency ?? "Not available"}</td></tr>
+        </tbody>
+      </table>
+      <SourceNote
+        source={rel.ev_charging_compat.source}
+        sourceUrl={rel.ev_charging_compat.source_url}
+        sourceDate={rel.ev_charging_compat.checked_date}
+        confidenceLabel={relConfidenceLabel(rel.ev_charging_compat)}
+        caveat={rel.ev_charging_compat.needs_review ? "Verify charging-connector compatibility with the destination network before trading." : undefined}
+      />
+      {evRules.length > 0 && (
+        <div class="rule">
+          {evRules.map((r) => (
+            <>
+              <div class="rule-head">
+                <h3>{r.title}</h3>
+                {r.needs_review && <span class="badge-review">Needs review</span>}
+              </div>
+              <p>{r.rule_text}</p>
+              <SourceNote source={r.source} sourceUrl={r.source_url} sourceDate={r.last_checked} confidenceLabel={r.source_url && !r.needs_review ? "Source-backed" : "Needs verification"} />
+            </>
+          ))}
+        </div>
+      )}
+    </section>
+  ) : (
+    <section>
+      <h2>Charging</h2>
+      <p>Not applicable — no EV/PHEV/EREV trim recorded for this pairing (Not available).</p>
+    </section>
+  )}
+
+  <!-- 7. Parts & service -->
+  <section>
+    <h2>Parts &amp; service</h2>
+    {rel?.model_considerations ? (
+      <>
+        <p>{rel.model_considerations.summary}</p>
+        <SourceNote
+          source={rel.model_considerations.source}
+          sourceUrl={rel.model_considerations.source_url}
+          sourceDate={rel.model_considerations.checked_date}
+          confidenceLabel={relConfidenceLabel(rel.model_considerations)}
+          caveat={rel.model_considerations.needs_review ? "Verify with the exporter / destination dealer before trading." : undefined}
+        />
+      </>
+    ) : (
+      <p>No parts/service note recorded for this pairing (Not available).</p>
+    )}
+    <p class="review-hint">
+      Parts and service availability varies by destination — confirm local dealer
+      and spare-parts support before purchasing.
+    </p>
+  </section>
+
+  <!-- 8. Landed cost -->
+  <section>
+    <h2>Landed cost</h2>
+    {duty ? (
+      <>
+        <p>Duty anchors for this vehicle class in {countryName}:</p>
+        <table class="data-table">
+          <thead><tr><th>Charge</th><th>Rate</th></tr></thead>
+          <tbody>
+            {duty.standard && <tr><td>{duty.standard.label}</td><td>{duty.standard.rate_pct}%</td></tr>}
+            {duty.ev && <tr><td>{duty.ev.label}</td><td>{duty.ev.rate_pct}%</td></tr>}
+            {duty.vat && <tr><td>{duty.vat.label}</td><td>{duty.vat.rate_pct}%</td></tr>}
+          </tbody>
+        </table>
+        {rel?.duty_anchors && (
+          <SourceNote
+            source={rel.duty_anchors.source}
+            sourceUrl={rel.duty_anchors.source_url}
+            sourceDate={rel.duty_anchors.checked_date}
+            confidenceLabel={relConfidenceLabel(rel.duty_anchors)}
+            caveat={rel.duty_anchors.needs_review ? "Verify current rates with official customs before trading." : undefined}
+          />
+        )}
+      </>
+    ) : (
+      <p>No duty anchors recorded for this pair (Not available).</p>
+    )}
+    <p class="review-hint">
+      Rates are referenced from <code>taxrules.json</code> (not copied). For a full
+      landed-cost breakdown — price, freight, insurance, duty, VAT and excise — use
+      the <a href={TOOLS_SITE_URL + "/landed-cost-calculator/"}>import cost calculator</a>.
+    </p>
+  </section>
+
+  <!-- 9. Known limitations -->
+  <section>
+    <h2>Known limitations</h2>
+    <ul>
+      {rel?.drive_side_fit?.status === "mismatch" && (
+        <li>Drive-side mismatch: {countryName} registers {driveSideLabel} only; a China-market LHD unit cannot be registered as-is.</li>
+      )}
+      {rel?.age_rule_fit?.status === "borderline" && (
+        <li>Age rule is borderline — verify the exact cut-off date with official customs before sourcing stock.</li>
+      )}
+      {rel?.age_rule_fit?.status === "ineligible" && (
+        <li>Age rule renders older units ineligible — check the specific unit's production date.</li>
+      )}
+      {rel?.ev_charging_compat?.needs_adapter && (
+        <li>Charging connector mismatch — a physical adapter may be required and destination DC fast-charging support should be confirmed.</li>
+      )}
+      {!rel?.drive_side_fit?.status && !rel?.age_rule_fit?.status && !rel?.ev_charging_compat?.needs_adapter && (
+        <li>No hard blockers recorded — but confirm all requirements with official authorities before trading.</li>
+      )}
+    </ul>
+  </section>
+
+  <!-- 10. Sources & confidence -->
+  <section>
+    <h2>Sources &amp; confidence</h2>
+    <p class="review-hint">
+      Confidence reflects how strongly each assertion is evidenced by its cited
+      source — not a guarantee of current accuracy. Re-verify with official
+      customs before trading.
+    </p>
+    <ul class="src-confidence">
+      {rel?.drive_side_fit && <li>Drive-side fit — <span class={"badge " + relConfidenceClass(rel.drive_side_fit)}>{relConfidenceLabel(rel.drive_side_fit)}</span> · {rel.drive_side_fit.source}</li>}
+      {rel?.age_rule_fit && <li>Age-rule fit — <span class={"badge " + relConfidenceClass(rel.age_rule_fit)}>{relConfidenceLabel(rel.age_rule_fit)}</span> · {rel.age_rule_fit.source}</li>}
+      {rel?.powertrain_fit && <li>Powertrain fit — <span class={"badge " + relConfidenceClass(rel.powertrain_fit)}>{relConfidenceLabel(rel.powertrain_fit)}</span> · {rel.powertrain_fit.source}</li>}
+      {rel?.ev_charging_compat && <li>Charging — <span class={"badge " + relConfidenceClass(rel.ev_charging_compat)}>{relConfidenceLabel(rel.ev_charging_compat)}</span> · {rel.ev_charging_compat.source}</li>}
+      {rel?.import_eligibility && <li>Import eligibility — <span class={"badge " + relConfidenceClass(rel.import_eligibility)}>{relConfidenceLabel(rel.import_eligibility)}</span> · {rel.import_eligibility.source}</li>}
+      {rel?.duty_anchors && <li>Duty anchors — <span class={"badge " + relConfidenceClass(rel.duty_anchors)}>{relConfidenceLabel(rel.duty_anchors)}</span> · {rel.duty_anchors.source}</li>}
+      {rel?.shipping_route && <li>Shipping route — <span class={"badge " + relConfidenceClass(rel.shipping_route)}>{relConfidenceLabel(rel.shipping_route)}</span> · {rel.shipping_route.source}</li>}
+    </ul>
+  </section>
+
+  <!-- 11. Shipping -->
+  <section>
+    <h2>Shipping</h2>
+    {shippingRoutes.length > 0 ? (
+      <table class="data-table">
+        <thead><tr><th>Origin</th><th>Destination</th><th>Est. days</th><th>Method</th></tr></thead>
+        <tbody>
+          {shippingRoutes.map((r) => (
+            <tr>
+              <td>{portName(r.origin_port_id)}</td>
+              <td>{portName(r.destination_port_id)}</td>
+              <td>{r.est_days_min}–{r.est_days_max}</td>
+              <td>{methodLabel(r.shipping_method)}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    ) : (
+      <p>No shipping route recorded for this market (Not available).</p>
+    )}
+    {rel?.shipping_route && (
+      <>
+        <p>{rel.shipping_route.notes}</p>
+        <SourceNote
+          source={rel.shipping_route.source}
+          sourceUrl={rel.shipping_route.source_url}
+          sourceDate={rel.shipping_route.checked_date}
+          confidenceLabel={relConfidenceLabel(rel.shipping_route)}
+          caveat={rel.shipping_route.needs_review ? "Transit estimates are indicative — confirm with a carrier." : undefined}
+        />
+      </>
+    )}
+  </section>
+
+  <!-- 12. Related -->
+  <section>
+    <h2>Related</h2>
+    <ul>
+      <li><a href={DATA_SITE_URL + "/models/" + vehicleId + "/"}>{modelName} — full model page (DATA site)</a></li>
+      <li><a href={DATA_SITE_URL + "/brands/" + model?.brand_id + "/"}>{brandName} — brand page (DATA site)</a></li>
+      <li><a href={"/countries/" + countryId + "/"}>{countryName} — market guide (this site)</a></li>
+      {siblingPairs.map((s) => (
+        <li><a href={"/countries/" + countryId + "/" + s.vehicle_id + "/"}>{getModel(s.vehicle_id)?.name ?? s.vehicle_id} in {countryName}</a></li>
+      ))}
+      <li><a href={TOOLS_SITE_URL + "/landed-cost-calculator/"}>Import cost calculator (Tools)</a></li>
+      <li><a href={TOOLS_SITE_URL + "/import-duty-calculator/"}>Import duty calculator (Tools)</a></li>
+      <li><a href={MAIN_SITE_URL + "/guides/export-documents/"}>Export documents guide (main site)</a></li>
+    </ul>
+  </section>
+
+  <p class="disclaimer">
+    This information is provided for general guidance only and is <strong>not legal
+    advice</strong>. Consult the relevant destination-country authorities before
+    trading. Rules and rates change — verify current figures with official customs.
+  </p>
+
+  <style>
+    .zh { color: var(--color-text-soft); font-size: 0.85em; margin-left: var(--space-2); }
+    .meta-line { color: var(--color-text-soft); }
+    section { margin-top: var(--space-6); }
+    section h2 { border-bottom: 1px solid var(--color-border); padding-bottom: var(--space-2); }
+
+    /* Quick Facts */
+    .quick-facts { background: var(--color-bg-alt); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-4); }
+    .qf-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: var(--space-3); margin-top: var(--space-3); }
+    .qf { display: flex; flex-direction: column; }
+    .qf-k { font-size: 12px; color: var(--color-text-soft); text-transform: uppercase; letter-spacing: .02em; }
+    .qf-v { font-weight: 600; }
+
+    .verdict { font-size: 18px; font-weight: 700; padding: var(--space-3); border-radius: var(--radius-md); }
+    .verdict-ok { background: #e3f2e9; color: var(--color-success); }
+    .verdict-warn { background: #fdf3dc; color: var(--color-warning); }
+    .verdict-bad { background: #fbe9e7; color: var(--color-danger); }
+
+    .rule { border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-4); margin: var(--space-3) 0; }
+    .rule-head { display: flex; align-items: center; gap: var(--space-2); flex-wrap: wrap; }
+    .rule-head h3 { margin: 0; font-size: 16px; }
+    .badge-review { display: inline-block; background: #fbe9e7; color: var(--color-danger); padding: 2px 8px; border-radius: var(--radius-sm); font-size: 12px; font-weight: 600; }
+    .review-hint { background: var(--color-bg-alt); border-left: 3px solid var(--color-warning); padding: var(--space-3); font-size: 14px; }
+    .drive-callout { font-size: 18px; font-weight: 700; color: var(--color-primary); }
+    .disclaimer { background: #fff7e6; border: 1px solid var(--color-warning); border-left: 4px solid var(--color-warning); padding: var(--space-3) var(--space-4); font-size: 14px; font-weight: 600; margin: var(--space-4) 0; }
+    .src-confidence { list-style: none; padding: 0; }
+    .src-confidence li { padding: var(--space-2) 0; border-bottom: 1px solid var(--color-border); font-size: 14px; }
+  </style>
+</BaseLayout>

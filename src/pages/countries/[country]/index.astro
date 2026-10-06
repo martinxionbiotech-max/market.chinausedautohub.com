@@ -25,6 +25,7 @@ import {
   applicabilityForTaxType,
 } from "../../../lib/market";
 import { countryContent, regionMeta } from "../../../lib/content";
+import { getRelationsForCountry } from "../../../lib/vehicle-market";
 
 export function getStaticPaths() {
   return countries.map((c) => ({ params: { country: c.country_id } }));
@@ -79,6 +80,9 @@ const cnBrands = brands.filter((b) => b.origin_country === "CN");
 
 const docsRules = rulesByCategory(countryId, "import_eligibility");
 const segmentTypes = [...new Set(popularModels.map((m) => m.body_type))];
+
+// Vehicle × Market combination pages generated for this country.
+const vehiclePairs = getRelationsForCountry(countryId);
 
 // Confidence distribution using the PHASE 6 five-level labels.
 const allDeclarations = [...rules, ...tax];
@@ -513,6 +517,27 @@ const taxMeta = (t: any) => ({
       Transit estimates are not confirmed schedules — treat them as indicative (Estimated confidence).
     </p>
   </section>
+
+  <!-- 10b. Vehicle × Market compatibility pages -->
+  {vehiclePairs.length > 0 && (
+    <section id="vehicle-compatibility">
+      <h2>Vehicle Compatibility Pages</h2>
+      <p class="review-hint">
+        Model-specific export compatibility &amp; cost pages for {country.name}.
+        These are generated only where a model × market pairing produces
+        knowledge the country and model pages do not state on their own.
+      </p>
+      <ul>
+        {vehiclePairs.map((p) => (
+          <li>
+            <a href={`/countries/${country.country_id}/${p.vehicle_id}/`}>
+              {getModel(p.vehicle_id)?.name ?? p.vehicle_id} in {country.name}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
 
   <!-- 11. Popular Vehicle Types -->
   <section>
