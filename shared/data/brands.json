@@ -534,6 +534,60 @@
       "source_url": "https://www.wuling.com/",
       "source_date": "2026-10-06",
       "confidence": "high"
+    },
+    {
+      "brand_id": "hongqi",
+      "name": "Hongqi",
+      "name_zh": "红旗",
+      "origin_country": "CN",
+      "founded": 1958,
+      "powertrains": [
+        "ev",
+        "ice"
+      ],
+      "vehicle_types": [
+        "sedan",
+        "suv"
+      ],
+      "source": "Official brand history",
+      "source_url": "https://www.hongqi-auto.com/",
+      "source_date": "2026-10-06",
+      "confidence": "high"
+    },
+    {
+      "brand_id": "avatr",
+      "name": "Avatr",
+      "name_zh": "阿维塔",
+      "origin_country": "CN",
+      "founded": 2018,
+      "powertrains": [
+        "ev"
+      ],
+      "vehicle_types": [
+        "suv",
+        "sedan"
+      ],
+      "source": "Official brand history",
+      "source_url": "https://www.avatr.com/",
+      "source_date": "2026-10-06",
+      "confidence": "high"
+    },
+    {
+      "brand_id": "baic",
+      "name": "BAIC",
+      "name_zh": "北汽",
+      "origin_country": "CN",
+      "founded": 1958,
+      "powertrains": [
+        "ice"
+      ],
+      "vehicle_types": [
+        "suv"
+      ],
+      "source": "Official brand history",
+      "source_url": "https://www.baicmotor.com/",
+      "source_date": "2026-10-06",
+      "confidence": "high"
     }
   ]
 }

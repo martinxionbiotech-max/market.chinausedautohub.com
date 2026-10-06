@@ -2149,6 +2149,225 @@
    "source_url": "https://en.wikipedia.org/wiki/Wuling_Bingo",
    "source_date": "2026-10-06",
    "confidence": "medium"
+  },
+  {
+   "model_id": "denza-n7",
+   "brand_id": "denza",
+   "name": "Denza N7",
+   "name_zh": "腾势N7",
+   "body_type": "suv",
+   "status": "active",
+   "generations": [
+    {
+     "generation_id": "denza-n7-g1",
+     "name": "First Generation",
+     "production_years": [
+      2023,
+      2025
+     ],
+     "trims": [
+      {
+       "trim_id": "denza-n7-g1-ev",
+       "name": "91.3 kWh RWD",
+       "powertrain": "ev",
+       "production_years": [
+        2023,
+        2025
+       ],
+       "specs": {
+        "motor_power_kw": 230,
+        "battery_capacity_kwh": 91.3,
+        "range_km": 702,
+        "drive_type": "rwd",
+        "seats": 5
+       },
+       "spec_source": "Automotive specifications database",
+       "spec_source_url": "https://www.auto-data.net/en/denza-n7-91.3-kwh-313hp-electric-52266",
+       "spec_source_date": "2026-10-06",
+       "confidence": "medium"
+      }
+     ]
+    }
+   ],
+   "source": "Automotive specifications database",
+   "source_url": "https://www.auto-data.net/en/denza-n7-91.3-kwh-313hp-electric-52266",
+   "source_date": "2026-10-06",
+   "confidence": "medium"
+  },
+  {
+   "model_id": "hongqi-e-hs9",
+   "brand_id": "hongqi",
+   "name": "Hongqi E-HS9",
+   "name_zh": "红旗E-HS9",
+   "body_type": "suv",
+   "status": "active",
+   "generations": [
+    {
+     "generation_id": "hongqi-e-hs9-g1",
+     "name": "First Generation",
+     "production_years": [
+      2020,
+      2025
+     ],
+     "trims": [
+      {
+       "trim_id": "hongqi-e-hs9-g1-ev",
+       "name": "84 kWh AWD 7-Seat",
+       "powertrain": "ev",
+       "production_years": [
+        2020,
+        2025
+       ],
+       "specs": {
+        "motor_power_kw": 320,
+        "battery_capacity_kwh": 84,
+        "range_km": 396,
+        "drive_type": "awd",
+        "seats": 7
+       },
+       "spec_source": "Automotive specifications database",
+       "spec_source_url": "https://www.auto-data.net/en/hongqi-e-hs9-84-kwh-435hp-awd-7-seat-45523",
+       "spec_source_date": "2026-10-06",
+       "confidence": "medium"
+      }
+     ]
+    }
+   ],
+   "source": "Automotive specifications database",
+   "source_url": "https://www.auto-data.net/en/hongqi-e-hs9-84-kwh-435hp-awd-7-seat-45523",
+   "source_date": "2026-10-06",
+   "confidence": "medium"
+  },
+  {
+   "model_id": "avatr-11",
+   "brand_id": "avatr",
+   "name": "Avatr 11",
+   "name_zh": "阿维塔11",
+   "body_type": "suv",
+   "status": "active",
+   "generations": [
+    {
+     "generation_id": "avatr-11-g1",
+     "name": "First Generation",
+     "production_years": [
+      2022,
+      2025
+     ],
+     "trims": [
+      {
+       "trim_id": "avatr-11-g1-ev",
+       "name": "EV RWD",
+       "powertrain": "ev",
+       "production_years": [
+        2022,
+        2025
+       ],
+       "specs": {
+        "motor_power_kw": 230,
+        "battery_capacity_kwh": 90.38,
+        "range_km": 555,
+        "drive_type": "rwd",
+        "seats": 5
+       },
+       "spec_source": "Reputable media specifications",
+       "spec_source_url": "https://en.wikipedia.org/wiki/Avatr_11",
+       "spec_source_date": "2026-10-06",
+       "confidence": "medium"
+      }
+     ]
+    }
+   ],
+   "source": "Reputable media specifications",
+   "source_url": "https://en.wikipedia.org/wiki/Avatr_11",
+   "source_date": "2026-10-06",
+   "confidence": "medium"
+  },
+  {
+   "model_id": "gac-emkoo",
+   "brand_id": "gac",
+   "name": "GAC Emkoo",
+   "name_zh": "影酷",
+   "body_type": "suv",
+   "status": "active",
+   "generations": [
+    {
+     "generation_id": "gac-emkoo-g1",
+     "name": "First Generation",
+     "production_years": [
+      2022,
+      2025
+     ],
+     "trims": [
+      {
+       "trim_id": "gac-emkoo-g1-ice",
+       "name": "1.5T",
+       "powertrain": "ice",
+       "production_years": [
+        2022,
+        2025
+       ],
+       "specs": {
+        "engine": "1.5T",
+        "engine_displacement_cc": 1497,
+        "transmission": "7-speed DCT",
+        "drive_type": "fwd",
+        "seats": 5
+       },
+       "spec_source": "Reputable media specifications",
+       "spec_source_url": "https://en.wikipedia.org/wiki/GAC_Emkoo",
+       "spec_source_date": "2026-10-06",
+       "confidence": "medium"
+      }
+     ]
+    }
+   ],
+   "source": "Reputable media specifications",
+   "source_url": "https://en.wikipedia.org/wiki/GAC_Emkoo",
+   "source_date": "2026-10-06",
+   "confidence": "medium"
+  },
+  {
+   "model_id": "baic-bj40",
+   "brand_id": "baic",
+   "name": "BAIC BJ40",
+   "name_zh": "北汽BJ40",
+   "body_type": "suv",
+   "status": "active",
+   "generations": [
+    {
+     "generation_id": "baic-bj40-g1",
+     "name": "First Generation",
+     "production_years": [
+      2013,
+      2025
+     ],
+     "trims": [
+      {
+       "trim_id": "baic-bj40-g1-ice",
+       "name": "2.0T 8AT",
+       "powertrain": "ice",
+       "production_years": [
+        2013,
+        2025
+       ],
+       "specs": {
+        "engine": "2.0T",
+        "transmission": "8-speed automatic",
+        "drive_type": "awd",
+        "seats": 5
+       },
+       "spec_source": "Reputable media specifications",
+       "spec_source_url": "https://en.wikipedia.org/wiki/Beijing_BJ40",
+       "spec_source_date": "2026-10-06",
+       "confidence": "medium"
+      }
+     ]
+    }
+   ],
+   "source": "Reputable media specifications",
+   "source_url": "https://en.wikipedia.org/wiki/Beijing_BJ40",
+   "source_date": "2026-10-06",
+   "confidence": "medium"
   }
  ]
 }
