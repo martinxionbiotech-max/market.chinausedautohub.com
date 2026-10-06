@@ -588,6 +588,61 @@
       "source_url": "https://www.baicmotor.com/",
       "source_date": "2026-10-06",
       "confidence": "high"
+    },
+    {
+      "brand_id": "galaxy",
+      "name": "Geely Galaxy",
+      "name_zh": "吉利银河",
+      "origin_country": "CN",
+      "founded": 2023,
+      "powertrains": [
+        "ev",
+        "phev"
+      ],
+      "vehicle_types": [
+        "suv"
+      ],
+      "source": "Official brand history",
+      "source_url": "https://www.geely.com/",
+      "source_date": "2026-10-06",
+      "confidence": "high"
+    },
+    {
+      "brand_id": "maxus",
+      "name": "Maxus (LDV)",
+      "name_zh": "上汽大通",
+      "origin_country": "CN",
+      "founded": 2011,
+      "powertrains": [
+        "ev",
+        "ice"
+      ],
+      "vehicle_types": [
+        "mpv",
+        "suv",
+        "pickup"
+      ],
+      "source": "Official brand history",
+      "source_url": "https://en.saicmaxus.com/",
+      "source_date": "2026-10-06",
+      "confidence": "high"
+    },
+    {
+      "brand_id": "jac",
+      "name": "JAC Motors",
+      "name_zh": "江淮汽车",
+      "origin_country": "CN",
+      "founded": 1964,
+      "powertrains": [
+        "ice"
+      ],
+      "vehicle_types": [
+        "pickup"
+      ],
+      "source": "Official brand history",
+      "source_url": "https://www.jac.com.cn/",
+      "source_date": "2026-10-06",
+      "confidence": "high"
     }
   ]
 }

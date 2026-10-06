@@ -1,7 +1,7 @@
 {
   "meta": {
     "name": "Vehicle x Market relationship layer",
-    "batch": "P3.8 (phase2/49 - Vehicle x Market Intelligence, batch 7 — vehicle-market-b7)",
+    "batch": "P3.8 (phase2/49 - Vehicle x Market Intelligence, batch 8 — vehicle-market-b8)",
     "updated": "2026-10-06",
     "vehicle_source": "data.chinausedautohub.com models.json (read-only reference; model_id join key)",
     "market_source": "market.chinausedautohub.com countries/importrules/taxrules/ports/routes",
@@ -6872,6 +6872,877 @@
       "source_type": "database",
       "confidence": "medium",
       "checked_date": "2026-10-06"
+    },
+    {
+      "vehicle_id": "galaxy-e5",
+      "country_id": "kenya",
+      "drive_side_fit": {
+        "status": "needs_conversion",
+        "summary": "Kenya registers RHD only. Geely Galaxy E5 (EX5) is produced in right-hand drive (Thailand (Thonburi-Geely) and Malaysia (Proton eMas 7)) — source a RHD unit rather than converting a China LHD unit.",
+        "source": "Geely Galaxy E5 (EX5) RHD production (see model page)",
+        "source_url": "https://data.chinausedautohub.com/models/galaxy-e5/",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "E5 (EX5) production began within the last ~5 years; the destination age limit is satisfied by current-generation units.",
+        "source": "market sub-site importrules.json (age limit)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Battery-electric (EV) — Kenya applies reduced EV import duty (10% vs 25%) under the EAC CET.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "CCS2 / CHAdeMO",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": true,
+        "notes": "China-market GB/T inlet vs Kenya CCS2/CHAdeMO network — adapter required; regional RHD units may carry other inlets (confirm the sourced unit).",
+        "source": "Vehicle: GB/T charging standard (Wikipedia); Destination: CCS2/CHAdeMO (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Pre-Export Verification of Conformity (PVoC)"
+        ],
+        "notes": "PVoC pre-shipment inspection required; EV duty relief (10% vs 25%) applies under the EAC CET.",
+        "source": "market sub-site importrules.json (PVoC, KEBS)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "ke-duty",
+        "ev_duty_taxrule_id": "ke-ev-duty",
+        "vat_taxrule_id": "ke-vat",
+        "ev_duty_relief": true,
+        "notes": "EV: 10% (EAC CET reduced) vs 25% standard + 16% VAT. Referenced from taxrules.json — verify with KRA.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://www.kra.go.ke",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-ke-mombasa",
+          "cn-shanghai-to-ke-mombasa"
+        ],
+        "notes": "Sea freight to Mombasa (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "Geely Galaxy E5 (EX5) is an electric vehicle; RHD production makes Kenya sourcing viable — confirm whether the sourced unit carries a GB/T or CCS2 inlet.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/galaxy-e5/",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://data.chinausedautohub.com/models/",
+      "source_type": "database",
+      "confidence": "medium",
+      "checked_date": "2026-10-06"
+    },
+    {
+      "vehicle_id": "galaxy-e5",
+      "country_id": "nigeria",
+      "drive_side_fit": {
+        "status": "needs_conversion",
+        "summary": "Nigeria registers RHD only. Geely Galaxy E5 (EX5) is produced in right-hand drive (Thailand (Thonburi-Geely) and Malaysia (Proton eMas 7)) — source a RHD unit rather than converting a China LHD unit.",
+        "source": "Geely Galaxy E5 (EX5) RHD production (see model page)",
+        "source_url": "https://data.chinausedautohub.com/models/galaxy-e5/",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "E5 (EX5) production began within the last ~5 years; the destination age limit is satisfied by current-generation units.",
+        "source": "market sub-site importrules.json (age limit)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Battery-electric (EV) — Nigeria's EV duty policy is developing; no confirmed EV-specific duty rate recorded. RHD availability is the primary increment.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "CCS2 / CHAdeMO",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": true,
+        "notes": "China-market GB/T inlet vs Nigeria CCS2/CHAdeMO network — adapter required; regional RHD units may carry other inlets (confirm the sourced unit).",
+        "source": "Vehicle: GB/T charging standard (Wikipedia); Destination: CCS2/CHAdeMO (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Pre-shipment inspection (SONCAP / Form M)"
+        ],
+        "notes": "Nigeria import clearance and pre-shipment inspection (SONCAP/Form M) apply; EV duty policy developing.",
+        "source": "market sub-site importrules.json (SONCAP / Form M)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "ng-duty",
+        "ev_duty_taxrule_id": null,
+        "vat_taxrule_id": "ng-vat",
+        "ev_duty_relief": false,
+        "notes": "EV/ICE: 20% standard + 7.5% VAT; no confirmed EV-specific duty rate. Referenced from taxrules.json — verify with Nigeria Customs.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://customs.gov.ng",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-ng-lagos",
+          "cn-guangzhou-to-ng-tincan"
+        ],
+        "notes": "Sea freight to Lagos (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "Geely Galaxy E5 (EX5) is an electric vehicle; RHD production makes Nigeria sourcing viable — confirm whether the sourced unit carries a GB/T or CCS2 inlet.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/galaxy-e5/",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://data.chinausedautohub.com/models/",
+      "source_type": "database",
+      "confidence": "medium",
+      "checked_date": "2026-10-06"
+    },
+    {
+      "vehicle_id": "galaxy-e5",
+      "country_id": "tanzania",
+      "drive_side_fit": {
+        "status": "needs_conversion",
+        "summary": "Tanzania registers RHD only. Geely Galaxy E5 (EX5) is produced in right-hand drive (Thailand (Thonburi-Geely) and Malaysia (Proton eMas 7)) — source a RHD unit rather than converting a China LHD unit.",
+        "source": "Geely Galaxy E5 (EX5) RHD production (see model page)",
+        "source_url": "https://data.chinausedautohub.com/models/galaxy-e5/",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "E5 (EX5) production began within the last ~5 years; the destination age limit is satisfied by current-generation units.",
+        "source": "market sub-site importrules.json (age limit)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Battery-electric (EV) — Tanzania has introduced reduced EV excise but records no EV-specific import-duty rate (25% standard duty + 18% VAT). Confirm current EV policy with TRA.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "CCS2 / CHAdeMO",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": true,
+        "notes": "China-market GB/T inlet vs Tanzania CCS2/CHAdeMO network — adapter required; regional RHD units may carry other inlets (confirm the sourced unit).",
+        "source": "Vehicle: GB/T charging standard (Wikipedia); Destination: CCS2/CHAdeMO (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Pre-shipment inspection (PVoC)"
+        ],
+        "notes": "Tanzania import clearance and pre-shipment inspection (PVoC) apply; EV excise incentives introduced but no EV-specific duty rate recorded.",
+        "source": "market sub-site importrules.json (PVoC, TBS)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "tz-duty",
+        "ev_duty_taxrule_id": null,
+        "vat_taxrule_id": "tz-vat",
+        "ev_duty_relief": false,
+        "notes": "EV/ICE: 25% standard + 18% VAT; no EV-specific duty rate recorded. Referenced from taxrules.json — verify with TRA.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://www.tra.go.tz",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-tz-dar-es-salaam",
+          "cn-shanghai-to-tz-dar-es-salaam"
+        ],
+        "notes": "Sea freight to Dar es Salaam (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "Geely Galaxy E5 (EX5) is an electric vehicle; RHD production makes Tanzania sourcing viable — confirm whether the sourced unit carries a GB/T or CCS2 inlet.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/galaxy-e5/",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://data.chinausedautohub.com/models/",
+      "source_type": "database",
+      "confidence": "medium",
+      "checked_date": "2026-10-06"
+    },
+    {
+      "vehicle_id": "maxus-mifa-9",
+      "country_id": "kenya",
+      "drive_side_fit": {
+        "status": "needs_conversion",
+        "summary": "Kenya registers RHD only. Maxus MIFA 9 is produced in right-hand drive (the UK, Australia, New Zealand, Malaysia and Singapore) — source a RHD unit rather than converting a China LHD unit.",
+        "source": "Maxus MIFA 9 RHD production (see model page)",
+        "source_url": "https://data.chinausedautohub.com/models/maxus-mifa-9/",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "MIFA 9 production began within the last ~5 years; the destination age limit is satisfied by current-generation units.",
+        "source": "market sub-site importrules.json (age limit)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Battery-electric (EV) — Kenya applies reduced EV import duty (10% vs 25%) under the EAC CET.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "CCS2 / CHAdeMO",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": true,
+        "notes": "China-market GB/T inlet vs Kenya CCS2/CHAdeMO network — adapter required; regional RHD units may carry other inlets (confirm the sourced unit).",
+        "source": "Vehicle: GB/T charging standard (Wikipedia); Destination: CCS2/CHAdeMO (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Pre-Export Verification of Conformity (PVoC)"
+        ],
+        "notes": "PVoC pre-shipment inspection required; EV duty relief (10% vs 25%) applies under the EAC CET.",
+        "source": "market sub-site importrules.json (PVoC, KEBS)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "ke-duty",
+        "ev_duty_taxrule_id": "ke-ev-duty",
+        "vat_taxrule_id": "ke-vat",
+        "ev_duty_relief": true,
+        "notes": "EV: 10% (EAC CET reduced) vs 25% standard + 16% VAT. Referenced from taxrules.json — verify with KRA.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://www.kra.go.ke",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-ke-mombasa",
+          "cn-shanghai-to-ke-mombasa"
+        ],
+        "notes": "Sea freight to Mombasa (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "Maxus MIFA 9 is an electric vehicle; RHD production makes Kenya sourcing viable — confirm whether the sourced unit carries a GB/T or CCS2 inlet.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/maxus-mifa-9/",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://data.chinausedautohub.com/models/",
+      "source_type": "database",
+      "confidence": "medium",
+      "checked_date": "2026-10-06"
+    },
+    {
+      "vehicle_id": "maxus-mifa-9",
+      "country_id": "nigeria",
+      "drive_side_fit": {
+        "status": "needs_conversion",
+        "summary": "Nigeria registers RHD only. Maxus MIFA 9 is produced in right-hand drive (the UK, Australia, New Zealand, Malaysia and Singapore) — source a RHD unit rather than converting a China LHD unit.",
+        "source": "Maxus MIFA 9 RHD production (see model page)",
+        "source_url": "https://data.chinausedautohub.com/models/maxus-mifa-9/",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "MIFA 9 production began within the last ~5 years; the destination age limit is satisfied by current-generation units.",
+        "source": "market sub-site importrules.json (age limit)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Battery-electric (EV) — Nigeria's EV duty policy is developing; no confirmed EV-specific duty rate recorded. RHD availability is the primary increment.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "CCS2 / CHAdeMO",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": true,
+        "notes": "China-market GB/T inlet vs Nigeria CCS2/CHAdeMO network — adapter required; regional RHD units may carry other inlets (confirm the sourced unit).",
+        "source": "Vehicle: GB/T charging standard (Wikipedia); Destination: CCS2/CHAdeMO (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Pre-shipment inspection (SONCAP / Form M)"
+        ],
+        "notes": "Nigeria import clearance and pre-shipment inspection (SONCAP/Form M) apply; EV duty policy developing.",
+        "source": "market sub-site importrules.json (SONCAP / Form M)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "ng-duty",
+        "ev_duty_taxrule_id": null,
+        "vat_taxrule_id": "ng-vat",
+        "ev_duty_relief": false,
+        "notes": "EV/ICE: 20% standard + 7.5% VAT; no confirmed EV-specific duty rate. Referenced from taxrules.json — verify with Nigeria Customs.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://customs.gov.ng",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-ng-lagos",
+          "cn-guangzhou-to-ng-tincan"
+        ],
+        "notes": "Sea freight to Lagos (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "Maxus MIFA 9 is an electric vehicle; RHD production makes Nigeria sourcing viable — confirm whether the sourced unit carries a GB/T or CCS2 inlet.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/maxus-mifa-9/",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://data.chinausedautohub.com/models/",
+      "source_type": "database",
+      "confidence": "medium",
+      "checked_date": "2026-10-06"
+    },
+    {
+      "vehicle_id": "maxus-d90",
+      "country_id": "kenya",
+      "drive_side_fit": {
+        "status": "needs_conversion",
+        "summary": "Kenya registers RHD only. Maxus D90 is produced in right-hand drive (Australia and New Zealand (LDV)) — source a RHD unit rather than converting a China LHD unit.",
+        "source": "Maxus D90 RHD production (see model page)",
+        "source_url": "https://data.chinausedautohub.com/models/maxus-d90/",
+        "source_type": "manufacturer",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "D90 production began within the last ~10 years; current-generation units satisfy the destination age limit.",
+        "source": "market sub-site importrules.json (age limit)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Combustion (ICE) — subject to standard 25% import duty; no EV-specific relief.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": null,
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Pre-Export Verification of Conformity (PVoC)"
+        ],
+        "notes": "PVoC pre-shipment inspection required before export.",
+        "source": "market sub-site importrules.json (PVoC, KEBS)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "ke-duty",
+        "ev_duty_taxrule_id": null,
+        "vat_taxrule_id": "ke-vat",
+        "ev_duty_relief": false,
+        "notes": "ICE: 25% standard + 16% VAT; no EV-specific relief. Referenced from taxrules.json — verify with KRA.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://www.kra.go.ke",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-ke-mombasa",
+          "cn-shanghai-to-ke-mombasa"
+        ],
+        "notes": "Sea freight to Mombasa (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "Maxus D90 is a 7-seat body-on-frame SUV; RHD production makes Kenya sourcing viable.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/maxus-d90/",
+        "source_type": "manufacturer",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://data.chinausedautohub.com/models/",
+      "source_type": "database",
+      "confidence": "medium",
+      "checked_date": "2026-10-06"
+    },
+    {
+      "vehicle_id": "maxus-d90",
+      "country_id": "nigeria",
+      "drive_side_fit": {
+        "status": "needs_conversion",
+        "summary": "Nigeria registers RHD only. Maxus D90 is produced in right-hand drive (Australia and New Zealand (LDV)) — source a RHD unit rather than converting a China LHD unit.",
+        "source": "Maxus D90 RHD production (see model page)",
+        "source_url": "https://data.chinausedautohub.com/models/maxus-d90/",
+        "source_type": "manufacturer",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "D90 production began within the last ~10 years; current-generation units satisfy the destination age limit.",
+        "source": "market sub-site importrules.json (age limit)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Combustion (ICE) — subject to standard 20% import duty; no EV-specific relief.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": null,
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Pre-shipment inspection (SONCAP / Form M)"
+        ],
+        "notes": "Nigeria import clearance and pre-shipment inspection (SONCAP/Form M) apply.",
+        "source": "market sub-site importrules.json (SONCAP / Form M)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "ng-duty",
+        "ev_duty_taxrule_id": null,
+        "vat_taxrule_id": "ng-vat",
+        "ev_duty_relief": false,
+        "notes": "ICE: 20% standard + 7.5% VAT; no EV-specific relief. Referenced from taxrules.json — verify with Nigeria Customs.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://customs.gov.ng",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-ng-lagos",
+          "cn-guangzhou-to-ng-tincan"
+        ],
+        "notes": "Sea freight to Lagos (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "Maxus D90 is a 7-seat body-on-frame SUV; RHD production makes Nigeria sourcing viable.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/maxus-d90/",
+        "source_type": "manufacturer",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://data.chinausedautohub.com/models/",
+      "source_type": "database",
+      "confidence": "medium",
+      "checked_date": "2026-10-06"
+    },
+    {
+      "vehicle_id": "jac-t9",
+      "country_id": "kenya",
+      "drive_side_fit": {
+        "status": "needs_conversion",
+        "summary": "Kenya registers RHD only. JAC T9 is produced in right-hand drive (Australia (JAC Motors Australia)) — source a RHD unit rather than converting a China LHD unit.",
+        "source": "JAC T9 RHD production (see model page)",
+        "source_url": "https://data.chinausedautohub.com/models/jac-t9/",
+        "source_type": "manufacturer",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "T9 production began within the last ~10 years; current-generation units satisfy the destination age limit.",
+        "source": "market sub-site importrules.json (age limit)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Combustion (ICE) — subject to standard 25% import duty; no EV-specific relief.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": null,
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Pre-Export Verification of Conformity (PVoC)"
+        ],
+        "notes": "PVoC pre-shipment inspection required before export.",
+        "source": "market sub-site importrules.json (PVoC, KEBS)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "ke-duty",
+        "ev_duty_taxrule_id": null,
+        "vat_taxrule_id": "ke-vat",
+        "ev_duty_relief": false,
+        "notes": "ICE: 25% standard + 16% VAT; no EV-specific relief. Referenced from taxrules.json — verify with KRA.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://www.kra.go.ke",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-ke-mombasa",
+          "cn-shanghai-to-ke-mombasa"
+        ],
+        "notes": "Sea freight to Mombasa (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "JAC T9 is a dual-cab pickup (2.0CTI diesel); RHD production makes Kenya sourcing viable.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/jac-t9/",
+        "source_type": "manufacturer",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://data.chinausedautohub.com/models/",
+      "source_type": "database",
+      "confidence": "medium",
+      "checked_date": "2026-10-06"
+    },
+    {
+      "vehicle_id": "jac-t9",
+      "country_id": "nigeria",
+      "drive_side_fit": {
+        "status": "needs_conversion",
+        "summary": "Nigeria registers RHD only. JAC T9 is produced in right-hand drive (Australia (JAC Motors Australia)) — source a RHD unit rather than converting a China LHD unit.",
+        "source": "JAC T9 RHD production (see model page)",
+        "source_url": "https://data.chinausedautohub.com/models/jac-t9/",
+        "source_type": "manufacturer",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "T9 production began within the last ~10 years; current-generation units satisfy the destination age limit.",
+        "source": "market sub-site importrules.json (age limit)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Combustion (ICE) — subject to standard 20% import duty; no EV-specific relief.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "ev_charging_compat": null,
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Pre-shipment inspection (SONCAP / Form M)"
+        ],
+        "notes": "Nigeria import clearance and pre-shipment inspection (SONCAP/Form M) apply.",
+        "source": "market sub-site importrules.json (SONCAP / Form M)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "ng-duty",
+        "ev_duty_taxrule_id": null,
+        "vat_taxrule_id": "ng-vat",
+        "ev_duty_relief": false,
+        "notes": "ICE: 20% standard + 7.5% VAT; no EV-specific relief. Referenced from taxrules.json — verify with Nigeria Customs.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://customs.gov.ng",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-ng-lagos",
+          "cn-guangzhou-to-ng-tincan"
+        ],
+        "notes": "Sea freight to Lagos (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "JAC T9 is a dual-cab pickup (2.0CTI diesel); RHD production makes Nigeria sourcing viable.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/jac-t9/",
+        "source_type": "manufacturer",
+        "confidence": "medium",
+        "checked_date": "2026-10-06",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://data.chinausedautohub.com/models/",
+      "source_type": "database",
+      "confidence": "medium",
+      "checked_date": "2026-10-06"
     }
   ],
   "skipped": [
@@ -7224,6 +8095,41 @@
       "vehicle_id": "lynk-co-01",
       "country_id": "kenya",
       "reason": "ICE × RHD — Lynk & Co 01 is LHD-only (Europe subscription); no RHD production evidence, drive-side mismatch already represented (avoid)."
+    },
+    {
+      "vehicle_id": "deepal-sl03",
+      "country_id": "kenya",
+      "reason": "EV × RHD — Deepal brand RHD already represented by deepal-s07 × kenya/nigeria; mechanical brand cross-product (avoid)."
+    },
+    {
+      "vehicle_id": "aion-s",
+      "country_id": "kenya",
+      "reason": "EV × RHD — Aion brand RHD already represented by aion-y-plus × kenya/nigeria; mechanical brand cross-product (avoid)."
+    },
+    {
+      "vehicle_id": "neta-l",
+      "country_id": "kenya",
+      "reason": "EV/EREV × RHD — Neta brand RHD already represented by neta-x × kenya/nigeria; mechanical brand cross-product (avoid)."
+    },
+    {
+      "vehicle_id": "wuling-hongguang-mini",
+      "country_id": "kenya",
+      "reason": "EV × RHD — Wuling brand RHD already represented by wuling-bingo × kenya/nigeria; mechanical brand cross-product (avoid)."
+    },
+    {
+      "vehicle_id": "wey-coffee-01",
+      "country_id": "uae",
+      "reason": "PHEV × LHD — Europe/Russia/Middle East export is LHD-only; no RHD, no EV-relief or age-rule increment beyond existing PHEV LHD coverage (avoid)."
+    },
+    {
+      "vehicle_id": "voyah-dreamer",
+      "country_id": "kazakhstan",
+      "reason": "PHEV MPV × LHD — Europe (Norway) export only, LHD; no RHD or distinct LHD EV/PHEV increment (avoid)."
+    },
+    {
+      "vehicle_id": "leapmotor-c11",
+      "country_id": "kazakhstan",
+      "reason": "EV × LHD — Europe (Stellantis) export only, LHD; EV-duty delta already represented by byd-atto-3 × kazakhstan (avoid mechanical EV cross-product)."
     }
   ]
 }

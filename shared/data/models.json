@@ -2368,6 +2368,180 @@
    "source_url": "https://en.wikipedia.org/wiki/Beijing_BJ40",
    "source_date": "2026-10-06",
    "confidence": "medium"
+  },
+  {
+   "model_id": "galaxy-e5",
+   "brand_id": "galaxy",
+   "name": "Galaxy E5",
+   "name_zh": "银河E5",
+   "body_type": "suv",
+   "status": "active",
+   "generations": [
+    {
+     "generation_id": "galaxy-e5-g1",
+     "name": "First Generation",
+     "production_years": [
+      2024,
+      2025
+     ],
+     "trims": [
+      {
+       "trim_id": "galaxy-e5-g1-ev",
+       "name": "68.39 kWh",
+       "powertrain": "ev",
+       "production_years": [
+        2024,
+        2025
+       ],
+       "specs": {
+        "motor_power_kw": 160,
+        "battery_capacity_kwh": 68.39,
+        "range_km": 610,
+        "drive_type": "fwd",
+        "seats": 5
+       },
+       "spec_source": "Automotive specifications database",
+       "spec_source_url": "https://www.auto-data.net/en/geely-galaxy-e5-68.39-kwh-218hp-58657",
+       "spec_source_date": "2026-10-06",
+       "confidence": "medium"
+      }
+     ]
+    }
+   ],
+   "source": "Automotive specifications database",
+   "source_url": "https://www.auto-data.net/en/geely-galaxy-e5-68.39-kwh-218hp-58657",
+   "source_date": "2026-10-06",
+   "confidence": "medium"
+  },
+  {
+   "model_id": "maxus-mifa-9",
+   "brand_id": "maxus",
+   "name": "MIFA 9",
+   "name_zh": "大家9",
+   "body_type": "mpv",
+   "status": "active",
+   "generations": [
+    {
+     "generation_id": "maxus-mifa-9-g1",
+     "name": "First Generation",
+     "production_years": [
+      2021,
+      2025
+     ],
+     "trims": [
+      {
+       "trim_id": "maxus-mifa-9-g1-ev",
+       "name": "90 kWh BEV",
+       "powertrain": "ev",
+       "production_years": [
+        2021,
+        2025
+       ],
+       "specs": {
+        "motor_power_kw": 180,
+        "battery_capacity_kwh": 90,
+        "range_km": 435,
+        "drive_type": "fwd",
+        "seats": 7
+       },
+       "spec_source": "Manufacturer specifications (SAIC Maxus)",
+       "spec_source_url": "https://en.saicmaxus.com/car/mifa9.shtml",
+       "spec_source_date": "2026-10-06",
+       "confidence": "medium"
+      }
+     ]
+    }
+   ],
+   "source": "Manufacturer specifications (SAIC Maxus)",
+   "source_url": "https://en.saicmaxus.com/car/mifa9.shtml",
+   "source_date": "2026-10-06",
+   "confidence": "medium"
+  },
+  {
+   "model_id": "maxus-d90",
+   "brand_id": "maxus",
+   "name": "Maxus D90",
+   "name_zh": "上汽大通D90",
+   "body_type": "suv",
+   "status": "active",
+   "generations": [
+    {
+     "generation_id": "maxus-d90-g1",
+     "name": "First Generation",
+     "production_years": [
+      2017,
+      2025
+     ],
+     "trims": [
+      {
+       "trim_id": "maxus-d90-g1-ice",
+       "name": "2.0T Automatic",
+       "powertrain": "ice",
+       "production_years": [
+        2017,
+        2025
+       ],
+       "specs": {
+        "engine": "2.0T",
+        "transmission": "8-speed automatic",
+        "drive_type": "rwd",
+        "seats": 7
+       },
+       "spec_source": "Manufacturer specifications (LDV Australia)",
+       "spec_source_url": "https://www.ldvautomotive.com.au/vehicles/ldv-my25-d90-suv/",
+       "spec_source_date": "2026-10-06",
+       "confidence": "medium"
+      }
+     ]
+    }
+   ],
+   "source": "Manufacturer specifications (LDV Australia)",
+   "source_url": "https://www.ldvautomotive.com.au/vehicles/ldv-my25-d90-suv/",
+   "source_date": "2026-10-06",
+   "confidence": "medium"
+  },
+  {
+   "model_id": "jac-t9",
+   "brand_id": "jac",
+   "name": "T9",
+   "name_zh": "江淮T9",
+   "body_type": "pickup",
+   "status": "active",
+   "generations": [
+    {
+     "generation_id": "jac-t9-g1",
+     "name": "First Generation",
+     "production_years": [
+      2021,
+      2025
+     ],
+     "trims": [
+      {
+       "trim_id": "jac-t9-g1-ice",
+       "name": "2.0CTI Diesel 8AT",
+       "powertrain": "ice",
+       "production_years": [
+        2021,
+        2025
+       ],
+       "specs": {
+        "engine": "2.0CTI Diesel",
+        "transmission": "8-speed automatic",
+        "drive_type": "awd",
+        "seats": 5
+       },
+       "spec_source": "Manufacturer specifications (JAC Motors Australia)",
+       "spec_source_url": "https://jacute.com.au/models/jac-t9/",
+       "spec_source_date": "2026-10-06",
+       "confidence": "medium"
+      }
+     ]
+    }
+   ],
+   "source": "Manufacturer specifications (JAC Motors Australia)",
+   "source_url": "https://jacute.com.au/models/jac-t9/",
+   "source_date": "2026-10-06",
+   "confidence": "medium"
   }
  ]
 }
