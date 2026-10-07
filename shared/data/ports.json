@@ -643,6 +643,55 @@
       "country_id": "guatemala",
       "type": "destination",
       "note": "Atlantic (Caribbean) coast"
+    },
+    {
+      "port_id": "py-asuncion",
+      "name": "Asunción (river port, via Montevideo/Brazil transit)",
+      "country_id": "paraguay",
+      "type": "destination",
+      "note": "Landlocked — river/road transit via Montevideo (Uruguay) or Brazilian ports"
+    },
+    {
+      "port_id": "ao-luanda",
+      "name": "Luanda",
+      "country_id": "angola",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "mz-maputo",
+      "name": "Maputo",
+      "country_id": "mozambique",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "mz-beira",
+      "name": "Beira",
+      "country_id": "mozambique",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "ug-kampala",
+      "name": "Kampala (via Mombasa transit)",
+      "country_id": "uganda",
+      "type": "destination",
+      "note": "Landlocked — transit via Port of Mombasa (Kenya) then road"
+    },
+    {
+      "port_id": "tj-dushanbe",
+      "name": "Dushanbe (via rail/road transit)",
+      "country_id": "tajikistan",
+      "type": "destination",
+      "note": "Landlocked — rail/road from China or via Poti/Batumi (Georgia) / Bandar Abbas (Iran)"
+    },
+    {
+      "port_id": "zw-harare",
+      "name": "Harare (via Durban/Beira transit)",
+      "country_id": "zimbabwe",
+      "type": "destination",
+      "note": "Landlocked — transit via Durban (South Africa) or Beira (Mozambique); Beitbridge/Forbes border"
     }
   ]
 }

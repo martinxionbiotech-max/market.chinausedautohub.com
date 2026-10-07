@@ -863,6 +863,90 @@
       "source_url": null,
       "last_checked": "2026-10-07",
       "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-py-asuncion",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "py-asuncion",
+      "est_days_min": 30,
+      "est_days_max": 42,
+      "shipping_method": "container",
+      "source": "Industry route estimates (via Montevideo transshipment)",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-guangzhou-to-ao-luanda",
+      "origin_port_id": "cn-guangzhou",
+      "destination_port_id": "ao-luanda",
+      "est_days_min": 28,
+      "est_days_max": 38,
+      "shipping_method": "roro",
+      "source": "Industry route estimates",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-mz-maputo",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "mz-maputo",
+      "est_days_min": 22,
+      "est_days_max": 32,
+      "shipping_method": "roro",
+      "source": "Industry route estimates",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-guangzhou-to-mz-beira",
+      "origin_port_id": "cn-guangzhou",
+      "destination_port_id": "mz-beira",
+      "est_days_min": 24,
+      "est_days_max": 34,
+      "shipping_method": "roro",
+      "source": "Industry route estimates",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-ug-kampala",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "ug-kampala",
+      "est_days_min": 20,
+      "est_days_max": 30,
+      "shipping_method": "roro",
+      "source": "Industry route estimates (sea to Mombasa + road transit)",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-lianyungang-to-tj-dushanbe",
+      "origin_port_id": "cn-lianyungang",
+      "destination_port_id": "tj-dushanbe",
+      "est_days_min": 18,
+      "est_days_max": 30,
+      "shipping_method": "container",
+      "source": "Industry route estimates (rail transit via Khorgos)",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-zw-harare",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "zw-harare",
+      "est_days_min": 24,
+      "est_days_max": 36,
+      "shipping_method": "roro",
+      "source": "Industry route estimates (sea to Durban + road transit)",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
     }
   ]
 }

@@ -1019,4 +1019,114 @@ export const countryContent: Record<string, CountryContent> = {
     evNote:
       "Guatemala has no confirmed EV-specific import-duty relief; EVs follow the standard DAI + VAT + IPRIMA stack.",
   },
+  paraguay: {
+    overview:
+      "Paraguay is a left-hand-drive South American market and one of the region's most open used-vehicle importers — it caps used passenger cars at 10 model-years old and applies a comparatively light Arancel (0–20%) plus 10% IVA, roughly 28–32% all-in. Landlocked Asunción is reached via Montevideo or Brazilian ports, and the country is a re-export hub into the wider Mercosur interior.",
+    considerations: [
+      "The 10-year age limit (Ley 2018/2002) is the key filter — source 2016+ stock.",
+      "A light duty stack (Arancel 0–20% + 10% IVA, ~28–32% all-in) makes Paraguay one of South America's lowest-tax used-import destinations.",
+      "No EV-specific import-duty relief is recorded; vehicles transit via Montevideo (Uruguay) or Brazilian ports to Asunción.",
+    ],
+    faq: [
+      { q: "Is Paraguay right- or left-hand drive?", a: "Left-hand drive (LHD)." },
+      { q: "What is the age limit?", a: "Used passenger cars are capped at 10 model-years old (Ley 2018/2002)." },
+      { q: "What duty and VAT apply?", a: "Arancel 0–20% plus 10% IVA, roughly 28–32% all-in — verify with Dirección Nacional de Aduanas." },
+      { q: "Which port handles imports?", a: "Asunción, reached via Montevideo or Brazilian ports (landlocked)." },
+    ],
+    popularModelIds: ["byd-atto-3", "li-auto-l7", "chery-tiggo-8"],
+    evNote:
+      "Paraguay has no EV-specific import-duty relief recorded; EVs follow the standard Arancel + 10% IVA stack, though the light overall duty makes it an accessible EV destination.",
+  },
+  angola: {
+    overview:
+      "Angola is a left-hand-drive Southern African market with a restricted, high-duty import regime applied at the port of Luanda. The used-vehicle age rule is cited inconsistently (5–6 years), and imports face a 30% customs duty plus 14% VAT (combined ~42–55%).",
+    considerations: [
+      "The age rule is cited inconsistently (5 vs 6 years vs no strict limit) — confirm the current cut-off with Angola Customs before sourcing stock.",
+      "A high-duty stack (30% + 14% VAT, ~42–55% combined) makes the landed cost heavy.",
+      "Clearance runs through Luanda, with the regime dependent on vehicle category and assessed value.",
+    ],
+    faq: [
+      { q: "Is Angola right- or left-hand drive?", a: "Left-hand drive (LHD)." },
+      { q: "What is the age limit?", a: "Cited inconsistently at 5–6 years — verify with Angola Customs." },
+      { q: "What duty and VAT apply?", a: "30% customs duty plus 14% VAT (combined ~42–55%)." },
+      { q: "Which port handles imports?", a: "Luanda." },
+    ],
+    popularModelIds: ["byd-atto-3", "geely-monjaro", "chery-tiggo-8"],
+    evNote:
+      "Angola records no EV-specific import-duty relief; EVs follow the same 30% duty plus 14% VAT as combustion vehicles.",
+  },
+  mozambique: {
+    overview:
+      "Mozambique is a right-hand-drive Southern African market — an outlier among the former Portuguese colonies in driving on the left. It has no fixed used-vehicle age limit, applies engine-size-based duty plus 17% VAT, and clears through the JUE digital portal at Maputo and Beira, with mandatory Intertek pre-shipment inspection.",
+    considerations: [
+      "RHD is mandatory (drives on the left) — source RHD export units.",
+      "No fixed age limit makes Mozambique one of the more accessible Southern African markets.",
+      "JUE digital clearance, a NUIT tax number and the Intertek MOZ pre-shipment inspection are required.",
+    ],
+    faq: [
+      { q: "Is Mozambique right- or left-hand drive?", a: "Right-hand drive (RHD) — Mozambique drives on the left." },
+      { q: "Is there an age limit?", a: "No fixed age limit, though duty may rise with age." },
+      { q: "What inspection is required?", a: "Intertek pre-shipment inspection (MOZ number) plus JUE digital clearance." },
+      { q: "Which ports handle imports?", a: "Maputo and Beira." },
+    ],
+    popularModelIds: ["byd-atto-3", "mg-4", "byd-sealion-6"],
+    evNote:
+      "Mozambique records no EV-specific import-duty relief; EVs follow the engine-size duty plus 17% VAT.",
+  },
+  uganda: {
+    overview:
+      "Uganda is a right-hand-drive East African market with a 15-year age limit (a reduction to 13 years is proposed for 2026/27), a Euro 4/IV emission standard and mandatory UNBS inspection. It applies 25% import duty plus 18% VAT and an age-based environmental levy, with vehicles transiting via the Port of Mombasa to landlocked Kampala.",
+    considerations: [
+      "The 15-year age limit (13 proposed) and Euro 4 emission standard are the binding filters.",
+      "The environmental levy is 0% under 9 years and 50% above — newer stock avoids the heaviest charge.",
+      "RHD is mandatory; vehicles transit via Mombasa (Kenya) to Kampala.",
+    ],
+    faq: [
+      { q: "Is Uganda right- or left-hand drive?", a: "Right-hand drive (RHD)." },
+      { q: "What is the age limit?", a: "15 years (13 years proposed for 2026/27)." },
+      { q: "What duty and VAT apply?", a: "25% import duty plus 18% VAT, plus an age-based environmental levy." },
+      { q: "Which port handles imports?", a: "Kampala, via the Port of Mombasa (Kenya) transit." },
+    ],
+    popularModelIds: ["byd-atto-3", "byd-song-plus", "chery-tiggo-8"],
+    evNote:
+      "Uganda's environmental levy is 0% for vehicles under 9 years old, so newer EVs and PHEVs avoid the heaviest charge; confirm EV-specific treatment with URA.",
+    suvNote:
+      "SUVs suit Uganda's mixed urban and rural roads; compact and mid-size SUVs are the dominant import segment.",
+  },
+  tajikistan: {
+    overview:
+      "Tajikistan is a left-hand-drive Central Asian market that bans vehicles produced before 2013 (Government Decree No. 355) and requires a Euro 4 emission minimum. It offers a 10-year EV import-duty exemption (from October 2022) versus ~20–30% duty plus 18% VAT for combustion, and is reached overland via rail from China or through the Caucasus/Iran corridors.",
+    considerations: [
+      "The fixed pre-2013 cutoff (Decree No. 355) is the hard age filter — source 2013+ stock.",
+      "The 10-year EV import-duty exemption is the standout relief delta versus ~20–30% duty + 18% VAT for combustion.",
+      "Landlocked — vehicles arrive by rail from China (Khorgos) or via Poti/Batumi (Georgia) / Bandar Abbas (Iran).",
+    ],
+    faq: [
+      { q: "Is Tajikistan right- or left-hand drive?", a: "Left-hand drive (LHD)." },
+      { q: "What is the age limit?", a: "Vehicles produced before 2013 are banned (Decree No. 355)." },
+      { q: "What EV incentive applies?", a: "A 10-year EV import-duty exemption from October 2022." },
+      { q: "How do vehicles arrive?", a: "By rail from China, or via Poti/Batumi (Georgia) / Bandar Abbas (Iran)." },
+    ],
+    popularModelIds: ["byd-atto-3", "byd-seal", "chery-tiggo-8"],
+    evNote:
+      "Tajikistan's 10-year EV import-duty exemption makes recent Chinese EVs the standout import category versus ~20–30% duty plus 18% VAT for combustion vehicles.",
+  },
+  zimbabwe: {
+    overview:
+      "Zimbabwe is a right-hand-drive Southern African market with a 10-year age limit (S.I. 54 of 2024) and a ZIMRA duty schedule that taxes EVs at a reduced 25% (hybrids 40%). Landlocked, vehicles transit via Durban or Beira and clear at the Beitbridge or Forbes border posts.",
+    considerations: [
+      "The 10-year age limit (S.I. 54 of 2024, with S.I. 172 exceptions) is the key filter — source 2016+ stock.",
+      "EVs attract a reduced 25% customs duty versus the engine-size ICE schedule — a structural advantage for EV imports.",
+      "RHD is mandatory; vehicles transit via Durban (South Africa) or Beira (Mozambique) to the Beitbridge/Forbes border.",
+    ],
+    faq: [
+      { q: "Is Zimbabwe right- or left-hand drive?", a: "Right-hand drive (RHD)." },
+      { q: "What is the age limit?", a: "10 years from manufacture (S.I. 54 of 2024)." },
+      { q: "What EV incentive applies?", a: "EVs are taxed at 25% duty (hybrids 40%) versus the engine-size ICE schedule." },
+      { q: "Which ports handle imports?", a: "Harare, via Durban or Beira transit and the Beitbridge/Forbes border." },
+    ],
+    popularModelIds: ["byd-atto-3", "geely-monjaro", "chery-tiggo-8"],
+    evNote:
+      "Zimbabwe's reduced 25% EV duty (versus the engine-size ICE schedule) makes recent Chinese EVs the standout import category, subject to the 10-year age limit.",
+  },
 };

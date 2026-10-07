@@ -714,6 +714,84 @@
       "source_url": "https://www.wcshipping.com/blog/guatemala-vehicle-import-rules-2025-sat-regulations-vs-reality-guide",
       "source_date": "2026-10-07",
       "confidence": "high"
+    },
+    {
+      "country_id": "paraguay",
+      "name": "Paraguay",
+      "name_zh": "巴拉圭",
+      "region": "latin-america",
+      "drive_side": "lhd",
+      "currency": "PYG",
+      "status": "active",
+      "source": "Dirección Nacional de Aduanas (Paraguay) / JP Sheet import guide",
+      "source_url": "https://jpsheet.com/import-guide/paraguay/",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "angola",
+      "name": "Angola",
+      "name_zh": "安哥拉",
+      "region": "africa",
+      "drive_side": "lhd",
+      "currency": "AOA",
+      "status": "active",
+      "source": "Angola Customs (AGT) / US trade.gov (Angola import tariffs)",
+      "source_url": "https://www.trade.gov/country-commercial-guides/angola-import-tariffs",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "mozambique",
+      "name": "Mozambique",
+      "name_zh": "莫桑比克",
+      "region": "africa",
+      "drive_side": "rhd",
+      "currency": "MZN",
+      "status": "active",
+      "source": "Autoridade Tributária de Moçambique (AT) / carimports.co.mz import guide",
+      "source_url": "https://www.carimports.co.mz/insights/the-complete-2026-guide-to-car-import-age-limits-and-restrictions-in-mozambique/",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "uganda",
+      "name": "Uganda",
+      "name_zh": "乌干达",
+      "region": "africa",
+      "drive_side": "rhd",
+      "currency": "UGX",
+      "status": "active",
+      "source": "Uganda Revenue Authority (URA)",
+      "source_url": "https://ura.go.ug/en/import-export-faqs/",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "tajikistan",
+      "name": "Tajikistan",
+      "name_zh": "塔吉克斯坦",
+      "region": "central-asia",
+      "drive_side": "lhd",
+      "currency": "TJS",
+      "status": "active",
+      "source": "Government Decree No. 355 (2023) / Product Compliance Institute",
+      "source_url": "https://www.productcomplianceinstitute.com/2023/09/05/tajikistan-new-regulation-for-the-import-of-vehicles/",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "zimbabwe",
+      "name": "Zimbabwe",
+      "name_zh": "津巴布韦",
+      "region": "africa",
+      "drive_side": "rhd",
+      "currency": "USD",
+      "status": "active",
+      "source": "Zimbabwe Revenue Authority (ZIMRA)",
+      "source_url": "https://www.zimra.co.zw/customs/importation-of-motor-vehicles-by-private-individuals",
+      "source_date": "2026-10-07",
+      "confidence": "high"
     }
   ]
 }
