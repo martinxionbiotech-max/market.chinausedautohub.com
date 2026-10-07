@@ -402,6 +402,84 @@
       "source_url": "https://customs.gov.az/en/ferdler-ucun/avtomobillerin-getirilmesi",
       "source_date": "2026-10-07",
       "confidence": "high"
+    },
+    {
+      "country_id": "australia",
+      "name": "Australia",
+      "name_zh": "澳大利亚",
+      "region": "oceania",
+      "drive_side": "rhd",
+      "currency": "AUD",
+      "status": "active",
+      "source": "Department of Infrastructure, Transport, Regional Development (ROVER) / Australian Border Force",
+      "source_url": "https://www.infrastructure.gov.au/infrastructure-transport-vehicles/vehicles/importing-road-vehicle-australia",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "russia",
+      "name": "Russia",
+      "name_zh": "俄罗斯",
+      "region": "europe",
+      "drive_side": "lhd",
+      "currency": "RUB",
+      "status": "active",
+      "source": "Federal Customs Service (FCS) / EAEU framework",
+      "source_url": "https://carawon.com/en/import-to-russia",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "georgia",
+      "name": "Georgia",
+      "name_zh": "格鲁吉亚",
+      "region": "europe",
+      "drive_side": "lhd",
+      "currency": "GEL",
+      "status": "active",
+      "source": "Revenue Service of Georgia (Customs)",
+      "source_url": "https://carawon.com/en/import-to-georgia",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "tunisia",
+      "name": "Tunisia",
+      "name_zh": "突尼斯",
+      "region": "africa",
+      "drive_side": "lhd",
+      "currency": "TND",
+      "status": "active",
+      "source": "Tunisian Customs (Direction Générale des Douanes)",
+      "source_url": "https://www.trade.gov/country-commercial-guides/tunisia-automotive-parts-services-equipment",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "oman",
+      "name": "Oman",
+      "name_zh": "阿曼",
+      "region": "middle-east",
+      "drive_side": "lhd",
+      "currency": "OMR",
+      "status": "active",
+      "source": "Royal Oman Police — Directorate General of Customs",
+      "source_url": "https://www.customs.gov.om/en/import-of-used-vehicles-motorcycles-and-classic-vehicles/",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "bahrain",
+      "name": "Bahrain",
+      "name_zh": "巴林",
+      "region": "middle-east",
+      "drive_side": "lhd",
+      "currency": "BHD",
+      "status": "active",
+      "source": "Bahrain Customs Affairs",
+      "source_url": "https://www.customs.gov.bh/en/faq",
+      "source_date": "2026-10-07",
+      "confidence": "high"
     }
   ]
 }

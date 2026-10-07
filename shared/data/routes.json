@@ -503,6 +503,102 @@
       "source_url": null,
       "last_checked": "2026-10-07",
       "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-au-melbourne",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "au-melbourne",
+      "est_days_min": 16,
+      "est_days_max": 24,
+      "shipping_method": "roro",
+      "source": "Industry route estimates",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-au-sydney",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "au-sydney",
+      "est_days_min": 16,
+      "est_days_max": 26,
+      "shipping_method": "roro",
+      "source": "Industry route estimates",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-tianjin-to-ru-vladivostok",
+      "origin_port_id": "cn-tianjin",
+      "destination_port_id": "ru-vladivostok",
+      "est_days_min": 4,
+      "est_days_max": 8,
+      "shipping_method": "roro",
+      "source": "Industry route estimates (short Far East sea leg)",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-manzhouli-to-ru-zabaykalsk",
+      "origin_port_id": "cn-manzhouli",
+      "destination_port_id": "ru-zabaykalsk",
+      "est_days_min": 2,
+      "est_days_max": 5,
+      "shipping_method": "container",
+      "source": "Industry route estimates (overland rail/road transit)",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-ge-poti",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "ge-poti",
+      "est_days_min": 24,
+      "est_days_max": 34,
+      "shipping_method": "roro",
+      "source": "Industry route estimates (Suez / Black Sea)",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-tn-rades",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "tn-rades",
+      "est_days_min": 20,
+      "est_days_max": 30,
+      "shipping_method": "roro",
+      "source": "Industry route estimates",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-guangzhou-to-om-sohar",
+      "origin_port_id": "cn-guangzhou",
+      "destination_port_id": "om-sohar",
+      "est_days_min": 12,
+      "est_days_max": 18,
+      "shipping_method": "roro",
+      "source": "Industry route estimates",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-bh-khalifa",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "bh-khalifa",
+      "est_days_min": 14,
+      "est_days_max": 20,
+      "shipping_method": "roro",
+      "source": "Industry route estimates",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
     }
   ]
 }

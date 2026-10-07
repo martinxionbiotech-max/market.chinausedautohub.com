@@ -370,6 +370,97 @@
       "country_id": "azerbaijan",
       "type": "destination",
       "note": "Caspian Sea transit via Baku International Sea Trade Port"
+    },
+    {
+      "port_id": "cn-manzhouli",
+      "name": "Manzhouli (满洲里) land border",
+      "country_id": "cn",
+      "type": "origin",
+      "note": "Land/rail border crossing for Russia overland"
+    },
+    {
+      "port_id": "au-melbourne",
+      "name": "Melbourne",
+      "country_id": "australia",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "au-sydney",
+      "name": "Sydney (Port Botany)",
+      "country_id": "australia",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "au-brisbane",
+      "name": "Brisbane",
+      "country_id": "australia",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "ru-vladivostok",
+      "name": "Vladivostok",
+      "country_id": "russia",
+      "type": "destination",
+      "note": "Far East — primary entry for China-origin RoRo"
+    },
+    {
+      "port_id": "ru-zabaykalsk",
+      "name": "Zabaykalsk (land border)",
+      "country_id": "russia",
+      "type": "destination",
+      "note": "Overland via Manzhouli rail/road crossing"
+    },
+    {
+      "port_id": "ge-poti",
+      "name": "Poti",
+      "country_id": "georgia",
+      "type": "destination",
+      "note": "Black Sea — re-export hub"
+    },
+    {
+      "port_id": "ge-batumi",
+      "name": "Batumi",
+      "country_id": "georgia",
+      "type": "destination",
+      "note": "Black Sea"
+    },
+    {
+      "port_id": "tn-rades",
+      "name": "Rades (Tunis)",
+      "country_id": "tunisia",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "tn-sfax",
+      "name": "Sfax",
+      "country_id": "tunisia",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "om-sohar",
+      "name": "Sohar",
+      "country_id": "oman",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "om-salalah",
+      "name": "Salalah",
+      "country_id": "oman",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "bh-khalifa",
+      "name": "Khalifa Bin Salman Port (Hidd)",
+      "country_id": "bahrain",
+      "type": "destination",
+      "note": null
     }
   ]
 }

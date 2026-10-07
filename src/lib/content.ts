@@ -581,4 +581,112 @@ export const countryContent: Record<string, CountryContent> = {
     evNote:
       "Azerbaijan zero-rates customs duty and excise on EVs three years old or newer (18% VAT applies from Jan 2026), a strong incentive versus the engine-cc excise stack for combustion vehicles.",
   },
+  australia: {
+    overview:
+      "Australia is a large, mature right-hand-drive Oceania market that tightly controls used-vehicle imports through the ROVER approval system under the Road Vehicle Standards Act 2018. Passenger vehicles attract 5% customs duty plus 10% GST, with a 33% Luxury Car Tax above a fuel-efficient threshold. Chinese RHD brands (BYD, MG, GWM, Chery) have strong local presence, and Melbourne and Sydney are the main RoRo entry ports.",
+    considerations: [
+      "Used-vehicle imports are restricted to narrow approval pathways (SEVS, 25-Year Rule, Personal Import Scheme) — confirm ROVER eligibility before sourcing stock.",
+      "RHD is mandatory — source RHD export units (most Chinese brands produce RHD for Australia).",
+      "No EV-specific duty relief, but EVs qualify for the higher fuel-efficient LCT threshold; 5% duty + 10% GST + LCT apply.",
+    ],
+    faq: [
+      { q: "Is Australia right- or left-hand drive?", a: "Right-hand drive (RHD)." },
+      { q: "Can I import a used car into Australia?", a: "Only under narrow approval pathways — SEVS, the 25-Year Rule, or the Personal Import Scheme (12+ months overseas ownership)." },
+      { q: "What duty and tax apply?", a: "5% customs duty + 10% GST, plus 33% Luxury Car Tax above the threshold (higher for fuel-efficient vehicles)." },
+      { q: "Which ports handle imports?", a: "Melbourne and Sydney (Port Botany), with Brisbane and Fremantle (Perth) as alternatives." },
+    ],
+    popularModelIds: ["byd-atto-3", "mg-4", "byd-sealion-6"],
+    evNote:
+      "Australia has no EV-specific import-duty relief, but EVs (and other vehicles ≤7L/100km) benefit from a higher Luxury Car Tax threshold. EV adoption is among the fastest in the region, and Chinese RHD EVs are well established.",
+  },
+  russia: {
+    overview:
+      "Russia is a large left-hand-drive market and one of the biggest destinations for Chinese-brand vehicles. Imports face a utilization (recycling) fee that has escalated since 2024, an engine-cc personal-import duty, an engine-power excise and 20% VAT, with EPTS electronic-passport activation. Vladivostok (Far East) and the Manzhouli/Zabaykalsk overland crossing are the main entry points.",
+    considerations: [
+      "The utilization (recycling) fee escalated from 2024 and 2025 and is a major cost component — verify current amounts with the Federal Customs Service.",
+      "Personal-import duty is keyed to engine displacement, not a flat percentage — quote per exact model.",
+      "Sanctions risk: Western automakers prohibit Russia exports, the EU bans luxury-car (>1,900cc) and EV/hybrid exports, and banking/payment friction plus compliance scrutiny apply — obtain legal advice before trading.",
+    ],
+    faq: [
+      { q: "Is Russia right- or left-hand drive?", a: "Left-hand drive (LHD)." },
+      { q: "What fees apply?", a: "A utilization (recycling) fee, engine-cc personal-import duty, engine-power excise and 20% VAT — verify current amounts with customs." },
+      { q: "Are there EV incentives?", a: "No EV-specific duty relief; EVs still pay the utilization fee and VAT." },
+      { q: "Which entry points are used?", a: "Vladivostok (sea) and the Manzhouli/Zabaykalsk overland crossing." },
+    ],
+    popularModelIds: ["li-auto-l7", "geely-monjaro", "chery-tiggo-8"],
+    evNote:
+      "Russia grants no EV-specific import-duty relief, and EV/hybrid trade is sanctions-sensitive (the EU bans EV/hybrid exports to Russia). Chinese new-energy vehicles nonetheless dominate the market; EREVs and PHEVs are the fastest-growing import segments.",
+  },
+  georgia: {
+    overview:
+      "Georgia is a left-hand-drive South Caucasus market with one of the region's lightest customs regimes — a nominal per-cc duty, a per-cc excise with a 6-year age cliff, and 18% VAT. Electric vehicles are exempt from duty and excise, and the Poti/Batumi corridor makes Georgia a re-export hub into Armenia, Azerbaijan and Central Asia.",
+    considerations: [
+      "The 6-year excise cliff (about 1.5 GEL/cc to 4.5 GEL/cc) materially raises the cost of older vehicles — source recent stock.",
+      "EVs are exempt from import duty and excise (18% VAT only) — a strong relief delta.",
+      "RHD vehicles face a tripled excise; re-export through Poti/Batumi may skip the tax.",
+    ],
+    faq: [
+      { q: "Is Georgia right- or left-hand drive?", a: "Left-hand drive (LHD); RHD vehicles face a tripled excise." },
+      { q: "What is the 6-year rule?", a: "A tax cliff, not a ban — the per-cc excise steps up sharply at 6 years of age." },
+      { q: "What EV incentive applies?", a: "EVs are exempt from import duty and excise, paying 18% VAT only." },
+      { q: "Which ports handle imports?", a: "Poti and Batumi, with onward re-export to Armenia, Azerbaijan and Central Asia." },
+    ],
+    popularModelIds: ["byd-atto-3", "geely-monjaro", "chery-tiggo-8"],
+    evNote:
+      "Georgia exempts EVs from import duty and per-cc excise (18% VAT only), and the Poti/Batumi corridor supports tax-skipping re-export — a distinctive EV + re-export value proposition in the Caucasus.",
+  },
+  tunisia: {
+    overview:
+      "Tunisia is a left-hand-drive North African market that permits used-vehicle imports under five years of age and an FCR conformity certificate. Combustion vehicles face high tariffs plus 19% VAT and a consumption tax, while fully electric vehicles under five years enjoy 0% customs duty, 0% VAT and 0% consumption tax — the strongest EV relief in North Africa. Rades (Tunis) is the main port.",
+    considerations: [
+      "The under-5-years rule is the hard age filter — older stock is ineligible.",
+      "EVs under 5 years pay 0% duty + 0% VAT + 0% consumption tax, versus a heavy ICE tariff stack.",
+      "An FCR conformity certificate is required for individual imports.",
+    ],
+    faq: [
+      { q: "Is Tunisia right- or left-hand drive?", a: "Left-hand drive (LHD)." },
+      { q: "What is the age limit?", a: "Used cars must be under five years old." },
+      { q: "What EV incentive applies?", a: "Fully electric vehicles under 5 years pay 0% customs duty, 0% VAT and 0% consumption tax." },
+      { q: "Which port handles imports?", a: "Rades (Tunis), with Sfax as an alternative." },
+    ],
+    popularModelIds: ["byd-atto-3", "geely-monjaro", "chery-tiggo-8"],
+    evNote:
+      "Tunisia's EV full-exemption (0% duty + 0% VAT + 0% consumption tax for vehicles under 5 years) makes recent Chinese EVs the standout import category, versus a heavy ICE tariff stack plus 19% VAT.",
+  },
+  oman: {
+    overview:
+      "Oman is a left-hand-drive Gulf market that follows GCC standard specifications. Oman Customs permits private vehicles under 7 years old, and imports attract a flat 5% customs duty plus 5% VAT. Sohar and Salalah are the main entry ports.",
+    considerations: [
+      "The 7-year age limit for private vehicles is the key filter — source recent stock.",
+      "GCC standard specification is mandatory.",
+      "A flat 5% customs duty plus 5% VAT applies, with no EV-specific relief recorded.",
+    ],
+    faq: [
+      { q: "Is Oman right- or left-hand drive?", a: "Left-hand drive (LHD)." },
+      { q: "What is the age limit?", a: "Private vehicles under 7 years old." },
+      { q: "What duty and VAT apply?", a: "5% customs duty plus 5% VAT." },
+      { q: "Which ports handle imports?", a: "Sohar and Salalah." },
+    ],
+    popularModelIds: ["chery-tiggo-8", "geely-monjaro", "great-wall-haval-h6"],
+    evNote:
+      "Oman has no EV-specific import-duty relief recorded; the flat 5% duty plus 5% VAT applies to all vehicles.",
+  },
+  bahrain: {
+    overview:
+      "Bahrain is a small but high-income left-hand-drive Gulf market following GCC specification. It applies 5% customs duty plus 10% VAT (the highest in the GCC) and restricts imported vehicles to about five years of age, with 5–10-year units paying a BHD 1,000 fee. Khalifa Bin Salman Port (Hidd) is the main entry point.",
+    considerations: [
+      "The ~5-year age limit (5–10-year units pay a BHD 1,000 fee) is the key filter — source recent stock.",
+      "GCC specification is mandatory.",
+      "5% customs duty + 10% VAT is the highest VAT in the GCC; no EV-specific relief recorded.",
+    ],
+    faq: [
+      { q: "Is Bahrain right- or left-hand drive?", a: "Left-hand drive (LHD)." },
+      { q: "What is the age limit?", a: "About five years; 5–10-year units pay an additional BHD 1,000 fee." },
+      { q: "What duty and VAT apply?", a: "5% customs duty plus 10% VAT (~15% total)." },
+      { q: "Which port handles imports?", a: "Khalifa Bin Salman Port (Hidd)." },
+    ],
+    popularModelIds: ["geely-monjaro", "chery-tiggo-8", "great-wall-haval-h6"],
+    evNote:
+      "Bahrain has no EV-specific import-duty relief recorded in the sources reviewed; the 5% duty plus 10% VAT applies, though Bahrain promotes EV adoption through other incentives.",
+  },
 };
