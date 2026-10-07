@@ -579,7 +579,7 @@
    "model_id": "changan-cs75-plus",
    "brand_id": "changan",
    "name": "CS75 Plus",
-   "name_zh": "CS75 PLUS",
+   "name_zh": "长安CS75 PLUS",
    "body_type": "suv",
    "status": "active",
    "generations": [
@@ -1181,7 +1181,7 @@
    "model_id": "mg-4",
    "brand_id": "mg",
    "name": "MG4 EV",
-   "name_zh": "MG4",
+   "name_zh": "名爵MG4 EV",
    "body_type": "hatchback",
    "status": "active",
    "generations": [
@@ -1225,7 +1225,7 @@
    "model_id": "mg-hs",
    "brand_id": "mg",
    "name": "MG HS",
-   "name_zh": "MG HS",
+   "name_zh": "名爵MG HS",
    "body_type": "suv",
    "status": "active",
    "generations": [
@@ -1269,7 +1269,7 @@
    "model_id": "mg-5",
    "brand_id": "mg",
    "name": "MG5",
-   "name_zh": "MG5",
+   "name_zh": "名爵MG5",
    "body_type": "sedan",
    "status": "active",
    "generations": [
