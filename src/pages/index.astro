@@ -5,7 +5,7 @@ import { countries, getRules } from "../lib/market";
 import { regionMeta } from "../lib/content";
 
 const siteTitle = "China Used Car Export Markets";
-const regionOrder = ["middle-east", "africa", "central-asia"];
+const regionOrder = ["middle-east", "africa", "central-asia", "south-asia", "latin-america"];
 
 const byRegion: Record<string, typeof countries> = {};
 for (const c of countries) {
@@ -29,7 +29,7 @@ const driveLabel = (s: string) => (s === "lhd" ? "LHD" : "RHD");
   siteUrl={MARKET_SITE_URL}
   currentSection="market"
   title="China Used Car Export Markets"
-  description="Country market intelligence for exporting used cars from China — import regulations, duties, ports and shipping routes for UAE, Saudi Arabia, Kenya, Tanzania, Nigeria, Kazakhstan and Uzbekistan."
+  description="Country market intelligence for exporting used cars from China — import regulations, duties, ports and shipping routes for 13 markets across the Middle East, Africa, Central Asia, South Asia and Latin America."
   canonical="/"
   jsonLd={jsonLd}
   breadcrumbs={[{ name: "Home", url: "/" }]}

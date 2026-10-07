@@ -143,6 +143,78 @@
       "source_url": null,
       "last_checked": "2026-10-04",
       "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-za-durban",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "za-durban",
+      "est_days_min": 18,
+      "est_days_max": 28,
+      "shipping_method": "roro",
+      "source": "Industry route estimates",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-tianjin-to-eg-alexandria",
+      "origin_port_id": "cn-tianjin",
+      "destination_port_id": "eg-alexandria",
+      "est_days_min": 22,
+      "est_days_max": 34,
+      "shipping_method": "roro",
+      "source": "Industry route estimates",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-jo-aqaba",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "jo-aqaba",
+      "est_days_min": 18,
+      "est_days_max": 28,
+      "shipping_method": "roro",
+      "source": "Industry route estimates",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-pk-karachi",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "pk-karachi",
+      "est_days_min": 12,
+      "est_days_max": 20,
+      "shipping_method": "roro",
+      "source": "Industry route estimates",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-guangzhou-to-bd-chittagong",
+      "origin_port_id": "cn-guangzhou",
+      "destination_port_id": "bd-chittagong",
+      "est_days_min": 10,
+      "est_days_max": 16,
+      "shipping_method": "roro",
+      "source": "Industry route estimates",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-cl-san-antonio",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "cl-san-antonio",
+      "est_days_min": 30,
+      "est_days_max": 40,
+      "shipping_method": "roro",
+      "source": "Industry route estimates",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
     }
   ]
 }

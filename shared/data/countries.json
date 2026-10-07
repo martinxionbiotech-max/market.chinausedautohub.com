@@ -90,6 +90,84 @@
       "source_url": null,
       "source_date": "2026-10-04",
       "confidence": "high"
+    },
+    {
+      "country_id": "south-africa",
+      "name": "South Africa",
+      "name_zh": "南非",
+      "region": "africa",
+      "drive_side": "rhd",
+      "currency": "ZAR",
+      "status": "active",
+      "source": "South African Government (gov.za)",
+      "source_url": "https://www.gov.za/services/services-organisations/import/importing-second-hand-or-used-vehicle",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "egypt",
+      "name": "Egypt",
+      "name_zh": "埃及",
+      "region": "africa",
+      "drive_side": "lhd",
+      "currency": "EGP",
+      "status": "active",
+      "source": "Egyptian Customs Authority (public record)",
+      "source_url": "https://www.trade.gov/country-commercial-guides/egypt-import-tariffs",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "jordan",
+      "name": "Jordan",
+      "name_zh": "约旦",
+      "region": "middle-east",
+      "drive_side": "lhd",
+      "currency": "JOD",
+      "status": "active",
+      "source": "Jordan Customs / Jordan Times (official reporting)",
+      "source_url": "https://www.jordantimes.com/news/local/cabinet-overhauls-vehicle-import-rules-slashes-taxes-bans-damaged-car-imports",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "pakistan",
+      "name": "Pakistan",
+      "name_zh": "巴基斯坦",
+      "region": "south-asia",
+      "drive_side": "rhd",
+      "currency": "PKR",
+      "status": "active",
+      "source": "Federal Board of Revenue (FBR)",
+      "source_url": "https://www.fbr.gov.pk/vehicles/51149/131187",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "bangladesh",
+      "name": "Bangladesh",
+      "name_zh": "孟加拉国",
+      "region": "south-asia",
+      "drive_side": "rhd",
+      "currency": "BDT",
+      "status": "active",
+      "source": "National Board of Revenue (NBR)",
+      "source_url": "https://bangladeshcustoms.gov.bd/",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "chile",
+      "name": "Chile",
+      "name_zh": "智利",
+      "region": "latin-america",
+      "drive_side": "lhd",
+      "currency": "CLP",
+      "status": "active",
+      "source": "Servicio Nacional de Aduanas (Chile Customs)",
+      "source_url": "https://www.aduana.cl/importacion-de-vehiculos/aduana/2017-11-22/101502.html",
+      "source_date": "2026-10-07",
+      "confidence": "high"
     }
   ]
 }

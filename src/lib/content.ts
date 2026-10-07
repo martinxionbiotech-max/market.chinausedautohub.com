@@ -3,6 +3,8 @@ export const regionMeta: Record<string, { label: string; label_zh: string }> = {
   "middle-east": { label: "Middle East", label_zh: "中东" },
   africa: { label: "Africa", label_zh: "非洲" },
   "central-asia": { label: "Central Asia", label_zh: "中亚" },
+  "south-asia": { label: "South Asia", label_zh: "南亚" },
+  "latin-america": { label: "Latin America", label_zh: "拉丁美洲" },
 };
 
 export interface CountryContent {
@@ -139,5 +141,113 @@ export const countryContent: Record<string, CountryContent> = {
     popularModelIds: ["byd-song-plus", "chery-tiggo-8", "geely-monjaro"],
     evNote:
       "Uzbekistan exempts EVs from import duty and excise tax; local assembly and adoption are growing under government incentives.",
+  },
+  "south-africa": {
+    overview:
+      "South Africa is the continent's most developed automotive market and a right-hand-drive country that protects its local manufacturing base. Used-vehicle imports are tightly restricted to defined permit categories (returning residents, immigrants, special-purpose vehicles), and Durban is the principal RoRo entry port.",
+    considerations: [
+      "Used imports require an ITAC permit plus an NRCS Letter of Authority and Interpol clearance — eligibility is narrow.",
+      "No fixed age limit, but permit categories are restrictive — confirm ITAC eligibility before sourcing stock.",
+      "EVs face the same 25% passenger-vehicle duty with no EV-specific relief (and a 15% VAT).",
+    ],
+    faq: [
+      { q: "Can I import a used car into South Africa?", a: "Only under defined ITAC permit categories — mainly returning South African nationals and permanent-residence immigrants." },
+      { q: "Is South Africa right- or left-hand drive?", a: "Right-hand drive (RHD)." },
+      { q: "What duty and VAT apply?", a: "Passenger vehicles attract 25% import duty plus 15% VAT (plus ad valorem excise on high-value units). Verify with SARS." },
+      { q: "Which port handles imports?", a: "Durban is the main RoRo port, with Cape Town as an alternative." },
+    ],
+    popularModelIds: ["great-wall-haval-h6", "chery-tiggo-8", "byd-atto-3"],
+    evNote:
+      "South Africa has no EV-specific import-duty relief; EVs face the same 25% duty (higher than the 18% ICE rate in some classifications). Local EV adoption is growing but the tariff regime does not currently favor imports.",
+  },
+  egypt: {
+    overview:
+      "Egypt is a large left-hand-drive North African market with an engine-capacity-based customs regime and a mandatory NAFEZA single-window clearance system. It has introduced strong EV incentives since January 2025, and Alexandria is the principal vehicle entry port.",
+    considerations: [
+      "Used passenger cars are near-new only (about one year); EVs may be imported up to three years old.",
+      "Conventional duty is 30% up to 1600cc and 100% above, plus a development fee and 14% VAT.",
+      "BEVs enjoy 0% customs duty with a FOB deduction up to 50% — one EV per individual every five years.",
+    ],
+    faq: [
+      { q: "Is Egypt right- or left-hand drive?", a: "Left-hand drive (LHD) — RHD vehicles cannot be registered." },
+      { q: "What is the age limit?", a: "Used cars are near-new (about one year); EVs up to three years old under the 2025 policy." },
+      { q: "What tax applies to EVs?", a: "BEVs (HS 8703.80) pay 0% customs duty plus 14% VAT." },
+      { q: "Which port handles imports?", a: "Alexandria, with Port Said as an alternative." },
+    ],
+    popularModelIds: ["byd-atto-3", "byd-seal", "byd-dolphin"],
+    evNote:
+      "Egypt exempts pure-electric vehicles from customs duty (0%) from January 2025, with a progressive FOB-value deduction up to 50%; individuals may import one EV every five years. NAFEZA single-window clearance is mandatory.",
+  },
+  jordan: {
+    overview:
+      "Jordan is a left-hand-drive Middle East market and a regional re-export hub. Its June 2025 tax reform unified EV special tax at 27% (versus 51% petrol and 39% hybrid) and tightened import rules — banning salvage vehicles and capping EV age at three years. Aqaba is the main port.",
+    considerations: [
+      "EVs older than three years (including clearance year) may no longer be imported (from 1 Nov 2025).",
+      "Salvage, fire- and flood-damaged vehicles are banned.",
+      "Special tax is 27% for EVs, 39% for hybrids, 51% for petrol — plus 16% GST.",
+    ],
+    faq: [
+      { q: "Is Jordan right- or left-hand drive?", a: "Left-hand drive (LHD)." },
+      { q: "What is the EV age cap?", a: "Three years, including the year of customs clearance." },
+      { q: "What tax applies to EVs?", a: "Special tax is unified at 27% for EVs, plus 16% GST." },
+      { q: "Which port handles imports?", a: "Aqaba." },
+    ],
+    popularModelIds: ["byd-atto-3", "byd-han", "byd-seal"],
+    evNote:
+      "Jordan's 2025 reform cut EV special tax to a unified 27% and introduced a three-year EV age cap; it remains a regional EV re-export hub. Verify current rules with Jordan Customs before trading.",
+  },
+  pakistan: {
+    overview:
+      "Pakistan is a large right-hand-drive South Asian market. Used vehicles enter under the Personal Baggage, Gift and Transfer of Residence schemes (cars up to three years old), with a fixed US-dollar duty schedule by engine capacity. Karachi (Port Qasim) is the main entry port.",
+    considerations: [
+      "Used cars over three years old are generally ineligible under personal schemes.",
+      "Duty is a fixed US-dollar schedule by engine size — not a simple percentage.",
+      "EVs up to US$50,000 attract 25% duty; hybrids up to 1800cc get 50% duty exemption.",
+    ],
+    faq: [
+      { q: "Is Pakistan right- or left-hand drive?", a: "Right-hand drive (RHD)." },
+      { q: "What is the age limit?", a: "Cars up to three years old under personal schemes (commercial age cap removed July 2026)." },
+      { q: "How is duty calculated?", a: "A fixed US-dollar schedule by engine capacity under the personal schemes." },
+      { q: "Which port handles imports?", a: "Karachi (Port Qasim)." },
+    ],
+    popularModelIds: ["byd-song-plus", "byd-atto-3", "chery-tiggo-8"],
+    evNote:
+      "Pakistan applies concessional EV duty — 25% for 4-wheelers up to US$50,000, with hybrid exemptions of 50% (≤1800cc) and 25% (1800–2500cc) — under the Electric Vehicle Policy 2020–2025.",
+  },
+  bangladesh: {
+    overview:
+      "Bangladesh is a right-hand-drive South Asian market that imports reconditioned (used) vehicles under a compounding duty cascade — customs duty, supplementary duty, VAT, advance income tax and regulatory duty that can multiply CIF value several times. Chittagong is the main port.",
+    considerations: [
+      "Duty is a compounding cascade, not a single rate — budget 3–4× CIF for reconditioned cars.",
+      "Pre-export inspection and standard export documents are required.",
+      "PHEV/EV duty reductions are under discussion — policy is evolving.",
+    ],
+    faq: [
+      { q: "Is Bangladesh right- or left-hand drive?", a: "Right-hand drive (RHD)." },
+      { q: "How high is the duty?", a: "A compounding cascade (CD + SD + VAT + AIT + RD) that can multiply CIF several times — verify with NBR." },
+      { q: "Are there EV incentives?", a: "PHEV/EV duty cuts have been proposed; policy is evolving — verify with NBR." },
+      { q: "Which port handles imports?", a: "Chittagong." },
+    ],
+    popularModelIds: ["byd-song-plus", "toyota-rav4", "honda-cr-v"],
+    evNote:
+      "Bangladesh has proposed import-duty cuts on plug-in hybrids as part of its energy-efficiency strategy; EV/PHEV duty treatment is evolving and should be verified with the NBR.",
+  },
+  chile: {
+    overview:
+      "Chile is a left-hand-drive Latin American market and one of the region's most flexible for used-vehicle import — it has no age limit and a flat 6% ad valorem duty plus 19% VAT. Chinese brands (BYD, Chery, Geely, MG) have strong local presence, and Iquique's free-trade zone doubles as a regional re-export hub.",
+    considerations: [
+      "No import age limit — model-year flexibility is a key advantage.",
+      "Flat 6% duty + 19% VAT (IVA); a RUT tax number is required.",
+      "Iquique ZOFRI free-trade zone supports re-export to Bolivia and northern Chile.",
+    ],
+    faq: [
+      { q: "Is Chile right- or left-hand drive?", a: "Left-hand drive (LHD)." },
+      { q: "Is there an age limit?", a: "No — Chile has no import age limit for used vehicles." },
+      { q: "What duty and VAT apply?", a: "6% ad valorem duty plus 19% VAT (IVA)." },
+      { q: "Which port handles imports?", a: "San Antonio, with the Iquique free-trade zone as a clearance and re-export option." },
+    ],
+    popularModelIds: ["byd-atto-3", "mg-4", "chery-tiggo-8"],
+    evNote:
+      "Chile applies the same flat 6% duty to EVs (no EV-specific relief) but has one of Latin America's strongest Chinese-EV markets; no age limit makes it attractive for recent low-mileage EV stock.",
   },
 };
