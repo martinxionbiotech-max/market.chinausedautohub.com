@@ -246,6 +246,84 @@
       "source_url": "https://www.sunat.gob.pe/customsinformation/importofvehicles/age_of_vehicle.html",
       "source_date": "2026-10-07",
       "confidence": "high"
+    },
+    {
+      "country_id": "philippines",
+      "name": "Philippines",
+      "name_zh": "菲律宾",
+      "region": "southeast-asia",
+      "drive_side": "lhd",
+      "currency": "PHP",
+      "status": "active",
+      "source": "Bureau of Customs (customs.gov.ph) / EO 12 & RA 8506",
+      "source_url": "https://customs.gov.ph/motor-vehicles-boats-yachts/",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "iraq",
+      "name": "Iraq",
+      "name_zh": "伊拉克",
+      "region": "middle-east",
+      "drive_side": "lhd",
+      "currency": "IQD",
+      "status": "active",
+      "source": "Iraqi Customs / trade guides (Umm Qasr)",
+      "source_url": "https://chinausedcar.net/market/iraq",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "ethiopia",
+      "name": "Ethiopia",
+      "name_zh": "埃塞俄比亚",
+      "region": "africa",
+      "drive_side": "lhd",
+      "currency": "ETB",
+      "status": "active",
+      "source": "Ethiopian Customs Commission / EV-only policy (Feb 2024)",
+      "source_url": "https://ethiopiauto.com/2026/09/20/customs-clearance-vehicles-ethiopia/",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "colombia",
+      "name": "Colombia",
+      "name_zh": "哥伦比亚",
+      "region": "latin-america",
+      "drive_side": "lhd",
+      "currency": "COP",
+      "status": "active",
+      "source": "DIAN (Colombia Customs)",
+      "source_url": "https://colombiatramita.co/vehiculos/importar-vehiculo-colombia/",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "morocco",
+      "name": "Morocco",
+      "name_zh": "摩洛哥",
+      "region": "africa",
+      "drive_side": "lhd",
+      "currency": "MAD",
+      "status": "active",
+      "source": "Moroccan Customs (ADII) / Douane",
+      "source_url": "https://ecarstrade.com/blog/how-to-import-a-car-to-morocco",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "sri-lanka",
+      "name": "Sri Lanka",
+      "name_zh": "斯里兰卡",
+      "region": "south-asia",
+      "drive_side": "rhd",
+      "currency": "LKR",
+      "status": "active",
+      "source": "Sri Lanka Customs / Imports & Exports (Control) Regs No.01/2025",
+      "source_url": "https://lankabizz.net/2025/02/01/sri-lanka-updates-motor-vehicle-import-regulations/",
+      "source_date": "2026-10-07",
+      "confidence": "high"
     }
   ]
 }

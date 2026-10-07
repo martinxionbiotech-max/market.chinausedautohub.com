@@ -230,6 +230,69 @@
       "country_id": "peru",
       "type": "destination",
       "note": null
+    },
+    {
+      "port_id": "ph-manila",
+      "name": "Manila (Port of Manila)",
+      "country_id": "philippines",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "iq-umm-qasr",
+      "name": "Umm Qasr",
+      "country_id": "iraq",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "iq-basrah",
+      "name": "Basrah (Khor Al Zubair)",
+      "country_id": "iraq",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "et-djibouti",
+      "name": "Djibouti (transit for landlocked Ethiopia)",
+      "country_id": "ethiopia",
+      "type": "destination",
+      "note": "Landlocked — vehicles transit via Port of Djibouti"
+    },
+    {
+      "port_id": "co-cartagena",
+      "name": "Cartagena",
+      "country_id": "colombia",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "co-buenaventura",
+      "name": "Buenaventura",
+      "country_id": "colombia",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "ma-casablanca",
+      "name": "Casablanca",
+      "country_id": "morocco",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "ma-tanger-med",
+      "name": "Tanger Med",
+      "country_id": "morocco",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "lk-colombo",
+      "name": "Colombo",
+      "country_id": "sri-lanka",
+      "type": "destination",
+      "note": null
     }
   ]
 }

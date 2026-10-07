@@ -342,6 +342,114 @@ export const countryContent: Record<string, CountryContent> = {
     evNote:
       "Ghana's EV import-duty reduction is developing; EV adoption is early-stage with limited charging infrastructure.",
   },
+  philippines: {
+    overview:
+      "The Philippines is a large left-hand-drive Southeast Asian market that generally prohibits used-vehicle imports, with narrow exceptions under the No-Dollar Importation (NDI) program. Its EV zero-import-duty policy (EO 12, extended to 2028 and broadened to hybrids) makes it a leading destination for Chinese new-energy vehicles, with Manila as the main entry port.",
+    considerations: [
+      "Used-vehicle imports are generally prohibited (EO 156 / EO 877-A); only returning residents, immigrants and diplomats qualify under the NDI program.",
+      "EVs and hybrids enjoy 0% import duty under EO 12 (extended to 2028) versus 40% standard duty — the strongest relief delta in the region.",
+      "RHD import is a criminal offence (RA 8506) — source LHD units only.",
+    ],
+    faq: [
+      { q: "Is the Philippines right- or left-hand drive?", a: "Left-hand drive (LHD). Importing an RHD vehicle is a criminal offence under RA 8506." },
+      { q: "Can I import a used car into the Philippines?", a: "Generally no — used imports are prohibited except under the NDI program for returning residents, immigrants and diplomats." },
+      { q: "What EV incentive applies?", a: "EVs and hybrids pay 0% import duty under EO 12, extended to 2028." },
+      { q: "Which port handles imports?", a: "Manila (Port of Manila)." },
+    ],
+    popularModelIds: ["byd-atto-3", "byd-sealion-6", "byd-dolphin"],
+    evNote:
+      "The Philippines zero-rates import duty on EVs, hybrids and PHEVs under EO 12 (extended to 2028), versus a 40% standard duty. This makes new-energy vehicles the standout import category, though used imports remain restricted.",
+  },
+  iraq: {
+    overview:
+      "Iraq is a left-hand-drive Middle Eastern market importing used vehicles primarily through Umm Qasr (with Basrah/Khor Al Zubair as an alternative). An age limit around five years applies, duty varies by category and engine size, and durable SUVs and saloons dominate demand.",
+    considerations: [
+      "Confirm the exact age limit (sources cite 5 years, some 2 years) with the Umm Qasr agent / Iraqi customs before sourcing stock.",
+      "Duty varies by vehicle category, engine size and entry port — quote per exact model and port.",
+      "Non-armored vehicles only; salvage, flood- and fire-damaged units are not admitted.",
+    ],
+    faq: [
+      { q: "Is Iraq right- or left-hand drive?", a: "Left-hand drive (LHD)." },
+      { q: "What is the age limit?", a: "Around five years (some sources cite two) — verify with Iraqi customs." },
+      { q: "How is duty calculated?", a: "Variable by category and engine size, and by entry port — verify with Iraqi customs." },
+      { q: "Which port handles imports?", a: "Umm Qasr, with Basrah (Khor Al Zubair) as an alternative." },
+    ],
+    popularModelIds: ["geely-monjaro", "chery-tiggo-8", "great-wall-haval-h6"],
+    evNote:
+      "No dedicated EV import-duty relief has been identified for Iraq in the sources reviewed; EVs are treated under the standard variable duty schedule. Confirm EV treatment with Iraqi customs before trading.",
+  },
+  ethiopia: {
+    overview:
+      "Ethiopia is a left-hand-drive East African market that, since February 2024, has banned petrol and diesel car imports entirely — only electric vehicles may be imported. The landlocked country clears vehicles through Djibouti, and affordable compact EVs dominate the emerging market.",
+    considerations: [
+      "EV-only policy (Feb 2024): petrol/diesel imports are banned — only electric vehicles are eligible.",
+      "Vehicles transit via the Port of Djibouti (Ethiopia is landlocked).",
+      "Reported ~15% EV import duty plus 15% VAT; an age limit around five years applies.",
+    ],
+    faq: [
+      { q: "Is Ethiopia right- or left-hand drive?", a: "Left-hand drive (LHD)." },
+      { q: "Can I import a petrol or diesel car?", a: "No — Ethiopia banned petrol/diesel car imports in February 2024; only EVs are eligible." },
+      { q: "What tax applies to EVs?", a: "Reported around 15% import duty plus 15% VAT — verify with Ethiopian customs." },
+      { q: "Which port handles imports?", a: "Djibouti (transit for landlocked Ethiopia)." },
+    ],
+    popularModelIds: ["byd-atto-3", "wuling-bingo", "byd-dolphin"],
+    evNote:
+      "Ethiopia's EV-only import policy (petrol/diesel banned since Feb 2024) makes it a uniquely EV-focused market; affordable compact EVs are the strongest fit, with combustion alternatives excluded entirely.",
+  },
+  colombia: {
+    overview:
+      "Colombia is a left-hand-drive Latin American market that effectively prohibits used-vehicle imports — only brand-new (current-year, 0 km) vehicles may be permanently imported, with narrow diplomatic and classic-car exceptions. It imposes heavy ICE taxes (~64–70% combined) but strong EV relief, with Cartagena and Buenaventura as the main ports.",
+    considerations: [
+      "Used-vehicle imports are prohibited for non-diplomats — only new/current-year vehicles qualify.",
+      "ICE taxes run ~35% duty + 19% VAT + 8–16% consumption tax (~64–70% combined); EVs reported ~5–7% combined.",
+      "The EV incentive applies to new units, not used imports.",
+    ],
+    faq: [
+      { q: "Is Colombia right- or left-hand drive?", a: "Left-hand drive (LHD)." },
+      { q: "Can I import a used car into Colombia?", a: "Generally no — permanent import is limited to new/current-year vehicles, with diplomatic and classic-car exceptions." },
+      { q: "What taxes apply?", a: "ICE: ~35% duty + 19% VAT + 8–16% consumption tax; EVs get strong relief (~5–7% combined)." },
+      { q: "Which port handles imports?", a: "Cartagena, with Buenaventura as a Pacific alternative." },
+    ],
+    popularModelIds: ["byd-atto-3", "chery-tiggo-8", "mg-4"],
+    evNote:
+      "Colombia taxes combustion vehicles at ~64–70% of CIF but applies strong EV relief (~5–7% combined). The incentive favors new EV units — used-vehicle import remains prohibited.",
+  },
+  morocco: {
+    overview:
+      "Morocco is a left-hand-drive North African market that permits used-vehicle imports under two hard filters: the vehicle must be less than five years old and meet the Euro 6 emissions standard. Casablanca and Tanger Med are the main ports, with a ~17.5% customs duty plus 20% VAT.",
+    considerations: [
+      "Five-year age limit plus Euro 6 emissions conformity are the hard filters.",
+      "~17.5% import duty plus 20% VAT (rate varies by engine size and origin).",
+      "No EV-specific import-duty relief has been identified — EVs follow the standard schedule.",
+    ],
+    faq: [
+      { q: "Is Morocco right- or left-hand drive?", a: "Left-hand drive (LHD)." },
+      { q: "What is the age limit?", a: "Less than five years old, plus Euro 6 emissions conformity." },
+      { q: "What duty and VAT apply?", a: "~17.5% import duty plus 20% VAT — verify with ADII." },
+      { q: "Which port handles imports?", a: "Casablanca, with Tanger Med as an alternative." },
+    ],
+    popularModelIds: ["geely-monjaro", "chery-tiggo-8", "byd-atto-3"],
+    evNote:
+      "Morocco has not been found to offer EV-specific import-duty relief in the sources reviewed; EVs follow the same ~17.5% duty plus 20% VAT as combustion vehicles.",
+  },
+  "sri-lanka": {
+    overview:
+      "Sri Lanka is a right-hand-drive South Asian market that reopened vehicle imports on 1 February 2025 after a multi-year suspension. It applies a layered tax stack — base duty plus a 50% surcharge, excise (per kW for EVs), VAT and SSCL — with Colombo as the main port.",
+    considerations: [
+      "Vehicle imports reopened 1 February 2025 under the Imports & Exports (Control) Regulations No. 01 of 2025.",
+      "RHD is mandatory — source RHD export units.",
+      "Layered taxes: 20% base duty + 50% surcharge + excise + 18% VAT + 2.5% SSCL.",
+    ],
+    faq: [
+      { q: "Is Sri Lanka right- or left-hand drive?", a: "Right-hand drive (RHD)." },
+      { q: "Can I import a used car now?", a: "Yes — imports reopened 1 February 2025 after a multi-year suspension." },
+      { q: "What taxes apply?", a: "20% base duty + 50% surcharge + excise (per kW for EVs) + 18% VAT + 2.5% SSCL." },
+      { q: "Which port handles imports?", a: "Colombo." },
+    ],
+    popularModelIds: ["byd-atto-3", "byd-dolphin", "geely-coolray"],
+    evNote:
+      "Sri Lanka levies excise on EVs per motor kilowatt (rather than per cc) under the February 2025 regime, a distinct EV treatment from combustion vehicles.",
+  },
   peru: {
     overview:
       "Peru is a left-hand-drive Latin American market with a five-year age limit for used vehicles (two years for diesel) and a layered tax stack of ad valorem duty, selective consumption tax and 17% IGV plus 2% IPM. Callao is the main port.",

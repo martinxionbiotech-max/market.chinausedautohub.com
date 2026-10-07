@@ -323,6 +323,102 @@
       "source_url": null,
       "last_checked": "2026-10-07",
       "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-ph-manila",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "ph-manila",
+      "est_days_min": 6,
+      "est_days_max": 12,
+      "shipping_method": "roro",
+      "source": "Industry route estimates",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-guangzhou-to-ph-manila",
+      "origin_port_id": "cn-guangzhou",
+      "destination_port_id": "ph-manila",
+      "est_days_min": 4,
+      "est_days_max": 8,
+      "shipping_method": "roro",
+      "source": "Industry route estimates",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-iq-umm-qasr",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "iq-umm-qasr",
+      "est_days_min": 18,
+      "est_days_max": 28,
+      "shipping_method": "roro",
+      "source": "Industry route estimates",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-et-djibouti",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "et-djibouti",
+      "est_days_min": 18,
+      "est_days_max": 28,
+      "shipping_method": "roro",
+      "source": "Industry route estimates",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-co-cartagena",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "co-cartagena",
+      "est_days_min": 28,
+      "est_days_max": 40,
+      "shipping_method": "roro",
+      "source": "Industry route estimates",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-ma-casablanca",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "ma-casablanca",
+      "est_days_min": 26,
+      "est_days_max": 36,
+      "shipping_method": "roro",
+      "source": "Industry route estimates",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-ningbo-to-ma-tanger-med",
+      "origin_port_id": "cn-ningbo",
+      "destination_port_id": "ma-tanger-med",
+      "est_days_min": 26,
+      "est_days_max": 36,
+      "shipping_method": "roro",
+      "source": "Industry route estimates",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-lk-colombo",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "lk-colombo",
+      "est_days_min": 10,
+      "est_days_max": 16,
+      "shipping_method": "roro",
+      "source": "Industry route estimates",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
     }
   ]
 }
