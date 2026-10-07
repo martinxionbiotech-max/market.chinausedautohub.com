@@ -2762,6 +2762,50 @@
    "source_url": "https://www.ultimatespecs.com/car-specs/Tesla/136950/Tesla-Model-3-2023-RWD-60-kWh.html",
    "source_date": "2026-10-06",
    "confidence": "medium"
+  },
+  {
+   "model_id": "arcfox-alpha-s",
+   "brand_id": "arcfox",
+   "name": "Alpha S",
+   "name_zh": "极狐阿尔法S",
+   "body_type": "sedan",
+   "status": "active",
+   "generations": [
+    {
+     "generation_id": "arcfox-alpha-s-g1",
+     "name": "First Generation",
+     "production_years": [
+      2021,
+      2025
+     ],
+     "trims": [
+      {
+       "trim_id": "arcfox-alpha-s-g1-ev",
+       "name": "525S",
+       "powertrain": "ev",
+       "production_years": [
+        2021,
+        2025
+       ],
+       "specs": {
+        "motor_power_kw": 163,
+        "battery_capacity_kwh": 67.3,
+        "range_km": 525,
+        "drive_type": "fwd",
+        "seats": 5
+       },
+       "spec_source": "Reputable media specifications",
+       "spec_source_url": "https://en.wikipedia.org/wiki/Arcfox_Alpha-S6",
+       "spec_source_date": "2026-10-06",
+       "confidence": "medium"
+      }
+     ]
+    }
+   ],
+   "source": "Reputable media specifications",
+   "source_url": "https://en.wikipedia.org/wiki/Arcfox_Alpha-S6",
+   "source_date": "2026-10-06",
+   "confidence": "medium"
   }
  ]
 }

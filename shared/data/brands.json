@@ -731,6 +731,24 @@
       "source_url": "https://www.tesla.cn/",
       "source_date": "2026-10-07",
       "confidence": "high"
+    },
+    {
+      "brand_id": "arcfox",
+      "name": "Arcfox",
+      "name_zh": "极狐",
+      "origin_country": "CN",
+      "founded": 2017,
+      "powertrains": [
+        "ev"
+      ],
+      "vehicle_types": [
+        "sedan",
+        "suv"
+      ],
+      "source": "Official brand history",
+      "source_url": "https://www.arcfox.com.cn/",
+      "source_date": "2026-10-07",
+      "confidence": "high"
     }
   ]
 }
