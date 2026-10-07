@@ -643,6 +643,76 @@
       "source_url": "https://www.jac.com.cn/",
       "source_date": "2026-10-06",
       "confidence": "high"
+    },
+    {
+      "brand_id": "dongfeng",
+      "name": "Dongfeng",
+      "name_zh": "东风",
+      "origin_country": "CN",
+      "founded": 1969,
+      "powertrains": [
+        "ice"
+      ],
+      "vehicle_types": [
+        "sedan",
+        "suv"
+      ],
+      "source": "Official brand history",
+      "source_url": "https://www.dongfeng-global.com/",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "brand_id": "faw",
+      "name": "FAW (Bestune)",
+      "name_zh": "一汽奔腾",
+      "origin_country": "CN",
+      "founded": 1953,
+      "powertrains": [
+        "ice"
+      ],
+      "vehicle_types": [
+        "suv"
+      ],
+      "source": "Official brand history",
+      "source_url": "https://www.faw.com.cn/",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "brand_id": "roewe",
+      "name": "Roewe",
+      "name_zh": "荣威",
+      "origin_country": "CN",
+      "founded": 2006,
+      "powertrains": [
+        "ice"
+      ],
+      "vehicle_types": [
+        "suv",
+        "sedan"
+      ],
+      "source": "Official brand history",
+      "source_url": "https://www.roewe.com.cn/",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "brand_id": "yangwang",
+      "name": "Yangwang",
+      "name_zh": "仰望",
+      "origin_country": "CN",
+      "founded": 2023,
+      "powertrains": [
+        "erev"
+      ],
+      "vehicle_types": [
+        "suv"
+      ],
+      "source": "Official brand history",
+      "source_url": "https://www.yangwangauto.com/",
+      "source_date": "2026-10-07",
+      "confidence": "high"
     }
   ]
 }

@@ -2542,6 +2542,182 @@
    "source_url": "https://jacute.com.au/models/jac-t9/",
    "source_date": "2026-10-06",
    "confidence": "medium"
+  },
+  {
+   "model_id": "dongfeng-forthing-t5",
+   "brand_id": "dongfeng",
+   "name": "Forthing T5 Evo",
+   "name_zh": "风行T5 EVO",
+   "body_type": "suv",
+   "status": "active",
+   "generations": [
+    {
+     "generation_id": "dongfeng-forthing-t5-g1",
+     "name": "First Generation",
+     "production_years": [
+      2020,
+      2025
+     ],
+     "trims": [
+      {
+       "trim_id": "dongfeng-forthing-t5-g1-ice",
+       "name": "1.5T DCT",
+       "powertrain": "ice",
+       "production_years": [
+        2020,
+        2025
+       ],
+       "specs": {
+        "engine": "1.5T",
+        "engine_displacement_cc": 1481,
+        "transmission": "7-speed DCT",
+        "drive_type": "fwd",
+        "seats": 5
+       },
+       "spec_source": "Automotive specifications database",
+       "spec_source_url": "https://www.auto-data.net/en/forthing-t5-evo-1.5-td-197hp-dct-49898",
+       "spec_source_date": "2026-10-07",
+       "confidence": "medium"
+      }
+     ]
+    }
+   ],
+   "source": "Automotive specifications database",
+   "source_url": "https://www.auto-data.net/en/forthing-t5-evo-1.5-td-197hp-dct-49898",
+   "source_date": "2026-10-07",
+   "confidence": "medium"
+  },
+  {
+   "model_id": "faw-bestune-t77",
+   "brand_id": "faw",
+   "name": "Bestune T77",
+   "name_zh": "奔腾T77",
+   "body_type": "suv",
+   "status": "active",
+   "generations": [
+    {
+     "generation_id": "faw-bestune-t77-g1",
+     "name": "First Generation",
+     "production_years": [
+      2018,
+      2025
+     ],
+     "trims": [
+      {
+       "trim_id": "faw-bestune-t77-g1-ice",
+       "name": "1.2T DCT",
+       "powertrain": "ice",
+       "production_years": [
+        2018,
+        2025
+       ],
+       "specs": {
+        "engine": "1.2T",
+        "transmission": "7-speed DCT",
+        "drive_type": "fwd",
+        "seats": 5
+       },
+       "spec_source": "Automotive specifications database",
+       "spec_source_url": "https://www.auto-data.net/en/bestune-t77-1.2-230-tid-143hp-dct-34983",
+       "spec_source_date": "2026-10-07",
+       "confidence": "medium"
+      }
+     ]
+    }
+   ],
+   "source": "Automotive specifications database",
+   "source_url": "https://www.auto-data.net/en/bestune-t77-1.2-230-tid-143hp-dct-34983",
+   "source_date": "2026-10-07",
+   "confidence": "medium"
+  },
+  {
+   "model_id": "roewe-rx5",
+   "brand_id": "roewe",
+   "name": "Roewe RX5",
+   "name_zh": "荣威RX5",
+   "body_type": "suv",
+   "status": "active",
+   "generations": [
+    {
+     "generation_id": "roewe-rx5-g1",
+     "name": "First Generation",
+     "production_years": [
+      2016,
+      2025
+     ],
+     "trims": [
+      {
+       "trim_id": "roewe-rx5-g1-ice",
+       "name": "1.5T DCT",
+       "powertrain": "ice",
+       "production_years": [
+        2016,
+        2025
+       ],
+       "specs": {
+        "engine": "1.5T",
+        "engine_displacement_cc": 1490,
+        "transmission": "7-speed DCT",
+        "drive_type": "fwd",
+        "seats": 5
+       },
+       "spec_source": "Automotive specifications database",
+       "spec_source_url": "https://www.auto-data.net/en/roewe-rx5-generation-6336",
+       "spec_source_date": "2026-10-07",
+       "confidence": "medium"
+      }
+     ]
+    }
+   ],
+   "source": "Automotive specifications database",
+   "source_url": "https://www.auto-data.net/en/roewe-rx5-generation-6336",
+   "source_date": "2026-10-07",
+   "confidence": "medium"
+  },
+  {
+   "model_id": "yangwang-u8",
+   "brand_id": "yangwang",
+   "name": "U8",
+   "name_zh": "仰望U8",
+   "body_type": "suv",
+   "status": "active",
+   "generations": [
+    {
+     "generation_id": "yangwang-u8-g1",
+     "name": "First Generation",
+     "production_years": [
+      2023,
+      2025
+     ],
+     "trims": [
+      {
+       "trim_id": "yangwang-u8-g1-erev",
+       "name": "2.0T Extended Range 4WD",
+       "powertrain": "erev",
+       "production_years": [
+        2023,
+        2025
+       ],
+       "specs": {
+        "engine": "2.0T (range extender)",
+        "motor_power_kw": 880,
+        "battery_capacity_kwh": 49.05,
+        "range_km": 180,
+        "drive_type": "awd",
+        "seats": 5
+       },
+       "spec_source": "Automotive specifications database",
+       "spec_source_url": "https://www.auto-data.net/en/yangwang-u8-2.0t-1197hp-extended-range-pure-electric-4wd-51283",
+       "spec_source_date": "2026-10-07",
+       "confidence": "medium"
+      }
+     ]
+    }
+   ],
+   "source": "Automotive specifications database",
+   "source_url": "https://www.auto-data.net/en/yangwang-u8-2.0t-1197hp-extended-range-pure-electric-4wd-51283",
+   "source_date": "2026-10-07",
+   "confidence": "medium"
   }
  ]
 }
