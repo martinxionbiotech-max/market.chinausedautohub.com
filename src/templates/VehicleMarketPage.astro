@@ -146,6 +146,12 @@ const sameVehicleOtherCountries = rel
   ? getRelationsForVehicle(vehicleId).filter((r) => r.country_id !== countryId)
   : [];
 
+const hasLimitations =
+  rel?.drive_side_fit?.status === "mismatch" ||
+  rel?.age_rule_fit?.status === "borderline" ||
+  rel?.age_rule_fit?.status === "ineligible" ||
+  !!rel?.ev_charging_compat?.needs_adapter;
+
 const incLabel = (i: string) => t(dict, `vehicle.increments.${i}`);
 const incrementsText = increments.map(incLabel).join(" · ");
 ---
@@ -408,9 +414,7 @@ const incrementsText = increments.map(incLabel).join(" · ");
       {rel?.age_rule_fit?.status === "borderline" && <li>{misc("limitationAgeBorderline")}</li>}
       {rel?.age_rule_fit?.status === "ineligible" && <li>{misc("limitationAgeIneligible")}</li>}
       {rel?.ev_charging_compat?.needs_adapter && <li>{misc("limitationCharging")}</li>}
-      {!rel?.drive_side_fit?.status && !rel?.age_rule_fit?.status && !rel?.ev_charging_compat?.needs_adapter && (
-        <li>{misc("limitationNone")}</li>
-      )}
+      {!hasLimitations && <li>{misc("limitationNone")}</li>}
     </ul>
   </section>
 
@@ -500,7 +504,7 @@ const incrementsText = increments.map(incLabel).join(" · ");
         <h3>{sect("thisVehicleOtherCountries")}</h3>
         <ul>
           {sameVehicleOtherCountries.map((s) => (
-            <li><a href={localizedUrl(`/countries/${s.country_id}/${vehicleId}/`, locale)}>{misc("inCountry", { model: modelName, country: getCountry(s.country_id)?.name ?? s.country_id })}</a></li>
+            <li><a href={localizedUrl(`/countries/${s.country_id}/${vehicleId}/`, locale)}>{t(dict, "country.misc.inCountry", { model: modelName, country: getCountry(s.country_id)?.name ?? s.country_id })}</a></li>
           ))}
         </ul>
       </>
@@ -510,7 +514,7 @@ const incrementsText = increments.map(incLabel).join(" · ");
         <h3>{sect("otherVehiclesInCountry", { country: countryName })}</h3>
         <ul>
           {siblingPairs.map((s) => (
-            <li><a href={localizedUrl(`/countries/${countryId}/${s.vehicle_id}/`, locale)}>{misc("inCountry", { model: getModel(s.vehicle_id)?.name ?? s.vehicle_id, country: countryName })}</a></li>
+            <li><a href={localizedUrl(`/countries/${countryId}/${s.vehicle_id}/`, locale)}>{t(dict, "country.misc.inCountry", { model: getModel(s.vehicle_id)?.name ?? s.vehicle_id, country: countryName })}</a></li>
           ))}
         </ul>
       </>
