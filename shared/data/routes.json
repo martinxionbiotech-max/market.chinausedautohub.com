@@ -947,6 +947,78 @@
       "source_url": null,
       "last_checked": "2026-10-07",
       "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-np-kathmandu",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "np-kathmandu",
+      "est_days_min": 14,
+      "est_days_max": 24,
+      "shipping_method": "container",
+      "source": "Industry route estimates (sea to Kolkata/Vizag + road transit)",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-guangzhou-to-zm-lusaka",
+      "origin_port_id": "cn-guangzhou",
+      "destination_port_id": "zm-lusaka",
+      "est_days_min": 26,
+      "est_days_max": 40,
+      "shipping_method": "roro",
+      "source": "Industry route estimates (sea to Durban/Dar es Salaam + road transit)",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-guangzhou-to-la-vientiane",
+      "origin_port_id": "cn-guangzhou",
+      "destination_port_id": "la-vientiane",
+      "est_days_min": 8,
+      "est_days_max": 16,
+      "shipping_method": "container",
+      "source": "Industry route estimates (sea to Laem Chabang + road, or China overland)",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-guangzhou-to-kh-sihanoukville",
+      "origin_port_id": "cn-guangzhou",
+      "destination_port_id": "kh-sihanoukville",
+      "est_days_min": 5,
+      "est_days_max": 10,
+      "shipping_method": "roro",
+      "source": "Industry route estimates",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-hn-puerto-cortes",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "hn-puerto-cortes",
+      "est_days_min": 30,
+      "est_days_max": 42,
+      "shipping_method": "roro",
+      "source": "Industry route estimates (via Panama transshipment)",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-sv-acajutla",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "sv-acajutla",
+      "est_days_min": 30,
+      "est_days_max": 42,
+      "shipping_method": "roro",
+      "source": "Industry route estimates (via Panama transshipment)",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
     }
   ]
 }

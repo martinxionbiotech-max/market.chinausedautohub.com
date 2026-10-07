@@ -792,6 +792,84 @@
       "source_url": "https://www.zimra.co.zw/customs/importation-of-motor-vehicles-by-private-individuals",
       "source_date": "2026-10-07",
       "confidence": "high"
+    },
+    {
+      "country_id": "nepal",
+      "name": "Nepal",
+      "name_zh": "尼泊尔",
+      "region": "south-asia",
+      "drive_side": "rhd",
+      "currency": "NPR",
+      "status": "active",
+      "source": "Department of Customs, Nepal / EV tax policy (FY 2083/84)",
+      "source_url": "https://customs.gov.np/content/50/custom-tariff-rate/",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "zambia",
+      "name": "Zambia",
+      "name_zh": "赞比亚",
+      "region": "africa",
+      "drive_side": "rhd",
+      "currency": "ZMW",
+      "status": "active",
+      "source": "Zambia Revenue Authority (ZRA) — Specific Duty schedule (2024)",
+      "source_url": "https://www.zra.org.zm/wp-content/uploads/2024/11/Specific-Duty-rates-Used-Motor-Vehicle-Valuation-July-2024.pdf",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "laos",
+      "name": "Laos",
+      "name_zh": "老挝",
+      "region": "southeast-asia",
+      "drive_side": "lhd",
+      "currency": "LAK",
+      "status": "active",
+      "source": "Lao PDR Trade Portal / US ITA (Laos Automotive Sector)",
+      "source_url": "https://www.laotradeportal.gov.la/en-gb/site/display/74",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "cambodia",
+      "name": "Cambodia",
+      "name_zh": "柬埔寨",
+      "region": "southeast-asia",
+      "drive_side": "lhd",
+      "currency": "KHR",
+      "status": "active",
+      "source": "General Department of Customs and Excise (GDCE) / DFDL (2026 tariff reductions)",
+      "source_url": "https://www.dfdl.com/insights/legal-and-tax-updates/cambodia-revised-customs-duty-and-tax-rates-on-certain-goods-effective-1-january-2026/",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "honduras",
+      "name": "Honduras",
+      "name_zh": "洪都拉斯",
+      "region": "latin-america",
+      "drive_side": "lhd",
+      "currency": "HNL",
+      "status": "active",
+      "source": "US trade.gov (Honduras Prohibited & Restricted Imports)",
+      "source_url": "https://www.trade.gov/country-commercial-guides/honduras-prohibited-restricted-imports",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "el-salvador",
+      "name": "El Salvador",
+      "name_zh": "萨尔瓦多",
+      "region": "latin-america",
+      "drive_side": "lhd",
+      "currency": "USD",
+      "status": "active",
+      "source": "Dirección General de Aduanas (DGA) / US trade.gov",
+      "source_url": "https://www.trade.gov/country-commercial-guides/el-salvador-import-tariffs",
+      "source_date": "2026-10-07",
+      "confidence": "high"
     }
   ]
 }

@@ -692,6 +692,48 @@
       "country_id": "zimbabwe",
       "type": "destination",
       "note": "Landlocked — transit via Durban (South Africa) or Beira (Mozambique); Beitbridge/Forbes border"
+    },
+    {
+      "port_id": "np-kathmandu",
+      "name": "Kathmandu (via Kolkata/Vizag transit or China overland)",
+      "country_id": "nepal",
+      "type": "destination",
+      "note": "Landlocked — via Kolkata/Vizag (India) ports or Tatopani/Rasuwagadhi border from China"
+    },
+    {
+      "port_id": "zm-lusaka",
+      "name": "Lusaka (via Durban/Dar es Salaam transit)",
+      "country_id": "zambia",
+      "type": "destination",
+      "note": "Landlocked — transit via Durban (South Africa) or Dar es Salaam (Tanzania); ZRA border post"
+    },
+    {
+      "port_id": "la-vientiane",
+      "name": "Vientiane (via Laem Chabang transit or China border)",
+      "country_id": "laos",
+      "type": "destination",
+      "note": "Landlocked — via Laem Chabang (Thailand) or China–Laos overland/border"
+    },
+    {
+      "port_id": "kh-sihanoukville",
+      "name": "Sihanoukville (Autonomous Port)",
+      "country_id": "cambodia",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "hn-puerto-cortes",
+      "name": "Puerto Cortés",
+      "country_id": "honduras",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "sv-acajutla",
+      "name": "Acajutla",
+      "country_id": "el-salvador",
+      "type": "destination",
+      "note": "No Caribbean coast — via Panama transshipment or Guatemalan/Honduran port + truck"
     }
   ]
 }

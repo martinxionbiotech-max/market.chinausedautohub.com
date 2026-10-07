@@ -1129,4 +1129,112 @@ export const countryContent: Record<string, CountryContent> = {
     evNote:
       "Zimbabwe's reduced 25% EV duty (versus the engine-size ICE schedule) makes recent Chinese EVs the standout import category, subject to the 10-year age limit.",
   },
+  nepal: {
+    overview:
+      "Nepal is a right-hand-drive South Asian market with no universal import age cap but a 20-year operation ban (30 years for EVs). The FY 2083/84 budget flattened EV customs duty to 20% (plus 13% VAT, CIIF and a 5% road fee) versus a 200–317% total tax stack for combustion vehicles. Landlocked, vehicles arrive via Indian ports (Kolkata/Vizag) or overland from China.",
+    considerations: [
+      "RHD is mandatory — China-market LHD units need an RHD export version before import.",
+      "EVs pay a flat 20% customs duty versus a 200–317% combustion tax stack — a decisive EV advantage.",
+      "No universal age cap today, but a 20-year operation ban and a proposed <1-year import rule — verify current rules with the Department of Customs.",
+    ],
+    faq: [
+      { q: "Is Nepal right- or left-hand drive?", a: "Right-hand drive (RHD)." },
+      { q: "What is the age limit?", a: "No universal import age cap, but a 20-year operation ban (30 for EVs)." },
+      { q: "What EV incentive applies?", a: "Flat 20% EV customs duty (FY 2083/84) versus a 200–317% combustion stack." },
+      { q: "How do vehicles arrive?", a: "Via Kolkata/Vizag (India) ports or overland via the China border." },
+    ],
+    popularModelIds: ["byd-atto-3", "byd-seal", "byd-dolphin"],
+    evNote:
+      "Nepal's flat 20% EV customs duty (replacing the old kW-based schedule) makes Chinese EVs the standout import category, provided an RHD export unit is sourced.",
+  },
+  zambia: {
+    overview:
+      "Zambia is a right-hand-drive Southern African market with no legal import age limit (but a 20% surtax on vehicles over 5 years old) and a ZRA specific-duty schedule assessed in flat Kwacha by engine size and age, plus a carbon-emission surtax and 16% VAT. Landlocked, vehicles transit via Durban or Dar es Salaam.",
+    considerations: [
+      "RHD is mandatory — China-market LHD units need an RHD export version.",
+      "Duty is a flat ZRA specific-duty schedule (not a simple percentage) — age-banded, with a 20% surtax over 5 years old.",
+      "JEVIC/Bureau Veritas pre-shipment inspection is mandatory before export.",
+    ],
+    faq: [
+      { q: "Is Zambia right- or left-hand drive?", a: "Right-hand drive (RHD)." },
+      { q: "What is the age limit?", a: "No legal age limit, but a 20% surtax applies over 5 years old." },
+      { q: "How is duty assessed?", a: "ZRA specific-duty (flat Kwacha) schedule by engine size and age, plus carbon surtax and 16% VAT." },
+      { q: "Which ports handle imports?", a: "Lusaka, via Durban or Dar es Salaam transit." },
+    ],
+    popularModelIds: ["byd-atto-3", "mg-4", "byd-dolphin"],
+    evNote:
+      "Zambia offers a reduced 15% hybrid excise; EV-specific relief is not separately documented, so EVs follow the ZRA specific-duty schedule — confirm treatment with ZRA before trading.",
+  },
+  laos: {
+    overview:
+      "Laos is a left-hand-drive Southeast Asian market that removed its 5-year used-vehicle age limit in 2025 and suspended new gasoline/diesel passenger-car imports from June 2024 to end-2026, making virtually all new passenger imports electric. Duty runs 40–65% of CIF depending on engine size. Landlocked, vehicles arrive via Thai ports or the China–Laos border.",
+    considerations: [
+      "The gas/diesel passenger-import ban (June 2024–2026) makes EVs the practical import channel.",
+      "LHD is standard — China-market LHD units import directly without conversion.",
+      "The 2025 removal of the 5-year age limit opens a window for 2018–2020 model-year units — verify current rules.",
+    ],
+    faq: [
+      { q: "Is Laos right- or left-hand drive?", a: "Left-hand drive (LHD)." },
+      { q: "What is the age limit?", a: "The 5-year limit was removed in 2025 — confirm the current rule." },
+      { q: "What EV policy applies?", a: "A gas/diesel passenger-import ban plus EV tax incentives." },
+      { q: "How do vehicles arrive?", a: "Via Laem Chabang (Thailand) or the China–Laos border." },
+    ],
+    popularModelIds: ["byd-atto-3", "byd-dolphin", "byd-seal"],
+    evNote:
+      "Laos' gas/diesel passenger-import suspension (June 2024–2026) and EV incentives make Chinese EVs the standout import category, subject to the 40–65% duty stack.",
+  },
+  cambodia: {
+    overview:
+      "Cambodia is a left-hand-drive Southeast Asian market that registers only LHD vehicles — making China a natural sourcing base. From 1 January 2026 EV customs duty fell to 0% and PHEV duty to 7%, versus 35% plus 10% VAT for ICE cars. There is no hard age cap, and Sihanoukville is the main port.",
+    considerations: [
+      "LHD is mandatory — China's pure-LHD production is a direct fit with no conversion.",
+      "EV 0% / PHEV 7% duty (from Jan 2026) versus 35% + 10% VAT for ICE — a decisive EV advantage.",
+      "No hard age cap as of 2026, but age-limit proposals recur — verify with GDCE.",
+    ],
+    faq: [
+      { q: "Is Cambodia right- or left-hand drive?", a: "Left-hand drive (LHD) only." },
+      { q: "What is the age limit?", a: "No hard age cap as of 2026; pre-2000 vehicles are discouraged." },
+      { q: "What EV incentive applies?", a: "EV duty 0% and PHEV 7% from 1 January 2026." },
+      { q: "Which port handles imports?", a: "Sihanoukville (Autonomous Port)." },
+    ],
+    popularModelIds: ["byd-atto-3", "byd-seal", "byd-song-plus"],
+    evNote:
+      "Cambodia's 0% EV duty (from 1 January 2026) makes Chinese BEVs price-competitive against local used cars, with PHEVs at 7% — a structural EV advantage.",
+  },
+  honduras: {
+    overview:
+      "Honduras is a left-hand-drive Central American market with a 10-year age limit (Financial Balance and Social Protection Act) and a landed-cost stack of DAI import duty (5–20%), 15% ISV sales tax and an ecotasa environmental fee. Puerto Cortés is the main port.",
+    considerations: [
+      "The 10-year age limit (some sources cite 7) is the key filter — source 2016+ stock and confirm with the DEI.",
+      "LHD is standard and RHD imports are prohibited — China-market LHD units fit directly.",
+      "No EV-specific relief is recorded; EVs follow the DAI + ISV + ecotasa stack.",
+    ],
+    faq: [
+      { q: "Is Honduras right- or left-hand drive?", a: "Left-hand drive (LHD) only." },
+      { q: "What is the age limit?", a: "10 years from manufacture (some sources cite 7)." },
+      { q: "What taxes apply?", a: "DAI duty 5–20% + 15% ISV + ecotasa environmental fee." },
+      { q: "Which port handles imports?", a: "Puerto Cortés." },
+    ],
+    popularModelIds: ["byd-atto-3", "chery-tiggo-8", "geely-monjaro"],
+    evNote:
+      "Honduras records no EV-specific import-duty relief, so EVs follow the standard DAI + 15% ISV + ecotasa stack — confirm EV treatment with the DEI before trading.",
+  },
+  "el-salvador": {
+    overview:
+      "El Salvador is a left-hand-drive Central American market with an 8-year age limit on passenger cars (15 years for trucks/SUVs) and a landed-cost stack of 25–30% duty plus 13% VAT (IVA). Acajutla is the main port, reached via Panama transshipment or a Guatemalan/Honduran port plus truck.",
+    considerations: [
+      "The 8-year age limit (15 for trucks/SUVs) is the key filter — source 2018+ passenger stock and confirm with the DGA.",
+      "LHD is standard — China-market LHD units import directly without conversion.",
+      "No EV-specific relief is recorded; EVs follow the 25–30% duty + 13% VAT stack.",
+    ],
+    faq: [
+      { q: "Is El Salvador right- or left-hand drive?", a: "Left-hand drive (LHD) only." },
+      { q: "What is the age limit?", a: "8 years for passenger cars (15 for trucks/SUVs)." },
+      { q: "What taxes apply?", a: "25–30% duty + 13% VAT (IVA)." },
+      { q: "Which port handles imports?", a: "Acajutla, via Panama transshipment or a Guatemalan/Honduran port." },
+    ],
+    popularModelIds: ["byd-atto-3", "chery-tiggo-8", "byd-dolphin"],
+    evNote:
+      "El Salvador records no EV-specific import-duty relief, so EVs follow the standard 25–30% duty + 13% VAT stack — confirm EV treatment with the DGA before trading.",
+  },
 };
