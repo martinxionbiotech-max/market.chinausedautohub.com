@@ -293,6 +293,83 @@
       "country_id": "sri-lanka",
       "type": "destination",
       "note": null
+    },
+    {
+      "port_id": "tr-istanbul",
+      "name": "Istanbul (Ambarlı/Haydarpaşa)",
+      "country_id": "turkey",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "tr-izmir",
+      "name": "Izmir (Alsancak)",
+      "country_id": "turkey",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "tr-mersin",
+      "name": "Mersin",
+      "country_id": "turkey",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "my-port-klang",
+      "name": "Port Klang",
+      "country_id": "malaysia",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "my-tanjung-pelepas",
+      "name": "Tanjung Pelepas (Johor)",
+      "country_id": "malaysia",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "nz-auckland",
+      "name": "Auckland",
+      "country_id": "new-zealand",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "nz-lyttelton",
+      "name": "Lyttelton (Christchurch)",
+      "country_id": "new-zealand",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "dz-algiers",
+      "name": "Algiers (Alger)",
+      "country_id": "algeria",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "dz-oran",
+      "name": "Oran",
+      "country_id": "algeria",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "qa-hamad",
+      "name": "Hamad Port (Doha)",
+      "country_id": "qatar",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "az-baku",
+      "name": "Baku (Alat / Caspian)",
+      "country_id": "azerbaijan",
+      "type": "destination",
+      "note": "Caspian Sea transit via Baku International Sea Trade Port"
     }
   ]
 }

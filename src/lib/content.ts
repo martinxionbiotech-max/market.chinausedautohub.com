@@ -7,6 +7,8 @@ export const regionMeta: Record<string, { label: string; label_zh: string }> = {
   "latin-america": { label: "Latin America", label_zh: "拉丁美洲" },
   "southeast-asia": { label: "Southeast Asia", label_zh: "东南亚" },
   "north-america": { label: "North America", label_zh: "北美" },
+  europe: { label: "Europe", label_zh: "欧洲" },
+  oceania: { label: "Oceania", label_zh: "大洋洲" },
 };
 
 export interface CountryContent {
@@ -467,5 +469,116 @@ export const countryContent: Record<string, CountryContent> = {
     popularModelIds: ["chery-tiggo-8", "byd-atto-3", "mg-4"],
     evNote:
       "Peru applies the same duty/IGV stack to EVs (no EV-specific relief), but recent Chinese EVs have growing local presence.",
+  },
+  turkey: {
+    overview:
+      "Turkey is a large left-hand-drive Eurasian market whose automotive import cost is dominated by a compounding tax stack — 10% customs duty, a Special Consumption Tax (ÖTV/SCT) and 20% VAT. The July 2025 EV SCT reform rebuilt EV taxation into four brackets (25–75%), while Chinese-origin petrol and hybrid vehicles face an additional 50% tariff. Istanbul, Izmir and Mersin are the main entry ports.",
+    considerations: [
+      "The ÖTV/SCT is the single largest cost lever — an EV in the 25% bracket versus a combustion vehicle at 90–100%+ changes the landed cost dramatically.",
+      "Chinese-origin petrol and hybrid vehicles attract an additional 50% tariff; EVs are exempt from that carve-out.",
+      "No universal used-vehicle age limit was identified — confirm eligibility with the Turkish Ministry of Trade before sourcing.",
+    ],
+    faq: [
+      { q: "Is Turkey right- or left-hand drive?", a: "Left-hand drive (LHD)." },
+      { q: "What taxes apply?", a: "A compounding stack of 10% customs duty, ÖTV (SCT) and 20% VAT — verify current brackets with the Ministry of Trade." },
+      { q: "What is the EV SCT rate?", a: "25–75% in four brackets by motor power and pre-tax price (Presidential Decision No. 10115, July 2025)." },
+      { q: "Which ports handle imports?", a: "Istanbul (Ambarlı/Haydarpaşa), Izmir and Mersin." },
+    ],
+    popularModelIds: ["byd-atto-3", "li-auto-l7", "byd-seal"],
+    evNote:
+      "Turkey's July 2025 EV SCT reform set four brackets (25% / 55% / 65% / 75%) by motor power and pre-tax price, preserving a structural advantage over the 90–100%+ combustion rates. Chinese EVs are exempt from the additional 50% China tariff.",
+  },
+  malaysia: {
+    overview:
+      "Malaysia is a right-hand-drive Southeast Asian market that protects local assembly through an Approved Permit (AP) system and a layered duty stack (30% import duty, 60–105% excise, 10% SST). Fully electric cars received temporary import-duty and excise relief until 31 December 2025, making it a leading RHD EV destination. Port Klang is the main entry port.",
+    considerations: [
+      "The Approved Permit (AP) is the hard gate for used-vehicle imports — verify AP eligibility with MITI.",
+      "RHD is mandatory — source RHD export units (BYD, Changan and others produce RHD for Malaysia).",
+      "EV duty and excise relief (until 31 Dec 2025) — confirm 2026 status with MITI.",
+    ],
+    faq: [
+      { q: "Is Malaysia right- or left-hand drive?", a: "Right-hand drive (RHD)." },
+      { q: "Do I need an Approved Permit?", a: "Yes — an AP from MITI is required for used-vehicle imports, and APs are restricted." },
+      { q: "What taxes apply?", a: "30% import duty, 60–105% excise and 10% SST for combustion vehicles — verify with RMCD." },
+      { q: "What EV incentive applied?", a: "Temporary EV import-duty and excise relief until 31 December 2025, with a RM100,000 on-road price floor." },
+      { q: "Which port handles imports?", a: "Port Klang, with Tanjung Pelepas (Johor) as an alternative." },
+    ],
+    popularModelIds: ["byd-atto-3", "byd-dolphin", "byd-sealion-6"],
+    evNote:
+      "Malaysia's temporary EV import-duty and excise relief (until 31 Dec 2025, price floor RM100k) made it a key RHD EV market for Chinese exporters; confirm the 2026 status with MITI.",
+  },
+  "new-zealand": {
+    overview:
+      "New Zealand is a right-hand-drive Oceania market and one of the most open used-car import regimes — passenger cars are duty-free with 15% GST, and eligibility is standards-based (emissions and frontal-impact compliance) rather than age-limited. Entry certification, biosecurity clearance and the Clean Car Standard CO₂ charge are the key process points. Auckland, Lyttelton and Wellington are the main ports.",
+    considerations: [
+      "RHD is mandatory — LHD vehicles are restricted to classics 20+ years or Special Interest Vehicle permits.",
+      "No fixed age limit, but emissions (post-2005) and frontal-impact (post-2003) standards must be met.",
+      "Duty-free passenger cars + 15% GST; a Clean Car Standard CO₂ charge applies to high-emission imports.",
+    ],
+    faq: [
+      { q: "Is New Zealand right- or left-hand drive?", a: "Right-hand drive (RHD) — LHD is limited to classics 20+ or SIV permits." },
+      { q: "Is there an age limit?", a: "No fixed age limit — eligibility is set by emissions and frontal-impact standards." },
+      { q: "What duty and tax apply?", a: "0% customs duty on passenger cars plus 15% GST; a Clean Car Standard CO₂ charge may apply." },
+      { q: "Which ports handle imports?", a: "Auckland, Lyttelton (Christchurch) and Wellington." },
+    ],
+    popularModelIds: ["byd-atto-3", "mg-4", "byd-dolphin"],
+    evNote:
+      "New Zealand is duty-free for passenger cars and zero-tailpipe EVs avoid the Clean Car Standard CO₂ charge, making it an attractive RHD EV destination for recent low-mileage Chinese stock.",
+  },
+  algeria: {
+    overview:
+      "Algeria is a left-hand-drive North African market that reopened used-car imports in 2023 under a strict under-3-years rule, with the 2025 Finance Law permitting resale subject to a sliding tax-benefit repayment. Imports face a 15–30% customs duty, internal consumption tax (TIC) and 19% VAT, while EVs receive up to an 80% personal-channel reduction. Algiers is the main entry port.",
+    considerations: [
+      "The under-3-years rule is the hard age filter — older stock is ineligible.",
+      "Safety equipment (ABS, speed limiter, airbags over 1.2L) is mandatory.",
+      "EVs receive up to an 80% import-tax reduction on the personal channel.",
+    ],
+    faq: [
+      { q: "Is Algeria right- or left-hand drive?", a: "Left-hand drive (LHD)." },
+      { q: "What is the age limit?", a: "Used cars must be less than 3 years old." },
+      { q: "What taxes apply?", a: "15% (≤1800cc) or 30% (≥1800cc) customs duty + TIC + 19% VAT — verify with Algerian Customs." },
+      { q: "What EV incentive applies?", a: "Up to 80% import-tax reduction on the personal channel." },
+      { q: "Which port handles imports?", a: "Algiers (Alger), with Oran as an alternative." },
+    ],
+    popularModelIds: ["byd-atto-3", "geely-monjaro", "chery-tiggo-8"],
+    evNote:
+      "Algeria applies up to an 80% import-tax reduction on EVs (personal channel) versus the 15–30% standard duty plus TIC and 19% VAT — a strong relief delta, subject to the under-3-years age rule.",
+  },
+  qatar: {
+    overview:
+      "Qatar is a small but high-income left-hand-drive Gulf market that follows GCC specification, with a flat 5% customs duty, no VAT currently in force, and a 5-year age limit on imported vehicles. Hamad Port (Doha) is the main entry point.",
+    considerations: [
+      "The 5-year age limit is the key filter — source recent stock.",
+      "GCC specification conformity and a Qatar ID plus driving licence are required.",
+      "A flat 5% customs duty applies with no VAT currently imposed (a 5% GCC-framework VAT is expected in future).",
+    ],
+    faq: [
+      { q: "Is Qatar right- or left-hand drive?", a: "Left-hand drive (LHD)." },
+      { q: "What is the age limit?", a: "Vehicles over 5 years old are prohibited from import." },
+      { q: "What duty and VAT apply?", a: "5% customs duty; no VAT currently imposed." },
+      { q: "Which port handles imports?", a: "Hamad Port (Doha)." },
+    ],
+    popularModelIds: ["geely-monjaro", "great-wall-haval-h6", "byd-atto-3"],
+    evNote:
+      "Qatar has no EV-specific import-duty relief recorded; the flat 5% duty applies to all vehicles, with EV adoption driven by infrastructure rather than duty relief.",
+  },
+  azerbaijan: {
+    overview:
+      "Azerbaijan is a left-hand-drive Caucasus/Caspian-corridor market with a 10-year age ban (Decree No. 94), an engine-capacity-based duty and excise stack, and 18% VAT. Electric vehicles three years old or newer pay 0% duty and no excise, but 18% VAT from January 2026. Baku (Alat) is the main entry point.",
+    considerations: [
+      "The 10-year age ban (2016+ in 2026) plus ABS, airbag and Euro-4 requirements are the hard filters.",
+      "Excise is engine-cc based (no flat duty); cars older than 7 years pay a higher excise coefficient from Jan 2026.",
+      "EVs ≤3 years old get 0% duty and no excise, but 18% VAT from January 2026.",
+    ],
+    faq: [
+      { q: "Is Azerbaijan right- or left-hand drive?", a: "Left-hand drive (LHD)." },
+      { q: "What is the age limit?", a: "Cars older than 10 years cannot be imported (Decree No. 94)." },
+      { q: "What taxes apply?", a: "Engine-cc based duty + excise + 18% VAT — verify with the State Customs Committee." },
+      { q: "What EV incentive applies?", a: "EVs ≤3 years old pay 0% duty and no excise, but 18% VAT from January 2026." },
+      { q: "Which port handles imports?", a: "Baku (Alat / Caspian)." },
+    ],
+    popularModelIds: ["byd-atto-3", "chery-tiggo-8", "geely-monjaro"],
+    evNote:
+      "Azerbaijan zero-rates customs duty and excise on EVs three years old or newer (18% VAT applies from Jan 2026), a strong incentive versus the engine-cc excise stack for combustion vehicles.",
   },
 };

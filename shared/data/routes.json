@@ -419,6 +419,90 @@
       "source_url": null,
       "last_checked": "2026-10-07",
       "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-tr-istanbul",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "tr-istanbul",
+      "est_days_min": 24,
+      "est_days_max": 34,
+      "shipping_method": "roro",
+      "source": "Industry route estimates",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-ningbo-to-tr-izmir",
+      "origin_port_id": "cn-ningbo",
+      "destination_port_id": "tr-izmir",
+      "est_days_min": 25,
+      "est_days_max": 35,
+      "shipping_method": "roro",
+      "source": "Industry route estimates",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-guangzhou-to-my-port-klang",
+      "origin_port_id": "cn-guangzhou",
+      "destination_port_id": "my-port-klang",
+      "est_days_min": 6,
+      "est_days_max": 12,
+      "shipping_method": "roro",
+      "source": "Industry route estimates",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-nz-auckland",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "nz-auckland",
+      "est_days_min": 20,
+      "est_days_max": 30,
+      "shipping_method": "roro",
+      "source": "Industry route estimates",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-dz-algiers",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "dz-algiers",
+      "est_days_min": 24,
+      "est_days_max": 34,
+      "shipping_method": "roro",
+      "source": "Industry route estimates",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-qa-hamad",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "qa-hamad",
+      "est_days_min": 18,
+      "est_days_max": 26,
+      "shipping_method": "roro",
+      "source": "Industry route estimates",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-lianyungang-to-az-baku",
+      "origin_port_id": "cn-lianyungang",
+      "destination_port_id": "az-baku",
+      "est_days_min": 18,
+      "est_days_max": 30,
+      "shipping_method": "container",
+      "source": "Industry route estimates (Caspian / rail transit)",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
     }
   ]
 }

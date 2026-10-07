@@ -324,6 +324,84 @@
       "source_url": "https://lankabizz.net/2025/02/01/sri-lanka-updates-motor-vehicle-import-regulations/",
       "source_date": "2026-10-07",
       "confidence": "high"
+    },
+    {
+      "country_id": "turkey",
+      "name": "Turkey",
+      "name_zh": "土耳其",
+      "region": "europe",
+      "drive_side": "lhd",
+      "currency": "TRY",
+      "status": "active",
+      "source": "Republic of Türkiye Ministry of Trade / Presidential Decision No. 10115",
+      "source_url": "https://lenacars.com/en/blog/2025-electric-vehicle-sct-rates-tax-brackets-2",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "malaysia",
+      "name": "Malaysia",
+      "name_zh": "马来西亚",
+      "region": "southeast-asia",
+      "drive_side": "rhd",
+      "currency": "MYR",
+      "status": "active",
+      "source": "Ministry of Investment, Trade and Industry (MITI)",
+      "source_url": "https://www.miti.gov.my/index.php/pages/view/10020",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "new-zealand",
+      "name": "New Zealand",
+      "name_zh": "新西兰",
+      "region": "oceania",
+      "drive_side": "rhd",
+      "currency": "NZD",
+      "status": "active",
+      "source": "NZ Transport Agency (NZTA) / NZ Customs",
+      "source_url": "https://vehicleinspection.nzta.govt.nz/virms/entry-certification/i-and-c/vehicle-structure/determining-frontal-impact-compliance",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "algeria",
+      "name": "Algeria",
+      "name_zh": "阿尔及利亚",
+      "region": "africa",
+      "drive_side": "lhd",
+      "currency": "DZD",
+      "status": "active",
+      "source": "Algerian Customs (DGD) / 2025 Finance Law",
+      "source_url": "https://guangcaiauto.com/car-import-rules-algeria-2025/",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "qatar",
+      "name": "Qatar",
+      "name_zh": "卡塔尔",
+      "region": "middle-east",
+      "drive_side": "lhd",
+      "currency": "QAR",
+      "status": "active",
+      "source": "General Authority of Customs (Qatar) / GCC framework",
+      "source_url": "https://www.expatfocus.com/qatar/guide/qatar-buying-or-importing-a-car",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "azerbaijan",
+      "name": "Azerbaijan",
+      "name_zh": "阿塞拜疆",
+      "region": "central-asia",
+      "drive_side": "lhd",
+      "currency": "AZN",
+      "status": "active",
+      "source": "State Customs Committee (DGK) / Cabinet Decree No. 94",
+      "source_url": "https://customs.gov.az/en/ferdler-ucun/avtomobillerin-getirilmesi",
+      "source_date": "2026-10-07",
+      "confidence": "high"
     }
   ]
 }
