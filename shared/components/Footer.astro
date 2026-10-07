@@ -1,10 +1,22 @@
 ---
 import { getTranslations, DEFAULT_LOCALE, type Locale } from "../../src/i18n";
 import { t } from "../../src/i18n";
+import { MAIN_SITE_URL, CONTACT } from "../config/config";
 
 const { siteUrl, lastUpdated } = Astro.props;
 const locale = (Astro.currentLocale ?? DEFAULT_LOCALE) as Locale;
 const dict = getTranslations(locale);
+
+const mainLegal = (path: string) =>
+  locale === DEFAULT_LOCALE ? `${MAIN_SITE_URL}${path}` : `${MAIN_SITE_URL}/${locale}${path}`;
+
+const legalLinks = [
+  { label: t(dict, "footer.privacy"), href: mainLegal("/privacy/") },
+  { label: t(dict, "footer.terms"), href: mainLegal("/terms/") },
+  { label: t(dict, "footer.legalNotice"), href: mainLegal("/legal-notice/") },
+  { label: t(dict, "footer.cookies"), href: mainLegal("/cookies/") },
+  { label: t(dict, "footer.disclaimerPage"), href: mainLegal("/disclaimer/") },
+];
 ---
 <footer class="site-footer">
   <div class="container">
@@ -12,8 +24,28 @@ const dict = getTranslations(locale);
       {t(dict, "footer.disclaimer")}
     </p>
     {lastUpdated && <p class="meta">{t(dict, "footer.lastUpdated", { date: lastUpdated })}</p>}
+
+    <div class="legal">
+      <p class="operated">{t(dict, "footer.operated")}</p>
+      <p class="contact">
+        {t(dict, "footer.contact")}: <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a> ·
+        WhatsApp: <a href={CONTACT.whatsappLink} target="_blank" rel="noopener noreferrer">{CONTACT.whatsapp}</a>
+      </p>
+      <nav aria-label={t(dict, "footer.legalTitle")}>
+        <ul>
+          {legalLinks.map((l) => (
+            <li><a href={l.href}>{l.label}</a></li>
+          ))}
+        </ul>
+      </nav>
+    </div>
   </div>
 </footer>
 <style>
   .site-footer { background: var(--color-bg-alt); border-top: 1px solid var(--color-border); margin-top: var(--space-7); padding: var(--space-5) 0; font-size: 13px; color: var(--color-text-soft); }
+  .legal { margin-top: var(--space-4); border-top: 1px solid var(--color-border); padding-top: var(--space-4); }
+  .legal ul { list-style: none; display: flex; flex-wrap: wrap; gap: var(--space-3); padding: 0; margin: var(--space-3) 0 0; }
+  .legal a { color: var(--color-text-soft); }
+  .legal a:hover { color: var(--color-primary); }
+  .operated, .contact { margin: var(--space-1) 0; }
 </style>

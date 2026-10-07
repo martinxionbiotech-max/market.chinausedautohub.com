@@ -315,7 +315,15 @@
   },
   "footer": {
     "disclaimer": "Toda la información se ofrece como referencia. Las regulaciones de importación, los impuestos y los precios cambian: verifique con las autoridades oficiales antes de cualquier transacción.",
-    "lastUpdated": "Última actualización: {date}"
+    "lastUpdated": "Última actualización: {date}",
+    "legalTitle": "Legal",
+    "operated": "China Used Auto Hub se opera a través de sus canales de contacto; no se publica una entidad corporativa registrada por separado.",
+    "contact": "Contacto",
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "legalNotice": "Aviso legal",
+    "cookies": "Cookies",
+    "disclaimerPage": "Descargo de responsabilidad"
   },
   "plurals": {
     "ruleSuffix": {
