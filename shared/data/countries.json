@@ -168,6 +168,84 @@
       "source_url": "https://www.aduana.cl/importacion-de-vehiculos/aduana/2017-11-22/101502.html",
       "source_date": "2026-10-07",
       "confidence": "high"
+    },
+    {
+      "country_id": "thailand",
+      "name": "Thailand",
+      "name_zh": "泰国",
+      "region": "southeast-asia",
+      "drive_side": "rhd",
+      "currency": "THB",
+      "status": "active",
+      "source": "Thai Customs Department / Board of Investment (BOI)",
+      "source_url": "https://osos.boi.go.th/EN/news/1723/EV-Board-Gives-the-Green-Light-to-EV-3-5-Package-Positioning-Thailand-as-the-Key-Regional-Hub-for-Electric-Vehicle-Manufacturing/",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "vietnam",
+      "name": "Vietnam",
+      "name_zh": "越南",
+      "region": "southeast-asia",
+      "drive_side": "lhd",
+      "currency": "VND",
+      "status": "active",
+      "source": "Vietnam General Department of Customs / Decree 116/2017",
+      "source_url": "https://ucarsea.com/vietnam-used-car-import-guide/",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "indonesia",
+      "name": "Indonesia",
+      "name_zh": "印度尼西亚",
+      "region": "southeast-asia",
+      "drive_side": "rhd",
+      "currency": "IDR",
+      "status": "active",
+      "source": "Indonesia Directorate General of Customs and Excise",
+      "source_url": "https://www.aseanncap.org/indonesias-used-car-import-rules-permits-taxes-ev-benefits/",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "mexico",
+      "name": "Mexico",
+      "name_zh": "墨西哥",
+      "region": "north-america",
+      "drive_side": "lhd",
+      "currency": "MXN",
+      "status": "active",
+      "source": "US International Trade Administration (trade.gov)",
+      "source_url": "https://www.trade.gov/market-intelligence/mexico-import-regulations-used-vehicles",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "ghana",
+      "name": "Ghana",
+      "name_zh": "加纳",
+      "region": "africa",
+      "drive_side": "rhd",
+      "currency": "GHS",
+      "status": "active",
+      "source": "Ghana Standards Authority (GSA)",
+      "source_url": "https://chale.news/six-weeks-left-ghanas-new-car-import-rules-kick-in-october-1/",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "peru",
+      "name": "Peru",
+      "name_zh": "秘鲁",
+      "region": "latin-america",
+      "drive_side": "lhd",
+      "currency": "PEN",
+      "status": "active",
+      "source": "SUNAT (Peru Customs)",
+      "source_url": "https://www.sunat.gob.pe/customsinformation/importofvehicles/age_of_vehicle.html",
+      "source_date": "2026-10-07",
+      "confidence": "high"
     }
   ]
 }

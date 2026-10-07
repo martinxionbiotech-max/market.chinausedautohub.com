@@ -1,7 +1,7 @@
 {
   "meta": {
     "name": "Vehicle x Market relationship layer",
-    "batch": "P3.8 (phase2/49 - Vehicle x Market Intelligence, batch 12 — market-countries)",
+    "batch": "batch 13 — market-countries2",
     "updated": "2026-10-07",
     "vehicle_source": "data.chinausedautohub.com models.json (read-only reference; model_id join key)",
     "market_source": "market.chinausedautohub.com countries/importrules/taxrules/ports/routes",
@@ -10155,6 +10155,963 @@
       },
       "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
       "source_url": "https://en.wikipedia.org/wiki/MG4_EV",
+      "source_type": "reputable_media",
+      "confidence": "medium",
+      "checked_date": "2026-10-07"
+    },
+    {
+      "vehicle_id": "byd-atto-3",
+      "country_id": "thailand",
+      "drive_side_fit": {
+        "status": "needs_conversion",
+        "summary": "China domestic-market production is left-hand drive (LHD), but Thailand registers right-hand drive (RHD) only — BYD Atto 3 is produced in RHD for export markets (Thailand, Australia, Singapore). Confirm RHD availability with the exporter and source an RHD unit.",
+        "source": "Data sub-site models.json (export intelligence) + Left- and right-hand traffic (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/Left-_and_right-hand_traffic",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "age_rule_fit": null,
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Battery-electric (EV) — Thailand's EV 3.5 package reduces excise tax from 8% to 2% for BEVs ≤7M baht and provides reduced CBU import duty during 2024–2025.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "CCS2 / Type 2 (Mennekes)",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": true,
+        "notes": "China-market GB/T inlet vs CCS2 / Type 2 (Mennekes) network — adapter required; confirm the sourced unit's inlet (some export units carry a CCS2 inlet).",
+        "source": "Vehicle: GB/T charging standard (Wikipedia); Destination: Combined Charging System / Type 2 (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Import permit (Department of Foreign Trade)"
+        ],
+        "notes": "Thailand tightly restricts used-vehicle imports — confirm the unit can clear as new/eligible and obtain the import permit.",
+        "source": "market sub-site importrules.json (import permit)",
+        "source_url": "https://anglosiamlaw.com/blog/importing-car-to-thailand-rules-tax-procedure",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "th-duty",
+        "ev_duty_taxrule_id": "th-ev-excise",
+        "vat_taxrule_id": "th-vat",
+        "ev_duty_relief": true,
+        "notes": "EV 3.5: excise reduced 8%→2% (th-ev-excise) vs 80% MFN import duty (th-duty), + 7% VAT. Referenced from taxrules.json — verify with Thai Customs.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://osos.boi.go.th/EN/news/1723/EV-Board-Gives-the-Green-Light-to-EV-3-5-Package-Positioning-Thailand-as-the-Key-Regional-Hub-for-Electric-Vehicle-Manufacturing/",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-shanghai-to-th-laem-chabang"
+        ],
+        "notes": "Sea freight to Laem Chabang (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "BYD Atto 3 is a compact EV SUV with strong RHD availability; the Thai used-import restriction and GB/T-vs-CCS2 charging are the key fit questions.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://www.byd.com/eu/car/atto3",
+      "source_type": "manufacturer",
+      "confidence": "medium",
+      "checked_date": "2026-10-07"
+    },
+    {
+      "vehicle_id": "byd-seal",
+      "country_id": "thailand",
+      "drive_side_fit": {
+        "status": "needs_conversion",
+        "summary": "China domestic-market production is left-hand drive (LHD), but Thailand registers right-hand drive (RHD) only — BYD Seal is produced in RHD for export markets (Thailand, Australia, Singapore). Confirm RHD availability with the exporter and source an RHD unit.",
+        "source": "Data sub-site models.json (export intelligence) + Left- and right-hand traffic (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/Left-_and_right-hand_traffic",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "age_rule_fit": null,
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Battery-electric (EV) — Thailand's EV 3.5 package reduces excise 8%→2% for BEVs ≤7M baht and provides reduced CBU import duty.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "CCS2 / Type 2 (Mennekes)",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": true,
+        "notes": "China-market GB/T inlet vs CCS2 / Type 2 (Mennekes) network — adapter required; confirm the sourced unit's inlet (some export units carry a CCS2 inlet).",
+        "source": "Vehicle: GB/T charging standard (Wikipedia); Destination: Combined Charging System / Type 2 (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Import permit (Department of Foreign Trade)"
+        ],
+        "notes": "Used-vehicle import is tightly restricted — confirm eligibility and permit before shipment.",
+        "source": "market sub-site importrules.json (import permit)",
+        "source_url": "https://anglosiamlaw.com/blog/importing-car-to-thailand-rules-tax-procedure",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "th-duty",
+        "ev_duty_taxrule_id": "th-ev-excise",
+        "vat_taxrule_id": "th-vat",
+        "ev_duty_relief": true,
+        "notes": "EV 3.5 excise 2% vs 80% MFN duty, + 7% VAT. Referenced from taxrules.json — verify with Thai Customs.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://osos.boi.go.th/EN/news/1723/EV-Board-Gives-the-Green-Light-to-EV-3-5-Package-Positioning-Thailand-as-the-Key-Regional-Hub-for-Electric-Vehicle-Manufacturing/",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-shanghai-to-th-laem-chabang"
+        ],
+        "notes": "Sea freight to Laem Chabang (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "BYD Seal (海豹) is an EV sedan with RHD availability in Thailand; the used-import restriction and charging-standard fit are the key questions.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://www.byd.com/eu/car/seal",
+      "source_type": "manufacturer",
+      "confidence": "medium",
+      "checked_date": "2026-10-07"
+    },
+    {
+      "vehicle_id": "byd-dolphin",
+      "country_id": "thailand",
+      "drive_side_fit": {
+        "status": "needs_conversion",
+        "summary": "China domestic-market production is left-hand drive (LHD), but Thailand registers right-hand drive (RHD) only — BYD Dolphin is produced in RHD for export markets (Thailand, Australia, Singapore). Confirm RHD availability with the exporter and source an RHD unit.",
+        "source": "Data sub-site models.json (export intelligence) + Left- and right-hand traffic (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/Left-_and_right-hand_traffic",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "age_rule_fit": null,
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Battery-electric (EV) — Thailand's EV 3.5 package reduces excise 8%→2% for BEVs ≤7M baht; the Dolphin is a high-volume compact EV in the Thai market.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "CCS2 / Type 2 (Mennekes)",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": true,
+        "notes": "China-market GB/T inlet vs CCS2 / Type 2 (Mennekes) network — adapter required; confirm the sourced unit's inlet (some export units carry a CCS2 inlet).",
+        "source": "Vehicle: GB/T charging standard (Wikipedia); Destination: Combined Charging System / Type 2 (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Import permit (Department of Foreign Trade)"
+        ],
+        "notes": "Used-vehicle import is tightly restricted — confirm eligibility and permit before shipment.",
+        "source": "market sub-site importrules.json (import permit)",
+        "source_url": "https://anglosiamlaw.com/blog/importing-car-to-thailand-rules-tax-procedure",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "th-duty",
+        "ev_duty_taxrule_id": "th-ev-excise",
+        "vat_taxrule_id": "th-vat",
+        "ev_duty_relief": true,
+        "notes": "EV 3.5 excise 2% vs 80% MFN duty, + 7% VAT. Referenced from taxrules.json — verify with Thai Customs.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://osos.boi.go.th/EN/news/1723/EV-Board-Gives-the-Green-Light-to-EV-3-5-Package-Positioning-Thailand-as-the-Key-Regional-Hub-for-Electric-Vehicle-Manufacturing/",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-shanghai-to-th-laem-chabang"
+        ],
+        "notes": "Sea freight to Laem Chabang (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "BYD Dolphin (海豚) is a compact EV hatchback popular in Thailand; RHD availability is strong and the EV 3.5 incentive applies.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://www.byd.com/eu/car/dolphin",
+      "source_type": "manufacturer",
+      "confidence": "medium",
+      "checked_date": "2026-10-07"
+    },
+    {
+      "vehicle_id": "deepal-s07",
+      "country_id": "thailand",
+      "drive_side_fit": {
+        "status": "needs_conversion",
+        "summary": "China domestic-market production is left-hand drive (LHD), but Thailand registers right-hand drive (RHD) only — Changan shipped its first right-hand-drive Deepal models to Thailand in 2024, so source the RHD export unit rather than converting a China LHD unit.",
+        "source": "Data sub-site models.json (export intelligence) + iChongqing (RHD Deepal shipment)",
+        "source_url": "https://www.ichongqing.info/2024/01/10/changans-first-right-hand-drive-deepal-models-head-to-thailand/",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "age_rule_fit": null,
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Battery-electric (EV) — Thailand's EV 3.5 package reduces excise 8%→2% for BEVs ≤7M baht.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "CCS2 / Type 2 (Mennekes)",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": true,
+        "notes": "China-market GB/T inlet vs CCS2 / Type 2 (Mennekes) network — adapter required; confirm the sourced unit's inlet (some export units carry a CCS2 inlet).",
+        "source": "Vehicle: GB/T charging standard (Wikipedia); Destination: Combined Charging System / Type 2 (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Import permit (Department of Foreign Trade)"
+        ],
+        "notes": "Used-vehicle import is tightly restricted — confirm eligibility and permit before shipment.",
+        "source": "market sub-site importrules.json (import permit)",
+        "source_url": "https://anglosiamlaw.com/blog/importing-car-to-thailand-rules-tax-procedure",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "th-duty",
+        "ev_duty_taxrule_id": "th-ev-excise",
+        "vat_taxrule_id": "th-vat",
+        "ev_duty_relief": true,
+        "notes": "EV 3.5 excise 2% vs 80% MFN duty, + 7% VAT. Referenced from taxrules.json — verify with Thai Customs.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://osos.boi.go.th/EN/news/1723/EV-Board-Gives-the-Green-Light-to-EV-3-5-Package-Positioning-Thailand-as-the-Key-Regional-Hub-for-Electric-Vehicle-Manufacturing/",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-shanghai-to-th-laem-chabang"
+        ],
+        "notes": "Sea freight to Laem Chabang (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "Changan Deepal S07 (深蓝S07) is an EV SUV with documented RHD production for Thailand — a direct fit for the Thai RHD EV market.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://www.ichongqing.info/2024/01/10/changans-first-right-hand-drive-deepal-models-head-to-thailand/",
+      "source_type": "reputable_media",
+      "confidence": "medium",
+      "checked_date": "2026-10-07"
+    },
+    {
+      "vehicle_id": "byd-atto-3",
+      "country_id": "vietnam",
+      "drive_side_fit": {
+        "status": "match",
+        "summary": "China domestic-market production is left-hand drive (LHD); Vietnam registers LHD only — no conversion required.",
+        "source": "Data sub-site models.json (export intelligence) + Left- and right-hand traffic (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/Left-_and_right-hand_traffic",
+        "source_type": "database",
+        "confidence": "high",
+        "checked_date": "2026-10-07"
+      },
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Atto 3 production began 2022; Vietnam's 5-year rule (Decree 116/2017) is satisfied by 2022+ units — verify the unit's manufacture year.",
+        "source": "market sub-site importrules.json (5-year age limit)",
+        "source_url": "https://ucarsea.com/vietnam-used-car-import-guide/",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Battery-electric (EV) — Vietnam exempts EVs from import duty (0% vs 70% MFN) and applies a reduced 3% special consumption tax during the incentive window into early 2027.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "CCS2 / Type 2 (Mennekes)",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": true,
+        "notes": "China-market GB/T inlet vs CCS2 / Type 2 (Mennekes) network — adapter required; confirm the sourced unit's inlet (some export units carry a CCS2 inlet).",
+        "source": "Vehicle: GB/T charging standard (Wikipedia); Destination: Combined Charging System / Type 2 (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Type approval (Decree 116/2017)",
+          "Technical safety inspection"
+        ],
+        "notes": "Type approval and technical inspection required; EVs avoid the used-combustion surcharge.",
+        "source": "market sub-site importrules.json (type approval)",
+        "source_url": "https://ucarsea.com/vietnam-used-car-import-guide/",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "vn-duty",
+        "ev_duty_taxrule_id": "vn-ev-duty",
+        "vat_taxrule_id": "vn-vat",
+        "ev_duty_relief": true,
+        "notes": "EV trims: 0% import duty + 3% SCT (vn-ev-sct) vs 70% MFN + 10% VAT. Referenced from taxrules.json — verify with Vietnam Customs.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://ucarsea.com/vietnam-used-car-import-guide/",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-guangzhou-to-vn-hai-phong"
+        ],
+        "notes": "Sea freight to Haiphong (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "BYD Atto 3 is a compact EV SUV; the 5-year age rule and GB/T-vs-CCS2 charging are the key fit questions for Vietnam.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://www.byd.com/eu/car/atto3",
+      "source_type": "manufacturer",
+      "confidence": "medium",
+      "checked_date": "2026-10-07"
+    },
+    {
+      "vehicle_id": "byd-song-plus",
+      "country_id": "vietnam",
+      "drive_side_fit": {
+        "status": "match",
+        "summary": "China domestic-market production is left-hand drive (LHD); Vietnam registers LHD only — no conversion required.",
+        "source": "Data sub-site models.json (export intelligence) + Left- and right-hand traffic (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/Left-_and_right-hand_traffic",
+        "source_type": "database",
+        "confidence": "high",
+        "checked_date": "2026-10-07"
+      },
+      "age_rule_fit": {
+        "status": "ineligible",
+        "summary": "Song Plus production began 2020; Vietnam's 5-year rule means 2020 units are now ~6 years old (ineligible), while 2021+ units are within/borderline — verify the unit's manufacture year.",
+        "source": "market sub-site importrules.json (5-year age limit)",
+        "source_url": "https://ucarsea.com/vietnam-used-car-import-guide/",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "PHEV (DM-i) and EV trims — Vietnam's 0% duty / 3% SCT incentive is BEV-specific, so the PHEV DM-i trim may not qualify; confirm classification with Vietnam Customs.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "CCS2 / Type 2 (Mennekes)",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": true,
+        "notes": "China-market GB/T inlet vs CCS2 / Type 2 (Mennekes) network — adapter required; confirm the sourced unit's inlet (some export units carry a CCS2 inlet).",
+        "source": "Vehicle: GB/T charging standard (Wikipedia); Destination: Combined Charging System / Type 2 (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Type approval (Decree 116/2017)",
+          "Technical safety inspection"
+        ],
+        "notes": "Type approval required; PHEV DM-i classification vs the BEV-only EV incentive is the key open question.",
+        "source": "market sub-site importrules.json (type approval)",
+        "source_url": "https://ucarsea.com/vietnam-used-car-import-guide/",
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "vn-duty",
+        "ev_duty_taxrule_id": "vn-ev-duty",
+        "vat_taxrule_id": "vn-vat",
+        "ev_duty_relief": true,
+        "notes": "EV trim: 0% duty + 3% SCT vs 70% MFN; PHEV DM-i classification uncertain. Referenced from taxrules.json — verify with Vietnam Customs.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://ucarsea.com/vietnam-used-car-import-guide/",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-shanghai-to-vn-cat-lai"
+        ],
+        "notes": "Sea freight to Ho Chi Minh City (Cat Lai), RoRo.",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "BYD Song Plus (宋PLUS) is a compact SUV sold as PHEV (DM-i) and EV; the 5-year age rule and BEV-only EV incentive are the key fit questions for Vietnam.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://www.byd.com/eu/car/seal-u",
+      "source_type": "manufacturer",
+      "confidence": "low",
+      "checked_date": "2026-10-07"
+    },
+    {
+      "vehicle_id": "chery-tiggo-8",
+      "country_id": "mexico",
+      "drive_side_fit": {
+        "status": "match",
+        "summary": "China domestic-market production is left-hand drive (LHD); Mexico registers LHD only — no conversion required.",
+        "source": "Data sub-site models.json (export intelligence) + Left- and right-hand traffic (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/Left-_and_right-hand_traffic",
+        "source_type": "database",
+        "confidence": "high",
+        "checked_date": "2026-10-07"
+      },
+      "age_rule_fit": {
+        "status": "borderline",
+        "summary": "Tiggo 8 production began 2018; Mexico's eight-year rule for definitive used imports means 2018 units are now ~8 years old (borderline/over) — 2019+ units are within the window. Verify the exact cut-off.",
+        "source": "market sub-site importrules.json (eight-year rule)",
+        "source_url": "https://vertexlegal.org/legalize-car-mexico-model-year-rules-import/",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Combustion (ICE) — subject to standard used-vehicle duty (15–50% range) + 16% IVA; no EV-specific relief.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "ev_charging_compat": null,
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "NOM emissions & safety conformity"
+        ],
+        "notes": "NOM conformity and definitive-import procedures apply; confirm the applicable NOM path before shipment.",
+        "source": "market sub-site importrules.json (NOM conformity)",
+        "source_url": "https://www.trade.gov/market-intelligence/mexico-import-regulations-used-vehicles",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "mx-duty",
+        "ev_duty_taxrule_id": null,
+        "vat_taxrule_id": "mx-vat",
+        "ev_duty_relief": false,
+        "notes": "ICE: 15–50% used-vehicle duty (mx-duty) + 16% IVA (mx-vat). Referenced from taxrules.json — verify with Mexican customs (SAT).",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://dutiable.io/duty-rates/mexico/used-cars",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-shanghai-to-mx-lazaro-cardenas"
+        ],
+        "notes": "Sea freight to Lázaro Cárdenas (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "Chery Tiggo 8 (瑞虎8) is an ICE SUV; the eight-year age rule vs its 2018 production start is the key fit question for Mexico.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://en.wikipedia.org/wiki/Chery_Tiggo_8",
+      "source_type": "reputable_media",
+      "confidence": "medium",
+      "checked_date": "2026-10-07"
+    },
+    {
+      "vehicle_id": "byd-atto-3",
+      "country_id": "ghana",
+      "drive_side_fit": {
+        "status": "needs_conversion",
+        "summary": "China domestic-market production is left-hand drive (LHD), but Ghana registers right-hand drive (RHD) only — BYD Atto 3 is produced in RHD for export markets (South Africa, Australia, Thailand). Confirm RHD availability with the exporter and source an RHD unit.",
+        "source": "Data sub-site models.json (export intelligence) + Left- and right-hand traffic (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/Left-_and_right-hand_traffic",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Atto 3 production began 2022; Ghana's 15-year age limit (from 1 Oct 2026) is comfortably satisfied — verify the unit's manufacture date.",
+        "source": "market sub-site importrules.json (15-year age limit)",
+        "source_url": "https://chale.news/six-weeks-left-ghanas-new-car-import-rules-kick-in-october-1/",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Battery-electric (EV) — Ghana's EV import-duty reduction is developing; confirm current EV duty treatment with the Ghana Revenue Authority.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "CCS2 / CHAdeMO",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": true,
+        "notes": "China-market GB/T inlet vs CCS2 / CHAdeMO network — adapter required; confirm the sourced unit's inlet (some export units carry a CCS2 inlet).",
+        "source": "Vehicle: GB/T charging standard (Wikipedia); Destination: Combined Charging System / Type 2 (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "GSA pre-shipment inspection",
+          "Certificate of Conformity"
+        ],
+        "notes": "GSA-approved pre-shipment inspection and a Certificate of Conformity are mandatory before export.",
+        "source": "market sub-site importrules.json (GSA pre-shipment)",
+        "source_url": "https://chale.news/six-weeks-left-ghanas-new-car-import-rules-kick-in-october-1/",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "gh-duty",
+        "ev_duty_taxrule_id": null,
+        "vat_taxrule_id": "gh-vat",
+        "ev_duty_relief": false,
+        "notes": "20% base duty + 12.5% VAT (plus NHIL/GETFund levies); EV duty reduction developing. Referenced from taxrules.json — verify with GRA.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://ghanaduty.app/guides/ghana-import-duty-rates/",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-guangzhou-to-gh-tema"
+        ],
+        "notes": "Sea freight to Tema (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "BYD Atto 3 is a compact EV SUV with RHD availability; the GSA pre-shipment regime and GB/T-vs-CCS2/CHAdeMO charging are the key fit questions for Ghana.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://www.byd.com/eu/car/atto3",
+      "source_type": "manufacturer",
+      "confidence": "medium",
+      "checked_date": "2026-10-07"
+    },
+    {
+      "vehicle_id": "mg-4",
+      "country_id": "ghana",
+      "drive_side_fit": {
+        "status": "needs_conversion",
+        "summary": "China domestic-market production is left-hand drive (LHD), but Ghana registers right-hand drive (RHD) only — MG4 EV is produced in RHD for export markets (UK, Australia, South Africa). Confirm RHD availability with the exporter and source an RHD unit.",
+        "source": "Data sub-site models.json (export intelligence) + Left- and right-hand traffic (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/Left-_and_right-hand_traffic",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "MG4 production began 2022; Ghana's 15-year age limit is comfortably satisfied — verify the unit's manufacture date.",
+        "source": "market sub-site importrules.json (15-year age limit)",
+        "source_url": "https://chale.news/six-weeks-left-ghanas-new-car-import-rules-kick-in-october-1/",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Battery-electric (EV) — Ghana's EV import-duty reduction is developing; confirm current EV duty treatment with GRA.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "CCS2 / CHAdeMO",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": true,
+        "notes": "China-market GB/T inlet vs CCS2 / CHAdeMO network — adapter required; confirm the sourced unit's inlet (some export units carry a CCS2 inlet).",
+        "source": "Vehicle: GB/T charging standard (Wikipedia); Destination: Combined Charging System / Type 2 (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "GSA pre-shipment inspection",
+          "Certificate of Conformity"
+        ],
+        "notes": "GSA-approved pre-shipment inspection and a Certificate of Conformity are mandatory before export.",
+        "source": "market sub-site importrules.json (GSA pre-shipment)",
+        "source_url": "https://chale.news/six-weeks-left-ghanas-new-car-import-rules-kick-in-october-1/",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "gh-duty",
+        "ev_duty_taxrule_id": null,
+        "vat_taxrule_id": "gh-vat",
+        "ev_duty_relief": false,
+        "notes": "20% base duty + 12.5% VAT (plus levies); EV duty reduction developing. Referenced from taxrules.json — verify with GRA.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://ghanaduty.app/guides/ghana-import-duty-rates/",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-shanghai-to-gh-takoradi"
+        ],
+        "notes": "Sea freight to Takoradi (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "MG4 EV is a RHD-capable compact EV hatchback; the GSA pre-shipment regime and charging-standard fit are the key questions for Ghana.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://www.auto-data.net/en/mg-mg4-ev-i-generation-8990",
+      "source_type": "reputable_media",
+      "confidence": "medium",
+      "checked_date": "2026-10-07"
+    },
+    {
+      "vehicle_id": "chery-tiggo-8",
+      "country_id": "peru",
+      "drive_side_fit": {
+        "status": "match",
+        "summary": "China domestic-market production is left-hand drive (LHD); Peru registers LHD only — no conversion required.",
+        "source": "Data sub-site models.json (export intelligence) + Left- and right-hand traffic (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/Left-_and_right-hand_traffic",
+        "source_type": "database",
+        "confidence": "high",
+        "checked_date": "2026-10-07"
+      },
+      "age_rule_fit": {
+        "status": "ineligible",
+        "summary": "Tiggo 8 production began 2018; Peru's 5-year rule means 2018 units are now ~8 years old (ineligible) — only 2021+ units are within the window. Verify the unit's manufacture year.",
+        "source": "market sub-site importrules.json (5-year age limit)",
+        "source_url": "https://www.sunat.gob.pe/customsinformation/importofvehicles/age_of_vehicle.html",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Combustion (ICE) — subject to ad valorem duty + selective consumption tax (ISC) + 17% IGV (plus 2% IPM); no EV-specific relief.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "ev_charging_compat": null,
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Unique Customs Declaration (DUA)",
+          "Ad valorem + ISC + IGV assessment"
+        ],
+        "notes": "Clearance via the DUA with layered duty/ISC/IGV assessment; confirm the unit meets the 5-year age rule.",
+        "source": "market sub-site importrules.json (layered taxes)",
+        "source_url": "https://www.sunat.gob.pe/customsinformation/importofvehicles/applicable_taxes.html",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "pe-duty",
+        "ev_duty_taxrule_id": null,
+        "vat_taxrule_id": "pe-igv",
+        "ev_duty_relief": false,
+        "notes": "ICE: 6% ad valorem (pe-duty) + 17% IGV + 2% IPM (pe-igv), plus ISC. Referenced from taxrules.json — verify with SUNAT.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://www.sunat.gob.pe/customsinformation/importofvehicles/applicable_taxes.html",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-shanghai-to-pe-callao"
+        ],
+        "notes": "Sea freight to Callao (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "Chery Tiggo 8 (瑞虎8) is an ICE SUV; Peru's 5-year age rule vs its 2018 production start is the key blocker.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://en.wikipedia.org/wiki/Chery_Tiggo_8",
       "source_type": "reputable_media",
       "confidence": "medium",
       "checked_date": "2026-10-07"

@@ -5,6 +5,8 @@ export const regionMeta: Record<string, { label: string; label_zh: string }> = {
   "central-asia": { label: "Central Asia", label_zh: "中亚" },
   "south-asia": { label: "South Asia", label_zh: "南亚" },
   "latin-america": { label: "Latin America", label_zh: "拉丁美洲" },
+  "southeast-asia": { label: "Southeast Asia", label_zh: "东南亚" },
+  "north-america": { label: "North America", label_zh: "北美" },
 };
 
 export interface CountryContent {
@@ -249,5 +251,113 @@ export const countryContent: Record<string, CountryContent> = {
     popularModelIds: ["byd-atto-3", "mg-4", "chery-tiggo-8"],
     evNote:
       "Chile applies the same flat 6% duty to EVs (no EV-specific relief) but has one of Latin America's strongest Chinese-EV markets; no age limit makes it attractive for recent low-mileage EV stock.",
+  },
+  thailand: {
+    overview:
+      "Thailand is Southeast Asia's automotive manufacturing hub and a right-hand-drive market that heavily restricts used-vehicle imports. Its EV 3.5 package (excise cut from 8% to 2% for BEVs up to 7 million baht) makes it a leading destination for Chinese RHD EVs, with Laem Chabang as the main port.",
+    considerations: [
+      "Used-vehicle imports are tightly restricted — only new cars and limited special categories generally qualify.",
+      "EV 3.5 reduces excise to 2% and provides reduced CBU duty for BEVs — confirm current rates with BOI/Thai Customs.",
+      "RHD is mandatory — source RHD export units (BYD, Changan Deepal and others produce RHD for Thailand).",
+    ],
+    faq: [
+      { q: "Is Thailand right- or left-hand drive?", a: "Right-hand drive (RHD)." },
+      { q: "Can I import a used car into Thailand?", a: "Used-vehicle imports are tightly restricted — verify eligibility with Thai Customs before sourcing." },
+      { q: "What EV incentive applies?", a: "EV 3.5 cuts excise from 8% to 2% for BEVs up to 7 million baht, plus reduced CBU duty during 2024–2025." },
+      { q: "Which port handles imports?", a: "Laem Chabang." },
+    ],
+    popularModelIds: ["byd-atto-3", "byd-dolphin", "deepal-s07"],
+    evNote:
+      "Thailand's EV 3.5 package (excise 8%→2% for BEVs ≤7M baht, plus reduced CBU duty) and its RHD EV production base make it the key RHD EV market for Chinese exporters.",
+  },
+  vietnam: {
+    overview:
+      "Vietnam is a left-hand-drive Southeast Asian market with a firm five-year age rule for used passenger cars (Decree 116/2017) and a heavy combustion surcharge. EVs enjoy 0% import duty and a reduced 3% special consumption tax, and Haiphong and Ho Chi Minh City are the main ports.",
+    considerations: [
+      "The 5-year age rule is a firm cutoff — in 2026 that means roughly model-year 2021 and newer.",
+      "Used combustion cars face a fixed mixed-duty surcharge that makes ICE imports expensive; EVs avoid it.",
+      "EVs pay 0% duty + 3% SCT during the incentive window into early 2027.",
+    ],
+    faq: [
+      { q: "Is Vietnam right- or left-hand drive?", a: "Left-hand drive (LHD)." },
+      { q: "What is the age limit?", a: "Five years from the year of manufacture (Decree 116/2017)." },
+      { q: "What EV incentive applies?", a: "0% import duty and a reduced 3% special consumption tax." },
+      { q: "Which ports handle imports?", a: "Haiphong and Ho Chi Minh City (Cat Lai)." },
+    ],
+    popularModelIds: ["byd-atto-3", "byd-song-plus", "byd-seal"],
+    evNote:
+      "Vietnam's 0% import duty and 3% SCT for EVs create a structural cost advantage over combustion used imports, favoring recent low-mileage Chinese EVs.",
+  },
+  indonesia: {
+    overview:
+      "Indonesia is Southeast Asia's largest market but a right-hand-drive country that effectively prohibits used-vehicle imports — only new CBU units may enter under an importer licence. Its CBU EV import-duty exemption (until December 2025) was not continued into 2026, and Tanjung Priok is the main port.",
+    considerations: [
+      "Used-vehicle imports are effectively prohibited — only new CBU units qualify.",
+      "The CBU EV import-duty exemption ended 31 December 2025 and was not continued in 2026.",
+      "Local-assembly protection dominates — confirm any import window with Indonesian customs before sourcing.",
+    ],
+    faq: [
+      { q: "Is Indonesia right- or left-hand drive?", a: "Right-hand drive (RHD)." },
+      { q: "Can I import a used car into Indonesia?", a: "Effectively no — used-vehicle imports are prohibited; only new CBU units under permit." },
+      { q: "What EV incentive applied?", a: "CBU EVs had import-duty exemption until 31 December 2025, not continued in 2026." },
+      { q: "Which port handles imports?", a: "Tanjung Priok (Jakarta)." },
+    ],
+    popularModelIds: ["byd-atto-3", "byd-seal", "mg-4"],
+    evNote:
+      "Indonesia's CBU EV import-duty exemption ended December 2025; used imports are prohibited, so this is a market to monitor rather than a current used-export destination.",
+  },
+  mexico: {
+    overview:
+      "Mexico is a large left-hand-drive North American market where definitive used-vehicle imports generally must be within the last eight model years and meet NOM emissions/safety standards. Lázaro Cárdenas and Veracruz are the main vehicle ports, and IVA is 16%.",
+    considerations: [
+      "Definitive used imports follow an eight-year model-year rule — verify the exact cut-off with SAT/Aduanas.",
+      "NOM emissions and safety conformity applies; border-zone temporary programs have separate rules.",
+      "No EV-specific import-duty relief is recorded — standard duty plus 16% IVA applies.",
+    ],
+    faq: [
+      { q: "Is Mexico right- or left-hand drive?", a: "Left-hand drive (LHD)." },
+      { q: "What is the age rule?", a: "Definitive used imports generally must be within the last eight model years." },
+      { q: "What tax applies?", a: "Used-vehicle duty (15–50% range) plus 16% IVA." },
+      { q: "Which ports handle imports?", a: "Lázaro Cárdenas and Veracruz." },
+    ],
+    popularModelIds: ["chery-tiggo-8", "byd-song-plus", "mg-5"],
+    evNote:
+      "Mexico has no EV-specific import-duty relief; Chinese EV brands are growing locally but the used-import duty regime is the same for all powertrains.",
+  },
+  ghana: {
+    overview:
+      "Ghana is a right-hand-drive West African market that, from 1 October 2026, enforces a 15-year age limit plus GSA-approved pre-shipment inspection. Tema and Takoradi are the main ports, and EV import-duty reduction is developing.",
+    considerations: [
+      "The 15-year age limit (from 1 Oct 2026) plus overage penalties for 10–15-year vehicles apply.",
+      "GSA-approved pre-shipment inspection and a Certificate of Conformity are mandatory.",
+      "RHD is mandatory — source RHD export units.",
+    ],
+    faq: [
+      { q: "Is Ghana right- or left-hand drive?", a: "Right-hand drive (RHD)." },
+      { q: "What is the age limit?", a: "15 years from 1 October 2026, with overage penalties for 10–15-year vehicles." },
+      { q: "What inspection is required?", a: "GSA-approved pre-shipment inspection and a Certificate of Conformity." },
+      { q: "Which ports handle imports?", a: "Tema and Takoradi." },
+    ],
+    popularModelIds: ["byd-atto-3", "mg-4", "chery-tiggo-8"],
+    evNote:
+      "Ghana's EV import-duty reduction is developing; EV adoption is early-stage with limited charging infrastructure.",
+  },
+  peru: {
+    overview:
+      "Peru is a left-hand-drive Latin American market with a five-year age limit for used vehicles (two years for diesel) and a layered tax stack of ad valorem duty, selective consumption tax and 17% IGV plus 2% IPM. Callao is the main port.",
+    considerations: [
+      "The 5-year age rule (2 years for diesel) is strictly applied by SUNAT.",
+      "Taxes layer as ad valorem + ISC + IGV/IPM — budget the full stack.",
+      "No EV-specific import-duty relief is recorded.",
+    ],
+    faq: [
+      { q: "Is Peru right- or left-hand drive?", a: "Left-hand drive (LHD)." },
+      { q: "What is the age limit?", a: "Five years for petrol vehicles, two years for diesel." },
+      { q: "What tax applies?", a: "Ad valorem duty + selective consumption tax + 17% IGV plus 2% IPM." },
+      { q: "Which port handles imports?", a: "Callao." },
+    ],
+    popularModelIds: ["chery-tiggo-8", "byd-atto-3", "mg-4"],
+    evNote:
+      "Peru applies the same duty/IGV stack to EVs (no EV-specific relief), but recent Chinese EVs have growing local presence.",
   },
 };

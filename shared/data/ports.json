@@ -167,6 +167,69 @@
       "country_id": "chile",
       "type": "destination",
       "note": "Free trade zone; re-export hub for Bolivia and northern Chile"
+    },
+    {
+      "port_id": "th-laem-chabang",
+      "name": "Laem Chabang",
+      "country_id": "thailand",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "vn-hai-phong",
+      "name": "Haiphong",
+      "country_id": "vietnam",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "vn-cat-lai",
+      "name": "Ho Chi Minh City (Cat Lai)",
+      "country_id": "vietnam",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "id-tanjung-priok",
+      "name": "Tanjung Priok (Jakarta)",
+      "country_id": "indonesia",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "mx-lazaro-cardenas",
+      "name": "Lázaro Cárdenas",
+      "country_id": "mexico",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "mx-veracruz",
+      "name": "Veracruz",
+      "country_id": "mexico",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "gh-tema",
+      "name": "Tema",
+      "country_id": "ghana",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "gh-takoradi",
+      "name": "Takoradi",
+      "country_id": "ghana",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "pe-callao",
+      "name": "Callao",
+      "country_id": "peru",
+      "type": "destination",
+      "note": null
     }
   ]
 }
