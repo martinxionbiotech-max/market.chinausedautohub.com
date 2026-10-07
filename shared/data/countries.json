@@ -870,6 +870,84 @@
       "source_url": "https://www.trade.gov/country-commercial-guides/el-salvador-import-tariffs",
       "source_date": "2026-10-07",
       "confidence": "high"
+    },
+    {
+      "country_id": "botswana",
+      "name": "Botswana",
+      "name_zh": "博茨瓦纳",
+      "region": "africa",
+      "drive_side": "rhd",
+      "currency": "BWP",
+      "status": "active",
+      "source": "Botswana Unified Revenue Service (BURS) / SACU",
+      "source_url": "https://www.burs.org.bw",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "namibia",
+      "name": "Namibia",
+      "name_zh": "纳米比亚",
+      "region": "africa",
+      "drive_side": "rhd",
+      "currency": "NAD",
+      "status": "active",
+      "source": "Namibia Revenue Agency (NamRA) / Namibia Trade Portal",
+      "source_url": "https://www.namra.org.na",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "mauritius",
+      "name": "Mauritius",
+      "name_zh": "毛里求斯",
+      "region": "africa",
+      "drive_side": "rhd",
+      "currency": "MUR",
+      "status": "active",
+      "source": "Mauritius Revenue Authority (MRA)",
+      "source_url": "https://www.mra.mu",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "jamaica",
+      "name": "Jamaica",
+      "name_zh": "牙买加",
+      "region": "caribbean",
+      "drive_side": "rhd",
+      "currency": "JMD",
+      "status": "active",
+      "source": "Trade Board Limited (Jamaica) / Jamaica Customs Agency",
+      "source_url": "https://www.tradeboard.gov.jm/ttbl/MV_Age.php",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "trinidad-and-tobago",
+      "name": "Trinidad and Tobago",
+      "name_zh": "特立尼达和多巴哥",
+      "region": "caribbean",
+      "drive_side": "rhd",
+      "currency": "TTD",
+      "status": "active",
+      "source": "Trinidad & Tobago Customs & Excise Division",
+      "source_url": "https://www.pacemotorsthailand.com/blog/2026-trinidad-vehicle-import-regulations-direct",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "brunei",
+      "name": "Brunei Darussalam",
+      "name_zh": "文莱",
+      "region": "southeast-asia",
+      "drive_side": "rhd",
+      "currency": "BND",
+      "status": "active",
+      "source": "Royal Customs and Excise Department (RCED)",
+      "source_url": "https://www.customs.gov.bn",
+      "source_date": "2026-10-07",
+      "confidence": "high"
     }
   ]
 }

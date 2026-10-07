@@ -734,6 +734,48 @@
       "country_id": "el-salvador",
       "type": "destination",
       "note": "No Caribbean coast — via Panama transshipment or Guatemalan/Honduran port + truck"
+    },
+    {
+      "port_id": "bw-gaborone",
+      "name": "Gaborone (via Durban transit)",
+      "country_id": "botswana",
+      "type": "destination",
+      "note": "Landlocked — transit via Durban (South Africa), SACU border post"
+    },
+    {
+      "port_id": "na-walvis-bay",
+      "name": "Walvis Bay",
+      "country_id": "namibia",
+      "type": "destination",
+      "note": "Direct deep-water port on the Atlantic coast"
+    },
+    {
+      "port_id": "mu-port-louis",
+      "name": "Port Louis",
+      "country_id": "mauritius",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "jm-kingston",
+      "name": "Kingston",
+      "country_id": "jamaica",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "tt-port-of-spain",
+      "name": "Port of Spain",
+      "country_id": "trinidad-and-tobago",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "bn-muara",
+      "name": "Muara",
+      "country_id": "brunei",
+      "type": "destination",
+      "note": null
     }
   ]
 }

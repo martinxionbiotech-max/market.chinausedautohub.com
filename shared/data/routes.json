@@ -1019,6 +1019,78 @@
       "source_url": null,
       "last_checked": "2026-10-07",
       "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-bw-gaborone",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "bw-gaborone",
+      "est_days_min": 28,
+      "est_days_max": 40,
+      "shipping_method": "roro",
+      "source": "Industry route estimates (sea to Durban + road transit)",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-na-walvis-bay",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "na-walvis-bay",
+      "est_days_min": 24,
+      "est_days_max": 34,
+      "shipping_method": "roro",
+      "source": "Industry route estimates",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-mu-port-louis",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "mu-port-louis",
+      "est_days_min": 20,
+      "est_days_max": 30,
+      "shipping_method": "roro",
+      "source": "Industry route estimates",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-jm-kingston",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "jm-kingston",
+      "est_days_min": 30,
+      "est_days_max": 42,
+      "shipping_method": "roro",
+      "source": "Industry route estimates (via Panama transshipment)",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-tt-port-of-spain",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "tt-port-of-spain",
+      "est_days_min": 30,
+      "est_days_max": 42,
+      "shipping_method": "roro",
+      "source": "Industry route estimates (via Panama transshipment)",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-guangzhou-to-bn-muara",
+      "origin_port_id": "cn-guangzhou",
+      "destination_port_id": "bn-muara",
+      "est_days_min": 7,
+      "est_days_max": 14,
+      "shipping_method": "roro",
+      "source": "Industry route estimates",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
     }
   ]
 }

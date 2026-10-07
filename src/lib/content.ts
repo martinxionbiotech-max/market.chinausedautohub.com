@@ -5,6 +5,7 @@ export const regionMeta: Record<string, { label: string; label_zh: string }> = {
   "central-asia": { label: "Central Asia", label_zh: "中亚" },
   "south-asia": { label: "South Asia", label_zh: "南亚" },
   "latin-america": { label: "Latin America", label_zh: "拉丁美洲" },
+  caribbean: { label: "Caribbean", label_zh: "加勒比" },
   "southeast-asia": { label: "Southeast Asia", label_zh: "东南亚" },
   "north-america": { label: "North America", label_zh: "北美" },
   europe: { label: "Europe", label_zh: "欧洲" },
@@ -1236,5 +1237,111 @@ export const countryContent: Record<string, CountryContent> = {
     popularModelIds: ["byd-atto-3", "chery-tiggo-8", "byd-dolphin"],
     evNote:
       "El Salvador records no EV-specific import-duty relief, so EVs follow the standard 25–30% duty + 13% VAT stack — confirm EV treatment with the DGA before trading.",
+  },
+  botswana: {
+    overview:
+      "Botswana is a landlocked right-hand-drive Southern African market that imports used vehicles (mainly from Japan and South Africa) under the Southern African Customs Union (SACU). There is no fixed age cap, but duty is assessed on CIF value (importer guides cite 27% customs + 12% VAT) and tax climbs with age. Vehicles transit via Durban, South Africa.",
+    considerations: [
+      "No hard age limit, but duty climbs with age and a 2-year no-sale rule applies — source the newest unit your budget allows.",
+      "Landlocked — vehicles transit via Durban (South Africa) under SACU; allow for transit time and border clearance.",
+      "RHD is the norm — China-market LHD units require sourcing an RHD export unit.",
+    ],
+    faq: [
+      { q: "Is there an age limit for used cars?", a: "No fixed age cap, but duty is assessed on CIF value and generally climbs with age — confirm the BURS schedule." },
+      { q: "Is Botswana right-hand drive?", a: "Yes — Botswana is a right-hand-drive (RHD) market." },
+      { q: "What duty and VAT apply?", a: "Importer guides cite 27% customs duty + 12% VAT (SACU). Verify current rates with BURS." },
+      { q: "Which port handles imports?", a: "Vehicles transit via Durban (South Africa) to Gaborone." },
+    ],
+    popularModelIds: ["byd-atto-3", "mg-4", "byd-song-plus"],
+    evNote:
+      "No EV-specific import-duty relief is confirmed for Botswana; EVs follow the SACU duty + VAT stack. Charging is European-aligned (Type 2 / CCS2), so a GB/T-to-CCS2 adapter is required for China-market units.",
+  },
+  namibia: {
+    overview:
+      "Namibia is a right-hand-drive Southern African market that enforces a strict 8-year age limit (counted from first registration) and requires an import permit before shipping. Walvis Bay is a direct deep-water port on the Atlantic, and NamRA is the customs authority. Duty is assessed on CIF value.",
+    considerations: [
+      "The strict 8-year age limit (from first registration, not model year) is the key filter — source units comfortably inside the window.",
+      "Walvis Bay is a direct port, cutting transit time versus landlocked neighbours.",
+      "RHD is mandatory — China-market LHD units require an RHD export unit.",
+    ],
+    faq: [
+      { q: "What is the age limit?", a: "8 years from first registration, with an import permit required before shipping." },
+      { q: "Is Namibia right-hand drive?", a: "Yes — Namibia is a right-hand-drive (RHD) market." },
+      { q: "Which port handles imports?", a: "Walvis Bay (direct Atlantic port)." },
+    ],
+    popularModelIds: ["byd-atto-3", "byd-seal", "chery-tiggo-8"],
+    evNote:
+      "No EV-specific duty relief is confirmed for Namibia; EVs follow the standard duty + 15% VAT stack. Charging is European-aligned (Type 2 / CCS2) — confirm the GB/T-to-CCS2 adapter requirement.",
+  },
+  mauritius: {
+    overview:
+      "Mauritius is a right-hand-drive Indian Ocean island market with a tight used-car age cap (historically ~3–4 years, set by the Finance Act). Landed cost is dominated by high excise duty plus 15% VAT, and vehicles discharge at Port Louis with MRA customs and NLTA roadworthiness inspection.",
+    considerations: [
+      "The ~3–4-year age cap is the decisive filter — source late-production units and confirm the current Finance Act age with MRA before bidding.",
+      "Excise duty (banded by engine size) plus 15% VAT dominate the landed cost; EV/hybrid excise concessions may apply.",
+      "RHD is mandatory and LHD is not permitted for normal use.",
+    ],
+    faq: [
+      { q: "What is the age limit?", a: "Around 3–4 years, set by the Finance Act and adjusted each budget — confirm with MRA." },
+      { q: "Is Mauritius right-hand drive?", a: "Yes — Mauritius is RHD and does not permit LHD for normal use." },
+      { q: "Which port handles imports?", a: "Port Louis." },
+    ],
+    popularModelIds: ["byd-atto-3", "byd-seal", "byd-dolphin"],
+    evNote:
+      "Mauritius has historically offered reduced excise for EVs and hybrids under successive Finance Acts. Charging is European-aligned (Type 2 / CCS2) — confirm the GB/T-to-CCS2 adapter requirement and current EV excise with MRA.",
+  },
+  jamaica: {
+    overview:
+      "Jamaica is a right-hand-drive Caribbean market with a 6-year age limit for cars and SUVs (10 years for pick-ups and vans) under the Motor Vehicle Import Policy. Individuals may import up to two vehicles every three years via a Trade Board permit, and vehicles clear at Kingston. EVs benefit from reduced import duty.",
+    considerations: [
+      "The 6-year car/SUV age limit is the key filter — source 2020+ stock and confirm with the Trade Board.",
+      "Individuals need a Trade Board import permit (2 vehicles every 3 years).",
+      "EVs enjoy reduced import duty — a structural advantage for Chinese BEVs.",
+    ],
+    faq: [
+      { q: "What is the age limit?", a: "6 years for cars/SUVs, 10 years for pick-ups and vans (Ministry Paper #36/14)." },
+      { q: "Is Jamaica right-hand drive?", a: "Yes — Jamaica is a right-hand-drive (RHD) market." },
+      { q: "Do EVs get a duty break?", a: "Yes — Jamaica offers reduced import duty for EVs. Verify the current rate with the Jamaica Customs Agency." },
+      { q: "Which port handles imports?", a: "Kingston." },
+    ],
+    popularModelIds: ["byd-atto-3", "byd-seal", "byd-dolphin"],
+    evNote:
+      "Jamaica's reduced EV import duty makes Chinese BEVs structurally competitive. Charging is Type 2 / CCS2 (European-aligned) — confirm the GB/T-to-Type 2 adapter requirement and the destination standard.",
+  },
+  "trinidad-and-tobago": {
+    overview:
+      "Trinidad & Tobago is a right-hand-drive Caribbean market that, from 1 January 2026, extended its used-vehicle age limits to 6 years for private cars (previously 3) and 10 years for light commercial vehicles (previously 7). Landed cost is set by 20–30% duty, an engine-banded Motor Vehicle Tax and 12.5% VAT, clearing at Port of Spain.",
+    considerations: [
+      "The extended 6-year car age limit (from Jan 2026) widens the eligible stock window versus the prior 3-year rule.",
+      "Duty (20–30%) + MVT (engine-banded) + 12.5% VAT form the landed-cost stack — confirm the current figures.",
+      "EV/hybrid eligibility was tightened in 2026 — verify before sourcing EV stock.",
+    ],
+    faq: [
+      { q: "What is the age limit?", a: "6 years for private cars and 10 years for light commercial vehicles (from 1 January 2026)." },
+      { q: "Is Trinidad & Tobago right-hand drive?", a: "Yes — Trinidad & Tobago is a right-hand-drive (RHD) market." },
+      { q: "What taxes apply?", a: "20–30% import duty + Motor Vehicle Tax (engine-banded) + 12.5% VAT." },
+      { q: "Which port handles imports?", a: "Port of Spain." },
+    ],
+    popularModelIds: ["byd-atto-3", "mg-4", "byd-seal"],
+    evNote:
+      "Trinidad & Tobago tightened EV/hybrid eligibility under the 2026 amendments, with no clear EV duty relief. Charging is Type 2 / CCS2 (European-aligned) — confirm the GB/T-to-Type 2 adapter requirement.",
+  },
+  brunei: {
+    overview:
+      "Brunei Darussalam is a right-hand-drive Southeast Asian market with a tight used-vehicle age cap — 3 years from registration (4 from manufacture) for private use and 60 months / 6 years for commercial. It levies import and excise duties but no VAT, and vehicles clear at Muara with an approval permit required before departure.",
+    considerations: [
+      "The 3-year private age cap is the decisive filter — source late-production units and confirm with RCED.",
+      "No VAT, but import and excise duties apply — confirm the current rates.",
+      "RHD is required; LHD vehicles are only permitted for temporary tour use and must be re-exported.",
+    ],
+    faq: [
+      { q: "What is the age limit?", a: "3 years from registration (4 from manufacture) for private use; 60 months / 6 years for commercial." },
+      { q: "Is Brunei right-hand drive?", a: "Yes — Brunei is a right-hand-drive (RHD) market." },
+      { q: "Is there VAT?", a: "No — Brunei levies import and excise duties but no VAT." },
+      { q: "Which port handles imports?", a: "Muara." },
+    ],
+    popularModelIds: ["byd-atto-3", "byd-seal", "byd-dolphin"],
+    evNote:
+      "No EV-specific import-duty relief is confirmed for Brunei; EVs follow the import + excise duty structure (no VAT). Charging is European-aligned (Type 2 / CCS2) — confirm the GB/T-to-CCS2 adapter requirement.",
   },
 };
