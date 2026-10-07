@@ -461,6 +461,83 @@
       "country_id": "bahrain",
       "type": "destination",
       "note": null
+    },
+    {
+      "port_id": "kw-shuwaikh",
+      "name": "Shuwaikh Port",
+      "country_id": "kuwait",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "kw-shuaiba",
+      "name": "Shuaiba Port",
+      "country_id": "kuwait",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "am-yerevan",
+      "name": "Yerevan (via Poti, Georgia transit)",
+      "country_id": "armenia",
+      "type": "destination",
+      "note": "Landlocked — vehicles transit via Port of Poti (Georgia) then road to Yerevan"
+    },
+    {
+      "port_id": "do-haina",
+      "name": "Haina (Santo Domingo)",
+      "country_id": "dominican-republic",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "do-caucedo",
+      "name": "Caucedo (DP World)",
+      "country_id": "dominican-republic",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "do-puerto-plata",
+      "name": "Puerto Plata",
+      "country_id": "dominican-republic",
+      "type": "destination",
+      "note": "North coast"
+    },
+    {
+      "port_id": "ec-guayaquil",
+      "name": "Guayaquil",
+      "country_id": "ecuador",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "ec-posorja",
+      "name": "Posorja",
+      "country_id": "ecuador",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "uy-montevideo",
+      "name": "Montevideo",
+      "country_id": "uruguay",
+      "type": "destination",
+      "note": "River Plate transshipment hub (onward to Paraguay/Argentina)"
+    },
+    {
+      "port_id": "pa-cristobal",
+      "name": "Cristóbal (Colón)",
+      "country_id": "panama",
+      "type": "destination",
+      "note": "Atlantic entrance / Colón Free Zone"
+    },
+    {
+      "port_id": "pa-balboa",
+      "name": "Balboa (Panama City)",
+      "country_id": "panama",
+      "type": "destination",
+      "note": "Pacific entrance"
     }
   ]
 }

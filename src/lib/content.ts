@@ -689,4 +689,113 @@ export const countryContent: Record<string, CountryContent> = {
     evNote:
       "Bahrain has no EV-specific import-duty relief recorded in the sources reviewed; the 5% duty plus 10% VAT applies, though Bahrain promotes EV adoption through other incentives.",
   },
+  kuwait: {
+    overview:
+      "Kuwait is the final GCC market in the tracked set — a high-income, left-hand-drive Gulf economy that enforces GCC specification and a strict ~5-year age limit on used passenger cars. Its import tax burden is among the lightest in the region: a flat 5% customs duty with no VAT, clearing through Shuwaikh and Shuaiba ports.",
+    considerations: [
+      "The ~5-year age limit on used passenger cars is stricter than several other Gulf states — source recent stock.",
+      "GCC specification conformity is mandatory; non-GCC-spec vehicles may require modification or assessment.",
+      "A flat 5% customs duty applies with no VAT — a comparatively light total import tax burden.",
+    ],
+    faq: [
+      { q: "Is Kuwait right- or left-hand drive?", a: "Left-hand drive (LHD)." },
+      { q: "What is the age limit?", a: "Used private passenger cars are generally limited to about five years from manufacture." },
+      { q: "What duty and VAT apply?", a: "A flat 5% customs duty with no VAT currently applied to vehicle imports." },
+      { q: "Which ports handle imports?", a: "Shuwaikh and Shuaiba ports." },
+    ],
+    popularModelIds: ["geely-monjaro", "chery-tiggo-8", "great-wall-haval-h6"],
+    evNote:
+      "Kuwait has no EV-specific import-duty relief recorded in the sources reviewed; the flat 5% duty applies to all vehicles, with EV adoption driven by charging infrastructure rather than duty relief.",
+  },
+  armenia: {
+    overview:
+      "Armenia is a landlocked, left-hand-drive Caucasus market and an EAEU member that clears non-EAEU vehicles under the EAEU Common Customs Tariff (~15% plus 20% VAT). Its 2026 EV regime — an EAEU duty-free quota plus a VAT exemption to 31 December 2026 — makes it the strongest EV-relief market in the Caucasus, with vehicles transiting via Poti (Georgia) to Yerevan.",
+    considerations: [
+      "EVs benefit from a 2026 EAEU duty-free quota plus a VAT exemption (to 31 Dec 2026) — a strong relief delta versus ~15% + 20% VAT for combustion.",
+      "Armenia is landlocked: the main corridor is sea to Poti (Georgia), then bonded road transit to Yerevan.",
+      "Duty base differs by importer status — company imports pay ~15% ad valorem, individuals pay an age/engine EUR-per-cc payment.",
+    ],
+    faq: [
+      { q: "Is Armenia right- or left-hand drive?", a: "Left-hand drive (LHD) — Japanese RHD cars cannot be registered." },
+      { q: "What duty and VAT apply?", a: "EAEU Common Customs Tariff (~15% company) plus 20% VAT; individuals pay an age/engine EUR-per-cc payment." },
+      { q: "What EV incentive applies?", a: "A 2026 EAEU duty-free quota plus a VAT exemption running to 31 December 2026." },
+      { q: "How do vehicles arrive?", a: "Via Poti (Georgia) by sea, then bonded road transit to Yerevan." },
+    ],
+    popularModelIds: ["byd-atto-3", "li-auto-l7", "byd-han"],
+    evNote:
+      "Armenia's 2026 EV regime (EAEU 15,000-unit duty-free quota plus a VAT exemption to 31 Dec 2026) is the standout relief delta in the Caucasus; EREV and PHEV classification under the quota should be confirmed with the State Revenue Committee.",
+  },
+  "dominican-republic": {
+    overview:
+      "The Dominican Republic is a left-hand-drive Caribbean market with a firm five-year age rule on used passenger cars (Law 04-07) and a layered tax stack of 20% duty, 18% ITBIS and a CO₂-scaled 17% first-plate tax. Haina and Caucedo are the main entry ports, and EV/hybrid reduced-duty incentives are evolving.",
+    considerations: [
+      "The 5-year age rule (cars) is strictly enforced at inspection — source 2021+ stock.",
+      "The layered tax stack (20% duty + 18% ITBIS + 17% first-plate + marbete + 2% transfer) can approach or exceed half the vehicle value.",
+      "Salvage, rebuilt and lien-encumbered vehicles are prohibited (Decree 671-02).",
+    ],
+    faq: [
+      { q: "Is the Dominican Republic right- or left-hand drive?", a: "Left-hand drive (LHD)." },
+      { q: "What is the age limit?", a: "Five years for passenger cars (fifteen for trucks) under Law 04-07." },
+      { q: "What taxes apply?", a: "20% duty + 18% ITBIS + 17% first-plate (CO₂-scaled) + marbete + 2% transfer." },
+      { q: "Which ports handle imports?", a: "Haina and Caucedo (south), Puerto Plata (north)." },
+    ],
+    popularModelIds: ["byd-atto-3", "geely-monjaro", "chery-tiggo-8"],
+    evNote:
+      "The Dominican Republic has historically granted reduced duties on EVs and hybrids, and its CO₂-scaled first-plate tax favours EVs; the current 2026 incentive scope should be confirmed with the DGA.",
+  },
+  ecuador: {
+    overview:
+      "Ecuador is a dollarised, left-hand-drive Andean market that effectively prohibits used-vehicle imports (a ~1-year age rule) while taxing combustion vehicles at ~60–80% of CIF. Its EV incentive (~0.5–2% combined) is the widest EV-vs-ICE tax gap in the tracked set — but it applies to new units only. Guayaquil and Posorja are the main ports.",
+    considerations: [
+      "Used-vehicle imports are effectively prohibited (1-year rule); only diplomatic and returning-migrant cases are exceptions.",
+      "Combustion imports face ~34% duty + 10% excise + 15% VAT (~70% combined), with ICE assessed on the official retail price.",
+      "EVs attract ~0.5–2% combined but need Ministry-of-Environment approval — a new-EV market, not a used-EV destination.",
+    ],
+    faq: [
+      { q: "Is Ecuador right- or left-hand drive?", a: "Left-hand drive (LHD)." },
+      { q: "What is the age limit?", a: "About one year — used-vehicle imports are effectively prohibited." },
+      { q: "What taxes apply?", a: "~34% duty + 10% excise + 15% VAT for combustion (~70% combined); EVs ~0.5–2%." },
+      { q: "Which ports handle imports?", a: "Guayaquil and Posorja." },
+    ],
+    popularModelIds: ["byd-atto-3", "geely-monjaro", "chery-tiggo-8"],
+    evNote:
+      "Ecuador's EV incentive (~0.5–2% of CIF versus ~70% for combustion) is the widest EV-vs-ICE gap tracked, but it applies to new units only — used imports are effectively prohibited.",
+  },
+  uruguay: {
+    overview:
+      "Uruguay is a stable, left-hand-drive Mercosur market and a River Plate transshipment hub through the Port of Montevideo. Used-vehicle imports are restricted to returning Uruguayan citizens (Law 18.250), vehicles over ten years old are restricted, and imports face the Mercosur Common External Tariff plus 22% VAT.",
+    considerations: [
+      "Only returning Uruguayan citizens (12+ months' prior use, 2 years' residence abroad) may import a used vehicle — private non-citizens cannot.",
+      "Used cars over 10 years old are restricted; Mercosur CET duty plus 22% VAT applies.",
+      "Montevideo is a regional transshipment hub serving onward moves to Paraguay and Argentina.",
+    ],
+    faq: [
+      { q: "Is Uruguay right- or left-hand drive?", a: "Left-hand drive (LHD)." },
+      { q: "Can I import a used car into Uruguay?", a: "Only as a returning Uruguayan citizen under Law 18.250 — private non-citizens cannot import." },
+      { q: "What is the age limit?", a: "Used cars over 10 years old are restricted." },
+      { q: "What taxes apply?", a: "Mercosur Common External Tariff (by HS code) plus 22% VAT." },
+      { q: "Which port handles imports?", a: "Montevideo." },
+    ],
+    popularModelIds: ["byd-atto-3", "geely-monjaro", "chery-tiggo-8"],
+    evNote:
+      "Uruguay has no EV-specific import-duty relief recorded; the Mercosur CET duty plus 22% VAT applies, with EV adoption promoted through local incentives rather than import-duty relief.",
+  },
+  panama: {
+    overview:
+      "Panama is a dollarised, left-hand-drive Central American market and a major regional re-export hub through the Colón Free Zone. Its vehicle age limit is cited inconsistently across sources, clean titles are mandatory, and imports face an ad valorem duty plus 7% ITBMS. Cristóbal (Atlantic) and Balboa (Pacific) are the entry ports.",
+    considerations: [
+      "The vehicle age limit is cited inconsistently (5/7/10 years) — verify the current threshold with a Panamanian customs broker.",
+      "Clean, lien-free titles are mandatory; salvage and rebuilt titles are rejected.",
+      "The Colón Free Zone enables duty-free entry for re-export, and Pensionado visa holders may claim a one-vehicle duty exemption every two years.",
+    ],
+    faq: [
+      { q: "Is Panama right- or left-hand drive?", a: "Left-hand drive (LHD) — RHD vehicles are not importable for road registration." },
+      { q: "What is the age limit?", a: "Cited inconsistently (5/7/10 years) — verify with a Panamanian customs broker." },
+      { q: "What taxes apply?", a: "An ad valorem duty plus 7% ITBMS (VAT)." },
+      { q: "Which ports handle imports?", a: "Cristóbal (Atlantic) and Balboa (Pacific)." },
+    ],
+    popularModelIds: ["byd-atto-3", "geely-monjaro", "chery-tiggo-8"],
+    evNote:
+      "Panama has no EV-specific import-duty relief recorded; the standard duty plus 7% ITBMS applies, with the Colón Free Zone and Pensionado exemption as scheme-specific routes.",
+  },
 };

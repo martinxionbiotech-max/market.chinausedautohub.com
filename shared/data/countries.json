@@ -480,6 +480,84 @@
       "source_url": "https://www.customs.gov.bh/en/faq",
       "source_date": "2026-10-07",
       "confidence": "high"
+    },
+    {
+      "country_id": "kuwait",
+      "name": "Kuwait",
+      "name_zh": "科威特",
+      "region": "middle-east",
+      "drive_side": "lhd",
+      "currency": "KWD",
+      "status": "active",
+      "source": "Kuwait General Administration of Customs / GCC framework",
+      "source_url": "https://www.customs.gov.kw/",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "armenia",
+      "name": "Armenia",
+      "name_zh": "亚美尼亚",
+      "region": "central-asia",
+      "drive_side": "lhd",
+      "currency": "AMD",
+      "status": "active",
+      "source": "State Revenue Committee of Armenia / EAEU Common Customs Tariff",
+      "source_url": "https://carawon.com/en/import-to-armenia",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "dominican-republic",
+      "name": "Dominican Republic",
+      "name_zh": "多米尼加共和国",
+      "region": "latin-america",
+      "drive_side": "lhd",
+      "currency": "DOP",
+      "status": "active",
+      "source": "Dirección General de Aduanas (DGA) / Law 04-07",
+      "source_url": "https://contadoresdominicanos.com/en/post/customs/requirements-for-importing-vehicles-to-the-dominican-republic/",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "ecuador",
+      "name": "Ecuador",
+      "name_zh": "厄瓜多尔",
+      "region": "latin-america",
+      "drive_side": "lhd",
+      "currency": "USD",
+      "status": "active",
+      "source": "Servicio Nacional de Aduana del Ecuador (SENAE) / INEN",
+      "source_url": "https://autolanded.com/ecuador/",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "uruguay",
+      "name": "Uruguay",
+      "name_zh": "乌拉圭",
+      "region": "latin-america",
+      "drive_side": "lhd",
+      "currency": "UYU",
+      "status": "active",
+      "source": "Dirección Nacional de Aduanas (Uruguay) / Law 18.250",
+      "source_url": "https://www.aduanas.gub.uy/innovaportal/v/5699/3/innova.front/vehiculos-usados.html",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "panama",
+      "name": "Panama",
+      "name_zh": "巴拿马",
+      "region": "latin-america",
+      "drive_side": "lhd",
+      "currency": "USD",
+      "status": "active",
+      "source": "Autoridad Nacional de Aduanas (ANA) / Colón Free Zone",
+      "source_url": "https://www.wcshipping.com/blog/ship-a-car-to-panama-or-buy-locally-col%C3%B3n-free-zone-guide",
+      "source_date": "2026-10-07",
+      "confidence": "high"
     }
   ]
 }
