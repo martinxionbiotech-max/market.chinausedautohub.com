@@ -1344,4 +1344,94 @@ export const countryContent: Record<string, CountryContent> = {
     evNote:
       "No EV-specific import-duty relief is confirmed for Brunei; EVs follow the import + excise duty structure (no VAT). Charging is European-aligned (Type 2 / CCS2) — confirm the GB/T-to-CCS2 adapter requirement.",
   },
+  fiji: {
+    overview:
+      "Fiji is a right-hand-drive Pacific island market that caps used-vehicle imports at around 8 years (adjusted in recent budgets) and levies import (fiscal) duty plus VAT through the Fiji Revenue and Customs Service. Vehicles clear mainly at Suva (Lautoka is secondary), and demand is concentrated on compact SUVs and economical sedans with growing EV interest.",
+    considerations: [
+      "The ~8-year age limit (has changed recently) is the key filter — source units comfortably inside the window and confirm the current FRCS cut-off.",
+      "RHD is mandatory — China-market LHD units require an RHD export unit.",
+      "EVs may attract duty concessions — confirm the current rate with FRCS before trading.",
+    ],
+    faq: [
+      { q: "What is the age limit?", a: "Around 8 years for petrol/diesel passenger vehicles — verify the current cut-off with the Fiji Revenue and Customs Service (FRCS)." },
+      { q: "Is Fiji right-hand drive?", a: "Yes — Fiji is a right-hand-drive (RHD) market." },
+      { q: "What taxes apply?", a: "Import (fiscal) duty plus VAT (and an environment levy on some categories). Verify current rates with FRCS." },
+      { q: "Which port handles imports?", a: "Suva (Lautoka is secondary)." },
+    ],
+    popularModelIds: ["byd-atto-3", "mg-4", "chery-tiggo-8"],
+    evNote:
+      "Fiji has offered import-duty concessions for EVs and hybrids, and charging is European-aligned (Type 2 / CCS2). A GB/T-to-CCS2 adapter is required for China-market units — confirm the destination standard and current EV duty with FRCS.",
+  },
+  "papua-new-guinea": {
+    overview:
+      "Papua New Guinea is a right-hand-drive Pacific market with no single universal age cap on used-vehicle imports — vehicles must meet roadworthiness and (for some categories) pre-shipment inspection, clearing through Lae and Port Moresby under PNG Customs. Import duty plus 10% GST apply, and demand favors durable SUVs and light commercial vehicles.",
+    considerations: [
+      "No fixed age cap, but roadworthiness and SGS inspection apply — confirm condition limits with PNG Customs.",
+      "RHD is mandatory — China-market LHD units require an RHD export unit.",
+      "No EV-specific duty relief is confirmed; EVs follow the standard duty + 10% GST stack.",
+    ],
+    faq: [
+      { q: "Is there an age limit?", a: "No single universal age cap — roadworthiness and inspection requirements apply. Verify with PNG Customs." },
+      { q: "Is Papua New Guinea right-hand drive?", a: "Yes — PNG is a right-hand-drive (RHD) market." },
+      { q: "What taxes apply?", a: "Import duty plus 10% GST. Verify current duty with PNG Customs." },
+      { q: "Which ports handle imports?", a: "Lae (main) and Port Moresby." },
+    ],
+    popularModelIds: ["byd-atto-3", "byd-seal", "tank-300"],
+    evNote:
+      "No EV-specific import-duty relief is confirmed for PNG; EVs follow the standard duty + 10% GST stack. Charging is European-aligned (Type 2 / CCS2) — confirm the GB/T-to-CCS2 adapter requirement.",
+  },
+  guyana: {
+    overview:
+      "Guyana is a right-hand-drive South American/Caribbean market (CARICOM) that restricts used-vehicle imports to 8 years old under Guyana Revenue Authority rules. Duty is banded by engine size plus 14% VAT, and vehicles clear at Georgetown. The oil-driven economy has lifted demand for SUVs and pick-ups, with emerging EV interest.",
+    considerations: [
+      "The 8-year age limit is the key filter — source units inside the window and confirm the exact GRA cut-off date.",
+      "RHD is mandatory — China-market LHD units require an RHD export unit.",
+      "EVs have received reduced or zero-rated import duty in recent budgets — confirm the current rate with GRA.",
+    ],
+    faq: [
+      { q: "What is the age limit?", a: "8 years — verify the exact cut-off with the Guyana Revenue Authority (GRA)." },
+      { q: "Is Guyana right-hand drive?", a: "Yes — Guyana is a right-hand-drive (RHD) market." },
+      { q: "What taxes apply?", a: "Import duty (banded by engine size) plus 14% VAT. Verify current rates with GRA." },
+      { q: "Which port handles imports?", a: "Georgetown." },
+    ],
+    popularModelIds: ["byd-atto-3", "great-wall-haval-h6", "chery-tiggo-8"],
+    evNote:
+      "Guyana has offered reduced or zero-rated import duty for EVs in recent budgets. Charging is European-aligned (Type 2 / CCS2) — confirm the GB/T-to-CCS2 adapter requirement and current EV duty with GRA.",
+  },
+  "timor-leste": {
+    overview:
+      "Timor-Leste is a right-hand-drive Southeast Asian market that prices trade in US dollars and clears vehicles through Dili under the Timor-Leste Customs Authority. A single current used-vehicle age limit is not clearly documented, and import duty plus a sales/service tax apply. The market is small and early-stage for new-energy vehicles.",
+    considerations: [
+      "No single age limit is clearly documented — confirm any age/condition rules with the Customs Authority before sourcing stock.",
+      "RHD is mandatory — China-market LHD units require an RHD export unit.",
+      "No EV-specific duty relief is confirmed; EVs follow the standard duty + sales/service tax stack.",
+    ],
+    faq: [
+      { q: "Is there an age limit?", a: "A single current age limit is not clearly documented — verify with the Timor-Leste Customs Authority." },
+      { q: "Is Timor-Leste right-hand drive?", a: "Yes — Timor-Leste is a right-hand-drive (RHD) market." },
+      { q: "What taxes apply?", a: "Import duty plus a sales/service tax. Verify current rates with the Customs Authority." },
+      { q: "Which port handles imports?", a: "Dili." },
+    ],
+    popularModelIds: ["byd-atto-3", "chery-tiggo-8", "toyota-rav4"],
+    evNote:
+      "No EV-specific import-duty relief is confirmed for Timor-Leste; EVs follow the standard duty + sales/service tax stack. Charging is European-aligned (Type 2 / CCS2) — confirm the GB/T-to-CCS2 adapter requirement.",
+  },
+  myanmar: {
+    overview:
+      "Myanmar is a large Southeast Asian market that drives on the right (left-hand-drive traffic) but retains a substantial right-hand-drive used-car fleet imported from Japan. Vehicle imports are regulated by an annual Ministry of Commerce notification on permitted model years (the 2025 policy, issued December 2024, reaffirmed existing rules), and vehicles clear mainly at Yangon (Thilawa) under Myanmar Customs with an import permit plus duty and commercial tax.",
+    considerations: [
+      "Permitted model years are set by the annual MOC notification — confirm the current permitted years before sourcing stock.",
+      "Drive side is nuanced: official traffic is LHD (drives right), but RHD imports are widespread — verify the current drive-side requirement with MOC.",
+      "Import permits and duty/commercial tax apply — confirm the document set and rates with Myanmar Customs.",
+    ],
+    faq: [
+      { q: "What are the import restrictions?", a: "Model-year limits set by the annual Ministry of Commerce notification (2025 policy reaffirmed existing rules). Verify with MOC." },
+      { q: "Is Myanmar right- or left-hand drive?", a: "Myanmar drives on the right (left-hand-drive traffic), but a large RHD used-car fleet exists — confirm the current rule with MOC." },
+      { q: "What taxes apply?", a: "Import duty plus commercial tax (CTT). Verify current rates with Myanmar Customs." },
+      { q: "Which port handles imports?", a: "Yangon (Thilawa)." },
+    ],
+    popularModelIds: ["byd-atto-3", "byd-song-plus", "chery-tiggo-8"],
+    evNote:
+      "Myanmar has reduced import duties for electric vehicles to encourage adoption, though exact current rates were not confirmed in the sources reviewed. Charging standard should be confirmed against the local network — verify EV treatment with the Ministry of Commerce.",
+  },
 };

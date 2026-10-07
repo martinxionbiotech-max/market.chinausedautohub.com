@@ -776,6 +776,41 @@
       "country_id": "brunei",
       "type": "destination",
       "note": null
+    },
+    {
+      "port_id": "fj-suva",
+      "name": "Suva",
+      "country_id": "fiji",
+      "type": "destination",
+      "note": "Main port; Lautoka is secondary"
+    },
+    {
+      "port_id": "pg-lae",
+      "name": "Lae",
+      "country_id": "papua-new-guinea",
+      "type": "destination",
+      "note": "Main port; Port Moresby is secondary"
+    },
+    {
+      "port_id": "gy-georgetown",
+      "name": "Georgetown",
+      "country_id": "guyana",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "tl-dili",
+      "name": "Dili",
+      "country_id": "timor-leste",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "mm-yangon",
+      "name": "Yangon (Thilawa)",
+      "country_id": "myanmar",
+      "type": "destination",
+      "note": null
     }
   ]
 }

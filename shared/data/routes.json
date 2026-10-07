@@ -1091,6 +1091,66 @@
       "source_url": null,
       "last_checked": "2026-10-07",
       "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-fj-suva",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "fj-suva",
+      "est_days_min": 20,
+      "est_days_max": 30,
+      "shipping_method": "roro",
+      "source": "Industry route estimates",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-pg-lae",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "pg-lae",
+      "est_days_min": 14,
+      "est_days_max": 20,
+      "shipping_method": "roro",
+      "source": "Industry route estimates",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-gy-georgetown",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "gy-georgetown",
+      "est_days_min": 30,
+      "est_days_max": 42,
+      "shipping_method": "roro",
+      "source": "Industry route estimates (via Panama transshipment)",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-guangzhou-to-tl-dili",
+      "origin_port_id": "cn-guangzhou",
+      "destination_port_id": "tl-dili",
+      "est_days_min": 10,
+      "est_days_max": 16,
+      "shipping_method": "roro",
+      "source": "Industry route estimates",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-guangzhou-to-mm-yangon",
+      "origin_port_id": "cn-guangzhou",
+      "destination_port_id": "mm-yangon",
+      "est_days_min": 7,
+      "est_days_max": 14,
+      "shipping_method": "roro",
+      "source": "Industry route estimates",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
     }
   ]
 }

@@ -948,6 +948,71 @@
       "source_url": "https://www.customs.gov.bn",
       "source_date": "2026-10-07",
       "confidence": "high"
+    },
+    {
+      "country_id": "fiji",
+      "name": "Fiji",
+      "name_zh": "斐济",
+      "region": "oceania",
+      "drive_side": "rhd",
+      "currency": "FJD",
+      "status": "active",
+      "source": "Fiji Revenue and Customs Service (FRCS)",
+      "source_url": "https://www.frcs.org.fj",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "papua-new-guinea",
+      "name": "Papua New Guinea",
+      "name_zh": "巴布亚新几内亚",
+      "region": "oceania",
+      "drive_side": "rhd",
+      "currency": "PGK",
+      "status": "active",
+      "source": "Papua New Guinea Customs Service",
+      "source_url": "https://customs.gov.pg/trade/importing_used_vehicles",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "guyana",
+      "name": "Guyana",
+      "name_zh": "圭亚那",
+      "region": "caribbean",
+      "drive_side": "rhd",
+      "currency": "GYD",
+      "status": "active",
+      "source": "Guyana Revenue Authority (GRA)",
+      "source_url": "https://gra.gov.gy/vehicles-8-years-old-used-tyres/",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "timor-leste",
+      "name": "Timor-Leste",
+      "name_zh": "东帝汶",
+      "region": "southeast-asia",
+      "drive_side": "rhd",
+      "currency": "USD",
+      "status": "active",
+      "source": "Timor-Leste Customs Authority",
+      "source_url": "https://customs.gov.tl/",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "myanmar",
+      "name": "Myanmar",
+      "name_zh": "缅甸",
+      "region": "southeast-asia",
+      "drive_side": "lhd",
+      "currency": "MMK",
+      "status": "active",
+      "source": "Myanmar Customs Department / Ministry of Commerce",
+      "source_url": "https://customs.gov.mm/",
+      "source_date": "2026-10-07",
+      "confidence": "high"
     }
   ]
 }
