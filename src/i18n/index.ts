@@ -74,7 +74,22 @@ export interface Dictionary {
     misc: Record<string, string>;
   };
   footer: Record<string, string>;
+  legal: {
+    lastUpdated: string;
+    privacy: LegalPageContent;
+    terms: LegalPageContent;
+    cookies: LegalPageContent;
+    disclaimer: LegalPageContent;
+  };
   plurals: Record<string, Record<string, string>>;
+}
+
+export interface LegalPageContent {
+  title: string;
+  description: string;
+  h1: string;
+  intro?: string;
+  sections: { h: string; p: string[] }[];
 }
 
 const dictionaries: Record<string, Dictionary> = { en, es, ru, ar };

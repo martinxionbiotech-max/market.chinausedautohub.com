@@ -323,7 +323,8 @@
     "terms": "Términos",
     "legalNotice": "Aviso legal",
     "cookies": "Cookies",
-    "disclaimerPage": "Descargo de responsabilidad"
+    "disclaimerPage": "Descargo de responsabilidad",
+    "mainSuite": "Suite legal completa (sitio principal)"
   },
   "plurals": {
     "ruleSuffix": {
@@ -333,6 +334,161 @@
     "statementsRecorded": {
       "one": "{count} afirmación de regla e impuesto registrada para {country}.",
       "other": "{count} afirmaciones de reglas e impuestos registradas para {country}."
+    }
+  },
+  "legal": {
+    "lastUpdated": "Última actualización: 7 de octubre de 2026",
+    "privacy": {
+      "title": "Política de privacidad — Mercados de Exportación de Coches Usados de China",
+      "description": "Cómo gestiona la información el subsitio de Mercados: una referencia estática de normas y aranceles de importación, sin formularios y sin rastreadores de publicidad ni analítica.",
+      "h1": "Política de privacidad",
+      "intro": "Esta política explica cómo gestiona la información el subsitio de Mercados (parte de China Used Auto Hub). Este sitio es una referencia estática; no ejecuta formularios ni rastreadores.",
+      "sections": [
+        {
+          "h": "Información que recopilamos",
+          "p": [
+            "El subsitio de Mercados es una referencia de normas de importación, aranceles, impuestos y rutas de envío. No ejecuta formularios de contacto ni de solicitud, y no recopila información personal a través del propio sitio. Si nos contacta por correo electrónico o WhatsApp, solo recibimos los datos que decida enviarnos."
+          ]
+        },
+        {
+          "h": "Cómo usamos su información",
+          "p": [
+            "Usamos la información que nos envía únicamente para responder a su consulta y prestar los servicios de aprovisionamiento y exportación que solicita. No vendemos su información ni la compartimos con terceros con fines de marketing."
+          ]
+        },
+        {
+          "h": "Almacenamiento",
+          "p": [
+            "Las consultas se conservan solo el tiempo necesario para responderle y mantener un registro de la conversación. Este sitio es estático y no ejecuta rastreadores de publicidad ni analítica."
+          ]
+        },
+        {
+          "h": "Sus derechos",
+          "p": [
+            "Puede pedirnos acceder, corregir o eliminar los datos personales que nos haya facilitado. Actualmente no designamos un representante en ninguna jurisdicción específica; nuestras prácticas de datos se describen aquí tal como funcionan en realidad."
+          ]
+        },
+        {
+          "h": "Contacto",
+          "p": [
+            "Para preguntas sobre privacidad, escríbanos a {email} o contáctenos por WhatsApp: {whatsapp}."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Términos de uso — Mercados de Exportación de Coches Usados de China",
+      "description": "Términos de uso del subsitio de Mercados: información de mercado por país facilitada solo como referencia, no como asesoramiento legal.",
+      "h1": "Términos de uso",
+      "intro": "Al usar este sitio web usted acepta estos términos. El subsitio de Mercados publica información de mercado por país como parte de China Used Auto Hub.",
+      "sections": [
+        {
+          "h": "Descripción del servicio",
+          "p": [
+            "El subsitio de Mercados publica información de mercado por país para exportar coches usados desde China: normas de importación, aranceles, impuestos, lado de conducción, puertos y rutas de envío. Se facilita con fines informativos y de comparación."
+          ]
+        },
+        {
+          "h": "Información de mercado como referencia",
+          "p": [
+            "La información regulatoria y fiscal se recopila de fuentes oficiales y públicas y se presenta como referencia. Las normas, tasas y requisitos pueden cambiar, y las cifras mostradas pueden no estar vigentes para su envío."
+          ]
+        },
+        {
+          "h": "No es asesoramiento legal",
+          "p": [
+            "Nada en este sitio constituye asesoramiento legal, fiscal, aduanero o de importación. Para decisiones con consecuencias legales o financieras, consulte a un asesor cualificado y a las autoridades del país de destino."
+          ]
+        },
+        {
+          "h": "Sin garantía de exactitud",
+          "p": [
+            "Trabajamos para mantener la información de mercado exacta y actual, pero no garantizamos que esté libre de errores u omisiones, y puede diferir de lo que las autoridades aplican en la práctica."
+          ]
+        },
+        {
+          "h": "Ley aplicable",
+          "p": [
+            "Salvo que la legislación imperativa de su jurisdicción disponga lo contrario, estos términos y su uso de este sitio web se rigen por las leyes de la República Popular China."
+          ]
+        },
+        {
+          "h": "Contacto",
+          "p": [
+            "Para preguntas sobre estos términos, escríbanos a {email}."
+          ]
+        }
+      ]
+    },
+    "cookies": {
+      "title": "Política de cookies — Mercados de Exportación de Coches Usados de China",
+      "description": "Política de cookies del subsitio de Mercados: un sitio estático sin cookies de seguimiento, sin analítica y sin banner de consentimiento requerido.",
+      "h1": "Política de cookies",
+      "intro": "Esta página describe las cookies utilizadas en este sitio web.",
+      "sections": [
+        {
+          "h": "Cookies que usamos",
+          "p": [
+            "Este sitio es una referencia estática y no usa cookies de publicidad ni analítica. No establecemos cookies de seguimiento, cookies publicitarias ni identificadores de seguimiento entre sitios."
+          ]
+        },
+        {
+          "h": "Sin seguimiento — no se requiere consentimiento",
+          "p": [
+            "Dado que este sitio no establece cookies no esenciales ni ejecuta scripts de seguimiento de terceros, no requiere un banner de consentimiento de cookies según las normas de protección de datos aplicables a las cookies no esenciales."
+          ]
+        },
+        {
+          "h": "Gestión de cookies",
+          "p": [
+            "Puede controlar o eliminar las cookies desde la configuración de su navegador. Este sitio no depende de cookies para la navegación básica, por lo que desactivarlas no debería afectar a su uso."
+          ]
+        },
+        {
+          "h": "Contacto",
+          "p": [
+            "Para preguntas sobre esta política de cookies, escríbanos a {email}."
+          ]
+        }
+      ]
+    },
+    "disclaimer": {
+      "title": "Aviso legal — Mercados de Exportación de Coches Usados de China",
+      "description": "Aviso legal de la información de mercado: solo orientación general, no asesoramiento legal, las tasas impositivas tienen fecha y pueden cambiar, y nada aquí es una cotización oficial.",
+      "h1": "Aviso legal",
+      "intro": "La información de mercado de este sitio web se facilita únicamente con fines de información general.",
+      "sections": [
+        {
+          "h": "No es asesoramiento legal",
+          "p": [
+            "Nada en este sitio constituye asesoramiento legal, fiscal, aduanero o de importación. Las normas, aranceles, impuestos y requisitos de importación pueden cambiar en cualquier momento, y las autoridades del país de destino —no este sitio web— tienen la última palabra sobre lo que se aplica a su envío. Consulte a un asesor cualificado y a las autoridades del país de destino antes de confiar en cualquier información de este sitio."
+          ]
+        },
+        {
+          "h": "Vigencia de las tasas impositivas",
+          "p": [
+            "Las tasas de aranceles e impuestos mostradas en este sitio se registran en la fecha indicada con cada elemento, y pueden estar desactualizadas o no reflejar las tasas, exenciones o la clasificación específica de su vehículo actuales. Confirme siempre las tasas vigentes con la autoridad aduanera de destino."
+          ]
+        },
+        {
+          "h": "No es una cotización oficial",
+          "p": [
+            "Las cifras de este sitio son referencias informativas, no cotizaciones, valoraciones ni ofertas oficiales. No vinculan a ninguna autoridad, proveedor ni agente, y no constituyen un compromiso con ningún precio, arancel o impuesto."
+          ]
+        },
+        {
+          "h": "Verifique antes de confiar",
+          "p": [
+            "Antes de realizar una transacción, verifique las normas, tasas y requisitos vigentes con las autoridades competentes de su país de destino. Las cifras pueden cambiar y diferir de lo mostrado."
+          ]
+        },
+        {
+          "h": "Contacto",
+          "p": [
+            "Si cree que la información aquí es incorrecta o está desactualizada, escríbanos a {email} o contáctenos por WhatsApp: {whatsapp}."
+          ]
+        }
+      ]
     }
   }
 }

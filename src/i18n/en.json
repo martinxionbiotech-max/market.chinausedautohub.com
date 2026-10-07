@@ -323,7 +323,8 @@
     "terms": "Terms",
     "legalNotice": "Legal Notice",
     "cookies": "Cookies",
-    "disclaimerPage": "Disclaimer"
+    "disclaimerPage": "Disclaimer",
+    "mainSuite": "Full legal suite (main site)"
   },
   "plurals": {
     "ruleSuffix": {
@@ -333,6 +334,161 @@
     "statementsRecorded": {
       "one": "{count} rule and tax statement recorded for {country}.",
       "other": "{count} rule and tax statements recorded for {country}."
+    }
+  },
+  "legal": {
+    "lastUpdated": "Last updated: 7 October 2026",
+    "privacy": {
+      "title": "Privacy Policy — China Used Car Export Markets",
+      "description": "How the Markets sub-site handles information: a static reference for import rules and duties with no forms and no advertising or analytics trackers.",
+      "h1": "Privacy Policy",
+      "intro": "This policy explains how the Markets sub-site (part of China Used Auto Hub) handles information. This site is a static reference; it does not run forms or trackers.",
+      "sections": [
+        {
+          "h": "Information we collect",
+          "p": [
+            "The Markets sub-site is a reference for import rules, duties, taxes and shipping routes. It does not run contact or request forms and does not collect personal information through the site itself. If you contact us by email or WhatsApp, we receive only the details you choose to send."
+          ]
+        },
+        {
+          "h": "How we use your information",
+          "p": [
+            "We use information you send us solely to respond to your enquiry and to provide the sourcing and export services you request. We do not sell your information or share it with third parties for marketing."
+          ]
+        },
+        {
+          "h": "Storage",
+          "p": [
+            "Enquiries are kept only as long as needed to respond to you and to keep a record of the conversation. This site is static and does not run advertising or analytics trackers."
+          ]
+        },
+        {
+          "h": "Your rights",
+          "p": [
+            "You may ask us to access, correct or delete the personal data you have provided. We do not currently appoint a representative in any specific jurisdiction; our data practices are described here as they actually operate."
+          ]
+        },
+        {
+          "h": "Contact",
+          "p": [
+            "For privacy questions, email {email} or message us on WhatsApp: {whatsapp}."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Terms of Use — China Used Car Export Markets",
+      "description": "Terms of use for the Markets sub-site: country market intelligence provided for reference, not legal advice.",
+      "h1": "Terms of Use",
+      "intro": "By using this website you agree to these terms. The Markets sub-site publishes country market intelligence as part of China Used Auto Hub.",
+      "sections": [
+        {
+          "h": "Service description",
+          "p": [
+            "The Markets sub-site publishes country market intelligence for exporting used cars from China — import rules, duties, taxes, drive-side rules, ports and shipping routes. It is provided for information and comparison."
+          ]
+        },
+        {
+          "h": "Market information for reference",
+          "p": [
+            "Regulatory and tax information is compiled from official and public sources and is presented for reference. Rules, rates and requirements can change, and the figures shown may not be current for your shipment."
+          ]
+        },
+        {
+          "h": "Not legal advice",
+          "p": [
+            "Nothing on this site is legal, tax, customs or import advice. For decisions with legal or financial consequences, consult a qualified adviser and the relevant destination-country authorities."
+          ]
+        },
+        {
+          "h": "No guarantee of accuracy",
+          "p": [
+            "We work to keep market information accurate and current, but we do not guarantee that it is free of errors or omissions, and it may differ from what the authorities apply in practice."
+          ]
+        },
+        {
+          "h": "Governing law",
+          "p": [
+            "Unless mandatory law in your jurisdiction provides otherwise, these terms and your use of this website are governed by the laws of the People's Republic of China."
+          ]
+        },
+        {
+          "h": "Contact",
+          "p": [
+            "For questions about these terms, email {email}."
+          ]
+        }
+      ]
+    },
+    "cookies": {
+      "title": "Cookie Policy — China Used Car Export Markets",
+      "description": "Cookie policy for the Markets sub-site: a static site with no tracking cookies, no analytics and no consent banner required.",
+      "h1": "Cookie Policy",
+      "intro": "This page describes the cookies used on this website.",
+      "sections": [
+        {
+          "h": "Cookies we use",
+          "p": [
+            "This site is a static reference and does not use advertising or analytics cookies. We do not set tracking cookies, advertising cookies or cross-site tracking identifiers."
+          ]
+        },
+        {
+          "h": "No tracking — no consent required",
+          "p": [
+            "Because this site sets no non-essential cookies and runs no third-party tracking scripts, it does not require a cookie-consent banner under data-protection rules that apply to non-essential cookies."
+          ]
+        },
+        {
+          "h": "Managing cookies",
+          "p": [
+            "You can control or delete cookies through your browser settings. This site does not depend on cookies for basic browsing, so disabling them should not affect your ability to use it."
+          ]
+        },
+        {
+          "h": "Contact",
+          "p": [
+            "For questions about this cookie policy, email {email}."
+          ]
+        }
+      ]
+    },
+    "disclaimer": {
+      "title": "Disclaimer — China Used Car Export Markets",
+      "description": "Market information disclaimer: general guidance only, not legal advice, tax rates are dated and may change, and nothing here is an official quote.",
+      "h1": "Disclaimer",
+      "intro": "The market information on this website is provided for general information only.",
+      "sections": [
+        {
+          "h": "Not legal advice",
+          "p": [
+            "Nothing on this site is legal, tax, customs or import advice. Import rules, duties, taxes and requirements can change at any time, and the authorities of the destination country — not this website — have the final say on what applies to your shipment. Consult a qualified adviser and the relevant destination-country authorities before relying on any information here."
+          ]
+        },
+        {
+          "h": "Tax rate timeliness",
+          "p": [
+            "Duty and tax rates shown on this site are recorded on the date shown with each item, and they may be out of date or may not reflect current rates, exemptions or your vehicle's specific classification. Always confirm current rates with the destination customs authority."
+          ]
+        },
+        {
+          "h": "Not an official quote",
+          "p": [
+            "Figures on this site are informational references, not official quotes, valuations or offers. They do not bind any authority, supplier or broker, and they do not constitute a commitment to any price, duty or tax."
+          ]
+        },
+        {
+          "h": "Verify before relying",
+          "p": [
+            "Before transacting, verify current rules, rates and requirements with the relevant authorities in your destination country. Figures can change and may differ from what is shown."
+          ]
+        },
+        {
+          "h": "Contact",
+          "p": [
+            "If you believe information here is incorrect or out of date, email {email} or message us on WhatsApp: {whatsapp}."
+          ]
+        }
+      ]
     }
   }
 }

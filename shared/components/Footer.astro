@@ -2,6 +2,7 @@
 import { getTranslations, DEFAULT_LOCALE, type Locale } from "../../src/i18n";
 import { t } from "../../src/i18n";
 import { MAIN_SITE_URL, CONTACT } from "../config/config";
+import { localizedUrl } from "../../src/lib/i18n";
 
 const { siteUrl, lastUpdated } = Astro.props;
 const locale = (Astro.currentLocale ?? DEFAULT_LOCALE) as Locale;
@@ -11,11 +12,10 @@ const mainLegal = (path: string) =>
   locale === DEFAULT_LOCALE ? `${MAIN_SITE_URL}${path}` : `${MAIN_SITE_URL}/${locale}${path}`;
 
 const legalLinks = [
-  { label: t(dict, "footer.privacy"), href: mainLegal("/privacy/") },
-  { label: t(dict, "footer.terms"), href: mainLegal("/terms/") },
-  { label: t(dict, "footer.legalNotice"), href: mainLegal("/legal-notice/") },
-  { label: t(dict, "footer.cookies"), href: mainLegal("/cookies/") },
-  { label: t(dict, "footer.disclaimerPage"), href: mainLegal("/disclaimer/") },
+  { label: t(dict, "footer.privacy"), href: localizedUrl("/privacy/", locale) },
+  { label: t(dict, "footer.terms"), href: localizedUrl("/terms/", locale) },
+  { label: t(dict, "footer.cookies"), href: localizedUrl("/cookies/", locale) },
+  { label: t(dict, "footer.disclaimerPage"), href: localizedUrl("/disclaimer/", locale) },
 ];
 ---
 <footer class="site-footer">
@@ -36,6 +36,7 @@ const legalLinks = [
           {legalLinks.map((l) => (
             <li><a href={l.href}>{l.label}</a></li>
           ))}
+          <li><a href={mainLegal("/legal-notice/")} rel="noopener noreferrer">{t(dict, "footer.mainSuite")}</a></li>
         </ul>
       </nav>
     </div>
