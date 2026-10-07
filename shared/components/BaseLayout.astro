@@ -1,8 +1,10 @@
 ---
-// 四站共享基础布局：统一设计系统 + 生态导航 + SEO 基础
+// 四站共享基础布局：统一设计系统 + 生态导航 + SEO 基础 + i18n（lang/dir/hreflang）
 import Header from "./Header.astro";
 import Footer from "./Footer.astro";
 import "../styles/design-tokens.css";
+import { getTranslations, DEFAULT_LOCALE, LOCALES, localeDir, type Locale } from "../../src/i18n";
+import { localizedPath } from "../../src/lib/i18n";
 
 interface Props {
   siteTitle: string;
@@ -15,23 +17,47 @@ interface Props {
   lastUpdated?: string;
   ogType?: string;
   noindex?: boolean;
+  /** True when this page has localized variants (country + combination pages). Static pages stay en-only. */
+  localized?: boolean;
 }
 const {
   siteTitle, siteUrl, title, description = "", canonical, jsonLd, breadcrumbs = [],
-  lastUpdated, ogType = "website", currentSection, noindex = false,
+  lastUpdated, ogType = "website", noindex = false, localized = false,
 } = Astro.props;
+
+const locale = (Astro.currentLocale ?? DEFAULT_LOCALE) as Locale;
+const dir = localeDir(locale);
+const t = getTranslations(locale);
+
+// Canonical: localized when this page has locale variants, else original.
 const canonicalUrl = canonical
-  ? (canonical.startsWith("http") ? canonical : siteUrl + canonical)
-  : siteUrl + Astro.url.pathname;
+  ? (canonical.startsWith("http")
+      ? canonical
+      : new URL(localized ? localizedPath(canonical, locale) : canonical, siteUrl).toString())
+  : new URL(Astro.url.pathname, siteUrl).toString();
+
+// hreflang alternates: emitted only for localized pages (static pages have no
+// locale variants, so pointing /es/... at them would 404).
+const alternates = localized
+  ? LOCALES.map(({ code }) => ({
+      code,
+      url: new URL(localizedPath(Astro.url.pathname, code), siteUrl).toString(),
+    }))
+  : [];
+const xDefault = alternates.find((a) => a.code === DEFAULT_LOCALE)?.url;
 ---
 <!doctype html>
-<html lang="en">
+<html lang={locale} dir={dir}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     {description && <meta name="description" content={description} />}
     <link rel="canonical" href={canonicalUrl} />
+    {alternates.map(({ code, url }) => (
+      <link rel="alternate" hreflang={code} href={url} />
+    ))}
+    {xDefault && <link rel="alternate" hreflang="x-default" href={xDefault} />}
     <meta property="og:title" content={title} />
     <meta property="og:type" content={ogType} />
     <meta property="og:url" content={canonicalUrl} />
@@ -46,7 +72,7 @@ const canonicalUrl = canonical
         )}
   </head>
   <body>
-    <Header siteTitle={siteTitle} currentSection={currentSection} />
+    <Header siteTitle={siteTitle} currentSection={Astro.props['currentSection']} showLangSwitcher={localized} />
     {breadcrumbs.length > 0 && (
       <nav class="breadcrumbs container" aria-label="Breadcrumb">
         <ol>
@@ -57,6 +83,7 @@ const canonicalUrl = canonical
         <style>
           .breadcrumbs ol { list-style: none; display: flex; gap: 8px; padding: 12px 0 0; margin: 0; font-size: 13px; flex-wrap: wrap; }
           .breadcrumbs li:not(:last-child)::after { content: "›"; margin-left: 8px; color: var(--color-text-soft); }
+          html[dir="rtl"] .breadcrumbs li:not(:last-child)::after { content: "‹"; margin-left: 0; margin-right: 8px; }
         </style>
       </nav>
     )}

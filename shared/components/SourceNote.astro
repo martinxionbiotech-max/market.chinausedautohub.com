@@ -1,4 +1,7 @@
 ---
+import { getTranslations, DEFAULT_LOCALE, type Locale } from "../../src/i18n";
+import { t } from "../../src/i18n";
+
 interface Props {
   source?: string;
   sourceUrl?: string;
@@ -14,6 +17,8 @@ interface Props {
   caveat?: string;
 }
 const { source, sourceUrl, sourceDate, confidence, confidenceLabel, effectiveDate, notes, jurisdiction, applicability, caveat } = Astro.props;
+const locale = (Astro.currentLocale ?? DEFAULT_LOCALE) as Locale;
+const dict = getTranslations(locale);
 const badgeClass = {
   High: "badge-high", Medium: "badge-medium", Low: "badge-low",
   high: "badge-high", medium: "badge-medium", low: "badge-low", Unknown: "badge-unknown", unknown: "badge-unknown",
@@ -21,16 +26,17 @@ const badgeClass = {
 const labelClass = {
   Confirmed: "badge-high", "Source-backed": "badge-high", "Needs verification": "badge-medium", Estimated: "badge-low", Unknown: "badge-unknown",
 }[confidenceLabel ?? ""] ?? "badge-unknown";
+const localizedLabel = confidenceLabel ? t(dict, `confidence.labels.${confidenceLabel}`) : confidence;
 ---
 <p class="source-note">
   {confidenceLabel
-    ? <span class={"badge " + labelClass}>Confidence: {confidenceLabel}</span>
-    : <span class={"badge " + badgeClass}>Confidence: {confidence ?? "Unknown"}</span>}
-  {source && <>Source: {sourceUrl ? <a href={sourceUrl} rel="noopener">{source}</a> : source}</>}
-  {sourceDate && <> · Date checked: {sourceDate}</>}
-  {jurisdiction && <> · Jurisdiction: {jurisdiction}</>}
-  {applicability && <> · Applies to: {applicability}</>}
-  {effectiveDate && <> · Effective date: {effectiveDate}</>}
+    ? <span class={"badge " + labelClass}>{t(dict, "sourceNote.confidence")}: {localizedLabel}</span>
+    : <span class={"badge " + badgeClass}>{t(dict, "sourceNote.confidence")}: {confidence ?? t(dict, "confidence.labels.Unknown")}</span>}
+  {source && <>{t(dict, "sourceNote.source")}: {sourceUrl ? <a href={sourceUrl} rel="noopener">{source}</a> : source}</>}
+  {sourceDate && <> · {t(dict, "sourceNote.dateChecked")}: {sourceDate}</>}
+  {jurisdiction && <> · {t(dict, "sourceNote.jurisdiction")}: {jurisdiction}</>}
+  {applicability && <> · {t(dict, "sourceNote.appliesTo")}: {applicability}</>}
+  {effectiveDate && <> · {t(dict, "sourceNote.effectiveDate")}: {effectiveDate}</>}
   {caveat && <span class="note"> · {caveat}</span>}
   {!caveat && notes && <span class="note"> · {notes}</span>}
 </p>

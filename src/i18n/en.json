@@ -1,0 +1,330 @@
+{
+  "site": {
+    "name": "China Used Car Export Markets",
+    "tagline": "Country market intelligence for exporting used cars from China"
+  },
+  "nav": {
+    "vehicles": "Vehicles",
+    "vehicleData": "Vehicle Data",
+    "companies": "Companies",
+    "tools": "Tools",
+    "markets": "Markets",
+    "language": "Language"
+  },
+  "lang": {
+    "en": "English",
+    "es": "Español",
+    "ru": "Русский",
+    "ar": "العربية"
+  },
+  "common": {
+    "notAvailable": "Not available",
+    "and": " and ",
+    "needsReview": "Needs review",
+    "review": "Review",
+    "lhd": "Left-hand drive (LHD)",
+    "rhd": "Right-hand drive (RHD)",
+    "roro": "RoRo",
+    "container": "Container",
+    "railTransit": "rail transit"
+  },
+  "breadcrumb": {
+    "markets": "Markets",
+    "countries": "Countries",
+    "home": "Home"
+  },
+  "regions": {
+    "middle-east": "Middle East",
+    "africa": "Africa",
+    "central-asia": "Central Asia",
+    "south-asia": "South Asia",
+    "southeast-asia": "Southeast Asia",
+    "latin-america": "Latin America",
+    "caribbean": "Caribbean",
+    "north-america": "North America",
+    "europe": "Europe",
+    "oceania": "Oceania"
+  },
+  "sourceNote": {
+    "confidence": "Confidence",
+    "source": "Source",
+    "dateChecked": "Date checked",
+    "jurisdiction": "Jurisdiction",
+    "appliesTo": "Applies to",
+    "effectiveDate": "Effective date"
+  },
+  "applicability": {
+    "Used vehicles by age": "Used vehicles by age",
+    "All imported vehicles (drive side)": "All imported vehicles (drive side)",
+    "Electric vehicles": "Electric vehicles",
+    "Used vehicle imports": "Used vehicle imports",
+    "Vehicle registration": "Vehicle registration",
+    "Emissions compliance": "Emissions compliance",
+    "General import requirement": "General import requirement",
+    "Imported used vehicles (CIF value)": "Imported used vehicles (CIF value)",
+    "Imported vehicles (CIF + duty)": "Imported vehicles (CIF + duty)",
+    "Selected vehicles": "Selected vehicles",
+    "General import charge": "General import charge"
+  },
+  "confidence": {
+    "heading": "How to Read the Confidence Labels",
+    "intro": "Every rule and tax statement on this page carries a confidence label plus its source, date checked, jurisdiction, applicability and caveat.",
+    "labels": {
+      "Confirmed": "Confirmed",
+      "Source-backed": "Source-backed",
+      "Needs verification": "Needs verification",
+      "Estimated": "Estimated",
+      "Unknown": "Unknown"
+    },
+    "legend": {
+      "Source-backed": "cited to an official government, customs or transport source URL.",
+      "Needs verification": "not yet confirmed against a current official source; verify before trading.",
+      "Estimated": "an estimate or a figure that changes frequently.",
+      "Unknown": "no reliable source recorded.",
+      "Confirmed": "independently verified against an official document. No statement on this page currently meets this bar."
+    }
+  },
+  "country": {
+    "title": "Import Used Cars to {country} — Rules, Duties & Routes",
+    "description": "Importing used cars from China to {country}: drive side, vehicle age rules, import duty and VAT, ports and shipping routes — each statement with source, date checked, jurisdiction, applicability and confidence level.",
+    "metaLine": "{region} · {driveSide} · Currency {currency} · Jurisdiction {jurisdiction}",
+    "disclaimer": "This information is provided for general guidance only and is not legal advice. Consult the relevant destination-country authorities (customs, tax and transport authorities) before trading. Rules may change; verify current requirements with official authorities.",
+    "sections": {
+      "marketOverview": "Market Overview",
+      "importEligibility": "Import Eligibility",
+      "vehicleAgeRules": "Vehicle Age Rules",
+      "driveSide": "Drive Side",
+      "importDuties": "Import Duties",
+      "vatTaxes": "VAT & Taxes",
+      "officialSources": "Official Sources",
+      "evRules": "EV Rules",
+      "requiredDocuments": "Required Documents",
+      "ports": "Ports",
+      "shippingFromChina": "Shipping From China",
+      "vehicleCompatibility": "Vehicle Compatibility Pages",
+      "popularVehicleTypes": "Popular Vehicle Types",
+      "vehicleSegmentFit": "Vehicle Segment Fit",
+      "chineseBrands": "Chinese Vehicle Brands",
+      "importCosts": "Import Costs",
+      "marketConsiderations": "Market Considerations",
+      "relatedTools": "Related Tools",
+      "relatedGuides": "Related Guides",
+      "availableVehicles": "Available Vehicles",
+      "faq": "FAQ",
+      "verification": "Verification Date & Evidence Status"
+    },
+    "reviewHints": {
+      "eligibility": "This is not legal advice — consult destination-country authorities. Regulations are high-risk data. Every rule below carries a source, date checked, jurisdiction, applicability and confidence level. Confirm with official customs before trading.",
+      "duty": "Rates come from taxrules.json and may change. Confirm with official customs before trading.",
+      "sources": "Official authorities cited for {country}'s import rules and tax rules. Verify current requirements with these sources before trading.",
+      "evConfirm": "Confirm current EV duty treatment with official customs before trading. For a cross-country comparison, see the {link}.",
+      "estimate": "Transit estimates are not confirmed schedules — treat them as indicative (Estimated confidence).",
+      "compat": "Model-specific export compatibility & cost pages for {country}. These are generated only where a model × market pairing produces knowledge the country and model pages do not state on their own.",
+      "confidence": "Confidence reflects how strongly each statement is evidenced by its cited source, not a guarantee of current accuracy. Re-verify rates and rules with official customs before trading."
+    },
+    "misc": {
+      "basis": "Basis: {basis}",
+      "noAgeRule": "No specific age rule recorded. Verify age limits with official customs.",
+      "noDuty": "No import duty recorded for this market.",
+      "noVat": "No VAT or additional tax recorded for this market.",
+      "taxLastChecked": "Tax data last checked: {date}",
+      "noSources": "No source URLs recorded for this market.",
+      "noEvRules": "No EV-specific rules recorded for this market.",
+      "evDutyHeading": "EV Duty & Tax Treatment",
+      "noEvDuty": "No EV-specific duty entries recorded — EV imports generally follow standard duty rates. Verify with official customs.",
+      "evImportCenter": "EV import center",
+      "popularEvHeading": "Popular EV & PHEV Models",
+      "noEvModels": "No EV or PHEV models recorded for this market yet.",
+      "noDocs": "No specific document or certification requirements recorded. Verify current requirements with official authorities before trading.",
+      "transitEstimate": "Transit times are industry estimates, not guarantees. Actual schedules and rates vary by carrier and season.",
+      "thOrigin": "Origin port",
+      "thDestination": "Destination",
+      "thDays": "Est. days",
+      "thMethod": "Method",
+      "inCountry": "{model} in {country}",
+      "segmentFit": "Popular models in this market are predominantly {segments} segments.",
+      "noSegment": "No vehicle segment data recorded for this market.",
+      "importCosts": "The landed cost is made up of the vehicle price, freight, insurance, import duty, VAT and any excise or inspection fees. For a full breakdown, use the import cost calculator.",
+      "availableVehicles": "Browse current stock and inquire about vehicles available for export to {country}.",
+      "browseVehicles": "Browse available vehicles →",
+      "requestVehicle": "Request a vehicle →",
+      "browseSuvs": "Browse SUVs",
+      "browseSedans": "Browse Sedans",
+      "browseEvs": "Browse EVs",
+      "verificationLastChecked": "Rule and tax data on this page last checked: {date}",
+      "verificationConfidence": "Confidence: {confirmed} Confirmed · {sourceBacked} Source-backed · {needsVerification} Needs verification · {estimated} Estimated · {unknown} Unknown.",
+      "toolLandedCost": "Import Cost Calculator",
+      "toolDuty": "Import Duty Calculator",
+      "toolCurrency": "Currency Converter",
+      "toolComparison": "Vehicle Comparison",
+      "guideBuy": "How to Buy a Used Car from China",
+      "guideProcess": "China Used Car Export Process",
+      "guideDocuments": "Export Documents",
+      "guideShipping": "Shipping",
+      "guideLandedCost": "Landed Cost",
+      "guideInspection": "Vehicle Inspection",
+      "verifyCaveat": "Verify with the official authority before trading."
+    }
+  },
+  "vehicle": {
+    "title": "{model} to {country} — export compatibility & cost",
+    "description": "Exporting the {model} ({zh}) to {country}: drive-side fit, age-rule fit, EV charging compatibility, import requirements and duty anchors — each statement with source, confidence and date checked.",
+    "metaLine": "Export compatibility & cost · Last checked {date}",
+    "disclaimer": "This information is provided for general guidance only and is not legal advice. Every assertion below carries a source and confidence level — verify with official authorities before trading.",
+    "quickFacts": {
+      "title": "Quick Facts",
+      "vehicle": "Vehicle",
+      "brand": "Brand",
+      "country": "Country",
+      "powertrain": "Powertrain",
+      "driveSideFit": "Drive-side fit",
+      "ageRuleFit": "Age-rule fit",
+      "importDutyRange": "Import duty range",
+      "confidence": "Confidence"
+    },
+    "verdict": {
+      "title": "At-a-glance verdict",
+      "notEligibleAsIs": "Not eligible as-is",
+      "notEligible": "Not eligible",
+      "needsReview": "Needs review",
+      "eligibleNeedsReview": "Eligible / needs review"
+    },
+    "sections": {
+      "buyerDecisionPoints": "Buyer decision points",
+      "suitableWhen": "Suitable when",
+      "notSuitableWhen": "Not suitable when",
+      "whyFit": "Why this vehicle may fit",
+      "powertrain": "Powertrain",
+      "driveSide": "Drive side",
+      "vehicleAge": "Vehicle age",
+      "importRequirements": "Import requirements",
+      "charging": "Charging",
+      "partsService": "Parts & service",
+      "landedCost": "Landed cost",
+      "knownLimitations": "Known limitations",
+      "keyRisks": "Key risks",
+      "practicalChecklist": "Practical checklist",
+      "sourcesConfidence": "Sources & confidence",
+      "shipping": "Shipping",
+      "related": "Related",
+      "thisVehicleOtherCountries": "This vehicle in other countries",
+      "otherVehiclesInCountry": "Other vehicles in {country}"
+    },
+    "powertrain": {
+      "ev": "EV (battery-electric)",
+      "phev": "PHEV (plug-in hybrid)",
+      "erev": "EREV (extended-range)",
+      "ice": "ICE (combustion)"
+    },
+    "driveFit": {
+      "match": "Match",
+      "mismatch": "Mismatch",
+      "notAvailable": "Not available"
+    },
+    "ageFit": {
+      "eligible": "Eligible",
+      "borderline": "Borderline",
+      "ineligible": "Ineligible",
+      "notAvailable": "Not available"
+    },
+    "increments": {
+      "drive-side mismatch": "drive-side mismatch",
+      "charging compatibility": "charging compatibility",
+      "EV duty relief": "EV duty relief",
+      "age-rule fit": "age-rule fit",
+      "powertrain classification": "powertrain classification"
+    },
+    "decision": {
+      "driveMatch": "Left-hand-drive match — a China-market unit can be registered without conversion.",
+      "driveConversion": "Right-hand-drive version is available — source the RHD unit rather than converting a China LHD unit.",
+      "driveMismatch": "Drive-side mismatch — a China-market LHD unit cannot be registered as-is in this RHD market.",
+      "ageEligible": "Age-rule fit — current-generation units satisfy the destination age limit.",
+      "ageBorderline": "Age-rule borderline — early production units sit near or over the age cut-off; verify the exact date.",
+      "ageIneligible": "Age-rule ineligible — the model's production window predates the destination age cut-off.",
+      "evDutyRelief": "EV duty relief — the electric trim qualifies for a reduced or zero import-duty rate.",
+      "chargingMismatch": "Charging connector mismatch — a GB/T-to-destination adapter is required and should be confirmed."
+    },
+    "risks": {
+      "duty": "Duty / VAT rates change frequently — verify current figures with official customs before trading.",
+      "age": "Age-limit rules may be adjusted — confirm the current cut-off before sourcing stock.",
+      "conformity": "Conformity / certification requirements may change — confirm before shipment.",
+      "charging": "Charging-connector compatibility must be confirmed against the destination network."
+    },
+    "checklist": {
+      "age": "Confirm the unit's production / registration date is within the destination age limit.",
+      "rhd": "Confirm right-hand-drive availability with the exporter before purchase.",
+      "conformity": "Obtain the required conformity / certification: {requirements}.",
+      "adapter": "Confirm charging-adapter availability for the destination connector standard."
+    },
+    "misc": {
+      "noDecision": "No decision points recorded for this pair (Not available).",
+      "noIndependent": "No independent increment recorded for this pair.",
+      "incrementsIntro": "This page exists because the {model} × {country} pairing produces knowledge neither parent page states on its own: {increments}.",
+      "noFit": "No model–market fit note recorded (Not available).",
+      "noDriveFit": "Drive-side fit not recorded (Not available).",
+      "noAgeComputation": "No model–specific age-rule computation recorded (Not available).",
+      "noEligibility": "No import-eligibility summary recorded for this pair (Not available).",
+      "noParts": "No parts/service note recorded for this pairing (Not available).",
+      "noDutyAnchors": "No duty anchors recorded for this pair (Not available).",
+      "noCharging": "Not applicable — no EV/PHEV/EREV trim recorded for this pairing (Not available).",
+      "noShipping": "No shipping route recorded for this market (Not available).",
+      "noRisks": "No flagged risks recorded for this pair — still confirm requirements with official authorities (Needs verification).",
+      "noChecklist": "No destination-specific checklist items recorded (Needs verification).",
+      "powertrainNone": "Powertrain data not available for this model.",
+      "powertrainRef": "Full generation, trim and specification detail is on the {link} — this page references it rather than duplicating specification values.",
+      "partsHint": "Parts and service availability varies by destination — confirm local dealer and spare-parts support before purchasing.",
+      "dutyAnchorsIntro": "Duty anchors for this vehicle class in {country}:",
+      "dataModelPage": "DATA site model page",
+      "landedCostHint": "Rates are referenced from taxrules.json (not copied). For a full landed-cost breakdown — price, freight, insurance, duty, VAT and excise — use the {link}.",
+      "chargingStd": "Vehicle charging standard",
+      "destinationStd": "Destination standard",
+      "adapterNeeded": "Adapter needed",
+      "voltage": "Voltage",
+      "frequency": "Frequency",
+      "yes": "Yes",
+      "attribute": "Attribute",
+      "value": "Value",
+      "charge": "Charge",
+      "rate": "Rate",
+      "sourceConfidenceHint": "Confidence reflects how strongly each assertion is evidenced by its cited source — not a guarantee of current accuracy. Re-verify with official customs before trading.",
+      "checklistHint": "Steps to complete before importing — each is evidence-backed for this destination. Verify with the official authority before trading.",
+      "limitationDriveMismatch": "Drive-side mismatch: {country} registers {driveSide} only; a China-market LHD unit cannot be registered as-is.",
+      "limitationAgeBorderline": "Age rule is borderline — verify the exact cut-off date with official customs before sourcing stock.",
+      "limitationAgeIneligible": "Age rule renders older units ineligible — check the specific unit's production date.",
+      "limitationCharging": "Charging connector mismatch — a physical adapter may be required and destination DC fast-charging support should be confirmed.",
+      "limitationNone": "No hard blockers recorded — but confirm all requirements with official authorities before trading.",
+      "srcDriveFit": "Drive-side fit",
+      "srcAgeFit": "Age-rule fit",
+      "srcPowertrainFit": "Powertrain fit",
+      "srcCharging": "Charging",
+      "srcEligibility": "Import eligibility",
+      "srcDuty": "Duty anchors",
+      "srcShipping": "Shipping route",
+      "modelPage": "{model} — full model page (DATA site)",
+      "brandPage": "{brand} — brand page (DATA site)",
+      "countryGuide": "{country} — market guide (this site)",
+      "toolLandedCostNote": "Import cost calculator (Tools)",
+      "toolDutyNote": "Import duty calculator (Tools)",
+      "guideDocumentsNote": "Export documents guide (main site)",
+      "verifyCaveat": "Verify with the official authority before trading.",
+      "chargingCaveat": "Verify charging-connector compatibility with the destination network before trading.",
+      "dealerCaveat": "Verify with the exporter / destination dealer before trading.",
+      "dutyCaveat": "Verify current rates with official customs before trading.",
+      "transitCaveat": "Transit estimates are indicative — confirm with a carrier."
+    }
+  },
+  "footer": {
+    "disclaimer": "All information is provided for reference. Import regulations, taxes and prices change — verify with official authorities before any transaction.",
+    "lastUpdated": "Last updated: {date}"
+  },
+  "plurals": {
+    "ruleSuffix": {
+      "one": "{count} rule",
+      "other": "{count} rules"
+    },
+    "statementsRecorded": {
+      "one": "{count} rule and tax statement recorded for {country}.",
+      "other": "{count} rule and tax statements recorded for {country}."
+    }
+  }
+}

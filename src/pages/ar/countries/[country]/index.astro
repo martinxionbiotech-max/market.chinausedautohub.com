@@ -1,6 +1,6 @@
 ---
-import CountryPage from "../../../templates/CountryPage.astro";
-import { countries } from "../../../lib/market";
+import CountryPage from "../../../../templates/CountryPage.astro";
+import { countries } from "../../../../lib/market";
 
 export function getStaticPaths() {
   return countries.map((c) => ({ params: { country: c.country_id } }));

@@ -1,0 +1,2217 @@
+{
+  "uae": {
+    "overview": "Emiratos Árabes Unidos es el mayor centro de reexportación de coches usados del Golfo, con una alta demanda de SUV premium, berlinas de lujo y vehículos de nueva energía. Es un mercado con volante a la izquierda que opera bajo la especificación GCC, con el puerto de Jebel Ali como principal punto de entrada para los vehículos que transitan hacia el resto de la región.",
+    "considerations": [
+      "La conformidad con la especificación GCC es el requisito de entrada clave; los vehículos no GCC pueden necesitar modificaciones antes de la matriculación.",
+      "El intenso calor ambiental favorece a los vehículos con sistemas de aire acondicionado y refrigeración potentes.",
+      "Al ser un centro de reexportación, muchos vehículos importados se destinan a otros mercados del GCC o de África."
+    ],
+    "faq": [
+      {
+        "q": "¿Puedo importar un vehículo con volante a la derecha a los EAU?",
+        "a": "Generalmente no: los EAU solo matriculan vehículos con volante a la izquierda."
+      },
+      {
+        "q": "¿Existe un límite de antigüedad para los coches usados?",
+        "a": "No existe un límite de antigüedad universal, pero los vehículos deben cumplir la especificación GCC."
+      },
+      {
+        "q": "¿Qué aranceles e IVA se aplican?",
+        "a": "El arancel de importación y el IVA figuran en las tablas de Aranceles de importación e IVA e impuestos de esta página. Las tarifas cambian: verifique las cifras vigentes con las aduanas oficiales antes de comprar."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones de vehículos?",
+        "a": "Jebel Ali, en Dubái, es el principal puerto de entrada."
+      }
+    ],
+    "evNote": "La adopción de vehículos eléctricos crece con rapidez en los EAU, respaldada por la carga pública (DEWA Green Charger) y las exenciones de peaje en algunos emiratos. Los VE premium y de gran autonomía tienen una demanda especialmente alta."
+  },
+  "saudi-arabia": {
+    "overview": "Arabia Saudí es el mayor mercado automovilístico del Golfo, con una rápida adopción de vehículos eléctricos y una fuerte demanda de SUV. Es un mercado con volante a la izquierda que aplica las normas GCC/SASO, con Dammam y Yeda como principales puertos marítimos para las importaciones de vehículos.",
+    "considerations": [
+      "Los turismos usados suelen limitarse a cinco años de antigüedad; confírmelo antes de adquirir stock.",
+      "La conformidad SASO y el registro SABER son obligatorios antes del embarque.",
+      "El polvo y el calor favorecen una refrigeración robusta y componentes sellados."
+    ],
+    "faq": [
+      {
+        "q": "¿Cuál es el límite de antigüedad para los coches usados importados?",
+        "a": "Los turismos suelen limitarse a cinco años de antigüedad; verifíquelo con ZATCA."
+      },
+      {
+        "q": "¿Qué impuestos se aplican?",
+        "a": "El arancel de importación y el IVA figuran en las tablas de Aranceles de importación e IVA e impuestos de esta página. Las tarifas cambian: verifique las cifras vigentes con las aduanas oficiales (ZATCA) antes de comprar."
+      },
+      {
+        "q": "¿Necesito un certificado SABER?",
+        "a": "Sí: se requieren la conformidad SASO y el registro SABER."
+      }
+    ],
+    "evNote": "Arabia Saudí está invirtiendo con fuerza en la carga y la adopción de vehículos eléctricos, y SASO mantiene normas para VE. Los VE premium de gran autonomía están entrando en el mercado."
+  },
+  "kenya": {
+    "overview": "Kenia es el mayor mercado de importación de coches usados de África Oriental y un país con volante a la derecha y una estricta regla de ocho años de antigüedad. Mombasa es el principal puerto de entrada. La demanda se concentra en SUV compactos y berlinas económicas, con un interés creciente por los vehículos eléctricos.",
+    "considerations": [
+      "El límite de ocho años de antigüedad se aplica con rigor; verifique el corte exacto con KRA/KEBS.",
+      "Se exige la inspección previa al embarque PVoC antes de la exportación.",
+      "Los VE se benefician de un arancel y un impuesto especial reducidos."
+    ],
+    "faq": [
+      {
+        "q": "¿Cuál es el límite de antigüedad del vehículo?",
+        "a": "Los vehículos usados no deben superar los ocho años de antigüedad (KS 1515:2000)."
+      },
+      {
+        "q": "¿Kenia es de volante a la derecha?",
+        "a": "Sí: Kenia es un mercado con volante a la derecha (RHD)."
+      },
+      {
+        "q": "¿Qué impuestos se aplican?",
+        "a": "El arancel de importación, el IVA y el impuesto especial figuran en las tablas de Aranceles de importación e IVA e impuestos de esta página. Las tarifas cambian: verifique las cifras vigentes con KRA antes de comprar."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Mombasa."
+      }
+    ],
+    "evNote": "Kenia ofrece arancel e impuesto especial reducidos para los VE, y las redes de carga se están expandiendo en Nairobi. Los VE compactos y los PHEV asequibles están ganando tracción.",
+    "suvNote": "Los SUV dominan el mercado de importación de usados de Kenia, favorecidos por el uso mixto urbano y en carreteras en mal estado. Los SUV compactos y medianos son los más vendidos."
+  },
+  "tanzania": {
+    "overview": "Tanzania es un mercado de África Oriental con volante a la derecha que importa vehículos usados principalmente a través de Dar es Salaam. Se aplica un límite de antigüedad de entre ocho y diez años, y se exige inspección previa al embarque. Los SUV y los vehículos comerciales ligeros dominan la demanda.",
+    "considerations": [
+      "Confirme el límite de antigüedad vigente con TRA antes de adquirir stock más antiguo.",
+      "La inspección previa al embarque PVoC es obligatoria.",
+      "La congestión del puerto de Dar es Salaam puede alargar los plazos."
+    ],
+    "faq": [
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "De ocho a diez años aproximadamente; verifíquelo con la Autoridad Tributaria de Tanzania."
+      },
+      {
+        "q": "¿Tanzania es de volante a la derecha?",
+        "a": "Sí: Tanzania es un mercado con volante a la derecha (RHD)."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Dar es Salaam."
+      }
+    ],
+    "evNote": "Tanzania ha introducido incentivos para los VE, incluida una reducción del impuesto especial. El mercado se encuentra en una fase inicial, con una infraestructura de carga limitada."
+  },
+  "nigeria": {
+    "overview": "Nigeria es el mayor mercado de coches usados de África Occidental y un país con volante a la derecha. Los vehículos entran por Lagos (Apapa y Tin Can Island). Se aplican restricciones de antigüedad que han cambiado en los últimos años, por lo que conviene confirmar las normas con la aduana de Nigeria.",
+    "considerations": [
+      "Las normas de antigüedad han cambiado recientemente; verifique los límites vigentes.",
+      "Los puertos de Lagos (Apapa y Tin Can Island) son los principales puntos de entrada.",
+      "Los SUV y las berlinas duraderas se adaptan a las condiciones locales de las carreteras."
+    ],
+    "faq": [
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "Se aplican restricciones que han cambiado recientemente; verifíquelas con la aduana de Nigeria."
+      },
+      {
+        "q": "¿Nigeria es de volante a la derecha?",
+        "a": "Sí: Nigeria es un mercado con volante a la derecha (RHD)."
+      },
+      {
+        "q": "¿Qué puertos gestionan las importaciones?",
+        "a": "Lagos (Apapa y Tin Can Island)."
+      }
+    ],
+    "evNote": "El mercado de VE de Nigeria está en una fase inicial, con una política en desarrollo y una infraestructura de carga limitada; el interés por los híbridos y PHEV está creciendo.",
+    "suvNote": "Los SUV tienen una fuerte demanda en Nigeria por su durabilidad en carreteras variadas; los SUV medianos son el segmento de importación más popular."
+  },
+  "kazakhstan": {
+    "overview": "Kazajistán es un mercado de Asia Central con volante a la izquierda que importa vehículos bajo las normas de la UEEA, y la mayoría de las unidades llegan por ferrocarril desde China. Los límites de antigüedad se han ajustado en los últimos años, y los VE gozan actualmente de alivio arancelario.",
+    "considerations": [
+      "La mayoría de los vehículos llegan por ferrocarril vía Khorgos/Alashankou, no por mar.",
+      "Se exige la certificación técnica de la UEEA.",
+      "Los VE tienen un alivio temporal del arancel aduanero y de la tasa de reciclaje."
+    ],
+    "faq": [
+      {
+        "q": "¿Kazajistán es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Cómo llegan los coches?",
+        "a": "Por ferrocarril vía los pasos fronterizos de Khorgos/Alashankou."
+      },
+      {
+        "q": "¿Existen incentivos para los VE?",
+        "a": "Los VE han tenido alivio temporal de arancel y tasas; confirme el estado vigente."
+      }
+    ],
+    "evNote": "Kazajistán exime temporalmente a los VE del arancel aduanero y de la tasa de reciclaje; la adopción va en aumento, sobre todo en el caso de VE asequibles."
+  },
+  "uzbekistan": {
+    "overview": "Uzbekistán es un mercado de Asia Central con volante a la izquierda y estrictos controles de importación, que incluyen certificación y tasas de reciclaje. La mayoría de los vehículos llegan por ferrocarril desde China. Los VE se benefician de exenciones del arancel de importación y del impuesto especial.",
+    "considerations": [
+      "Los controles de importación son estrictos; confirme los requisitos vigentes con las aduanas.",
+      "El tránsito ferroviario vía Khorgos/Alashankou es la ruta principal.",
+      "Los VE están exentos del arancel de importación y del impuesto especial (confirme el estado vigente)."
+    ],
+    "faq": [
+      {
+        "q": "¿Uzbekistán es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Qué tan estrictas son las normas de importación?",
+        "a": "Los controles de importación son estrictos; verifíquelos con las aduanas antes de operar."
+      },
+      {
+        "q": "¿Existen incentivos para los VE?",
+        "a": "Los VE están exentos del arancel de importación y del impuesto especial; confirme las tarifas vigentes."
+      }
+    ],
+    "evNote": "Uzbekistán exime a los VE del arancel de importación y del impuesto especial; el ensamblaje local y la adopción crecen bajo los incentivos gubernamentales."
+  },
+  "south-africa": {
+    "overview": "Sudáfrica es el mercado automovilístico más desarrollado del continente y un país con volante a la derecha que protege su base de fabricación local. Las importaciones de vehículos usados están estrictamente limitadas a categorías de permiso definidas (residentes que regresan, inmigrantes, vehículos de uso especial), y Durban es el principal puerto de entrada RoRo.",
+    "considerations": [
+      "Las importaciones de usados exigen un permiso ITAC, una Carta de Autoridad NRCS y un certificado de Interpol; la elegibilidad es muy restringida.",
+      "No hay un límite de antigüedad fijo, pero las categorías de permiso son restrictivas; confirme la elegibilidad ITAC antes de adquirir stock.",
+      "Los VE afrontan el mismo arancel del 25% para turismos sin alivio específico para VE (y un IVA del 15%)."
+    ],
+    "faq": [
+      {
+        "q": "¿Puedo importar un coche usado a Sudáfrica?",
+        "a": "Solo bajo categorías de permiso ITAC definidas, principalmente para ciudadanos sudafricanos que regresan e inmigrantes con residencia permanente."
+      },
+      {
+        "q": "¿Sudáfrica es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la derecha (RHD)."
+      },
+      {
+        "q": "¿Qué arancel e IVA se aplican?",
+        "a": "Los turismos pagan un arancel de importación del 25% más un IVA del 15% (más impuesto especial ad valorem en unidades de alto valor). Verifíquelo con SARS."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Durban es el principal puerto RoRo, con Ciudad del Cabo como alternativa."
+      }
+    ],
+    "evNote": "Sudáfrica no ofrece alivio específico del arancel de importación para VE; los VE afrontan el mismo arancel del 25% (superior al tipo del 18% para ICE en algunas clasificaciones). La adopción local de VE crece, pero el régimen arancelario no favorece actualmente las importaciones."
+  },
+  "egypt": {
+    "overview": "Egipto es un gran mercado del norte de África con volante a la izquierda, un régimen aduanero basado en la cilindrada y el sistema obligatorio de ventanilla única NAFEZA. Ha introducido fuertes incentivos para los VE desde enero de 2025, y Alejandría es el principal puerto de entrada de vehículos.",
+    "considerations": [
+      "Los turismos usados solo pueden ser casi nuevos (alrededor de un año); los VE pueden importarse con hasta tres años de antigüedad.",
+      "El arancel convencional es del 30% hasta 1600 cc y del 100% por encima, más una tasa de desarrollo y un IVA del 14%.",
+      "Los BEV disfrutan de un arancel aduanero del 0% con una deducción FOB de hasta el 50%; un VE por persona cada cinco años."
+    ],
+    "faq": [
+      {
+        "q": "¿Egipto es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD); los vehículos RHD no pueden matricularse."
+      },
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "Los coches usados son casi nuevos (alrededor de un año); los VE de hasta tres años bajo la política de 2025."
+      },
+      {
+        "q": "¿Qué impuesto se aplica a los VE?",
+        "a": "Los BEV (HS 8703.80) pagan un arancel aduanero del 0% más un IVA del 14%."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Alejandría, con Port Said como alternativa."
+      }
+    ],
+    "evNote": "Egipto exime a los vehículos puramente eléctricos del arancel aduanero (0%) desde enero de 2025, con una deducción progresiva del valor FOB de hasta el 50%; las personas físicas pueden importar un VE cada cinco años. El despacho de ventanilla única NAFEZA es obligatorio."
+  },
+  "jordan": {
+    "overview": "Jordania es un mercado de Oriente Medio con volante a la izquierda y un centro de reexportación regional. Su reforma fiscal de junio de 2025 unificó el impuesto especial sobre los VE en el 27% (frente al 51% de gasolina y el 39% de híbridos) y endureció las normas de importación, prohibiendo los vehículos siniestrados y limitando la antigüedad de los VE a tres años. Áqaba es el puerto principal.",
+    "considerations": [
+      "Los VE de más de tres años (incluido el año de despacho) pueden dejar de importarse (desde el 1 de noviembre de 2025).",
+      "Están prohibidos los vehículos siniestrados, dañados por incendio o por inundación.",
+      "El impuesto especial es del 27% para VE, 39% para híbridos, 51% para gasolina, más un GST del 16%."
+    ],
+    "faq": [
+      {
+        "q": "¿Jordania es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Cuál es el límite de antigüedad para los VE?",
+        "a": "Tres años, incluido el año de despacho aduanero."
+      },
+      {
+        "q": "¿Qué impuesto se aplica a los VE?",
+        "a": "El impuesto especial está unificado en el 27% para los VE, más un GST del 16%."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Áqaba."
+      }
+    ],
+    "evNote": "La reforma de 2025 de Jordania redujo el impuesto especial sobre los VE a un 27% unificado e introdujo un límite de tres años de antigüedad; sigue siendo un centro regional de reexportación de VE. Verifique las normas vigentes con la aduana de Jordania antes de operar."
+  },
+  "pakistan": {
+    "overview": "Pakistán es un gran mercado del sur de Asia con volante a la derecha. Los vehículos usados entran bajo los regímenes de Equipaje Personal, Regalo y Transferencia de Residencia (coches de hasta tres años), con un arancel fijo en dólares estadounidenses por cilindrada. Karachi (Port Qasim) es el principal puerto de entrada.",
+    "considerations": [
+      "Los coches usados de más de tres años generalmente no son elegibles bajo los regímenes personales.",
+      "El arancel es un calendario fijo en dólares estadounidenses por cilindrada, no un simple porcentaje.",
+      "Los VE de hasta 50.000 USD pagan un arancel del 25%; los híbridos de hasta 1800 cc tienen una exención del 50% del arancel."
+    ],
+    "faq": [
+      {
+        "q": "¿Pakistán es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la derecha (RHD)."
+      },
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "Coches de hasta tres años bajo los regímenes personales (el tope de antigüedad comercial se eliminó en julio de 2026)."
+      },
+      {
+        "q": "¿Cómo se calcula el arancel?",
+        "a": "Un calendario fijo en dólares estadounidenses por cilindrada bajo los regímenes personales."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Karachi (Port Qasim)."
+      }
+    ],
+    "evNote": "Pakistán aplica un arancel reducido para VE (25% para vehículos de 4 ruedas de hasta 50.000 USD), con exenciones para híbridos del 50% (≤1800 cc) y del 25% (1800–2500 cc), bajo la Política de Vehículos Eléctricos 2020–2025."
+  },
+  "bangladesh": {
+    "overview": "Bangladés es un mercado del sur de Asia con volante a la derecha que importa vehículos reacondicionados (usados) bajo una cascada arancelaria compuesta: arancel aduanero, arancel suplementario, IVA, impuesto anticipado sobre la renta y arancel regulatorio, que pueden multiplicar el valor CIF varias veces. Chittagong es el puerto principal.",
+    "considerations": [
+      "El arancel es una cascada compuesta, no un tipo único; calcule 3–4 veces el CIF para coches reacondicionados.",
+      "Se exigen inspección previa a la exportación y documentos de exportación estándar.",
+      "Las reducciones de aranceles para PHEV/VE están en discusión; la política está evolucionando."
+    ],
+    "faq": [
+      {
+        "q": "¿Bangladés es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la derecha (RHD)."
+      },
+      {
+        "q": "¿Qué tan alto es el arancel?",
+        "a": "Una cascada compuesta (CD + SD + IVA + AIT + RD) que puede multiplicar el CIF varias veces; verifíquelo con NBR."
+      },
+      {
+        "q": "¿Existen incentivos para los VE?",
+        "a": "Se han propuesto recortes arancelarios para PHEV/VE; la política está evolucionando; verifíquelo con NBR."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Chittagong."
+      }
+    ],
+    "evNote": "Bangladés ha propuesto recortes del arancel de importación para los híbridos enchufables como parte de su estrategia de eficiencia energética; el tratamiento arancelario de VE/PHEV está evolucionando y debe verificarse con la NBR."
+  },
+  "chile": {
+    "overview": "Chile es un mercado latinoamericano con volante a la izquierda y uno de los más flexibles de la región para la importación de vehículos usados: no tiene límite de antigüedad y aplica un arancel ad valorem fijo del 6% más un IVA del 19%. Las marcas chinas (BYD, Chery, Geely, MG) tienen una fuerte presencia local, y la zona franca de Iquique funciona también como centro regional de reexportación.",
+    "considerations": [
+      "No hay límite de antigüedad para importar; la flexibilidad del año de modelo es una ventaja clave.",
+      "Arancel fijo del 6% + IVA del 19% (IVA); se exige un número tributario RUT.",
+      "La zona franca de Iquique (ZOFRI) facilita la reexportación a Bolivia y al norte de Chile."
+    ],
+    "faq": [
+      {
+        "q": "¿Chile es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Existe un límite de antigüedad?",
+        "a": "No: Chile no tiene límite de antigüedad para importar vehículos usados."
+      },
+      {
+        "q": "¿Qué arancel e IVA se aplican?",
+        "a": "Arancel ad valorem del 6% más IVA del 19%."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "San Antonio, con la zona franca de Iquique como opción de despacho y reexportación."
+      }
+    ],
+    "evNote": "Chile aplica el mismo arancel fijo del 6% a los VE (sin alivio específico para VE), pero cuenta con uno de los mercados de VE chinos más fuertes de América Latina; la ausencia de límite de antigüedad lo hace atractivo para stock de VE reciente y de bajo kilometraje."
+  },
+  "thailand": {
+    "overview": "Tailandia es el centro de fabricación automovilística del Sudeste Asiático y un mercado con volante a la derecha que restringe fuertemente las importaciones de vehículos usados. Su paquete EV 3.5 (reducción del impuesto especial del 8% al 2% para BEV de hasta 7 millones de baht) lo convierte en un destino líder para los VE RHD chinos, con Laem Chabang como puerto principal.",
+    "considerations": [
+      "Las importaciones de vehículos usados están estrictamente restringidas; por lo general solo califican coches nuevos y categorías especiales limitadas.",
+      "El EV 3.5 reduce el impuesto especial al 2% y ofrece un arancel CBU reducido para los BEV; confirme las tarifas vigentes con BOI y la aduana tailandesa.",
+      "El RHD es obligatorio; busque unidades de exportación RHD (BYD, Changan Deepal y otros producen RHD para Tailandia)."
+    ],
+    "faq": [
+      {
+        "q": "¿Tailandia es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la derecha (RHD)."
+      },
+      {
+        "q": "¿Puedo importar un coche usado a Tailandia?",
+        "a": "Las importaciones de vehículos usados están estrictamente restringidas; verifique la elegibilidad con la aduana tailandesa antes de adquirir stock."
+      },
+      {
+        "q": "¿Qué incentivo para VE se aplica?",
+        "a": "El EV 3.5 reduce el impuesto especial del 8% al 2% para BEV de hasta 7 millones de baht, más un arancel CBU reducido durante 2024–2025."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Laem Chabang."
+      }
+    ],
+    "evNote": "El paquete EV 3.5 de Tailandia (impuesto especial del 8% al 2% para BEV ≤7 millones de baht, más arancel CBU reducido) y su base de producción de VE RHD lo convierten en el mercado clave de VE RHD para los exportadores chinos."
+  },
+  "vietnam": {
+    "overview": "Vietnam es un mercado del Sudeste Asiático con volante a la izquierda y una firme regla de cinco años de antigüedad para los turismos usados (Decreto 116/2017), además de un fuerte recargo para los motores de combustión. Los VE disfrutan de un arancel de importación del 0% y un impuesto especial al consumo reducido del 3%; Haiphong y Ciudad Ho Chi Minh son los puertos principales.",
+    "considerations": [
+      "La regla de cinco años de antigüedad es un corte firme: en 2026 significa aproximadamente año de modelo 2021 y posteriores.",
+      "Los coches usados de combustión afrontan un recargo mixto fijo que encarece las importaciones de ICE; los VE lo evitan.",
+      "Los VE pagan un arancel del 0% + un impuesto especial al consumo del 3% durante la ventana de incentivos hasta principios de 2027."
+    ],
+    "faq": [
+      {
+        "q": "¿Vietnam es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "Cinco años desde el año de fabricación (Decreto 116/2017)."
+      },
+      {
+        "q": "¿Qué incentivo para VE se aplica?",
+        "a": "Arancel de importación del 0% y un impuesto especial al consumo reducido del 3%."
+      },
+      {
+        "q": "¿Qué puertos gestionan las importaciones?",
+        "a": "Haiphong y Ciudad Ho Chi Minh (Cat Lai)."
+      }
+    ],
+    "evNote": "El arancel de importación del 0% y el impuesto especial al consumo del 3% para los VE crean una ventaja de coste estructural frente a las importaciones de usados de combustión, favoreciendo a los VE chinos recientes de bajo kilometraje."
+  },
+  "indonesia": {
+    "overview": "Indonesia es el mayor mercado del Sudeste Asiático, pero es un país con volante a la derecha que prohíbe efectivamente las importaciones de vehículos usados: solo pueden entrar unidades CBU nuevas bajo una licencia de importador. Su exención del arancel de importación para VE CBU (hasta diciembre de 2025) no se prorrogó en 2026, y Tanjung Priok es el puerto principal.",
+    "considerations": [
+      "Las importaciones de vehículos usados están efectivamente prohibidas; solo califican unidades CBU nuevas.",
+      "La exención del arancel de importación para VE CBU finalizó el 31 de diciembre de 2025 y no se prorrogó en 2026.",
+      "La protección del ensamblaje local domina; confirme cualquier ventana de importación con la aduana indonesia antes de adquirir stock."
+    ],
+    "faq": [
+      {
+        "q": "¿Indonesia es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la derecha (RHD)."
+      },
+      {
+        "q": "¿Puedo importar un coche usado a Indonesia?",
+        "a": "Efectivamente no: las importaciones de vehículos usados están prohibidas; solo unidades CBU nuevas bajo permiso."
+      },
+      {
+        "q": "¿Qué incentivo para VE se aplicó?",
+        "a": "Los VE CBU tuvieron exención del arancel de importación hasta el 31 de diciembre de 2025, no prorrogada en 2026."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Tanjung Priok (Yakarta)."
+      }
+    ],
+    "evNote": "La exención del arancel de importación para VE CBU de Indonesia finalizó en diciembre de 2025; las importaciones de usados están prohibidas, por lo que es un mercado a vigilar más que un destino actual de exportación de usados."
+  },
+  "mexico": {
+    "overview": "México es un gran mercado norteamericano con volante a la izquierda donde las importaciones definitivas de vehículos usados generalmente deben estar dentro de los últimos ocho años de modelo y cumplir las normas de emisiones y seguridad NOM. Lázaro Cárdenas y Veracruz son los principales puertos de vehículos, y el IVA es del 16%.",
+    "considerations": [
+      "Las importaciones definitivas de usados siguen una regla de ocho años de modelo; verifique el corte exacto con SAT/Aduanas.",
+      "Se aplica la conformidad de emisiones y seguridad NOM; los programas temporales de la zona fronteriza tienen reglas separadas.",
+      "No se registra alivio específico del arancel de importación para VE: se aplica el arancel estándar más un IVA del 16%."
+    ],
+    "faq": [
+      {
+        "q": "¿México es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Cuál es la regla de antigüedad?",
+        "a": "Las importaciones definitivas de usados generalmente deben estar dentro de los últimos ocho años de modelo."
+      },
+      {
+        "q": "¿Qué impuesto se aplica?",
+        "a": "Arancel de vehículos usados (rango 15–50%) más IVA del 16%."
+      },
+      {
+        "q": "¿Qué puertos gestionan las importaciones?",
+        "a": "Lázaro Cárdenas y Veracruz."
+      }
+    ],
+    "evNote": "México no ofrece alivio específico del arancel de importación para VE; las marcas chinas de VE crecen localmente, pero el régimen arancelario de importación de usados es el mismo para todas las motorizaciones."
+  },
+  "ghana": {
+    "overview": "Ghana es un mercado de África Occidental con volante a la derecha que, desde el 1 de octubre de 2026, aplica un límite de antigüedad de 15 años más una inspección previa al embarque aprobada por la GSA. Tema y Takoradi son los puertos principales, y la reducción del arancel de importación para VE está en desarrollo.",
+    "considerations": [
+      "Se aplica el límite de antigüedad de 15 años (desde el 1 de octubre de 2026) más penalizaciones por exceso de antigüedad para vehículos de 10 a 15 años.",
+      "Son obligatorias la inspección previa al embarque aprobada por la GSA y un Certificado de Conformidad.",
+      "El RHD es obligatorio; busque unidades de exportación RHD."
+    ],
+    "faq": [
+      {
+        "q": "¿Ghana es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la derecha (RHD)."
+      },
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "15 años desde el 1 de octubre de 2026, con penalizaciones por exceso de antigüedad para vehículos de 10 a 15 años."
+      },
+      {
+        "q": "¿Qué inspección se exige?",
+        "a": "Inspección previa al embarque aprobada por la GSA y un Certificado de Conformidad."
+      },
+      {
+        "q": "¿Qué puertos gestionan las importaciones?",
+        "a": "Tema y Takoradi."
+      }
+    ],
+    "evNote": "La reducción del arancel de importación para VE en Ghana está en desarrollo; la adopción de VE está en una fase inicial, con una infraestructura de carga limitada."
+  },
+  "philippines": {
+    "overview": "Filipinas es un gran mercado del Sudeste Asiático con volante a la izquierda que generalmente prohíbe las importaciones de vehículos usados, con excepciones limitadas bajo el programa de Importación sin Dólares (NDI). Su política de arancel de importación cero para VE (EO 12, prorrogada hasta 2028 y ampliada a híbridos) la convierte en un destino líder para los vehículos de nueva energía chinos, con Manila como principal puerto de entrada.",
+    "considerations": [
+      "Las importaciones de vehículos usados están generalmente prohibidas (EO 156 / EO 877-A); solo residentes que regresan, inmigrantes y diplomáticos califican bajo el programa NDI.",
+      "Los VE e híbridos disfrutan de un arancel de importación del 0% bajo la EO 12 (prorrogada hasta 2028) frente al arancel estándar del 40%, la mayor diferencia de alivio de la región.",
+      "La importación de RHD es un delito (RA 8506); utilice solo unidades LHD."
+    ],
+    "faq": [
+      {
+        "q": "¿Filipinas es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD). Importar un vehículo RHD es un delito bajo la RA 8506."
+      },
+      {
+        "q": "¿Puedo importar un coche usado a Filipinas?",
+        "a": "Generalmente no: las importaciones de usados están prohibidas salvo bajo el programa NDI para residentes que regresan, inmigrantes y diplomáticos."
+      },
+      {
+        "q": "¿Qué incentivo para VE se aplica?",
+        "a": "Los VE e híbridos pagan un arancel de importación del 0% bajo la EO 12, prorrogada hasta 2028."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Manila (Puerto de Manila)."
+      }
+    ],
+    "evNote": "Filipinas aplica un arancel de importación del 0% a los VE, híbridos y PHEV bajo la EO 12 (prorrogada hasta 2028), frente a un arancel estándar del 40%. Esto convierte a los vehículos de nueva energía en la categoría de importación destacada, aunque las importaciones de usados siguen restringidas."
+  },
+  "iraq": {
+    "overview": "Irak es un mercado de Oriente Medio con volante a la izquierda que importa vehículos usados principalmente a través de Umm Qasr (con Basora/Khor Al Zubair como alternativa). Se aplica un límite de antigüedad de unos cinco años, el arancel varía según la categoría y la cilindrada, y los SUV y berlinas duraderos dominan la demanda.",
+    "considerations": [
+      "Confirme el límite de antigüedad exacto (las fuentes citan 5 años, algunas 2) con el agente de Umm Qasr o la aduana iraquí antes de adquirir stock.",
+      "El arancel varía según la categoría del vehículo, la cilindrada y el puerto de entrada; cotice por modelo y puerto exactos.",
+      "Solo vehículos no blindados; no se admiten unidades siniestradas, dañadas por inundación o por incendio."
+    ],
+    "faq": [
+      {
+        "q": "¿Irak es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "Alrededor de cinco años (algunas fuentes citan dos); verifíquelo con la aduana iraquí."
+      },
+      {
+        "q": "¿Cómo se calcula el arancel?",
+        "a": "Variable por categoría y cilindrada, y por puerto de entrada; verifíquelo con la aduana iraquí."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Umm Qasr, con Basora (Khor Al Zubair) como alternativa."
+      }
+    ],
+    "evNote": "No se ha identificado un alivio específico del arancel de importación para VE en Irak en las fuentes revisadas; los VE se tratan bajo el calendario arancelario variable estándar. Confirme el tratamiento de los VE con la aduana iraquí antes de operar."
+  },
+  "ethiopia": {
+    "overview": "Etiopía es un mercado de África Oriental con volante a la izquierda que, desde febrero de 2024, prohíbe por completo las importaciones de coches de gasolina y diésel: solo pueden importarse vehículos eléctricos. El país sin litoral despacha los vehículos a través de Yibuti, y los VE compactos asequibles dominan el mercado emergente.",
+    "considerations": [
+      "Política solo VE (febrero de 2024): las importaciones de gasolina/diésel están prohibidas; solo son elegibles los vehículos eléctricos.",
+      "Los vehículos transitan por el puerto de Yibuti (Etiopía no tiene litoral).",
+      "Se informa de un arancel de importación de VE de alrededor del 15% más un IVA del 15%; se aplica un límite de antigüedad de unos cinco años."
+    ],
+    "faq": [
+      {
+        "q": "¿Etiopía es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Puedo importar un coche de gasolina o diésel?",
+        "a": "No: Etiopía prohibió las importaciones de coches de gasolina/diésel en febrero de 2024; solo son elegibles los VE."
+      },
+      {
+        "q": "¿Qué impuesto se aplica a los VE?",
+        "a": "Se informa de un arancel de importación de alrededor del 15% más un IVA del 15%; verifíquelo con la aduana etíope."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Yibuti (tránsito para Etiopía, sin litoral)."
+      }
+    ],
+    "evNote": "La política de importación solo VE de Etiopía (gasolina/diésel prohibidos desde febrero de 2024) la convierte en un mercado excepcionalmente centrado en VE; los VE compactos asequibles son el mejor encaje, con las alternativas de combustión totalmente excluidas."
+  },
+  "colombia": {
+    "overview": "Colombia es un mercado latinoamericano con volante a la izquierda que prohíbe efectivamente las importaciones de vehículos usados: solo pueden importarse de forma permanente vehículos completamente nuevos (año actual, 0 km), con excepciones limitadas para diplomáticos y coches clásicos. Impone fuertes impuestos a los ICE (~64–70% combinados) pero un fuerte alivio para VE, con Cartagena y Buenaventura como puertos principales.",
+    "considerations": [
+      "Las importaciones de vehículos usados están prohibidas para no diplomáticos; solo califican vehículos nuevos/año actual.",
+      "Los impuestos a los ICE rondan el 35% de arancel + 19% de IVA + 8–16% de impuesto al consumo (~64–70% combinados); los VE se informan en ~5–7% combinados.",
+      "El incentivo para VE se aplica a unidades nuevas, no a importaciones de usados."
+    ],
+    "faq": [
+      {
+        "q": "¿Colombia es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Puedo importar un coche usado a Colombia?",
+        "a": "Generalmente no: la importación permanente se limita a vehículos nuevos/año actual, con excepciones diplomáticas y de coches clásicos."
+      },
+      {
+        "q": "¿Qué impuestos se aplican?",
+        "a": "ICE: ~35% de arancel + 19% de IVA + 8–16% de impuesto al consumo; los VE reciben un fuerte alivio (~5–7% combinados)."
+      },
+      {
+        "q": "¿Qué puertos gestionan las importaciones?",
+        "a": "Cartagena, con Buenaventura como alternativa en el Pacífico."
+      }
+    ],
+    "evNote": "Colombia grava los vehículos de combustión con ~64–70% del CIF, pero aplica un fuerte alivio para VE (~5–7% combinados). El incentivo favorece a las unidades de VE nuevas; la importación de usados sigue prohibida."
+  },
+  "morocco": {
+    "overview": "Marruecos es un mercado del norte de África con volante a la izquierda que permite la importación de vehículos usados bajo dos filtros estrictos: el vehículo debe tener menos de cinco años y cumplir la norma de emisiones Euro 6. Casablanca y Tánger Med son los puertos principales, con un arancel aduanero de ~17,5% más un IVA del 20%.",
+    "considerations": [
+      "El límite de cinco años de antigüedad más la conformidad de emisiones Euro 6 son los filtros estrictos.",
+      "~17,5% de arancel de importación más 20% de IVA (el tipo varía según cilindrada y origen).",
+      "No se ha identificado alivio específico del arancel de importación para VE: los VE siguen el calendario estándar."
+    ],
+    "faq": [
+      {
+        "q": "¿Marruecos es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "Menos de cinco años, más la conformidad de emisiones Euro 6."
+      },
+      {
+        "q": "¿Qué arancel e IVA se aplican?",
+        "a": "~17,5% de arancel de importación más 20% de IVA; verifíquelo con ADII."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Casablanca, con Tánger Med como alternativa."
+      }
+    ],
+    "evNote": "No se ha encontrado que Marruecos ofrezca alivio específico del arancel de importación para VE en las fuentes revisadas; los VE siguen el mismo ~17,5% de arancel más 20% de IVA que los vehículos de combustión."
+  },
+  "sri-lanka": {
+    "overview": "Sri Lanka es un mercado del sur de Asia con volante a la derecha que reabrió las importaciones de vehículos el 1 de febrero de 2025 tras una suspensión de varios años. Aplica un apilamiento fiscal por capas (arancel base más un recargo del 50%, impuesto especial por kW para VE, IVA y SSCL), con Colombo como puerto principal.",
+    "considerations": [
+      "Las importaciones de vehículos se reabrieron el 1 de febrero de 2025 bajo el Reglamento (de Control) de Importaciones y Exportaciones n.º 01 de 2025.",
+      "El RHD es obligatorio; busque unidades de exportación RHD.",
+      "Impuestos por capas: 20% de arancel base + 50% de recargo + impuesto especial + 18% de IVA + 2,5% de SSCL."
+    ],
+    "faq": [
+      {
+        "q": "¿Sri Lanka es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la derecha (RHD)."
+      },
+      {
+        "q": "¿Puedo importar un coche usado ahora?",
+        "a": "Sí: las importaciones se reabrieron el 1 de febrero de 2025 tras una suspensión de varios años."
+      },
+      {
+        "q": "¿Qué impuestos se aplican?",
+        "a": "20% de arancel base + 50% de recargo + impuesto especial (por kW para VE) + 18% de IVA + 2,5% de SSCL."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Colombo."
+      }
+    ],
+    "evNote": "Sri Lanka aplica el impuesto especial sobre los VE por kilovatio de motor (en lugar de por cc) bajo el régimen de febrero de 2025, un tratamiento de VE distinto al de los vehículos de combustión."
+  },
+  "peru": {
+    "overview": "Perú es un mercado latinoamericano con volante a la izquierda y un límite de antigüedad de cinco años para vehículos usados (dos años para diésel), además de un apilamiento fiscal de arancel ad valorem, impuesto selectivo al consumo y 17% de IGV más 2% de IPM. Callao es el puerto principal.",
+    "considerations": [
+      "La regla de 5 años de antigüedad (2 años para diésel) la aplica estrictamente SUNAT.",
+      "Los impuestos se apilan como ad valorem + ISC + IGV/IPM; calcule el apilamiento completo.",
+      "No se registra alivio específico del arancel de importación para VE."
+    ],
+    "faq": [
+      {
+        "q": "¿Perú es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "Cinco años para vehículos de gasolina, dos años para diésel."
+      },
+      {
+        "q": "¿Qué impuesto se aplica?",
+        "a": "Arancel ad valorem + impuesto selectivo al consumo + 17% de IGV más 2% de IPM."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Callao."
+      }
+    ],
+    "evNote": "Perú aplica el mismo apilamiento de arancel/IGV a los VE (sin alivio específico para VE), pero los VE chinos recientes tienen una presencia local creciente."
+  },
+  "turkey": {
+    "overview": "Turquía es un gran mercado euroasiático con volante a la izquierda cuyo coste de importación automovilística está dominado por un apilamiento fiscal compuesto: 10% de arancel aduanero, un Impuesto Especial al Consumo (ÖTV/SCT) y 20% de IVA. La reforma del SCT de VE de julio de 2025 reconstruyó la fiscalidad de los VE en cuatro tramos (25–75%), mientras que los vehículos de gasolina e híbridos de origen chino afrontan un arancel adicional del 50%. Estambul, Esmirna y Mersin son los principales puertos de entrada.",
+    "considerations": [
+      "El ÖTV/SCT es la principal palanca de coste: un VE en el tramo del 25% frente a un vehículo de combustión al 90–100%+ cambia drásticamente el coste en destino.",
+      "Los vehículos de gasolina e híbridos de origen chino atraen un arancel adicional del 50%; los VE están exentos de esa exclusión.",
+      "No se identificó un límite universal de antigüedad para usados; confirme la elegibilidad con el Ministerio de Comercio turco antes de adquirir stock."
+    ],
+    "faq": [
+      {
+        "q": "¿Turquía es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Qué impuestos se aplican?",
+        "a": "Un apilamiento compuesto de 10% de arancel aduanero, ÖTV (SCT) y 20% de IVA; verifique los tramos vigentes con el Ministerio de Comercio."
+      },
+      {
+        "q": "¿Cuál es el tipo de SCT para VE?",
+        "a": "25–75% en cuatro tramos según potencia del motor y precio antes de impuestos (Decisión Presidencial n.º 10115, julio de 2025)."
+      },
+      {
+        "q": "¿Qué puertos gestionan las importaciones?",
+        "a": "Estambul (Ambarlı/Haydarpaşa), Esmirna y Mersin."
+      }
+    ],
+    "evNote": "La reforma del SCT de VE de julio de 2025 de Turquía fijó cuatro tramos (25% / 55% / 65% / 75%) según potencia del motor y precio antes de impuestos, preservando una ventaja estructural frente a los tipos de combustión del 90–100%+. Los VE chinos están exentos del arancel adicional del 50% para China."
+  },
+  "malaysia": {
+    "overview": "Malasia es un mercado del Sudeste Asiático con volante a la derecha que protege el ensamblaje local mediante un sistema de Permiso Aprobado (AP) y un apilamiento arancelario por capas (30% de arancel de importación, 60–105% de impuesto especial, 10% de SST). Los coches totalmente eléctricos recibieron un alivio temporal del arancel de importación y del impuesto especial hasta el 31 de diciembre de 2025, lo que lo convirtió en un destino líder de VE RHD. Port Klang es el principal puerto de entrada.",
+    "considerations": [
+      "El Permiso Aprobado (AP) es la barrera principal para las importaciones de vehículos usados; verifique la elegibilidad del AP con MITI.",
+      "El RHD es obligatorio; busque unidades de exportación RHD (BYD, Changan y otros producen RHD para Malasia).",
+      "El alivio de arancel e impuesto especial para VE (hasta el 31 de diciembre de 2025); confirme el estado de 2026 con MITI."
+    ],
+    "faq": [
+      {
+        "q": "¿Malasia es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la derecha (RHD)."
+      },
+      {
+        "q": "¿Necesito un Permiso Aprobado?",
+        "a": "Sí: se exige un AP de MITI para las importaciones de vehículos usados, y los AP están restringidos."
+      },
+      {
+        "q": "¿Qué impuestos se aplican?",
+        "a": "30% de arancel de importación, 60–105% de impuesto especial y 10% de SST para vehículos de combustión; verifíquelo con RMCD."
+      },
+      {
+        "q": "¿Qué incentivo para VE se aplicó?",
+        "a": "Alivio temporal del arancel de importación y del impuesto especial para VE hasta el 31 de diciembre de 2025, con un precio mínimo en carretera de 100.000 RM."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Port Klang, con Tanjung Pelepas (Johor) como alternativa."
+      }
+    ],
+    "evNote": "El alivio temporal del arancel de importación y del impuesto especial para VE de Malasia (hasta el 31 de diciembre de 2025, precio mínimo de 100.000 RM) lo convirtió en un mercado clave de VE RHD para los exportadores chinos; confirme el estado de 2026 con MITI."
+  },
+  "new-zealand": {
+    "overview": "Nueva Zelanda es un mercado de Oceanía con volante a la derecha y uno de los regímenes de importación de coches usados más abiertos: los turismos están libres de arancel con un GST del 15%, y la elegibilidad se basa en normas (conformidad de emisiones y de impacto frontal) más que en la antigüedad. La certificación de entrada, el despacho de bioseguridad y el cargo de CO₂ del Estándar de Coches Limpios son los puntos clave del proceso. Auckland, Lyttelton y Wellington son los puertos principales.",
+    "considerations": [
+      "El RHD es obligatorio; los vehículos LHD se limitan a clásicos de 20+ años o permisos de Vehículo de Interés Especial.",
+      "No hay límite de antigüedad fijo, pero deben cumplirse las normas de emisiones (posteriores a 2005) y de impacto frontal (posteriores a 2003).",
+      "Turismos libres de arancel + 15% de GST; se aplica un cargo de CO₂ del Estándar de Coches Limpios a las importaciones de altas emisiones."
+    ],
+    "faq": [
+      {
+        "q": "¿Nueva Zelanda es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la derecha (RHD); el LHD se limita a clásicos de 20+ años o permisos SIV."
+      },
+      {
+        "q": "¿Existe un límite de antigüedad?",
+        "a": "No hay límite de antigüedad fijo: la elegibilidad se fija por las normas de emisiones e impacto frontal."
+      },
+      {
+        "q": "¿Qué arancel e impuesto se aplican?",
+        "a": "0% de arancel aduanero sobre turismos más 15% de GST; puede aplicarse un cargo de CO₂ del Estándar de Coches Limpios."
+      },
+      {
+        "q": "¿Qué puertos gestionan las importaciones?",
+        "a": "Auckland, Lyttelton (Christchurch) y Wellington."
+      }
+    ],
+    "evNote": "Nueva Zelanda está libre de arancel para turismos, y los VE de cero emisiones evitan el cargo de CO₂ del Estándar de Coches Limpios, lo que la convierte en un destino RHD atractivo de VE para stock chino reciente de bajo kilometraje."
+  },
+  "algeria": {
+    "overview": "Argelia es un mercado del norte de África con volante a la izquierda que reabrió las importaciones de coches usados en 2023 bajo una estricta regla de menos de 3 años, y la Ley de Finanzas de 2025 permite la reventa sujeta a un reembolso escalonado del beneficio fiscal. Las importaciones afrontan un arancel aduanero del 15–30%, el impuesto interno al consumo (TIC) y un IVA del 19%, mientras que los VE reciben hasta una reducción del 80% por el canal personal. Argel es el principal puerto de entrada.",
+    "considerations": [
+      "La regla de menos de 3 años es el filtro de antigüedad estricto: el stock más antiguo no es elegible.",
+      "El equipamiento de seguridad (ABS, limitador de velocidad, airbags por encima de 1,2 L) es obligatorio.",
+      "Los VE reciben hasta una reducción del 80% del impuesto de importación por el canal personal."
+    ],
+    "faq": [
+      {
+        "q": "¿Argelia es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "Los coches usados deben tener menos de 3 años."
+      },
+      {
+        "q": "¿Qué impuestos se aplican?",
+        "a": "15% (≤1800 cc) o 30% (≥1800 cc) de arancel aduanero + TIC + 19% de IVA; verifíquelo con la aduana argelina."
+      },
+      {
+        "q": "¿Qué incentivo para VE se aplica?",
+        "a": "Hasta un 80% de reducción del impuesto de importación por el canal personal."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Argel (Alger), con Orán como alternativa."
+      }
+    ],
+    "evNote": "Argelia aplica hasta un 80% de reducción del impuesto de importación sobre los VE (canal personal) frente al arancel estándar del 15–30% más TIC y 19% de IVA: una fuerte diferencia de alivio, sujeta a la regla de menos de 3 años de antigüedad."
+  },
+  "qatar": {
+    "overview": "Catar es un pequeño mercado del Golfo de altos ingresos, con volante a la izquierda, que sigue la especificación GCC, con un arancel aduanero fijo del 5%, sin IVA actualmente en vigor, y un límite de antigüedad de 5 años para los vehículos importados. Hamad Port (Doha) es el principal punto de entrada.",
+    "considerations": [
+      "El límite de antigüedad de 5 años es el filtro clave: adquiera stock reciente.",
+      "Se exigen la conformidad con la especificación GCC, un ID de Catar y el permiso de conducir.",
+      "Se aplica un arancel aduanero fijo del 5% sin IVA actualmente impuesto (se prevé un IVA del 5% en el marco del GCC en el futuro)."
+    ],
+    "faq": [
+      {
+        "q": "¿Catar es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "Los vehículos de más de 5 años tienen prohibida la importación."
+      },
+      {
+        "q": "¿Qué arancel e IVA se aplican?",
+        "a": "5% de arancel aduanero; actualmente no se impone IVA."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Hamad Port (Doha)."
+      }
+    ],
+    "evNote": "No se registra un alivio específico del arancel de importación para VE en Catar; el arancel fijo del 5% se aplica a todos los vehículos, con la adopción de VE impulsada por la infraestructura más que por el alivio arancelario."
+  },
+  "azerbaijan": {
+    "overview": "Azerbaiyán es un mercado del Cáucaso/corredor del Caspio con volante a la izquierda, con una prohibición de antigüedad de 10 años (Decreto n.º 94), un apilamiento de arancel e impuesto especial basado en la cilindrada y un IVA del 18%. Los vehículos eléctricos de tres años o menos pagan 0% de arancel y sin impuesto especial, pero 18% de IVA desde enero de 2026. Bakú (Alat) es el principal punto de entrada.",
+    "considerations": [
+      "La prohibición de 10 años de antigüedad (2016+ en 2026) más los requisitos de ABS, airbag y Euro-4 son los filtros estrictos.",
+      "El impuesto especial se basa en la cilindrada (sin arancel fijo); los coches de más de 7 años pagan un coeficiente de impuesto especial más alto desde enero de 2026.",
+      "Los VE ≤3 años reciben 0% de arancel y sin impuesto especial, pero 18% de IVA desde enero de 2026."
+    ],
+    "faq": [
+      {
+        "q": "¿Azerbaiyán es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "Los coches de más de 10 años no pueden importarse (Decreto n.º 94)."
+      },
+      {
+        "q": "¿Qué impuestos se aplican?",
+        "a": "Arancel por cilindrada + impuesto especial + 18% de IVA; verifíquelo con el Comité Estatal de Aduanas."
+      },
+      {
+        "q": "¿Qué incentivo para VE se aplica?",
+        "a": "Los VE ≤3 años pagan 0% de arancel y sin impuesto especial, pero 18% de IVA desde enero de 2026."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Bakú (Alat / Caspio)."
+      }
+    ],
+    "evNote": "Azerbaiyán aplica arancel aduanero e impuesto especial cero a los VE de tres años o menos (18% de IVA desde enero de 2026), un fuerte incentivo frente al apilamiento de impuesto especial por cilindrada de los vehículos de combustión."
+  },
+  "australia": {
+    "overview": "Australia es un mercado maduro y extenso de Oceanía con volante a la derecha que controla estrictamente las importaciones de vehículos usados mediante el sistema de aprobación ROVER bajo la Ley de Normas de Vehículos de Carretera de 2018. Los turismos pagan un arancel aduanero del 5% más un GST del 10%, con un Impuesto sobre Coches de Lujo del 33% por encima de un umbral de eficiencia de combustible. Las marcas chinas RHD (BYD, MG, GWM, Chery) tienen una fuerte presencia local, y Melbourne y Sídney son los principales puertos de entrada RoRo.",
+    "considerations": [
+      "Las importaciones de vehículos usados se limitan a vías de aprobación estrechas (SEVS, Regla de los 25 Años, Régimen de Importación Personal); confirme la elegibilidad ROVER antes de adquirir stock.",
+      "El RHD es obligatorio: busque unidades de exportación RHD (la mayoría de las marcas chinas producen RHD para Australia).",
+      "No hay alivio arancelario específico para VE, pero los VE califican para el umbral más alto del Impuesto sobre Coches de Lujo para vehículos eficientes; se aplican 5% de arancel + 10% de GST + LCT."
+    ],
+    "faq": [
+      {
+        "q": "¿Australia es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la derecha (RHD)."
+      },
+      {
+        "q": "¿Puedo importar un coche usado a Australia?",
+        "a": "Solo bajo vías de aprobación estrechas: SEVS, la Regla de los 25 Años o el Régimen de Importación Personal (12+ meses de propiedad en el extranjero)."
+      },
+      {
+        "q": "¿Qué arancel e impuesto se aplican?",
+        "a": "5% de arancel aduanero + 10% de GST, más un Impuesto sobre Coches de Lujo del 33% por encima del umbral (más alto para vehículos eficientes)."
+      },
+      {
+        "q": "¿Qué puertos gestionan las importaciones?",
+        "a": "Melbourne y Sídney (Port Botany), con Brisbane y Fremantle (Perth) como alternativas."
+      }
+    ],
+    "evNote": "Australia no ofrece alivio arancelario específico para VE, pero los VE (y otros vehículos ≤7 L/100 km) se benefician de un umbral más alto del Impuesto sobre Coches de Lujo. La adopción de VE está entre las más rápidas de la región, y los VE RHD chinos están bien consolidados."
+  },
+  "russia": {
+    "overview": "Rusia es un gran mercado con volante a la izquierda y uno de los mayores destinos de vehículos de marcas chinas. Las importaciones afrontan una tasa de utilización (reciclaje) que se ha incrementado desde 2024, un arancel de importación personal por cilindrada, un impuesto especial por potencia del motor y un IVA del 20%, con activación de pasaporte electrónico EPTS. Vladivostok (Lejano Oriente) y el cruce terrestre de Manzhouli/Zabaykalsk son los principales puntos de entrada.",
+    "considerations": [
+      "La tasa de utilización (reciclaje) se incrementó desde 2024 y 2025 y es un componente de coste importante; verifique los importes vigentes con el Servicio Federal de Aduanas.",
+      "El arancel de importación personal está vinculado a la cilindrada, no a un porcentaje fijo: cotice por modelo exacto.",
+      "Riesgo de sanciones: los fabricantes occidentales prohíben las exportaciones a Rusia, la UE prohíbe las exportaciones de coches de lujo (>1.900 cc) y de VE/híbridos, y se aplican fricciones bancarias/de pago y escrutinio de cumplimiento; obtenga asesoramiento legal antes de operar."
+    ],
+    "faq": [
+      {
+        "q": "¿Rusia es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Qué tasas se aplican?",
+        "a": "Una tasa de utilización (reciclaje), arancel de importación personal por cilindrada, impuesto especial por potencia del motor y 20% de IVA; verifique los importes vigentes con las aduanas."
+      },
+      {
+        "q": "¿Existen incentivos para VE?",
+        "a": "No hay alivio arancelario específico para VE; los VE siguen pagando la tasa de utilización y el IVA."
+      },
+      {
+        "q": "¿Qué puntos de entrada se utilizan?",
+        "a": "Vladivostok (mar) y el cruce terrestre de Manzhouli/Zabaykalsk."
+      }
+    ],
+    "evNote": "Rusia no concede alivio arancelario específico para VE, y el comercio de VE/híbridos es sensible a sanciones (la UE prohíbe las exportaciones de VE/híbridos a Rusia). Aun así, los vehículos chinos de nueva energía dominan el mercado; los EREV y PHEV son los segmentos de importación de más rápido crecimiento."
+  },
+  "georgia": {
+    "overview": "Georgia es un mercado del Cáucaso Sur con volante a la izquierda y uno de los regímenes aduaneros más ligeros de la región: un arancel nominal por cc, un impuesto especial por cc con un escalón a los 6 años y un IVA del 18%. Los vehículos eléctricos están exentos de arancel e impuesto especial, y el corredor de Poti/Batumi convierte a Georgia en un centro de reexportación hacia Armenia, Azerbaiyán y Asia Central.",
+    "considerations": [
+      "El escalón del impuesto especial a los 6 años (de ~1,5 GEL/cc a 4,5 GEL/cc) eleva materialmente el coste de los vehículos más antiguos: adquiera stock reciente.",
+      "Los VE están exentos del arancel de importación y del impuesto especial (solo 18% de IVA): una fuerte diferencia de alivio.",
+      "Los vehículos RHD afrontan un impuesto especial triplicado; la reexportación vía Poti/Batumi puede evitar el impuesto."
+    ],
+    "faq": [
+      {
+        "q": "¿Georgia es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD); los vehículos RHD afrontan un impuesto especial triplicado."
+      },
+      {
+        "q": "¿Qué es la regla de los 6 años?",
+        "a": "Un escalón fiscal, no una prohibición: el impuesto especial por cc sube bruscamente a los 6 años de antigüedad."
+      },
+      {
+        "q": "¿Qué incentivo para VE se aplica?",
+        "a": "Los VE están exentos del arancel de importación y del impuesto especial, pagando solo el 18% de IVA."
+      },
+      {
+        "q": "¿Qué puertos gestionan las importaciones?",
+        "a": "Poti y Batumi, con reexportación posterior hacia Armenia, Azerbaiyán y Asia Central."
+      }
+    ],
+    "evNote": "Georgia exime a los VE del arancel de importación y del impuesto especial por cc (solo 18% de IVA), y el corredor de Poti/Batumi facilita la reexportación con ahorro fiscal: una propuesta de valor distintiva de VE + reexportación en el Cáucaso."
+  },
+  "tunisia": {
+    "overview": "Túnez es un mercado del norte de África con volante a la izquierda que permite la importación de vehículos usados de menos de cinco años con un certificado de conformidad FCR. Los vehículos de combustión afrontan aranceles elevados más un IVA del 19% y un impuesto al consumo, mientras que los vehículos totalmente eléctricos de menos de cinco años disfrutan de 0% de arancel aduanero, 0% de IVA y 0% de impuesto al consumo: el mayor alivio para VE del norte de África. Rades (Túnez) es el puerto principal.",
+    "considerations": [
+      "La regla de menos de 5 años es el filtro de antigüedad estricto: el stock más antiguo no es elegible.",
+      "Los VE de menos de 5 años pagan 0% de arancel + 0% de IVA + 0% de impuesto al consumo, frente a un pesado apilamiento arancelario de ICE.",
+      "Se exige un certificado de conformidad FCR para las importaciones individuales."
+    ],
+    "faq": [
+      {
+        "q": "¿Túnez es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "Los coches usados deben tener menos de cinco años."
+      },
+      {
+        "q": "¿Qué incentivo para VE se aplica?",
+        "a": "Los vehículos totalmente eléctricos de menos de 5 años pagan 0% de arancel aduanero, 0% de IVA y 0% de impuesto al consumo."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Rades (Túnez), con Sfax como alternativa."
+      }
+    ],
+    "evNote": "La exención total de VE de Túnez (0% de arancel + 0% de IVA + 0% de impuesto al consumo para vehículos de menos de 5 años) hace de los VE chinos recientes la categoría de importación destacada, frente a un pesado apilamiento arancelario de ICE más 19% de IVA."
+  },
+  "oman": {
+    "overview": "Omán es un mercado del Golfo con volante a la izquierda que sigue las especificaciones estándar del GCC. La aduana omaní permite vehículos privados de menos de 7 años, y las importaciones pagan un arancel aduanero fijo del 5% más un IVA del 5%. Sohar y Salalah son los principales puertos de entrada.",
+    "considerations": [
+      "El límite de antigüedad de 7 años para vehículos privados es el filtro clave: adquiera stock reciente.",
+      "La especificación estándar del GCC es obligatoria.",
+      "Se aplica un arancel aduanero fijo del 5% más un IVA del 5%, sin alivio específico para VE registrado."
+    ],
+    "faq": [
+      {
+        "q": "¿Omán es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "Vehículos privados de menos de 7 años."
+      },
+      {
+        "q": "¿Qué arancel e IVA se aplican?",
+        "a": "5% de arancel aduanero más 5% de IVA."
+      },
+      {
+        "q": "¿Qué puertos gestionan las importaciones?",
+        "a": "Sohar y Salalah."
+      }
+    ],
+    "evNote": "No se registra un alivio específico del arancel de importación para VE en Omán; el arancel fijo del 5% más el IVA del 5% se aplica a todos los vehículos."
+  },
+  "bahrain": {
+    "overview": "Baréin es un pequeño mercado del Golfo de altos ingresos, con volante a la izquierda, que sigue la especificación GCC. Aplica un arancel aduanero del 5% más un IVA del 10% (el más alto del GCC) y restringe los vehículos importados a unos cinco años de antigüedad, pagando las unidades de 5 a 10 años una tasa de 1.000 BHD. Khalifa Bin Salman Port (Hidd) es el principal punto de entrada.",
+    "considerations": [
+      "El límite de antigüedad de ~5 años (las unidades de 5 a 10 años pagan una tasa de 1.000 BHD) es el filtro clave: adquiera stock reciente.",
+      "La especificación GCC es obligatoria.",
+      "El 5% de arancel aduanero + 10% de IVA es el IVA más alto del GCC; no se registra alivio específico para VE."
+    ],
+    "faq": [
+      {
+        "q": "¿Baréin es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "Alrededor de cinco años; las unidades de 5 a 10 años pagan una tasa adicional de 1.000 BHD."
+      },
+      {
+        "q": "¿Qué arancel e IVA se aplican?",
+        "a": "5% de arancel aduanero más 10% de IVA (~15% en total)."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Khalifa Bin Salman Port (Hidd)."
+      }
+    ],
+    "evNote": "No se registra un alivio específico del arancel de importación para VE en Baréin en las fuentes revisadas; se aplica el 5% de arancel más 10% de IVA, aunque Baréin promueve la adopción de VE mediante otros incentivos."
+  },
+  "kuwait": {
+    "overview": "Kuwait es el último mercado del GCC del conjunto analizado: una economía del Golfo de altos ingresos, con volante a la izquierda, que aplica la especificación GCC y un límite estricto de ~5 años de antigüedad para los turismos usados. Su carga fiscal de importación está entre las más ligeras de la región: un arancel aduanero fijo del 5% sin IVA, con despacho por los puertos de Shuwaikh y Shuaiba.",
+    "considerations": [
+      "El límite de ~5 años de antigüedad para los turismos usados es más estricto que el de otros estados del Golfo: adquiera stock reciente.",
+      "La conformidad con la especificación GCC es obligatoria; los vehículos no GCC pueden requerir modificación o evaluación.",
+      "Se aplica un arancel aduanero fijo del 5% sin IVA: una carga fiscal total de importación comparativamente ligera."
+    ],
+    "faq": [
+      {
+        "q": "¿Kuwait es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "Los turismos privados usados se limitan generalmente a unos cinco años desde la fabricación."
+      },
+      {
+        "q": "¿Qué arancel e IVA se aplican?",
+        "a": "Un arancel aduanero fijo del 5% sin IVA aplicado actualmente a las importaciones de vehículos."
+      },
+      {
+        "q": "¿Qué puertos gestionan las importaciones?",
+        "a": "Los puertos de Shuwaikh y Shuaiba."
+      }
+    ],
+    "evNote": "No se registra un alivio específico del arancel de importación para VE en Kuwait en las fuentes revisadas; el arancel fijo del 5% se aplica a todos los vehículos, con la adopción de VE impulsada por la infraestructura de carga más que por el alivio arancelario."
+  },
+  "armenia": {
+    "overview": "Armenia es un mercado del Cáucaso sin litoral, con volante a la izquierda, y miembro de la UEEA que despacha los vehículos no UEEA bajo el Arancel Aduanero Común de la UEEA (~15% más 20% de IVA). Su régimen de VE de 2026 (una cuota libre de arancel de la UEEA más una exención de IVA hasta el 31 de diciembre de 2026) lo convierte en el mercado con mayor alivio para VE del Cáucaso, con vehículos que transitan vía Poti (Georgia) hasta Ereván.",
+    "considerations": [
+      "Los VE se benefician de una cuota libre de arancel de la UEEA de 2026 más una exención de IVA (hasta el 31 de diciembre de 2026): una fuerte diferencia de alivio frente al ~15% + 20% de IVA para la combustión.",
+      "Armenia no tiene litoral: el corredor principal es por mar hasta Poti (Georgia), luego tránsito carretero aduanero hasta Ereván.",
+      "La base arancelaria difiere según el estatus del importador: las empresas pagan ~15% ad valorem, las personas físicas un pago EUR por cc según antigüedad/motor."
+    ],
+    "faq": [
+      {
+        "q": "¿Armenia es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD); los coches RHD japoneses no pueden matricularse."
+      },
+      {
+        "q": "¿Qué arancel e IVA se aplican?",
+        "a": "Arancel Aduanero Común de la UEEA (~15% empresa) más 20% de IVA; las personas físicas pagan un pago EUR por cc según antigüedad/motor."
+      },
+      {
+        "q": "¿Qué incentivo para VE se aplica?",
+        "a": "Una cuota libre de arancel de la UEEA de 2026 más una exención de IVA vigente hasta el 31 de diciembre de 2026."
+      },
+      {
+        "q": "¿Cómo llegan los vehículos?",
+        "a": "Vía Poti (Georgia) por mar, luego tránsito carretero aduanero hasta Ereván."
+      }
+    ],
+    "evNote": "El régimen de VE de 2026 de Armenia (cuota libre de arancel de 15.000 unidades de la UEEA más una exención de IVA hasta el 31 de diciembre de 2026) es la diferencia de alivio destacada del Cáucaso; la clasificación de EREV y PHEV bajo la cuota debe confirmarse con el Comité Estatal de Ingresos."
+  },
+  "dominican-republic": {
+    "overview": "La República Dominicana es un mercado del Caribe con volante a la izquierda y una firme regla de cinco años de antigüedad para los turismos usados (Ley 04-07), además de un apilamiento fiscal de 20% de arancel, 18% de ITBIS y un impuesto de primera placa del 17% escalado por CO₂. Haina y Caucedo son los principales puertos de entrada, y los incentivos de arancel reducido para VE/híbridos están evolucionando.",
+    "considerations": [
+      "La regla de 5 años de antigüedad (coches) se aplica estrictamente en la inspección: adquiera stock de 2021 en adelante.",
+      "El apilamiento fiscal (20% de arancel + 18% de ITBIS + 17% de primera placa + marbete + 2% de transferencia) puede acercarse o superar la mitad del valor del vehículo.",
+      "Los vehículos siniestrados, reconstruidos y con gravámenes están prohibidos (Decreto 671-02)."
+    ],
+    "faq": [
+      {
+        "q": "¿La República Dominicana es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "Cinco años para turismos (quince para camiones) bajo la Ley 04-07."
+      },
+      {
+        "q": "¿Qué impuestos se aplican?",
+        "a": "20% de arancel + 18% de ITBIS + 17% de primera placa (escalado por CO₂) + marbete + 2% de transferencia."
+      },
+      {
+        "q": "¿Qué puertos gestionan las importaciones?",
+        "a": "Haina y Caucedo (sur), Puerto Plata (norte)."
+      }
+    ],
+    "evNote": "La República Dominicana ha concedido históricamente aranceles reducidos para VE e híbridos, y su impuesto de primera placa escalado por CO₂ favorece a los VE; el alcance del incentivo vigente en 2026 debe confirmarse con la DGA."
+  },
+  "ecuador": {
+    "overview": "Ecuador es un mercado andino dolarizado, con volante a la izquierda, que prohíbe efectivamente las importaciones de vehículos usados (regla de ~1 año de antigüedad) mientras grava los vehículos de combustión con ~60–80% del CIF. Su incentivo para VE (~0,5–2% combinados) es la mayor brecha fiscal VE frente a ICE del conjunto analizado, pero se aplica solo a unidades nuevas. Guayaquil y Posorja son los puertos principales.",
+    "considerations": [
+      "Las importaciones de vehículos usados están efectivamente prohibidas (regla de 1 año); solo los casos diplomáticos y de migrantes que regresan son excepciones.",
+      "Las importaciones de combustión afrontan ~34% de arancel + 10% de impuesto especial + 15% de IVA (~70% combinados), con el ICE calculado sobre el precio de venta oficial.",
+      "Los VE pagan ~0,5–2% combinados pero requieren aprobación del Ministerio de Ambiente: un mercado de VE nuevos, no un destino de VE usados."
+    ],
+    "faq": [
+      {
+        "q": "¿Ecuador es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "Alrededor de un año: las importaciones de vehículos usados están efectivamente prohibidas."
+      },
+      {
+        "q": "¿Qué impuestos se aplican?",
+        "a": "~34% de arancel + 10% de impuesto especial + 15% de IVA para combustión (~70% combinados); VE ~0,5–2%."
+      },
+      {
+        "q": "¿Qué puertos gestionan las importaciones?",
+        "a": "Guayaquil y Posorja."
+      }
+    ],
+    "evNote": "El incentivo para VE de Ecuador (~0,5–2% del CIF frente a ~70% para combustión) es la mayor brecha VE frente a ICE registrada, pero se aplica solo a unidades nuevas: las importaciones de usados están efectivamente prohibidas."
+  },
+  "uruguay": {
+    "overview": "Uruguay es un mercado estable del Mercosur, con volante a la izquierda, y un centro de transbordo del Río de la Plata a través del Puerto de Montevideo. Las importaciones de vehículos usados se limitan a ciudadanos uruguayos que regresan (Ley 18.250), los vehículos de más de diez años están restringidos y las importaciones afrontan el Arancel Externo Común del Mercosur más un IVA del 22%.",
+    "considerations": [
+      "Solo los ciudadanos uruguayos que regresan (12+ meses de uso previo, 2 años de residencia en el extranjero) pueden importar un vehículo usado: los no ciudadanos no pueden.",
+      "Los coches usados de más de 10 años están restringidos; se aplica el arancel AEC del Mercosur más un IVA del 22%.",
+      "Montevideo es un centro de transbordo regional que sirve movimientos posteriores hacia Paraguay y Argentina."
+    ],
+    "faq": [
+      {
+        "q": "¿Uruguay es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Puedo importar un coche usado a Uruguay?",
+        "a": "Solo como ciudadano uruguayo que regresa bajo la Ley 18.250: los no ciudadanos no pueden importar."
+      },
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "Los coches usados de más de 10 años están restringidos."
+      },
+      {
+        "q": "¿Qué impuestos se aplican?",
+        "a": "Arancel Externo Común del Mercosur (por código HS) más 22% de IVA."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Montevideo."
+      }
+    ],
+    "evNote": "No se registra un alivio específico del arancel de importación para VE en Uruguay; se aplica el arancel AEC del Mercosur más el 22% de IVA, con la adopción de VE promovida mediante incentivos locales más que mediante alivio arancelario."
+  },
+  "panama": {
+    "overview": "Panamá es un mercado centroamericano dolarizado, con volante a la izquierda, y un importante centro regional de reexportación a través de la Zona Libre de Colón. Su límite de antigüedad de vehículos se cita de forma inconsistente según las fuentes, los títulos limpios son obligatorios y las importaciones afrontan un arancel ad valorem más un ITBMS del 7%. Cristóbal (Atlántico) y Balboa (Pacífico) son los puertos de entrada.",
+    "considerations": [
+      "El límite de antigüedad se cita de forma inconsistente (5/7/10 años): verifique el umbral vigente con un agente aduanero panameño.",
+      "Los títulos limpios y sin gravámenes son obligatorios; los títulos siniestrados y reconstruidos se rechazan.",
+      "La Zona Libre de Colón permite la entrada libre de arancel para reexportación, y los titulares de visa de Pensionado pueden reclamar una exención de un vehículo cada dos años."
+    ],
+    "faq": [
+      {
+        "q": "¿Panamá es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD); los vehículos RHD no son importables para matriculación vial."
+      },
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "Citado de forma inconsistente (5/7/10 años): verifíquelo con un agente aduanero panameño."
+      },
+      {
+        "q": "¿Qué impuestos se aplican?",
+        "a": "Un arancel ad valorem más 7% de ITBMS (IVA)."
+      },
+      {
+        "q": "¿Qué puertos gestionan las importaciones?",
+        "a": "Cristóbal (Atlántico) y Balboa (Pacífico)."
+      }
+    ],
+    "evNote": "No se registra un alivio específico del arancel de importación para VE en Panamá; se aplica el arancel estándar más 7% de ITBMS, con la Zona Libre de Colón y la exención de Pensionado como rutas específicas por régimen."
+  },
+  "mongolia": {
+    "overview": "Mongolia es un mercado del norte de Asia con volante a la izquierda que importa intensamente desde China; de forma singular, la mayoría de los vehículos llegan por tierra en ferrocarril a través del cruce fronterizo de Erlian/Zamyn-Üüd en lugar de por mar. No tiene límite de antigüedad fijo, pero el impuesto especial sube con la antigüedad, y los vehículos eléctricos, híbridos y de gas reciben hasta un 50% de descuento en el impuesto especial.",
+    "considerations": [
+      "La mayoría de los vehículos llegan por ferrocarril vía Tianjin y el cruce de Erlian/Zamyn-Üüd, no por mar.",
+      "No hay límite de antigüedad fijo, pero el impuesto especial sube con la antigüedad, así que adquiera el stock más nuevo que permita el presupuesto.",
+      "Las importaciones RHD JDM siguen permitidas hasta una prohibición programada para el 1 de junio de 2030; las unidades LHD de China no se ven afectadas."
+    ],
+    "faq": [
+      {
+        "q": "¿Mongolia es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD); las importaciones RHD JDM se permiten solo hasta el 1 de junio de 2030."
+      },
+      {
+        "q": "¿Existe un límite de antigüedad?",
+        "a": "No hay límite de antigüedad fijo, pero el impuesto especial sube con la antigüedad: confirme el calendario vigente con la aduana mongola."
+      },
+      {
+        "q": "¿Qué impuestos se aplican?",
+        "a": "Aproximadamente 5% de arancel aduanero + 10% de IVA + impuesto especial por motor/antigüedad, con hasta un 50% de descuento en el impuesto especial para VE/híbridos/gas."
+      },
+      {
+        "q": "¿Cómo llegan los vehículos?",
+        "a": "Por mar hasta Tianjin, luego en ferrocarril hasta Ulán Bator vía Erlian/Zamyn-Üüd."
+      }
+    ],
+    "evNote": "Mongolia concede hasta un 50% de descuento en el impuesto especial sobre vehículos eléctricos, híbridos y de gas: un incentivo fiscal significativo para los VE chinos recientes, reforzado por una red de carga GB/T fuertemente influenciada por China."
+  },
+  "kyrgyzstan": {
+    "overview": "Kirguistán es un miembro de la UEEA sin litoral en Asia Central, con volante a la izquierda, un límite de antigüedad de 10 años para las importaciones de usados y sin inspección previa al embarque. Los vehículos llegan por ferrocarril desde China/Kazajistán hasta Biskek, y el país sirve de corredor de reexportación hacia el espacio más amplio de la UEEA.",
+    "considerations": [
+      "El límite de antigüedad de 10 años es el filtro estricto: adquiera stock de 2017 en adelante.",
+      "El Arancel Aduanero Común de la UEEA más el IVA se aplican a los vehículos no UEEA.",
+      "No se exige inspección previa al embarque, lo que simplifica el proceso de exportación."
+    ],
+    "faq": [
+      {
+        "q": "¿Kirguistán es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "Los vehículos de más de 10 años no pueden importarse."
+      },
+      {
+        "q": "¿Se exige inspección?",
+        "a": "No se exige inspección previa al embarque."
+      },
+      {
+        "q": "¿Qué impuestos se aplican?",
+        "a": "Arancel Aduanero Común de la UEEA más IVA: verifique las tarifas vigentes con el Servicio Estatal de Aduanas."
+      }
+    ],
+    "evNote": "El tratamiento del arancel de importación de VE de Kirguistán no se confirmó en las fuentes revisadas; como miembro de la UEEA, su marco de VE está evolucionando. Verifíquelo con el Servicio Estatal de Aduanas antes de operar.",
+    "suvNote": "Los SUV se adaptan al terreno montañoso de Kirguistán y son el segmento de importación dominante; los SUV chinos medianos son los más vendidos."
+  },
+  "serbia": {
+    "overview": "Serbia es un mercado europeo con volante a la izquierda que importa unos 130.000 coches usados al año. Aplica un arancel aduanero del 12,5% (origen no UE) más un IVA del 20% sobre un valor de catálogo AMSS, un mínimo de emisiones Euro 3 y sin límite de antigüedad fijo. A Belgrado se llega vía Bar (Montenegro) o Salónica (Grecia).",
+    "considerations": [
+      "No hay límite de antigüedad fijo: la norma de emisiones Euro 3 es la puerta de elegibilidad vinculante.",
+      "12,5% de arancel + 20% de IVA, con impuestos calculados sobre el valor de catálogo AMSS en lugar del precio de factura.",
+      "Todos los tipos de combustible (gasolina, diésel, híbrido, VE) son aceptados por la aduana serbia."
+    ],
+    "faq": [
+      {
+        "q": "¿Serbia es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Existe un límite de antigüedad?",
+        "a": "No hay límite de antigüedad fijo: la elegibilidad se fija por la norma de emisiones Euro 3."
+      },
+      {
+        "q": "¿Qué impuestos se aplican?",
+        "a": "12,5% de arancel aduanero (no UE) + 20% de IVA, calculados sobre el valor de catálogo AMSS."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Belgrado, vía Bar (Montenegro) o Salónica (Grecia)."
+      }
+    ],
+    "evNote": "Serbia no registra alivio específico del arancel de importación para VE: los VE afrontan el mismo 12,5% + 20% de IVA pero evitan el umbral de combustión Euro 3. Los VE chinos que entran vía la red CCS2/Type 2 necesitan un adaptador de carga."
+  },
+  "senegal": {
+    "overview": "Senegal es un mercado de África Occidental con volante a la izquierda y una de las reglas de antigüedad más estrictas de la región: los vehículos privados deben tener menos de 3 años desde la matriculación (4 años desde la fabricación). La inspección previa al embarque y la aprobación previa de importación son obligatorias, y Dakar es el puerto principal.",
+    "considerations": [
+      "La regla de 3 años para vehículos privados es el filtro estricto: adquiera stock casi nuevo de 2023 en adelante.",
+      "Se exigen inspección previa al embarque en el país de origen y un permiso de aprobación previa de importación.",
+      "Dakar es el principal puerto de entrada, con una función regional de reexportación."
+    ],
+    "faq": [
+      {
+        "q": "¿Senegal es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "Los vehículos privados deben tener menos de 3 años desde la matriculación (4 años desde la fabricación); comerciales hasta 60 meses/6 años."
+      },
+      {
+        "q": "¿Qué inspección se exige?",
+        "a": "Inspección previa a la entrega en el país de origen."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Dakar."
+      }
+    ],
+    "evNote": "El tratamiento del arancel de importación de VE de Senegal no se confirmó en las fuentes revisadas; la política de VE está en desarrollo y debe verificarse con la aduana senegalesa.",
+    "suvNote": "La estricta regla de antigüedad de Senegal restringe efectivamente las importaciones a unidades casi nuevas; los SUV compactos y medianos recientes son el mejor encaje."
+  },
+  "cote-divoire": {
+    "overview": "Côte d'Ivoire es un mercado de África Occidental con volante a la izquierda, un límite de antigüedad de 5 años para los turismos y un pesado arancel aduanero de ~53% más una tasa de matriculación. Abiyán es el puerto principal, y el país es una de las economías más dinámicas de África Occidental.",
+    "considerations": [
+      "El límite de antigüedad de 5 años es el filtro estricto: adquiera stock de 2021 en adelante.",
+      "El ~53% de arancel aduanero más una tasa de matriculación de ~690 EUR encarecen el coste en destino: calcule en consecuencia.",
+      "Los vehículos no pueden enviarse en el mismo contenedor que los enseres domésticos."
+    ],
+    "faq": [
+      {
+        "q": "¿Côte d'Ivoire es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "Los turismos se limitan a 5 años de antigüedad."
+      },
+      {
+        "q": "¿Qué arancel se aplica?",
+        "a": "Aproximadamente 53% de arancel aduanero más una tasa de matriculación de ~690 EUR; verifíquelo con la aduana de Côte d'Ivoire."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Abiyán."
+      }
+    ],
+    "evNote": "El tratamiento del arancel de importación de VE de Côte d'Ivoire no se confirmó en las fuentes revisadas; se espera que los VE sigan el calendario estándar de ~53%. Verifíquelo con la aduana de Côte d'Ivoire."
+  },
+  "cameroon": {
+    "overview": "Camerún es un mercado de África Central con volante a la izquierda, sin límite fijo de antigüedad pero con un pronunciado arancel basado en la cilindrada: 58% para motores de hasta 2000 cc y 77% por encima. Douala es el puerto principal y una puerta de entrada hacia el interior sin litoral de la CEMAC (Chad, RCA).",
+    "considerations": [
+      "No hay límite de antigüedad, pero el arancel por cilindrada (58% ≤2000 cc / 77% >2000 cc) es la palanca de coste clave.",
+      "Se exige un certificado de no venta, y los documentos deben presentarse al menos un mes antes de la llegada.",
+      "Douala sirve de puerta de reexportación hacia Chad y la República Centroafricana."
+    ],
+    "faq": [
+      {
+        "q": "¿Camerún es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Existe un límite de antigüedad?",
+        "a": "No hay límite fijo de antigüedad, pero los impuestos varían según la antigüedad y la potencia del motor."
+      },
+      {
+        "q": "¿Qué arancel se aplica?",
+        "a": "58% (≤2000 cc) o 77% (>2000 cc) del CIF; verifíquelo con la aduana camerunesa."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Douala."
+      }
+    ],
+    "evNote": "El arancel por cilindrada de Camerún no se corresponde claramente con los VE, por lo que la clasificación y el tipo de los VE son inciertos: confírmelos con la aduana camerunesa antes de operar."
+  },
+  "lebanon": {
+    "overview": "Líbano es un mercado de Oriente Medio con volante a la izquierda y un centro de reexportación regional con un límite de antigüedad de ocho años y una prohibición de vehículos diésel. El arancel es una cantidad fija de 5 millones de LBP para vehículos de hasta 20 millones de LBP de CIF (50% por encima), más un IVA del 10%, y Beirut es el único puerto de entrada.",
+    "considerations": [
+      "El límite de antigüedad de 8 años es el filtro clave: adquiera año de modelo 2018 y posteriores.",
+      "Los vehículos usados diésel están prohibidos; se admiten motorizaciones de gasolina, híbridas y eléctricas.",
+      "El arancel es una cantidad fija en LBP para vehículos de CIF bajo y del 50% por encima de 20 millones de LBP de CIF: cotice por vehículo exacto."
+    ],
+    "faq": [
+      {
+        "q": "¿Líbano es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "Ocho años desde el año de fabricación."
+      },
+      {
+        "q": "¿Qué impuestos se aplican?",
+        "a": "5 millones de LBP fijos (≤20 millones de CIF) o 50% por encima, más 10% de IVA; verifíquelo con la aduana libanesa."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Beirut."
+      }
+    ],
+    "evNote": "Líbano prohíbe los vehículos usados diésel y no tiene un alivio específico para VE confirmado; los VE son admisibles pero siguen el calendario arancelario estándar."
+  },
+  "ukraine": {
+    "overview": "Ucrania es un gran mercado europeo con volante a la izquierda, una puerta de emisiones Euro-2, sin límite de antigüedad firme (se propone un tope de 20 años) y un apilamiento arancelario de 10% de arancel de importación más un impuesto especial por antigüedad/motor más 20% de IVA. Su exención total de VE expiró el 31 de diciembre de 2025, y Odesa es el principal puerto de entrada del mar Negro.",
+    "considerations": [
+      "El cumplimiento Euro-2 es la puerta vinculante; un tope de antigüedad propuesto de 20 años aún no es ley.",
+      "El impuesto especial es una fórmula (tipo de motor, cilindrada y antigüedad), no un porcentaje fijo: cotice por modelo exacto.",
+      "La exención total de VE (0% de arancel/impuesto especial/IVA) finalizó el 31 de diciembre de 2025: los VE ahora afrontan hasta 10% de arancel + 1 €/kWh de impuesto especial + 20% de IVA."
+    ],
+    "faq": [
+      {
+        "q": "¿Ucrania es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Existe un límite de antigüedad?",
+        "a": "Sin tope firme (Euro-2 es la puerta); se propone un tope de 20 años."
+      },
+      {
+        "q": "¿Qué impuestos se aplican?",
+        "a": "10% de arancel + impuesto especial por antigüedad/motor + 20% de IVA; verifíquelo con el Servicio Estatal de Aduanas."
+      },
+      {
+        "q": "¿Qué tratamiento de VE se aplica?",
+        "a": "La exención total de VE finalizó el 31 de diciembre de 2025."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Odesa, con Chornomorsk como alternativa."
+      }
+    ],
+    "evNote": "La exención total de VE de Ucrania finalizó el 31 de diciembre de 2025, por lo que los VE ahora afrontan el arancel estándar + 1 €/kWh de impuesto especial + 20% de IVA: la anterior ventaja de coste de los VE se ha reducido."
+  },
+  "belarus": {
+    "overview": "Bielorrusia es una puerta de entrada de la UEEA con volante a la izquierda que ofrece una cuota libre de arancel de 20.000 unidades para vehículos puramente eléctricos (más 0% de IVA individual para VE hasta 2028) y despacho aduanero único en toda la UEEA. No hay prohibición estricta de antigüedad: el tipo unificado individual escala con la antigüedad y la cilindrada, y el país no tiene litoral, transitando vía Klaipėda/Riga o Brest.",
+    "considerations": [
+      "La cuota libre de arancel de 20.000 unidades para VE es por orden de llegada y estaba consumida en más del 40% en abril de 2026: confirme la disponibilidad de cuota antes de comprar.",
+      "Los VE puros pagan 0% de arancel + 0% de IVA individual; los híbridos quedan excluidos y pagan 15% de arancel + 20% de IVA.",
+      "El despacho único de la UEEA permite que un coche despachado circule por Rusia, Kazajistán, Kirguistán y Armenia sin volver a pagar arancel (Rusia sigue aplicando una tasa de reciclaje)."
+    ],
+    "faq": [
+      {
+        "q": "¿Bielorrusia es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Existe un límite de antigüedad?",
+        "a": "Sin prohibición estricta de antigüedad: el tipo unificado escala con la antigüedad y la cilindrada."
+      },
+      {
+        "q": "¿Qué incentivo para VE se aplica?",
+        "a": "Una cuota libre de arancel de 20.000 unidades más 0% de IVA individual para VE hasta 2028."
+      },
+      {
+        "q": "¿Cómo llegan los vehículos?",
+        "a": "Por tierra vía Brest o a través de los puertos marítimos de Klaipėda/Riga hasta Minsk."
+      }
+    ],
+    "evNote": "La cuota libre de arancel de 20.000 unidades para VE de Bielorrusia más el 0% de IVA individual para VE hasta 2028 la convierten en un corredor de VE de alto valor, pero la cuota es limitada y se restablece anualmente."
+  },
+  "bolivia": {
+    "overview": "Bolivia es un mercado latinoamericano sin litoral, con volante a la izquierda, y una de las reglas de antigüedad de vehículos usados más estrictas de la región: un año de modelo desde diciembre de 2014 (algunas fuentes citan hasta dos años), lo que prácticamente impide las importaciones de usados. Las importaciones afrontan el arancel NANDINA más un IVA del 14,94%, y los vehículos transitan vía Iquique/Antofagasta (Chile) o Matarani/Ilo (Perú).",
+    "considerations": [
+      "La regla de ~1 año de modelo es una barrera casi total para las importaciones de usados: solo califican unidades completamente nuevas/año de modelo actual.",
+      "La importación exige una entidad registrada localmente con NIT y un agente de aduanas autorizado (Agente Despachante) por encima de 1.000 USD.",
+      "El tránsito sin litoral vía Chile o Perú añade coste y plazo."
+    ],
+    "faq": [
+      {
+        "q": "¿Bolivia es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "~1 año de modelo (algunas fuentes citan 2): verifíquelo con la Aduana Nacional."
+      },
+      {
+        "q": "¿Qué impuestos se aplican?",
+        "a": "Arancel NANDINA más 14,94% de IVA."
+      },
+      {
+        "q": "¿Cómo llegan los vehículos?",
+        "a": "Vía Iquique/Antofagasta (Chile) o Matarani/Ilo (Perú)."
+      }
+    ],
+    "evNote": "Bolivia no tiene un alivio específico del arancel de importación para VE confirmado, y la estricta regla de antigüedad lo convierte en un mercado a vigilar más que en un destino actual de exportación de usados."
+  },
+  "costa-rica": {
+    "overview": "Costa Rica es un mercado latinoamericano con volante a la izquierda, sin límite de antigüedad pero con un impuesto de importación fuertemente escalonado por antigüedad (52,29% ≤3 años, 63,91% a los 4 años, 79,03% a los 6+ años) y una exención total del impuesto de importación para vehículos totalmente eléctricos bajo la Ley 9518. Puerto Limón (Atlántico) y Caldera (Pacífico) son los puertos de entrada.",
+    "considerations": [
+      "El impuesto de importación cero para VE (Ley 9518) frente al impuesto escalonado de ICE del 52–79% es el mayor alivio para VE del conjunto latinoamericano analizado.",
+      "No hay límite de antigüedad, pero la antigüedad determina el tramo arancelario, y los vehículos más antiguos necesitan inspecciones RITEVE más frecuentes.",
+      "Los híbridos no reciben la exención total de VE: confirme el tratamiento vigente de los híbridos."
+    ],
+    "faq": [
+      {
+        "q": "¿Costa Rica es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Existe un límite de antigüedad?",
+        "a": "No, pero el impuesto de importación sube bruscamente con la antigüedad."
+      },
+      {
+        "q": "¿Qué incentivo para VE se aplica?",
+        "a": "Los vehículos totalmente eléctricos están exentos del impuesto de importación (Ley 9518)."
+      },
+      {
+        "q": "¿Qué puertos gestionan las importaciones?",
+        "a": "Puerto Limón (Atlántico) y Caldera (Pacífico)."
+      }
+    ],
+    "evNote": "El impuesto de importación cero de Costa Rica sobre los vehículos totalmente eléctricos (Ley 9518) lo convierte en un destino destacado de VE; los híbridos reciben solo un alivio parcial."
+  },
+  "guatemala": {
+    "overview": "Guatemala es un mercado centroamericano con volante a la izquierda, un límite de antigüedad de ~10 años (citado de forma inconsistente) y un apilamiento fiscal de arancel de importación DAI (0–15%), 12% de IVA y un impuesto de primera matriculación IPRIMA de ~20%. Puerto Quetzal (Pacífico) y Santo Tomás de Castilla (Atlántico) son los puertos de entrada.",
+    "considerations": [
+      "El límite de antigüedad de 10 años se cita de forma inconsistente: confírmelo con SAT o un agente autorizado antes de adquirir stock.",
+      "El apilamiento de DAI + 12% de IVA + ~20% de IPRIMA es por capas: calcule el apilamiento completo.",
+      "No se registra alivio específico del arancel de importación para VE."
+    ],
+    "faq": [
+      {
+        "q": "¿Guatemala es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "~10 años (citado de forma inconsistente): verifíquelo con SAT."
+      },
+      {
+        "q": "¿Qué impuestos se aplican?",
+        "a": "Arancel DAI (0–15%) + 12% de IVA + ~20% de IPRIMA."
+      },
+      {
+        "q": "¿Qué puertos gestionan las importaciones?",
+        "a": "Puerto Quetzal (Pacífico) y Santo Tomás de Castilla (Atlántico)."
+      }
+    ],
+    "evNote": "Guatemala no tiene un alivio específico del arancel de importación para VE confirmado; los VE siguen el apilamiento estándar de DAI + IVA + IPRIMA."
+  },
+  "paraguay": {
+    "overview": "Paraguay es un mercado sudamericano con volante a la izquierda y uno de los importadores de vehículos usados más abiertos de la región: limita los turismos usados a 10 años de modelo y aplica un Arancel comparativamente ligero (0–20%) más 10% de IVA, alrededor de 28–32% en total. La Asunción sin litoral se alcanza vía Montevideo o puertos brasileños, y el país es un centro de reexportación hacia el interior más amplio del Mercosur.",
+    "considerations": [
+      "El límite de antigüedad de 10 años (Ley 2018/2002) es el filtro clave: adquiera stock de 2016 en adelante.",
+      "Un apilamiento arancelario ligero (Arancel 0–20% + 10% de IVA, ~28–32% en total) hace de Paraguay uno de los destinos de importación de usados con impuestos más bajos de Sudamérica.",
+      "No se registra alivio específico del arancel de importación para VE; los vehículos transitan vía Montevideo (Uruguay) o puertos brasileños hasta Asunción."
+    ],
+    "faq": [
+      {
+        "q": "¿Paraguay es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "Los turismos usados se limitan a 10 años de modelo (Ley 2018/2002)."
+      },
+      {
+        "q": "¿Qué arancel e IVA se aplican?",
+        "a": "Arancel 0–20% más 10% de IVA, alrededor de 28–32% en total; verifíquelo con la Dirección Nacional de Aduanas."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Asunción, alcanzada vía Montevideo o puertos brasileños (sin litoral)."
+      }
+    ],
+    "evNote": "No se registra un alivio específico del arancel de importación para VE en Paraguay; los VE siguen el apilamiento estándar de Arancel + 10% de IVA, aunque el arancel general ligero lo convierte en un destino de VE accesible."
+  },
+  "angola": {
+    "overview": "Angola es un mercado del sur de África con volante a la izquierda y un régimen de importación restringido y de aranceles elevados aplicado en el puerto de Luanda. La regla de antigüedad de vehículos usados se cita de forma inconsistente (5–6 años), y las importaciones afrontan un arancel aduanero del 30% más un IVA del 14% (combinado ~42–55%).",
+    "considerations": [
+      "La regla de antigüedad se cita de forma inconsistente (5 frente a 6 años frente a sin límite estricto): confirme el corte vigente con la aduana angoleña antes de adquirir stock.",
+      "Un apilamiento arancelario elevado (30% + 14% de IVA, ~42–55% combinado) encarece el coste en destino.",
+      "El despacho se realiza por Luanda, con el régimen dependiente de la categoría del vehículo y el valor tasado."
+    ],
+    "faq": [
+      {
+        "q": "¿Angola es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "Citado de forma inconsistente en 5–6 años; verifíquelo con la aduana angoleña."
+      },
+      {
+        "q": "¿Qué arancel e IVA se aplican?",
+        "a": "30% de arancel aduanero más 14% de IVA (combinado ~42–55%)."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Luanda."
+      }
+    ],
+    "evNote": "Angola no registra un alivio específico del arancel de importación para VE; los VE siguen el mismo 30% de arancel más 14% de IVA que los vehículos de combustión."
+  },
+  "mozambique": {
+    "overview": "Mozambique es un mercado del sur de África con volante a la derecha, una excepción entre las antiguas colonias portuguesas por conducir por la izquierda. No tiene límite fijo de antigüedad para vehículos usados, aplica un arancel basado en la cilindrada más 17% de IVA y despacha a través del portal digital JUE en Maputo y Beira, con inspección previa al embarque obligatoria de Intertek.",
+    "considerations": [
+      "El RHD es obligatorio (conduce por la izquierda): busque unidades de exportación RHD.",
+      "La ausencia de límite de antigüedad fijo hace de Mozambique uno de los mercados más accesibles del sur de África.",
+      "Se exigen el despacho digital JUE, un número fiscal NUIT y la inspección previa al embarque Intertek MOZ."
+    ],
+    "faq": [
+      {
+        "q": "¿Mozambique es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la derecha (RHD); Mozambique conduce por la izquierda."
+      },
+      {
+        "q": "¿Existe un límite de antigüedad?",
+        "a": "No hay límite de antigüedad fijo, aunque el arancel puede subir con la antigüedad."
+      },
+      {
+        "q": "¿Qué inspección se exige?",
+        "a": "Inspección previa al embarque Intertek (número MOZ) más despacho digital JUE."
+      },
+      {
+        "q": "¿Qué puertos gestionan las importaciones?",
+        "a": "Maputo y Beira."
+      }
+    ],
+    "evNote": "Mozambique no registra un alivio específico del arancel de importación para VE; los VE siguen el arancel por cilindrada más 17% de IVA."
+  },
+  "uganda": {
+    "overview": "Uganda es un mercado de África Oriental con volante a la derecha, un límite de antigüedad de 15 años (se propone una reducción a 13 años para 2026/27), una norma de emisiones Euro 4/IV y la inspección obligatoria UNBS. Aplica un arancel de importación del 25% más 18% de IVA y una tasa ambiental por antigüedad, con vehículos que transitan vía el puerto de Mombasa hasta la Kampala sin litoral.",
+    "considerations": [
+      "El límite de antigüedad de 15 años (13 propuestos) y la norma de emisiones Euro 4 son los filtros vinculantes.",
+      "La tasa ambiental es del 0% por debajo de 9 años y del 50% por encima; el stock más nuevo evita el cargo más elevado.",
+      "El RHD es obligatorio; los vehículos transitan vía Mombasa (Kenia) hasta Kampala."
+    ],
+    "faq": [
+      {
+        "q": "¿Uganda es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la derecha (RHD)."
+      },
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "15 años (se proponen 13 años para 2026/27)."
+      },
+      {
+        "q": "¿Qué arancel e IVA se aplican?",
+        "a": "25% de arancel de importación más 18% de IVA, más una tasa ambiental por antigüedad."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Kampala, vía el tránsito por el puerto de Mombasa (Kenia)."
+      }
+    ],
+    "evNote": "La tasa ambiental de Uganda es del 0% para vehículos de menos de 9 años, de modo que los VE y PHEV más nuevos evitan el cargo más elevado; confirme el tratamiento específico de VE con URA.",
+    "suvNote": "Los SUV se adaptan a las carreteras urbanas y rurales mixtas de Uganda; los SUV compactos y medianos son el segmento de importación dominante."
+  },
+  "tajikistan": {
+    "overview": "Tayikistán es un mercado de Asia Central con volante a la izquierda que prohíbe los vehículos fabricados antes de 2013 (Decreto Gubernamental n.º 355) y exige un mínimo de emisiones Euro 4. Ofrece una exención del arancel de importación para VE de 10 años (desde octubre de 2022) frente a ~20–30% de arancel más 18% de IVA para la combustión, y se alcanza por tierra en ferrocarril desde China o a través de los corredores del Cáucaso/Irán.",
+    "considerations": [
+      "El corte fijo anterior a 2013 (Decreto n.º 355) es el filtro de antigüedad estricto: adquiera stock de 2013 en adelante.",
+      "La exención del arancel de importación para VE de 10 años es la diferencia de alivio destacada frente a ~20–30% de arancel + 18% de IVA para la combustión.",
+      "Sin litoral: los vehículos llegan por ferrocarril desde China (Khorgos) o vía Poti/Batumi (Georgia) / Bandar Abbas (Irán)."
+    ],
+    "faq": [
+      {
+        "q": "¿Tayikistán es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "Los vehículos fabricados antes de 2013 están prohibidos (Decreto n.º 355)."
+      },
+      {
+        "q": "¿Qué incentivo para VE se aplica?",
+        "a": "Una exención del arancel de importación para VE de 10 años desde octubre de 2022."
+      },
+      {
+        "q": "¿Cómo llegan los vehículos?",
+        "a": "Por ferrocarril desde China, o vía Poti/Batumi (Georgia) / Bandar Abbas (Irán)."
+      }
+    ],
+    "evNote": "La exención del arancel de importación para VE de 10 años de Tayikistán hace de los VE chinos recientes la categoría de importación destacada frente a ~20–30% de arancel más 18% de IVA para los vehículos de combustión."
+  },
+  "zimbabwe": {
+    "overview": "Zimbabue es un mercado del sur de África con volante a la derecha, un límite de antigüedad de 10 años (S.I. 54 de 2024) y un calendario arancelario de ZIMRA que grava los VE al 25% reducido (híbridos al 40%). Sin litoral, los vehículos transitan vía Durban o Beira y se despachan en los puestos fronterizos de Beitbridge o Forbes.",
+    "considerations": [
+      "El límite de antigüedad de 10 años (S.I. 54 de 2024, con excepciones S.I. 172) es el filtro clave: adquiera stock de 2016 en adelante.",
+      "Los VE pagan un arancel aduanero reducido del 25% frente al calendario ICE por cilindrada: una ventaja estructural para las importaciones de VE.",
+      "El RHD es obligatorio; los vehículos transitan vía Durban (Sudáfrica) o Beira (Mozambique) hasta la frontera de Beitbridge/Forbes."
+    ],
+    "faq": [
+      {
+        "q": "¿Zimbabue es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la derecha (RHD)."
+      },
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "10 años desde la fabricación (S.I. 54 de 2024)."
+      },
+      {
+        "q": "¿Qué incentivo para VE se aplica?",
+        "a": "Los VE tributan al 25% de arancel (híbridos al 40%) frente al calendario ICE por cilindrada."
+      },
+      {
+        "q": "¿Qué puertos gestionan las importaciones?",
+        "a": "Harare, vía tránsito por Durban o Beira y la frontera de Beitbridge/Forbes."
+      }
+    ],
+    "evNote": "El arancel reducido del 25% para VE de Zimbabue (frente al calendario ICE por cilindrada) hace de los VE chinos recientes la categoría de importación destacada, sujeta al límite de antigüedad de 10 años."
+  },
+  "nepal": {
+    "overview": "Nepal es un mercado del sur de Asia con volante a la derecha, sin tope universal de antigüedad para importar pero con una prohibición de circulación de 20 años (30 años para VE). El presupuesto del año fiscal 2083/84 fijó el arancel aduanero de VE en un 20% (más 13% de IVA, CIIF y una tasa vial del 5%) frente a un apilamiento fiscal total de 200–317% para los vehículos de combustión. Sin litoral, los vehículos llegan vía puertos indios (Calcuta/Vizag) o por tierra desde China.",
+    "considerations": [
+      "El RHD es obligatorio: las unidades LHD del mercado chino necesitan una versión de exportación RHD antes de importar.",
+      "Los VE pagan un arancel aduanero fijo del 20% frente a un apilamiento fiscal de combustión de 200–317%: una ventaja decisiva para los VE.",
+      "No hay tope universal de antigüedad hoy, pero existe una prohibición de circulación de 20 años y una regla de importación propuesta de <1 año; verifique las normas vigentes con el Departamento de Aduanas."
+    ],
+    "faq": [
+      {
+        "q": "¿Nepal es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la derecha (RHD)."
+      },
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "Sin tope universal de antigüedad para importar, pero con una prohibición de circulación de 20 años (30 para VE)."
+      },
+      {
+        "q": "¿Qué incentivo para VE se aplica?",
+        "a": "Arancel aduanero de VE fijo del 20% (año fiscal 2083/84) frente a un apilamiento de combustión de 200–317%."
+      },
+      {
+        "q": "¿Cómo llegan los vehículos?",
+        "a": "Vía los puertos de Calcuta/Vizag (India) o por tierra vía la frontera con China."
+      }
+    ],
+    "evNote": "El arancel aduanero de VE fijo del 20% de Nepal (que sustituye al antiguo calendario por kW) hace de los VE chinos la categoría de importación destacada, siempre que se adquiera una unidad de exportación RHD."
+  },
+  "zambia": {
+    "overview": "Zambia es un mercado del sur de África con volante a la derecha, sin límite legal de antigüedad para importar (pero con un recargo del 20% para vehículos de más de 5 años) y un calendario de arancel específico de ZRA tasado en kwacha fija por cilindrada y antigüedad, más un recargo por emisiones de carbono y 16% de IVA. Sin litoral, los vehículos transitan vía Durban o Dar es Salaam.",
+    "considerations": [
+      "El RHD es obligatorio: las unidades LHD del mercado chino necesitan una versión de exportación RHD.",
+      "El arancel es un calendario específico de ZRA (no un simple porcentaje) por tramos de antigüedad, con un recargo del 20% por encima de 5 años.",
+      "La inspección previa al embarque JEVIC/Bureau Veritas es obligatoria antes de la exportación."
+    ],
+    "faq": [
+      {
+        "q": "¿Zambia es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la derecha (RHD)."
+      },
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "Sin límite legal de antigüedad, pero se aplica un recargo del 20% por encima de 5 años."
+      },
+      {
+        "q": "¿Cómo se tasan los aranceles?",
+        "a": "Calendario específico de ZRA (kwacha fija) por cilindrada y antigüedad, más recargo por carbono y 16% de IVA."
+      },
+      {
+        "q": "¿Qué puertos gestionan las importaciones?",
+        "a": "Lusaka, vía tránsito por Durban o Dar es Salaam."
+      }
+    ],
+    "evNote": "Zambia ofrece un impuesto especial reducido del 15% para híbridos; el alivio específico para VE no está documentado por separado, por lo que los VE siguen el calendario específico de ZRA; confirme el tratamiento con ZRA antes de operar."
+  },
+  "laos": {
+    "overview": "Laos es un mercado del Sudeste Asiático con volante a la izquierda que eliminó su límite de antigüedad de 5 años para vehículos usados en 2025 y suspendió las nuevas importaciones de turismos de gasolina/diésel desde junio de 2024 hasta finales de 2026, lo que hace que prácticamente todas las nuevas importaciones de turismos sean eléctricas. El arancel va del 40 al 65% del CIF según la cilindrada. Sin litoral, los vehículos llegan vía puertos tailandeses o la frontera China–Laos.",
+    "considerations": [
+      "La prohibición de importación de turismos de gasolina/diésel (junio de 2024–2026) hace de los VE el canal de importación práctico.",
+      "El LHD es estándar: las unidades LHD del mercado chino se importan directamente sin conversión.",
+      "La eliminación en 2025 del límite de antigüedad de 5 años abre una ventana para unidades de año de modelo 2018–2020; verifique las normas vigentes."
+    ],
+    "faq": [
+      {
+        "q": "¿Laos es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "El límite de 5 años se eliminó en 2025; confirme la regla vigente."
+      },
+      {
+        "q": "¿Qué política de VE se aplica?",
+        "a": "Una prohibición de importación de turismos de gasolina/diésel más incentivos fiscales para VE."
+      },
+      {
+        "q": "¿Cómo llegan los vehículos?",
+        "a": "Vía Laem Chabang (Tailandia) o la frontera China–Laos."
+      }
+    ],
+    "evNote": "La suspensión de importación de turismos de gasolina/diésel de Laos (junio de 2024–2026) y los incentivos para VE hacen de los VE chinos la categoría de importación destacada, sujeta al apilamiento arancelario del 40–65%."
+  },
+  "cambodia": {
+    "overview": "Camboya es un mercado del Sudeste Asiático con volante a la izquierda que matricula solo vehículos LHD, lo que convierte a China en una base natural de suministro. Desde el 1 de enero de 2026, el arancel aduanero de VE cayó al 0% y el de PHEV al 7%, frente al 35% más 10% de IVA para los coches ICE. No hay un tope estricto de antigüedad, y Sihanoukville es el puerto principal.",
+    "considerations": [
+      "El LHD es obligatorio: la producción puramente LHD de China encaja directamente sin conversión.",
+      "Arancel de VE del 0% / PHEV del 7% (desde enero de 2026) frente al 35% + 10% de IVA para ICE: una ventaja decisiva para los VE.",
+      "No hay tope estricto de antigüedad a partir de 2026, pero las propuestas de límite de antigüedad se repiten; verifíquelo con GDCE."
+    ],
+    "faq": [
+      {
+        "q": "¿Camboya es de volante a la derecha o a la izquierda?",
+        "a": "Solo volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "Sin tope estricto de antigüedad a partir de 2026; los vehículos anteriores a 2000 se desaconsejan."
+      },
+      {
+        "q": "¿Qué incentivo para VE se aplica?",
+        "a": "Arancel de VE del 0% y de PHEV del 7% desde el 1 de enero de 2026."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Sihanoukville (Puerto Autónomo)."
+      }
+    ],
+    "evNote": "El arancel de VE del 0% de Camboya (desde el 1 de enero de 2026) hace que los BEV chinos sean competitivos en precio frente a los coches usados locales, con los PHEV al 7%: una ventaja estructural para los VE."
+  },
+  "honduras": {
+    "overview": "Honduras es un mercado centroamericano con volante a la izquierda, un límite de antigüedad de 10 años (Ley de Equilibrio Financiero y Protección Social) y un apilamiento de coste en destino de arancel de importación DAI (5–20%), 15% de impuesto sobre ventas ISV y una tasa ambiental ecotasa. Puerto Cortés es el puerto principal.",
+    "considerations": [
+      "El límite de antigüedad de 10 años (algunas fuentes citan 7) es el filtro clave: adquiera stock de 2016 en adelante y confírmelo con la DEI.",
+      "El LHD es estándar y las importaciones RHD están prohibidas: las unidades LHD del mercado chino encajan directamente.",
+      "No se registra alivio específico para VE; los VE siguen el apilamiento de DAI + ISV + ecotasa."
+    ],
+    "faq": [
+      {
+        "q": "¿Honduras es de volante a la derecha o a la izquierda?",
+        "a": "Solo volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "10 años desde la fabricación (algunas fuentes citan 7)."
+      },
+      {
+        "q": "¿Qué impuestos se aplican?",
+        "a": "Arancel DAI 5–20% + 15% de ISV + tasa ambiental ecotasa."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Puerto Cortés."
+      }
+    ],
+    "evNote": "Honduras no registra un alivio específico del arancel de importación para VE, por lo que los VE siguen el apilamiento estándar de DAI + 15% de ISV + ecotasa; confirme el tratamiento de VE con la DEI antes de operar."
+  },
+  "el-salvador": {
+    "overview": "El Salvador es un mercado centroamericano con volante a la izquierda, un límite de antigüedad de 8 años para los turismos (15 años para camiones/SUV) y un apilamiento de coste en destino de 25–30% de arancel más 13% de IVA. Acajutla es el puerto principal, alcanzado vía transbordo en Panamá o un puerto guatemalteco/hondureño más camión.",
+    "considerations": [
+      "El límite de antigüedad de 8 años (15 para camiones/SUV) es el filtro clave: adquiera stock de turismos de 2018 en adelante y confírmelo con la DGA.",
+      "El LHD es estándar: las unidades LHD del mercado chino se importan directamente sin conversión.",
+      "No se registra alivio específico para VE; los VE siguen el apilamiento de 25–30% de arancel + 13% de IVA."
+    ],
+    "faq": [
+      {
+        "q": "¿El Salvador es de volante a la derecha o a la izquierda?",
+        "a": "Solo volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "8 años para turismos (15 para camiones/SUV)."
+      },
+      {
+        "q": "¿Qué impuestos se aplican?",
+        "a": "25–30% de arancel + 13% de IVA."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Acajutla, vía transbordo en Panamá o un puerto guatemalteco/hondureño."
+      }
+    ],
+    "evNote": "El Salvador no registra un alivio específico del arancel de importación para VE, por lo que los VE siguen el apilamiento estándar de 25–30% de arancel + 13% de IVA; confirme el tratamiento de VE con la DGA antes de operar."
+  },
+  "botswana": {
+    "overview": "Botsuana es un mercado del sur de África sin litoral, con volante a la derecha, que importa vehículos usados (principalmente de Japón y Sudáfrica) bajo la Unión Aduanera de África Meridional (SACU). No hay tope fijo de antigüedad, pero el arancel se tasa sobre el valor CIF (las guías de importadores citan 27% de aduana + 12% de IVA) y el impuesto sube con la antigüedad. Los vehículos transitan vía Durban, Sudáfrica.",
+    "considerations": [
+      "Sin límite estricto de antigüedad, pero el arancel sube con la antigüedad y se aplica una regla de no venta de 2 años: adquiera la unidad más nueva que permita su presupuesto.",
+      "Sin litoral: los vehículos transitan vía Durban (Sudáfrica) bajo la SACU; prevea tiempo de tránsito y despacho fronterizo.",
+      "El RHD es la norma: las unidades LHD del mercado chino requieren adquirir una unidad de exportación RHD."
+    ],
+    "faq": [
+      {
+        "q": "¿Existe un límite de antigüedad para los coches usados?",
+        "a": "Sin tope fijo de antigüedad, pero el arancel se tasa sobre el valor CIF y generalmente sube con la antigüedad; confirme el calendario de BURS."
+      },
+      {
+        "q": "¿Botsuana es de volante a la derecha?",
+        "a": "Sí: Botsuana es un mercado con volante a la derecha (RHD)."
+      },
+      {
+        "q": "¿Qué arancel e IVA se aplican?",
+        "a": "Las guías de importadores citan 27% de arancel aduanero + 12% de IVA (SACU). Verifique las tarifas vigentes con BURS."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Los vehículos transitan vía Durban (Sudáfrica) hasta Gaborone."
+      }
+    ],
+    "evNote": "No se confirma un alivio específico del arancel de importación para VE en Botsuana; los VE siguen el apilamiento de arancel + IVA de la SACU. La carga está alineada con Europa (Type 2 / CCS2), por lo que se requiere un adaptador GB/T a CCS2 para las unidades del mercado chino."
+  },
+  "namibia": {
+    "overview": "Namibia es un mercado del sur de África con volante a la derecha que aplica un límite estricto de antigüedad de 8 años (contado desde la primera matriculación) y exige un permiso de importación antes del embarque. Walvis Bay es un puerto de aguas profundas directo sobre el Atlántico, y NamRA es la autoridad aduanera. El arancel se tasa sobre el valor CIF.",
+    "considerations": [
+      "El límite estricto de 8 años de antigüedad (desde la primera matriculación, no el año de modelo) es el filtro clave: adquiera unidades cómodamente dentro de la ventana.",
+      "Walvis Bay es un puerto directo, lo que reduce el tiempo de tránsito frente a los vecinos sin litoral.",
+      "El RHD es obligatorio: las unidades LHD del mercado chino requieren una unidad de exportación RHD."
+    ],
+    "faq": [
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "8 años desde la primera matriculación, con un permiso de importación requerido antes del embarque."
+      },
+      {
+        "q": "¿Namibia es de volante a la derecha?",
+        "a": "Sí: Namibia es un mercado con volante a la derecha (RHD)."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Walvis Bay (puerto atlántico directo)."
+      }
+    ],
+    "evNote": "No se confirma un alivio arancelario específico para VE en Namibia; los VE siguen el apilamiento de arancel estándar + 15% de IVA. La carga está alineada con Europa (Type 2 / CCS2); confirme el requisito de adaptador GB/T a CCS2."
+  },
+  "mauritius": {
+    "overview": "Mauricio es un mercado insular del océano Índico con volante a la derecha y un tope estricto de antigüedad para coches usados (históricamente ~3–4 años, fijado por la Ley de Finanzas). El coste en destino está dominado por un elevado impuesto especial más 15% de IVA, y los vehículos desembarcan en Port Louis con la aduana MRA y la inspección de aptitud vial NLTA.",
+    "considerations": [
+      "El tope de antigüedad de ~3–4 años es el filtro decisivo: adquiera unidades de producción tardía y confirme la antigüedad vigente de la Ley de Finanzas con MRA antes de pujar.",
+      "El impuesto especial (por tramos de cilindrada) más 15% de IVA dominan el coste en destino; pueden aplicarse concesiones de impuesto especial para VE/híbridos.",
+      "El RHD es obligatorio y el LHD no está permitido para uso normal."
+    ],
+    "faq": [
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "Alrededor de 3–4 años, fijado por la Ley de Finanzas y ajustado en cada presupuesto; confírmelo con MRA."
+      },
+      {
+        "q": "¿Mauricio es de volante a la derecha?",
+        "a": "Sí: Mauricio es RHD y no permite LHD para uso normal."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Port Louis."
+      }
+    ],
+    "evNote": "Mauricio ha ofrecido históricamente un impuesto especial reducido para VE e híbridos bajo sucesivas Leyes de Finanzas. La carga está alineada con Europa (Type 2 / CCS2); confirme el requisito de adaptador GB/T a CCS2 y el impuesto especial vigente de VE con MRA."
+  },
+  "jamaica": {
+    "overview": "Jamaica es un mercado del Caribe con volante a la derecha, un límite de antigüedad de 6 años para coches y SUV (10 años para pick-ups y furgonetas) bajo la Política de Importación de Vehículos de Motor. Las personas físicas pueden importar hasta dos vehículos cada tres años mediante un permiso del Trade Board, y los vehículos se despachan en Kingston. Los VE se benefician de un arancel de importación reducido.",
+    "considerations": [
+      "El límite de antigüedad de 6 años para coches/SUV es el filtro clave: adquiera stock de 2020 en adelante y confírmelo con el Trade Board.",
+      "Las personas físicas necesitan un permiso de importación del Trade Board (2 vehículos cada 3 años).",
+      "Los VE disfrutan de un arancel de importación reducido: una ventaja estructural para los BEV chinos."
+    ],
+    "faq": [
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "6 años para coches/SUV, 10 años para pick-ups y furgonetas (Ministerial Paper n.º 36/14)."
+      },
+      {
+        "q": "¿Jamaica es de volante a la derecha?",
+        "a": "Sí: Jamaica es un mercado con volante a la derecha (RHD)."
+      },
+      {
+        "q": "¿Los VE tienen una rebaja arancelaria?",
+        "a": "Sí: Jamaica ofrece un arancel de importación reducido para VE. Verifique la tarifa vigente con la Agencia Aduanera de Jamaica."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Kingston."
+      }
+    ],
+    "evNote": "El arancel de importación reducido para VE de Jamaica hace que los BEV chinos sean estructuralmente competitivos. La carga es Type 2 / CCS2 (alineada con Europa); confirme el requisito de adaptador GB/T a Type 2 y el estándar de destino."
+  },
+  "trinidad-and-tobago": {
+    "overview": "Trinidad y Tobago es un mercado del Caribe con volante a la derecha que, desde el 1 de enero de 2026, amplió sus límites de antigüedad de vehículos usados a 6 años para coches privados (antes 3) y 10 años para vehículos comerciales ligeros (antes 7). El coste en destino lo fijan un arancel del 20–30%, un Impuesto sobre Vehículos de Motor por tramos de motor y un IVA del 12,5%, con despacho en Puerto España.",
+    "considerations": [
+      "El límite de antigüedad ampliado de 6 años para coches (desde enero de 2026) amplía la ventana de stock elegible frente a la regla anterior de 3 años.",
+      "El arancel (20–30%) + MVT (por tramos de motor) + 12,5% de IVA forman el apilamiento de coste en destino; confirme las cifras vigentes.",
+      "La elegibilidad de VE/híbridos se endureció en 2026; verifíquela antes de adquirir stock de VE."
+    ],
+    "faq": [
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "6 años para coches privados y 10 años para vehículos comerciales ligeros (desde el 1 de enero de 2026)."
+      },
+      {
+        "q": "¿Trinidad y Tobago es de volante a la derecha?",
+        "a": "Sí: Trinidad y Tobago es un mercado con volante a la derecha (RHD)."
+      },
+      {
+        "q": "¿Qué impuestos se aplican?",
+        "a": "20–30% de arancel de importación + Impuesto sobre Vehículos de Motor (por tramos de motor) + 12,5% de IVA."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Puerto España."
+      }
+    ],
+    "evNote": "Trinidad y Tobago endureció la elegibilidad de VE/híbridos bajo las enmiendas de 2026, sin un alivio arancelario claro para VE. La carga es Type 2 / CCS2 (alineada con Europa); confirme el requisito de adaptador GB/T a Type 2."
+  },
+  "brunei": {
+    "overview": "Brunéi Darussalam es un mercado del Sudeste Asiático con volante a la derecha y un tope estricto de antigüedad para vehículos usados: 3 años desde la matriculación (4 desde la fabricación) para uso privado y 60 meses / 6 años para uso comercial. Aplica aranceles de importación e impuestos especiales pero sin IVA, y los vehículos se despachan en Muara con un permiso de aprobación requerido antes de la salida.",
+    "considerations": [
+      "El tope de antigüedad de 3 años para uso privado es el filtro decisivo: adquiera unidades de producción tardía y confírmelo con RCED.",
+      "Sin IVA, pero se aplican aranceles de importación e impuestos especiales; confirme las tarifas vigentes.",
+      "El RHD es obligatorio; los vehículos LHD solo se permiten para uso turístico temporal y deben reexportarse."
+    ],
+    "faq": [
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "3 años desde la matriculación (4 desde la fabricación) para uso privado; 60 meses / 6 años para uso comercial."
+      },
+      {
+        "q": "¿Brunéi es de volante a la derecha?",
+        "a": "Sí: Brunéi es un mercado con volante a la derecha (RHD)."
+      },
+      {
+        "q": "¿Existe IVA?",
+        "a": "No: Brunéi aplica aranceles de importación e impuestos especiales pero sin IVA."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Muara."
+      }
+    ],
+    "evNote": "No se confirma un alivio específico del arancel de importación para VE en Brunéi; los VE siguen la estructura de arancel de importación + impuesto especial (sin IVA). La carga está alineada con Europa (Type 2 / CCS2); confirme el requisito de adaptador GB/T a CCS2."
+  },
+  "fiji": {
+    "overview": "Fiyi es un mercado insular del Pacífico con volante a la derecha que limita las importaciones de vehículos usados a unos 8 años (ajustado en presupuestos recientes) y aplica un arancel de importación (fiscal) más IVA a través del Servicio de Aduanas e Ingresos de Fiyi. Los vehículos se despachan principalmente en Suva (Lautoka es secundario), y la demanda se concentra en SUV compactos y berlinas económicas con un interés creciente por los VE.",
+    "considerations": [
+      "El límite de antigüedad de ~8 años (ha cambiado recientemente) es el filtro clave: adquiera unidades cómodamente dentro de la ventana y confirme el corte vigente de FRCS.",
+      "El RHD es obligatorio: las unidades LHD del mercado chino requieren una unidad de exportación RHD.",
+      "Los VE pueden atraer concesiones arancelarias; confirme la tarifa vigente con FRCS antes de operar."
+    ],
+    "faq": [
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "Alrededor de 8 años para turismos de gasolina/diésel; verifique el corte vigente con el Servicio de Aduanas e Ingresos de Fiyi (FRCS)."
+      },
+      {
+        "q": "¿Fiyi es de volante a la derecha?",
+        "a": "Sí: Fiyi es un mercado con volante a la derecha (RHD)."
+      },
+      {
+        "q": "¿Qué impuestos se aplican?",
+        "a": "Arancel de importación (fiscal) más IVA (y una tasa ambiental en algunas categorías). Verifique las tarifas vigentes con FRCS."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Suva (Lautoka es secundario)."
+      }
+    ],
+    "evNote": "Fiyi ha ofrecido concesiones del arancel de importación para VE e híbridos, y la carga está alineada con Europa (Type 2 / CCS2). Se requiere un adaptador GB/T a CCS2 para las unidades del mercado chino; confirme el estándar de destino y el arancel vigente de VE con FRCS."
+  },
+  "papua-new-guinea": {
+    "overview": "Papúa Nueva Guinea es un mercado del Pacífico con volante a la derecha y sin un tope universal único de antigüedad para las importaciones de vehículos usados: los vehículos deben cumplir la aptitud vial y (para algunas categorías) la inspección previa al embarque, con despacho en Lae y Port Moresby bajo la aduana de PNG. Se aplica un arancel de importación más 10% de GST, y la demanda favorece SUV duraderos y vehículos comerciales ligeros.",
+    "considerations": [
+      "Sin tope fijo de antigüedad, pero se aplican la aptitud vial y la inspección SGS; confirme los límites de estado con la aduana de PNG.",
+      "El RHD es obligatorio: las unidades LHD del mercado chino requieren una unidad de exportación RHD.",
+      "No se confirma un alivio arancelario específico para VE; los VE siguen el apilamiento de arancel estándar + 10% de GST."
+    ],
+    "faq": [
+      {
+        "q": "¿Existe un límite de antigüedad?",
+        "a": "Sin tope universal único de antigüedad: se aplican requisitos de aptitud vial e inspección. Verifíquelo con la aduana de PNG."
+      },
+      {
+        "q": "¿Papúa Nueva Guinea es de volante a la derecha?",
+        "a": "Sí: PNG es un mercado con volante a la derecha (RHD)."
+      },
+      {
+        "q": "¿Qué impuestos se aplican?",
+        "a": "Arancel de importación más 10% de GST. Verifique el arancel vigente con la aduana de PNG."
+      },
+      {
+        "q": "¿Qué puertos gestionan las importaciones?",
+        "a": "Lae (principal) y Port Moresby."
+      }
+    ],
+    "evNote": "No se confirma un alivio específico del arancel de importación para VE en PNG; los VE siguen el apilamiento de arancel estándar + 10% de GST. La carga está alineada con Europa (Type 2 / CCS2); confirme el requisito de adaptador GB/T a CCS2."
+  },
+  "guyana": {
+    "overview": "Guyana es un mercado sudamericano/caribeño (CARICOM) con volante a la derecha que restringe las importaciones de vehículos usados a 8 años bajo las normas de la Autoridad de Ingresos de Guyana. El arancel se distribuye por tramos de cilindrada más 14% de IVA, y los vehículos se despachan en Georgetown. La economía impulsada por el petróleo ha elevado la demanda de SUV y pick-ups, con un interés emergente por los VE.",
+    "considerations": [
+      "El límite de antigüedad de 8 años es el filtro clave: adquiera unidades dentro de la ventana y confirme la fecha de corte exacta de GRA.",
+      "El RHD es obligatorio: las unidades LHD del mercado chino requieren una unidad de exportación RHD.",
+      "Los VE han recibido un arancel de importación reducido o nulo en presupuestos recientes; confirme la tarifa vigente con GRA."
+    ],
+    "faq": [
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "8 años; verifique el corte exacto con la Autoridad de Ingresos de Guyana (GRA)."
+      },
+      {
+        "q": "¿Guyana es de volante a la derecha?",
+        "a": "Sí: Guyana es un mercado con volante a la derecha (RHD)."
+      },
+      {
+        "q": "¿Qué impuestos se aplican?",
+        "a": "Arancel de importación (por tramos de cilindrada) más 14% de IVA. Verifique las tarifas vigentes con GRA."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Georgetown."
+      }
+    ],
+    "evNote": "Guyana ha ofrecido un arancel de importación reducido o nulo para VE en presupuestos recientes. La carga está alineada con Europa (Type 2 / CCS2); confirme el requisito de adaptador GB/T a CCS2 y el arancel vigente de VE con GRA."
+  },
+  "timor-leste": {
+    "overview": "Timor-Leste es un mercado del Sudeste Asiático con volante a la derecha que opera sus transacciones en dólares estadounidenses y despacha vehículos a través de Dili bajo la Autoridad Aduanera de Timor-Leste. Un límite único vigente de antigüedad para vehículos usados no está claramente documentado, y se aplican un arancel de importación más un impuesto sobre ventas/servicios. El mercado es pequeño y se encuentra en una fase inicial para los vehículos de nueva energía.",
+    "considerations": [
+      "Ningún límite de antigüedad único está claramente documentado: confirme cualquier regla de antigüedad/estado con la Autoridad Aduanera antes de adquirir stock.",
+      "El RHD es obligatorio: las unidades LHD del mercado chino requieren una unidad de exportación RHD.",
+      "No se confirma un alivio arancelario específico para VE; los VE siguen el apilamiento de arancel estándar + impuesto sobre ventas/servicios."
+    ],
+    "faq": [
+      {
+        "q": "¿Existe un límite de antigüedad?",
+        "a": "Un límite vigente único de antigüedad no está claramente documentado; verifíquelo con la Autoridad Aduanera de Timor-Leste."
+      },
+      {
+        "q": "¿Timor-Leste es de volante a la derecha?",
+        "a": "Sí: Timor-Leste es un mercado con volante a la derecha (RHD)."
+      },
+      {
+        "q": "¿Qué impuestos se aplican?",
+        "a": "Arancel de importación más un impuesto sobre ventas/servicios. Verifique las tarifas vigentes con la Autoridad Aduanera."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Dili."
+      }
+    ],
+    "evNote": "No se confirma un alivio específico del arancel de importación para VE en Timor-Leste; los VE siguen el apilamiento de arancel estándar + impuesto sobre ventas/servicios. La carga está alineada con Europa (Type 2 / CCS2); confirme el requisito de adaptador GB/T a CCS2."
+  },
+  "myanmar": {
+    "overview": "Myanmar es un gran mercado del Sudeste Asiático que conduce por la derecha (tráfico con volante a la izquierda) pero conserva una flota sustancial de coches usados con volante a la derecha importados de Japón. Las importaciones de vehículos se regulan mediante una notificación anual del Ministerio de Comercio sobre los años de modelo permitidos (la política de 2025, emitida en diciembre de 2024, reafirmó las normas existentes), y los vehículos se despachan principalmente en Yangón (Thilawa) bajo la aduana de Myanmar con un permiso de importación más arancel e impuesto comercial.",
+    "considerations": [
+      "Los años de modelo permitidos los fija la notificación anual del MOC; confirme los años permitidos vigentes antes de adquirir stock.",
+      "El lado del volante es matizado: el tráfico oficial es LHD (conduce por la derecha), pero las importaciones RHD están generalizadas; verifique el requisito vigente de lado del volante con MOC.",
+      "Se aplican permisos de importación y arancel/impuesto comercial; confirme el conjunto de documentos y las tarifas con la aduana de Myanmar."
+    ],
+    "faq": [
+      {
+        "q": "¿Cuáles son las restricciones de importación?",
+        "a": "Límites de año de modelo fijados por la notificación anual del Ministerio de Comercio (la política de 2025 reafirmó las normas existentes). Verifíquelo con MOC."
+      },
+      {
+        "q": "¿Myanmar es de volante a la derecha o a la izquierda?",
+        "a": "Myanmar conduce por la derecha (tráfico con volante a la izquierda), pero existe una gran flota de coches usados RHD; confirme la regla vigente con MOC."
+      },
+      {
+        "q": "¿Qué impuestos se aplican?",
+        "a": "Arancel de importación más impuesto comercial (CTT). Verifique las tarifas vigentes con la aduana de Myanmar."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Yangón (Thilawa)."
+      }
+    ],
+    "evNote": "Myanmar ha reducido los aranceles de importación de los vehículos eléctricos para fomentar la adopción, aunque las tarifas exactas vigentes no se confirmaron en las fuentes revisadas. El estándar de carga debe confirmarse frente a la red local; verifique el tratamiento de VE con el Ministerio de Comercio."
+  },
+  "rwanda": {
+    "overview": "Ruanda es un mercado de África Oriental con volante a la izquierda y sin límite fijo de antigüedad de vehículos: la elegibilidad la determina el cumplimiento de emisiones Euro 4 (norma EAC EAS 1047:2022). Las importaciones se despachan a través de la Ventanilla Electrónica Única de Ruanda (ReSW) con una inspección física de la Junta de Normas de Ruanda, y el país sin litoral transita los vehículos vía Mombasa (Kenia) o Dar es Salaam (Tanzania). Los vehículos totalmente eléctricos disfrutan de una exención fiscal total hasta el 30 de junio de 2028.",
+    "considerations": [
+      "El cumplimiento de emisiones Euro 4/IV (EAS 1047:2022) es el filtro de elegibilidad en lugar de un límite fijo de antigüedad; confirme el certificado de conformidad con RRA.",
+      "Los VE están totalmente exentos de arancel, IVA, impuesto especial e impuesto de retención hasta el 30 de junio de 2028; los híbridos perdieron su exención total desde julio de 2025.",
+      "Sin litoral: los vehículos transitan vía Mombasa o Dar es Salaam y luego viajan por carretera; tenga en cuenta el tiempo y el coste del tránsito."
+    ],
+    "faq": [
+      {
+        "q": "¿Ruanda es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Existe un límite de antigüedad?",
+        "a": "Sin límite fijo de antigüedad: el cumplimiento de emisiones Euro 4 (EAS 1047:2022) es el filtro."
+      },
+      {
+        "q": "¿Qué incentivo para VE se aplica?",
+        "a": "Los vehículos totalmente eléctricos están exentos de arancel, IVA, impuesto especial e impuesto de retención hasta el 30 de junio de 2028."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Kigali, vía tránsito por Mombasa (Kenia) o Dar es Salaam (Tanzania)."
+      }
+    ],
+    "evNote": "Ruanda exime totalmente a los vehículos eléctricos del arancel de importación, el IVA, el impuesto especial y el impuesto de retención hasta el 30 de junio de 2028, un fuerte incentivo frente al arancel estándar del 25%. Los híbridos ahora pagan un impuesto especial escalonado y 18% de IVA. Confirme el estado vigente con RRA."
+  },
+  "malawi": {
+    "overview": "Malawi es un mercado del sur de África con volante a la derecha y sin litoral: los vehículos se envían a Dar es Salaam (Tanzania) por RoRo y viajan posteriormente por carretera. Sus normas de importación de VE de 2025 eximen a los vehículos totalmente eléctricos del arancel de importación, reducen el IVA de VE al 8%, eximen del impuesto especial a los VE por debajo de 100 kW y no aplican límite de antigüedad a los VE, lo que lo convierte en un destino cada vez más atractivo para los vehículos de nueva energía chinos.",
+    "considerations": [
+      "El RHD es obligatorio: busque unidades de exportación RHD.",
+      "Las normas de VE de 2025 de Malawi dan a los VE plenos 0% de arancel de importación + 8% de IVA + sin impuesto especial (<100 kW) sin límite de antigüedad; los vehículos de combustión se informan limitados a unos 10 años.",
+      "Sin litoral: los vehículos transitan vía Dar es Salaam; tenga en cuenta el tiempo y el coste del tránsito."
+    ],
+    "faq": [
+      {
+        "q": "¿Malawi es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la derecha (RHD)."
+      },
+      {
+        "q": "¿Qué incentivo para VE se aplica?",
+        "a": "Normas de 2025: 0% de arancel de importación, 8% de IVA y sin impuesto especial (<100 kW) para vehículos totalmente eléctricos, sin límite de antigüedad."
+      },
+      {
+        "q": "¿Qué impuestos se aplican a los vehículos de combustión?",
+        "a": "Alrededor de 25% de arancel de importación, 0–110% de impuesto especial y 16,5% de IVA; verifíquelo con MRA."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Lilongüe, vía tránsito por Dar es Salaam (Tanzania)."
+      }
+    ],
+    "evNote": "Las normas de importación de VE de 2025 de Malawi (0% de arancel + 8% de IVA + sin impuesto especial por debajo de 100 kW + sin límite de antigüedad) hacen de los VE chinos recientes un fuerte encaje, frente a un apilamiento de 25% de arancel + 16,5% de IVA + 0–110% de impuesto especial para los vehículos de combustión. Confirme las cifras vigentes con MRA."
+  },
+  "albania": {
+    "overview": "Albania es un mercado europeo con volante a la izquierda que restringe las importaciones de vehículos usados a unos 10 años de antigüedad más emisiones Euro 4/5. El despacho aduanero se realiza a través de la Dirección General de Aduanas (DPD) en el sistema ASYCUDA World, con Durrës como principal puerto RoRo. Los vehículos afrontan un arancel NMF del 10% más 20% de IVA, y la exención de IVA para VE se limita solo a vehículos nuevos.",
+    "considerations": [
+      "Un límite de antigüedad de unos 10 años más emisiones Euro 4/5; confirme el corte vigente con DPD antes de adquirir stock.",
+      "La exención de IVA para VE (artículo 51(p)) se aplica solo a vehículos nuevos: los VE usados pagan el 20% de IVA completo.",
+      "Las importaciones comerciales requieren un NIPT albanés (identificación fiscal empresarial); se aplica la declaración ASYCUDA World."
+    ],
+    "faq": [
+      {
+        "q": "¿Albania es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Cuál es el límite de antigüedad?",
+        "a": "Unos 10 años más emisiones Euro 4/5; verifíquelo con DPD."
+      },
+      {
+        "q": "¿Qué arancel e IVA se aplican?",
+        "a": "Arancel de importación NMF del 10% más 20% de IVA."
+      },
+      {
+        "q": "¿Los VE tienen una exención de IVA?",
+        "a": "Solo los VE nuevos: los VE usados pagan el 20% de IVA completo (artículo 51(p) de la Ley del IVA)."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Durrës."
+      }
+    ],
+    "evNote": "Albania exime del IVA a los vehículos eléctricos nuevos bajo el artículo 51(p), pero la exención no se extiende a los VE usados: las importaciones de VE usados pagan el 20% de IVA completo más el 10% de arancel NMF. Esta es una advertencia de coste clave para el comercio de VE usados."
+  },
+  "moldova": {
+    "overview": "Moldavia es un mercado europeo con volante a la izquierda que no tiene límite de antigüedad de vehículos desde el 1 de enero de 2021. El impuesto especial está vinculado a la cilindrada y la antigüedad, de modo que los vehículos eléctricos (sin cilindrada) están exentos del impuesto especial; se prevé aplicar un IVA del 20% a partir de 2027 bajo el proyecto de política fiscal. Los vehículos se despachan a través del puerto danubiano de Giurgiulesti.",
+    "considerations": [
+      "Sin límite de antigüedad desde 2021: la flexibilidad del año de modelo es una ventaja clave.",
+      "Los VE están exentos del impuesto especial (sin cilindrada); desde 2027 los VE pagan 20% de IVA más la tasa de trámites aduaneros del 0,4%.",
+      "Las declaraciones deben presentarse dentro de las 72 horas posteriores a la importación; el despacho es vía Giurgiulesti."
+    ],
+    "faq": [
+      {
+        "q": "¿Moldavia es de volante a la derecha o a la izquierda?",
+        "a": "Volante a la izquierda (LHD)."
+      },
+      {
+        "q": "¿Existe un límite de antigüedad?",
+        "a": "Sin límite de antigüedad desde el 1 de enero de 2021."
+      },
+      {
+        "q": "¿Qué incentivo para VE se aplica?",
+        "a": "Los VE están exentos del impuesto especial (sin cilindrada); se aplica un IVA del 20% a partir de 2027."
+      },
+      {
+        "q": "¿Qué puerto gestiona las importaciones?",
+        "a": "Giurgiulesti (Danubio)."
+      }
+    ],
+    "evNote": "El impuesto especial moldavo se basa en la cilindrada, de modo que los vehículos eléctricos están exentos del impuesto especial. Desde el 1 de enero de 2027 (proyecto de política fiscal) los VE pagan 20% de IVA más la tasa de trámites del 0,4%. Confirme el tratamiento vigente del IVA con el Servicio de Aduanas."
+  }
+}

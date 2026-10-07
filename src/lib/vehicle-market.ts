@@ -5,6 +5,7 @@
 // already states. This is the "independent-information-increment" gate (model doc §3).
 import relationsData from "../../shared/data/vehicle-market.json";
 import { taxrules, getTaxRules, getCountry, rateLabel } from "./market";
+import { getTranslations, t } from "../i18n";
 
 export interface RelationField {
   status?: string;
@@ -196,125 +197,89 @@ function fieldMeta(f: RelationField | null): Omit<SourcedPoint, "text"> {
 }
 
 /** Buyer decision points: when this vehicle × market is suitable / not suitable. */
-export function decisionPoints(rel: Relation): {
+export function decisionPoints(
+  rel: Relation,
+  locale = "en",
+): {
   suitable: SourcedPoint[];
   notSuitable: SourcedPoint[];
 } {
+  const dict = getTranslations(locale);
+  const d = (key: string) => t(dict, `vehicle.decision.${key}`);
   const suitable: SourcedPoint[] = [];
   const notSuitable: SourcedPoint[] = [];
 
   const ds = rel.drive_side_fit;
   if (ds?.status === "match") {
-    suitable.push({
-      text: "Left-hand-drive match — a China-market unit can be registered without conversion.",
-      ...fieldMeta(ds),
-    });
+    suitable.push({ text: d("driveMatch"), ...fieldMeta(ds) });
   } else if (ds?.status === "needs_conversion") {
-    suitable.push({
-      text: "Right-hand-drive version is available — source the RHD unit rather than converting a China LHD unit.",
-      ...fieldMeta(ds),
-    });
+    suitable.push({ text: d("driveConversion"), ...fieldMeta(ds) });
   } else if (ds?.status === "mismatch") {
-    notSuitable.push({
-      text: "Drive-side mismatch — a China-market LHD unit cannot be registered as-is in this RHD market.",
-      ...fieldMeta(ds),
-    });
+    notSuitable.push({ text: d("driveMismatch"), ...fieldMeta(ds) });
   }
 
   const ag = rel.age_rule_fit;
   if (ag?.status === "eligible") {
-    suitable.push({
-      text: "Age-rule fit — current-generation units satisfy the destination age limit.",
-      ...fieldMeta(ag),
-    });
+    suitable.push({ text: d("ageEligible"), ...fieldMeta(ag) });
   } else if (ag?.status === "borderline") {
-    notSuitable.push({
-      text: "Age-rule borderline — early production units sit near or over the age cut-off; verify the exact date.",
-      ...fieldMeta(ag),
-    });
+    notSuitable.push({ text: d("ageBorderline"), ...fieldMeta(ag) });
   } else if (ag?.status === "ineligible") {
-    notSuitable.push({
-      text: "Age-rule ineligible — the model's production window predates the destination age cut-off.",
-      ...fieldMeta(ag),
-    });
+    notSuitable.push({ text: d("ageIneligible"), ...fieldMeta(ag) });
   }
 
   if (rel.duty_anchors?.ev_duty_relief) {
-    suitable.push({
-      text: "EV duty relief — the electric trim qualifies for a reduced or zero import-duty rate.",
-      ...fieldMeta(rel.duty_anchors),
-    });
+    suitable.push({ text: d("evDutyRelief"), ...fieldMeta(rel.duty_anchors) });
   }
 
   if (rel.ev_charging_compat?.needs_adapter) {
-    notSuitable.push({
-      text: "Charging connector mismatch — a GB/T-to-destination adapter is required and should be confirmed.",
-      ...fieldMeta(rel.ev_charging_compat),
-    });
+    notSuitable.push({ text: d("chargingMismatch"), ...fieldMeta(rel.ev_charging_compat) });
   }
 
   return { suitable, notSuitable };
 }
 
 /** Key risks — emitted only when the underlying field is flagged needs-review / low-confidence. */
-export function keyRisks(rel: Relation): SourcedPoint[] {
+export function keyRisks(rel: Relation, locale = "en"): SourcedPoint[] {
+  const dict = getTranslations(locale);
+  const d = (key: string) => t(dict, `vehicle.risks.${key}`);
   const risks: SourcedPoint[] = [];
 
   if (rel.duty_anchors?.needs_review) {
-    risks.push({
-      text: "Duty / VAT rates change frequently — verify current figures with official customs before trading.",
-      ...fieldMeta(rel.duty_anchors),
-    });
+    risks.push({ text: d("duty"), ...fieldMeta(rel.duty_anchors) });
   }
   if (rel.age_rule_fit?.needs_review) {
-    risks.push({
-      text: "Age-limit rules may be adjusted — confirm the current cut-off before sourcing stock.",
-      ...fieldMeta(rel.age_rule_fit),
-    });
+    risks.push({ text: d("age"), ...fieldMeta(rel.age_rule_fit) });
   }
   if (rel.import_eligibility?.needs_review) {
-    risks.push({
-      text: "Conformity / certification requirements may change — confirm before shipment.",
-      ...fieldMeta(rel.import_eligibility),
-    });
+    risks.push({ text: d("conformity"), ...fieldMeta(rel.import_eligibility) });
   }
   if (rel.ev_charging_compat?.needs_review) {
-    risks.push({
-      text: "Charging-connector compatibility must be confirmed against the destination network.",
-      ...fieldMeta(rel.ev_charging_compat),
-    });
+    risks.push({ text: d("charging"), ...fieldMeta(rel.ev_charging_compat) });
   }
 
   return risks;
 }
 
 /** Practical pre-import checklist — only destination-evidenced steps. */
-export function checklist(rel: Relation): SourcedPoint[] {
+export function checklist(rel: Relation, locale = "en"): SourcedPoint[] {
+  const dict = getTranslations(locale);
+  const d = (key: string) => t(dict, `vehicle.checklist.${key}`);
   const items: SourcedPoint[] = [];
 
   if (rel.age_rule_fit) {
-    items.push({
-      text: "Confirm the unit's production / registration date is within the destination age limit.",
-      ...fieldMeta(rel.age_rule_fit),
-    });
+    items.push({ text: d("age"), ...fieldMeta(rel.age_rule_fit) });
   }
   if (rel.drive_side_fit && ["mismatch", "needs_conversion"].includes(rel.drive_side_fit.status ?? "")) {
-    items.push({
-      text: "Confirm right-hand-drive availability with the exporter before purchase.",
-      ...fieldMeta(rel.drive_side_fit),
-    });
+    items.push({ text: d("rhd"), ...fieldMeta(rel.drive_side_fit) });
   }
   if (rel.import_eligibility?.requirements?.length) {
     items.push({
-      text: `Obtain the required conformity / certification: ${rel.import_eligibility.requirements.join(", ")}.`,
+      text: t(dict, "vehicle.checklist.conformity", { requirements: rel.import_eligibility.requirements.join(", ") }),
       ...fieldMeta(rel.import_eligibility),
     });
   }
   if (rel.ev_charging_compat?.needs_adapter) {
-    items.push({
-      text: "Confirm charging-adapter availability for the destination connector standard.",
-      ...fieldMeta(rel.ev_charging_compat),
-    });
+    items.push({ text: d("adapter"), ...fieldMeta(rel.ev_charging_compat) });
   }
 
   return items;

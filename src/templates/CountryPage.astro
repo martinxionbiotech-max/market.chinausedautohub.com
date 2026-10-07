@@ -1,0 +1,604 @@
+---
+import BaseLayout from "../../shared/components/BaseLayout.astro";
+import SourceNote from "../../shared/components/SourceNote.astro";
+import {
+  MARKET_SITE_URL,
+  DATA_SITE_URL,
+  TOOLS_SITE_URL,
+  MAIN_SITE_URL,
+} from "../../shared/config/config";
+import {
+  countries,
+  getRules,
+  rulesByCategory,
+  getTaxRules,
+  getDestPorts,
+  getRoutesForCountry,
+  portName,
+  getModel,
+  brands,
+  models,
+  confidenceLabel,
+  confidenceClass,
+  jurisdictionFor,
+  applicabilityForCategory,
+  applicabilityForTaxType,
+  rateLabel,
+} from "../lib/market";
+import { regionMeta } from "../lib/content";
+import { getCountryContent } from "../lib/localized-content";
+import { getRelationsForCountry } from "../lib/vehicle-market";
+import { getTranslations, DEFAULT_LOCALE, t, plural, type Locale } from "../i18n";
+import { localizedUrl } from "../lib/i18n";
+
+interface Props {
+  countryId: string;
+}
+
+const { countryId } = Astro.props;
+const locale = (Astro.currentLocale ?? DEFAULT_LOCALE) as Locale;
+const dict = getTranslations(locale);
+
+const country = countries.find((c) => c.country_id === countryId);
+const content = getCountryContent(countryId, locale);
+
+const rules = getRules(countryId);
+const ageRules = rulesByCategory(countryId, "vehicle_age");
+const driveRules = rulesByCategory(countryId, "drive_side");
+const evRules = rulesByCategory(countryId, "ev_policy");
+const tax = getTaxRules(countryId);
+const dutyRules = tax.filter((x) => x.tax_type === "import_duty");
+const otherTax = tax.filter((x) => x.tax_type !== "import_duty");
+const evTax = tax.filter((x) => x.label.toLowerCase().includes("electric"));
+const evModels = models
+  .filter((m) => m.generations.some((g) => g.trims.some((x) => ["ev", "phev"].includes(x.powertrain))))
+  .slice(0, 5);
+const destPorts = getDestPorts(countryId);
+const shippingRoutes = getRoutesForCountry(countryId);
+const jurisdiction = jurisdictionFor(countryId);
+
+const sourceMap = new Map<string, { urls: string[]; count: number }>();
+for (const item of [...rules, ...tax]) {
+  const key = item.source || "Unknown source";
+  const entry = sourceMap.get(key) ?? { urls: [] as string[], count: 0 };
+  entry.count += 1;
+  if (item.source_url && !entry.urls.includes(item.source_url)) entry.urls.push(item.source_url);
+  sourceMap.set(key, entry);
+}
+const officialSources = [...sourceMap.entries()].map(([source, e]) => ({ source, urls: e.urls, count: e.count }));
+
+const driveSide = country.drive_side === "lhd" ? t(dict, "common.lhd") : t(dict, "common.rhd");
+const regionLabel = t(dict, `regions.${country.region}`);
+const methodLabel = (m: string, source: string) =>
+  (m === "roro" ? t(dict, "common.roro") : t(dict, "common.container")) +
+  (source.includes("rail") ? ` (${t(dict, "common.railTransit")})` : "");
+
+const popularModels = (content.popularModelIds || []).map((id) => getModel(id)).filter(Boolean);
+const cnBrands = brands.filter((b) => b.origin_country === "CN");
+const docsRules = rulesByCategory(countryId, "import_eligibility");
+const segmentTypes = [...new Set(popularModels.map((m) => m.body_type))];
+const vehiclePairs = getRelationsForCountry(countryId);
+
+const confCounts = { Confirmed: 0, "Source-backed": 0, "Needs verification": 0, Estimated: 0, Unknown: 0 } as Record<string, number>;
+for (const item of [...rules, ...tax]) confCounts[confidenceLabel(item)] += 1;
+const totalDeclarations = [...rules, ...tax].length;
+const lastChecked = rules.length > 0 ? rules[0].last_checked : t(dict, "common.notAvailable");
+
+// Localized helpers (data layer stays English; render layer translates).
+const cl = (item: any) => t(dict, `confidence.labels.${confidenceLabel(item)}`);
+const appCat = (cat: string) => t(dict, `applicability.${applicabilityForCategory(cat)}`);
+const appTax = (tx: string) => t(dict, `applicability.${applicabilityForTaxType(tx)}`);
+const rl = (x: any) => (rateLabel(x) === "Not available" ? t(dict, "common.notAvailable") : rateLabel(x));
+const sect = (k: string) => t(dict, `country.sections.${k}`);
+const hint = (k: string, v?: Record<string, string | number>) => t(dict, `country.reviewHints.${k}`, v);
+const misc = (k: string, v?: Record<string, string | number>) => t(dict, `country.misc.${k}`, v);
+const verifyCaveat = t(dict, "country.misc.verifyCaveat");
+
+const pageUrl = MARKET_SITE_URL + localizedUrl(`/countries/${country.country_id}/`, locale);
+const title = t(dict, "country.title", { country: country.name });
+const description = t(dict, "country.description", { country: country.name });
+
+const articleLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: t(dict, "country.title", { country: country.name }),
+  description,
+  url: pageUrl,
+  dateModified: "2026-10-04",
+  inLanguage: locale,
+};
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: t(dict, "breadcrumb.markets"), item: MARKET_SITE_URL + "/" },
+    { "@type": "ListItem", position: 2, name: country.name, item: pageUrl },
+  ],
+};
+
+const ruleMeta = (r: any) => ({
+  label: confidenceLabel(r),
+  jurisdiction,
+  applicability: appCat(r.category),
+  caveat: r.needs_review ? verifyCaveat : r.notes ?? undefined,
+});
+const taxMeta = (x: any) => ({
+  label: confidenceLabel(x),
+  jurisdiction,
+  applicability: appTax(x.tax_type),
+  caveat: x.needs_review ? verifyCaveat : x.notes ?? undefined,
+});
+---
+
+<BaseLayout
+  siteTitle={t(dict, "site.name")}
+  siteUrl={MARKET_SITE_URL}
+  currentSection="market"
+  title={title}
+  description={description}
+  canonical={`/countries/${country.country_id}/`}
+  jsonLd={[articleLd, breadcrumbLd]}
+  localized
+  breadcrumbs={[
+    { name: t(dict, "breadcrumb.markets"), url: localizedUrl("/", locale) },
+    { name: country.name, url: localizedUrl(`/countries/${country.country_id}/`, locale) },
+  ]}
+>
+  <h1>{country.name} <span class="zh">{country.name_zh}</span></h1>
+  <p class="meta-line">
+    {t(dict, "country.metaLine", { region: regionLabel, driveSide, currency: country.currency, jurisdiction })}
+  </p>
+
+  <p class="disclaimer">{t(dict, "country.disclaimer")}</p>
+
+  <!-- Confidence legend (PHASE 6 five-level labels) -->
+  <section>
+    <h2>{t(dict, "confidence.heading")}</h2>
+    <p class="review-hint">{t(dict, "confidence.intro")}</p>
+    <ul class="legend">
+      <li><span class="badge badge-high">{t(dict, "confidence.labels.Source-backed")}</span> — {t(dict, "confidence.legend.Source-backed")}</li>
+      <li><span class="badge badge-medium">{t(dict, "confidence.labels.Needs verification")}</span> — {t(dict, "confidence.legend.Needs verification")}</li>
+      <li><span class="badge badge-low">{t(dict, "confidence.labels.Estimated")}</span> — {t(dict, "confidence.legend.Estimated")}</li>
+      <li><span class="badge badge-unknown">{t(dict, "confidence.labels.Unknown")}</span> — {t(dict, "confidence.legend.Unknown")}</li>
+      <li><span class="badge badge-muted">{t(dict, "confidence.labels.Confirmed")}</span> — {t(dict, "confidence.legend.Confirmed")}</li>
+    </ul>
+  </section>
+
+  <!-- 1. Market Overview -->
+  <section>
+    <h2>{sect("marketOverview")}</h2>
+    <p>{content.overview}</p>
+  </section>
+
+  <!-- 2. Import Eligibility -->
+  <section>
+    <h2>{sect("importEligibility")}</h2>
+    <p class="review-hint">{hint("eligibility")}</p>
+    <div class="rule-list">
+      {rules.map((r) => {
+        const m = ruleMeta(r);
+        return (
+          <article class="rule">
+            <div class="rule-head">
+              <h3>{r.title}</h3>
+              {r.needs_review && <span class="badge-review">{t(dict, "common.needsReview")}</span>}
+            </div>
+            <p>{r.rule_text}</p>
+            <SourceNote
+              source={r.source}
+              sourceUrl={r.source_url}
+              sourceDate={r.last_checked}
+              confidenceLabel={m.label}
+              effectiveDate={r.effective_date}
+              jurisdiction={m.jurisdiction}
+              applicability={m.applicability}
+              caveat={m.caveat}
+            />
+          </article>
+        );
+      })}
+    </div>
+  </section>
+
+  <!-- 3. Vehicle Age Rules -->
+  <section>
+    <h2>{sect("vehicleAgeRules")}</h2>
+    {ageRules.length > 0 ? (
+      ageRules.map((r) => {
+        const m = ruleMeta(r);
+        return (
+          <div class="rule">
+            <div class="rule-head">
+              <h3>{r.title}</h3>
+              {r.needs_review && <span class="badge-review">{t(dict, "common.needsReview")}</span>}
+            </div>
+            <p>{r.rule_text}</p>
+            <SourceNote source={r.source} sourceUrl={r.source_url} sourceDate={r.last_checked} confidenceLabel={m.label} effectiveDate={r.effective_date} jurisdiction={m.jurisdiction} applicability={m.applicability} caveat={m.caveat} />
+          </div>
+        );
+      })
+    ) : (
+      <p>{misc("noAgeRule")}</p>
+    )}
+  </section>
+
+  <!-- 4. Drive Side -->
+  <section>
+    <h2>{sect("driveSide")}</h2>
+    <p class="drive-callout">{driveSide}</p>
+    {driveRules.map((r) => {
+      const m = ruleMeta(r);
+      return (
+        <div class="rule">
+          <div class="rule-head">
+            <h3>{r.title}</h3>
+            {r.needs_review && <span class="badge-review">{t(dict, "common.needsReview")}</span>}
+          </div>
+          <p>{r.rule_text}</p>
+          <SourceNote source={r.source} sourceUrl={r.source_url} sourceDate={r.last_checked} confidenceLabel={m.label} effectiveDate={r.effective_date} jurisdiction={m.jurisdiction} applicability={m.applicability} caveat={m.caveat} />
+        </div>
+      );
+    })}
+  </section>
+
+  <!-- 5. Import Duties -->
+  <section>
+    <h2>{sect("importDuties")}</h2>
+    <p class="review-hint">{hint("duty")}</p>
+    {dutyRules.length > 0 ? (
+      dutyRules.map((x) => {
+        const m = taxMeta(x);
+        return (
+          <div class="rule">
+            <div class="rule-head">
+              <h3>{x.label} — {rl(x)}</h3>
+              {x.needs_review && <span class="badge-review">{t(dict, "common.review")}</span>}
+            </div>
+            <p>{misc("basis", { basis: x.basis })}</p>
+            <SourceNote source={x.source} sourceUrl={x.source_url} sourceDate={x.source_date ?? x.last_checked} confidenceLabel={m.label} effectiveDate={x.effective_date} jurisdiction={m.jurisdiction} applicability={m.applicability} caveat={m.caveat} />
+          </div>
+        );
+      })
+    ) : (
+      <p>{misc("noDuty")}</p>
+    )}
+  </section>
+
+  <!-- 6. VAT & Taxes -->
+  <section>
+    <h2>{sect("vatTaxes")}</h2>
+    {otherTax.length > 0 ? (
+      otherTax.map((x) => {
+        const m = taxMeta(x);
+        return (
+          <div class="rule">
+            <div class="rule-head">
+              <h3>{x.label} — {rl(x)}</h3>
+              {x.needs_review && <span class="badge-review">{t(dict, "common.review")}</span>}
+            </div>
+            <p>{misc("basis", { basis: x.basis })}</p>
+            <SourceNote source={x.source} sourceUrl={x.source_url} sourceDate={x.source_date ?? x.last_checked} confidenceLabel={m.label} effectiveDate={x.effective_date} jurisdiction={m.jurisdiction} applicability={m.applicability} caveat={m.caveat} />
+          </div>
+        );
+      })
+    ) : (
+      <p>{misc("noVat")}</p>
+    )}
+    <p class="checked">{misc("taxLastChecked", { date: "2026-10-04" })}</p>
+  </section>
+
+  <!-- Official Sources -->
+  <section>
+    <h2>{sect("officialSources")}</h2>
+    <p class="review-hint">{hint("sources", { country: country.name })}</p>
+    {officialSources.length > 0 ? (
+      <ul class="source-list">
+        {officialSources.map((s) => (
+          <li>
+            {s.urls.length > 0 ? <a href={s.urls[0]} rel="noopener">{s.source}</a> : <span>{s.source}</span>}
+            <span class="src-count"> — {plural(locale, "ruleSuffix", s.count, dict)}</span>
+          </li>
+        ))}
+      </ul>
+    ) : (
+      <p>{misc("noSources")}</p>
+    )}
+  </section>
+
+  <!-- 7. EV Rules -->
+  <section id="ev-rules">
+    <h2>{sect("evRules")}</h2>
+    {content.evNote && <p>{content.evNote}</p>}
+    {evRules.length > 0 ? (
+      evRules.map((r) => {
+        const m = ruleMeta(r);
+        return (
+          <div class="rule">
+            <div class="rule-head">
+              <h3>{r.title}</h3>
+              {r.needs_review && <span class="badge-review">{t(dict, "common.needsReview")}</span>}
+            </div>
+            <p>{r.rule_text}</p>
+            <SourceNote source={r.source} sourceUrl={r.source_url} sourceDate={r.last_checked} confidenceLabel={m.label} effectiveDate={r.effective_date} jurisdiction={m.jurisdiction} applicability={m.applicability} caveat={m.caveat} />
+          </div>
+        );
+      })
+    ) : (
+      <p>{misc("noEvRules")}</p>
+    )}
+
+    <h3>{misc("evDutyHeading")}</h3>
+    {evTax.length > 0 ? (
+      evTax.map((x) => {
+        const m = taxMeta(x);
+        return (
+          <div class="rule">
+            <div class="rule-head">
+              <h3>{x.label} — {rl(x)}</h3>
+              {x.needs_review && <span class="badge-review">{t(dict, "common.review")}</span>}
+            </div>
+            <p>{misc("basis", { basis: x.basis })}</p>
+            <SourceNote source={x.source} sourceUrl={x.source_url} sourceDate={x.source_date ?? x.last_checked} confidenceLabel={m.label} effectiveDate={x.effective_date} jurisdiction={m.jurisdiction} applicability={m.applicability} caveat={m.caveat} />
+          </div>
+        );
+      })
+    ) : (
+      <p>{misc("noEvDuty")}</p>
+    )}
+    <p class="review-hint" set:html={hint("evConfirm", { link: `<a href="${localizedUrl("/ev-import/", locale)}">${misc("evImportCenter")}</a>` })} />
+
+    <h3>{misc("popularEvHeading")}</h3>
+    {evModels.length > 0 ? (
+      <ul>
+        {evModels.map((m) => (
+          <li>
+            <a href={DATA_SITE_URL + "/models/" + m.model_id + "/"}>{m.name}</a>
+            <span class="zh">{m.name_zh}</span> — {m.body_type.toUpperCase()}
+          </li>
+        ))}
+      </ul>
+    ) : (
+      <p>{misc("noEvModels")}</p>
+    )}
+  </section>
+
+  <!-- 8. Registration / Required Documents -->
+  <section>
+    <h2>{sect("requiredDocuments")}</h2>
+    {docsRules.length > 0 ? (
+      docsRules.map((r) => {
+        const m = ruleMeta(r);
+        return (
+          <div class="rule">
+            <div class="rule-head">
+              <h3>{r.title}</h3>
+              {r.needs_review && <span class="badge-review">{t(dict, "common.needsReview")}</span>}
+            </div>
+            <p>{r.rule_text}</p>
+            <SourceNote source={r.source} sourceUrl={r.source_url} sourceDate={r.last_checked} confidenceLabel={m.label} effectiveDate={r.effective_date} jurisdiction={m.jurisdiction} applicability={m.applicability} caveat={m.caveat} />
+          </div>
+        );
+      })
+    ) : (
+      <p>{misc("noDocs")}</p>
+    )}
+  </section>
+
+  <!-- 9. Ports -->
+  <section>
+    <h2>{sect("ports")}</h2>
+    <ul>
+      {destPorts.map((p) => (
+        <li>
+          {p.name}
+          {p.note && <span class="port-note"> — {p.note}</span>}
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <!-- 10. Shipping From China -->
+  <section>
+    <h2>{sect("shippingFromChina")}</h2>
+    <p class="estimates">{misc("transitEstimate")}</p>
+    <table class="data-table">
+      <thead>
+        <tr><th>{misc("thOrigin")}</th><th>{misc("thDestination")}</th><th>{misc("thDays")}</th><th>{misc("thMethod")}</th></tr>
+      </thead>
+      <tbody>
+        {shippingRoutes.map((r) => (
+          <tr>
+            <td>{portName(r.origin_port_id)}</td>
+            <td>{portName(r.destination_port_id)}</td>
+            <td>{r.est_days_min}–{r.est_days_max}</td>
+            <td>{methodLabel(r.shipping_method, r.source)}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+    <p class="checked">{hint("estimate")}</p>
+  </section>
+
+  <!-- 10b. Vehicle × Market compatibility pages -->
+  {vehiclePairs.length > 0 && (
+    <section id="vehicle-compatibility">
+      <h2>{sect("vehicleCompatibility")}</h2>
+      <p class="review-hint">{hint("compat", { country: country.name })}</p>
+      <ul>
+        {vehiclePairs.map((p) => (
+          <li>
+            <a href={localizedUrl(`/countries/${country.country_id}/${p.vehicle_id}/`, locale)}>
+              {misc("inCountry", { model: getModel(p.vehicle_id)?.name ?? p.vehicle_id, country: country.name })}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
+
+  <!-- 11. Popular Vehicle Types -->
+  <section>
+    <h2>{sect("popularVehicleTypes")}</h2>
+    <ul>
+      {popularModels.map((m) => (
+        <li>
+          <a href={DATA_SITE_URL + "/models/" + m.model_id + "/"}>{m.name}</a>
+          <span class="zh">{m.name_zh}</span> — {m.body_type.toUpperCase()}
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <!-- 11b. Vehicle Segment Fit -->
+  <section>
+    <h2>{sect("vehicleSegmentFit")}</h2>
+    {segmentTypes.length > 0 ? (
+      <p>
+        {misc("segmentFit", { segments: segmentTypes.map((x) => x.toUpperCase()).join(t(dict, "common.and")) })}
+        {content.suvNote && <span class="segment-note"> {content.suvNote}</span>}
+      </p>
+    ) : (
+      <p>{misc("noSegment")}</p>
+    )}
+  </section>
+
+  <!-- 12. Chinese Vehicle Brands -->
+  <section>
+    <h2>{sect("chineseBrands")}</h2>
+    <ul class="brand-list">
+      {cnBrands.map((b) => (
+        <li>
+          <a href={DATA_SITE_URL + "/brands/" + b.brand_id + "/"}>{b.name}</a>
+          <span class="zh">{b.name_zh}</span>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <!-- 13. Import Costs -->
+  <section>
+    <h2>{sect("importCosts")}</h2>
+    <p>{misc("importCosts")}</p>
+  </section>
+
+  <!-- 14. Market Considerations -->
+  <section>
+    <h2>{sect("marketConsiderations")}</h2>
+    <ul>
+      {content.considerations.map((c) => (
+        <li>{c}</li>
+      ))}
+    </ul>
+  </section>
+
+  <!-- 15. Related Tools -->
+  <section>
+    <h2>{sect("relatedTools")}</h2>
+    <ul>
+      <li><a href={TOOLS_SITE_URL + "/landed-cost-calculator/"}>{misc("toolLandedCost")}</a></li>
+      <li><a href={TOOLS_SITE_URL + "/import-duty-calculator/"}>{misc("toolDuty")}</a></li>
+      <li><a href={TOOLS_SITE_URL + "/currency-converter/"}>{misc("toolCurrency")}</a></li>
+      <li><a href={TOOLS_SITE_URL + "/vehicle-comparison/"}>{misc("toolComparison")}</a></li>
+    </ul>
+  </section>
+
+  <!-- 15b. Related Guides -->
+  <section>
+    <h2>{sect("relatedGuides")}</h2>
+    <ul>
+      <li><a href={MAIN_SITE_URL + "/guides/how-to-buy-used-car-from-china/"}>{misc("guideBuy")}</a></li>
+      <li><a href={MAIN_SITE_URL + "/guides/china-used-car-export-process/"}>{misc("guideProcess")}</a></li>
+      <li><a href={MAIN_SITE_URL + "/guides/export-documents/"}>{misc("guideDocuments")}</a></li>
+      <li><a href={MAIN_SITE_URL + "/guides/shipping/"}>{misc("guideShipping")}</a></li>
+      <li><a href={MAIN_SITE_URL + "/guides/landed-cost/"}>{misc("guideLandedCost")}</a></li>
+      <li><a href={MAIN_SITE_URL + "/guides/vehicle-inspection/"}>{misc("guideInspection")}</a></li>
+    </ul>
+  </section>
+
+  <!-- 16. Available Vehicles & Request -->
+  <section>
+    <h2>{sect("availableVehicles")}</h2>
+    <p>{misc("availableVehicles", { country: country.name })}</p>
+    <ul class="cta-list">
+      <li><a class="cta" href={MAIN_SITE_URL + "/cars/"}>{misc("browseVehicles")}</a></li>
+      <li><a class="cta cta-alt" href={MAIN_SITE_URL + "/contact/"}>{misc("requestVehicle")}</a></li>
+    </ul>
+    <ul class="related-links">
+      <li><a href={DATA_SITE_URL + "/vehicle-types/suv/"}>{misc("browseSuvs")}</a></li>
+      <li><a href={DATA_SITE_URL + "/vehicle-types/sedan/"}>{misc("browseSedans")}</a></li>
+      <li><a href={DATA_SITE_URL + "/vehicle-types/ev/"}>{misc("browseEvs")}</a></li>
+    </ul>
+  </section>
+
+  <!-- 17. FAQ -->
+  <section>
+    <h2>{sect("faq")}</h2>
+    <div class="faq">
+      {content.faq.map((f) => (
+        <details>
+          <summary>{f.q}</summary>
+          <p>{f.a}</p>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <!-- 18. Verification Date & Evidence Status -->
+  <section>
+    <h2>{sect("verification")}</h2>
+    <p class="checked">{misc("verificationLastChecked", { date: lastChecked })}</p>
+    <ul>
+      <li>{plural(locale, "statementsRecorded", totalDeclarations, dict).replace("{country}", country.name)}</li>
+      <li>
+        {misc("verificationConfidence", {
+          confirmed: confCounts["Confirmed"],
+          sourceBacked: confCounts["Source-backed"],
+          needsVerification: confCounts["Needs verification"],
+          estimated: confCounts["Estimated"],
+          unknown: confCounts["Unknown"],
+        })}
+      </li>
+    </ul>
+    <p class="review-hint">{hint("confidence")}</p>
+  </section>
+
+  <p class="disclaimer">{t(dict, "country.disclaimer")}</p>
+
+  <style>
+    .zh { color: var(--color-text-soft); font-size: 0.85em; margin-inline-start: var(--space-2); }
+    .meta-line { color: var(--color-text-soft); }
+    section { margin-top: var(--space-6); }
+    section h2 { border-bottom: 1px solid var(--color-border); padding-bottom: var(--space-2); }
+    .rule { border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-4); margin: var(--space-3) 0; }
+    .rule-head { display: flex; align-items: center; gap: var(--space-2); flex-wrap: wrap; }
+    .rule-head h3 { margin: 0; font-size: 16px; }
+    .badge-review { display: inline-block; background: #fbe9e7; color: var(--color-danger); padding: 2px 8px; border-radius: var(--radius-sm); font-size: 12px; font-weight: 600; }
+    .review-hint { background: var(--color-bg-alt); border-left: 3px solid var(--color-warning); padding: var(--space-3); font-size: 14px; }
+    .estimates { font-size: 14px; color: var(--color-text-soft); }
+    .checked { font-size: 12px; color: var(--color-text-soft); margin: var(--space-2) 0 0; }
+    .drive-callout { font-size: 18px; font-weight: 700; color: var(--color-primary); }
+    .port-note { color: var(--color-text-soft); font-size: 0.9em; }
+    .segment-note { color: var(--color-text-soft); }
+    .brand-list { column-count: 2; }
+    .faq summary { cursor: pointer; font-weight: 600; }
+    .faq p { margin: var(--space-2) 0 var(--space-3); color: var(--color-text-soft); }
+    .disclaimer { background: #fff7e6; border: 1px solid var(--color-warning); border-left: 4px solid var(--color-warning); padding: var(--space-3) var(--space-4); font-size: 14px; font-weight: 600; margin: var(--space-4) 0; }
+    .source-list { list-style: none; padding: 0; }
+    .source-list li { padding: var(--space-2) 0; border-bottom: 1px solid var(--color-border); }
+    .src-count { color: var(--color-text-soft); font-size: 0.9em; }
+    .legend { list-style: none; padding: 0; }
+    .legend li { margin: var(--space-2) 0; font-size: 14px; color: var(--color-text-soft); }
+    .badge { display: inline-block; padding: 2px 8px; border-radius: var(--radius-sm); font-size: 12px; font-weight: 600; margin-right: var(--space-1); }
+    .badge-high { background: #e6f4ea; color: #1e7d32; }
+    .badge-medium { background: #fbe9e7; color: #b34700; }
+    .badge-low { background: #fff4e5; color: #8a5a00; }
+    .badge-unknown { background: #eceff1; color: #546e7a; }
+    .badge-muted { background: #f3e5f5; color: #6a1b9a; }
+    .cta-list { list-style: none; padding: 0; display: flex; gap: var(--space-3); flex-wrap: wrap; }
+    .cta { display: inline-block; background: var(--color-primary); color: #fff; padding: var(--space-2) var(--space-4); border-radius: var(--radius-md); font-weight: 600; }
+    .cta:hover { text-decoration: none; opacity: 0.92; }
+    .cta-alt { background: var(--color-accent); }
+    .related-links { margin-top: var(--space-3); }
+    @media (max-width: 600px) { .brand-list { column-count: 1; } }
+  </style>
+</BaseLayout>

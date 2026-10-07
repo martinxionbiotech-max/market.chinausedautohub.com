@@ -1,6 +1,6 @@
 ---
-import VehicleMarketPage from "../../../../templates/VehicleMarketPage.astro";
-import { relations, passesGate } from "../../../../lib/vehicle-market";
+import VehicleMarketPage from "../../../../../templates/VehicleMarketPage.astro";
+import { relations, passesGate } from "../../../../../lib/vehicle-market";
 
 export function getStaticPaths() {
   return relations.filter(passesGate).map((r) => ({

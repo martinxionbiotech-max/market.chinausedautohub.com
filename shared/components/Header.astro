@@ -1,12 +1,19 @@
 ---
 import { MAIN_SITE_URL, DATA_SITE_URL, COMPANIES_SITE_URL, TOOLS_SITE_URL, MARKET_SITE_URL } from "../config/config";
-const { siteTitle, currentSection } = Astro.props;
+import { getTranslations, DEFAULT_LOCALE, LOCALES, type Locale } from "../../src/i18n";
+import { localizedPath } from "../../src/lib/i18n";
+
+const { siteTitle, currentSection, showLangSwitcher = false } = Astro.props;
+const locale = (Astro.currentLocale ?? DEFAULT_LOCALE) as Locale;
+const t = getTranslations(locale);
+const path = Astro.url.pathname;
+
 const links = [
-  { label: "Vehicles", url: MAIN_SITE_URL + "/", key: "vehicles" },
-  { label: "Vehicle Data", url: DATA_SITE_URL + "/", key: "data" },
-  { label: "Companies", url: COMPANIES_SITE_URL + "/", key: "companies" },
-  { label: "Tools", url: TOOLS_SITE_URL + "/", key: "tools" },
-  { label: "Markets", url: MARKET_SITE_URL + "/", key: "market" },
+  { label: t.nav.vehicles, url: MAIN_SITE_URL + "/", key: "vehicles" },
+  { label: t.nav.vehicleData, url: DATA_SITE_URL + "/", key: "data" },
+  { label: t.nav.companies, url: COMPANIES_SITE_URL + "/", key: "companies" },
+  { label: t.nav.tools, url: TOOLS_SITE_URL + "/", key: "tools" },
+  { label: t.nav.markets, url: MARKET_SITE_URL + "/", key: "market" },
 ];
 ---
 <header class="site-header">
@@ -17,6 +24,18 @@ const links = [
         <a href={l.url} class={l.key === currentSection ? "current" : ""}>{l.label}</a>
       ))}
     </nav>
+    {showLangSwitcher && (
+      <nav class="lang-nav" aria-label={t.nav.language}>
+        {LOCALES.map((l) => (
+          <a
+            href={localizedPath(path, l.code)}
+            class={l.code === locale ? "lang current" : "lang"}
+            hreflang={l.code}
+            lang={l.code}
+          >{l.code.toUpperCase()}</a>
+        ))}
+      </nav>
+    )}
   </div>
 </header>
 <style>
@@ -27,4 +46,8 @@ const links = [
   .eco-nav a { color: #cfe0f2; font-size: 14px; }
   .eco-nav a:hover { color: #fff; }
   .eco-nav a.current { color: #fff; font-weight: 700; }
+  .lang-nav { display: flex; gap: var(--space-2); margin-inline-start: auto; align-items: center; }
+  .lang-nav .lang { color: #cfe0f2; font-size: 12px; font-weight: 600; padding: 2px 6px; border-radius: var(--radius-sm); }
+  .lang-nav .lang:hover { color: #fff; text-decoration: none; }
+  .lang-nav .lang.current { background: rgba(255,255,255,0.18); color: #fff; }
 </style>

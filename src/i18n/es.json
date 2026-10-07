@@ -1,0 +1,330 @@
+{
+  "site": {
+    "name": "Mercados de Exportación de Coches Usados de China",
+    "tagline": "Inteligencia de mercado por país para exportar coches usados desde China"
+  },
+  "nav": {
+    "vehicles": "Vehículos",
+    "vehicleData": "Datos de vehículos",
+    "companies": "Empresas",
+    "tools": "Herramientas",
+    "markets": "Mercados",
+    "language": "Idioma"
+  },
+  "lang": {
+    "en": "English",
+    "es": "Español",
+    "ru": "Русский",
+    "ar": "العربية"
+  },
+  "common": {
+    "notAvailable": "No disponible",
+    "and": " y ",
+    "needsReview": "Requiere revisión",
+    "review": "Revisar",
+    "lhd": "Volante a la izquierda (LHD)",
+    "rhd": "Volante a la derecha (RHD)",
+    "roro": "RoRo",
+    "container": "Contenedor",
+    "railTransit": "tránsito ferroviario"
+  },
+  "breadcrumb": {
+    "markets": "Mercados",
+    "countries": "Países",
+    "home": "Inicio"
+  },
+  "regions": {
+    "middle-east": "Oriente Medio",
+    "africa": "África",
+    "central-asia": "Asia Central",
+    "south-asia": "Asia Meridional",
+    "southeast-asia": "Sudeste Asiático",
+    "latin-america": "América Latina",
+    "caribbean": "Caribe",
+    "north-america": "América del Norte",
+    "europe": "Europa",
+    "oceania": "Oceanía"
+  },
+  "sourceNote": {
+    "confidence": "Confianza",
+    "source": "Fuente",
+    "dateChecked": "Fecha de verificación",
+    "jurisdiction": "Jurisdicción",
+    "appliesTo": "Aplica a",
+    "effectiveDate": "Fecha de entrada en vigor"
+  },
+  "applicability": {
+    "Used vehicles by age": "Vehículos usados por antigüedad",
+    "All imported vehicles (drive side)": "Todos los vehículos importados (lado del volante)",
+    "Electric vehicles": "Vehículos eléctricos",
+    "Used vehicle imports": "Importación de vehículos usados",
+    "Vehicle registration": "Matriculación del vehículo",
+    "Emissions compliance": "Cumplimiento de emisiones",
+    "General import requirement": "Requisito general de importación",
+    "Imported used vehicles (CIF value)": "Vehículos usados importados (valor CIF)",
+    "Imported vehicles (CIF + duty)": "Vehículos importados (CIF + arancel)",
+    "Selected vehicles": "Vehículos seleccionados",
+    "General import charge": "Cargo general de importación"
+  },
+  "confidence": {
+    "heading": "Cómo leer las etiquetas de confianza",
+    "intro": "Cada afirmación sobre reglas e impuestos de esta página lleva una etiqueta de confianza, además de su fuente, fecha de verificación, jurisdicción, aplicabilidad y advertencia.",
+    "labels": {
+      "Confirmed": "Confirmado",
+      "Source-backed": "Respaldado por fuente",
+      "Needs verification": "Requiere verificación",
+      "Estimated": "Estimado",
+      "Unknown": "Desconocido"
+    },
+    "legend": {
+      "Source-backed": "citado a una URL oficial de gobierno, aduanas o transporte.",
+      "Needs verification": "aún no confirmado frente a una fuente oficial vigente; verifique antes de operar.",
+      "Estimated": "una estimación o una cifra que cambia con frecuencia.",
+      "Unknown": "no hay una fuente fiable registrada.",
+      "Confirmed": "verificado de forma independiente contra un documento oficial. Actualmente ninguna afirmación de esta página alcanza ese nivel."
+    }
+  },
+  "country": {
+    "title": "Importar coches usados a {country} — Reglas, aranceles y rutas",
+    "description": "Importación de coches usados de China a {country}: lado del volante, reglas de antigüedad, aranceles e IVA, puertos y rutas de envío — cada afirmación con fuente, fecha de verificación, jurisdicción, aplicabilidad y nivel de confianza.",
+    "metaLine": "{region} · {driveSide} · Moneda {currency} · Jurisdicción {jurisdiction}",
+    "disclaimer": "Esta información se ofrece únicamente como orientación general y no constituye asesoramiento legal. Consulte a las autoridades competentes del país de destino (aduanas, impuestos y transporte) antes de operar. Las reglas pueden cambiar; verifique los requisitos vigentes con las autoridades oficiales.",
+    "sections": {
+      "marketOverview": "Resumen del mercado",
+      "importEligibility": "Elegibilidad de importación",
+      "vehicleAgeRules": "Reglas de antigüedad del vehículo",
+      "driveSide": "Lado del volante",
+      "importDuties": "Aranceles de importación",
+      "vatTaxes": "IVA e impuestos",
+      "officialSources": "Fuentes oficiales",
+      "evRules": "Reglas para vehículos eléctricos",
+      "requiredDocuments": "Documentos requeridos",
+      "ports": "Puertos",
+      "shippingFromChina": "Envío desde China",
+      "vehicleCompatibility": "Páginas de compatibilidad de vehículos",
+      "popularVehicleTypes": "Tipos de vehículo populares",
+      "vehicleSegmentFit": "Ajuste por segmento de vehículo",
+      "chineseBrands": "Marcas chinas de vehículos",
+      "importCosts": "Costes de importación",
+      "marketConsiderations": "Consideraciones del mercado",
+      "relatedTools": "Herramientas relacionadas",
+      "relatedGuides": "Guías relacionadas",
+      "availableVehicles": "Vehículos disponibles",
+      "faq": "Preguntas frecuentes",
+      "verification": "Fecha de verificación y estado de la evidencia"
+    },
+    "reviewHints": {
+      "eligibility": "Esto no es asesoramiento legal: consulte a las autoridades del país de destino. La normativa son datos de alto riesgo. Cada regla a continuación lleva fuente, fecha de verificación, jurisdicción, aplicabilidad y nivel de confianza. Confirme con las aduanas oficiales antes de operar.",
+      "duty": "Las tarifas provienen de taxrules.json y pueden cambiar. Confirme con las aduanas oficiales antes de operar.",
+      "sources": "Autoridades oficiales citadas para las reglas de importación e impuestos de {country}. Verifique los requisitos vigentes con estas fuentes antes de operar.",
+      "evConfirm": "Confirme el tratamiento arancelario vigente para vehículos eléctricos con las aduanas oficiales antes de operar. Para una comparación entre países, consulte el {link}.",
+      "estimate": "Las estimaciones de tránsito no son horarios confirmados: trátelas como indicativas (confianza: Estimado).",
+      "compat": "Páginas de compatibilidad y coste de exportación específicas por modelo para {country}. Se generan solo cuando el emparejamiento modelo × mercado produce información que las páginas de país y de modelo no exponen por sí solas.",
+      "confidence": "La confianza refleja con qué solidez respalda cada afirmación su fuente citada, no una garantía de exactitud actual. Vuelva a verificar tarifas y reglas con las aduanas oficiales antes de operar."
+    },
+    "misc": {
+      "basis": "Base: {basis}",
+      "noAgeRule": "No hay una regla de antigüedad específica registrada. Verifique los límites de antigüedad con las aduanas oficiales.",
+      "noDuty": "No hay arancel de importación registrado para este mercado.",
+      "noVat": "No hay IVA ni impuesto adicional registrado para este mercado.",
+      "taxLastChecked": "Datos fiscales verificados por última vez: {date}",
+      "noSources": "No hay URLs de fuente registradas para este mercado.",
+      "noEvRules": "No hay reglas específicas para vehículos eléctricos registradas para este mercado.",
+      "evDutyHeading": "Tratamiento arancelario e impositivo de los VE",
+      "noEvDuty": "No hay entradas de aranceles específicos para VE registradas: las importaciones de VE suelen seguir las tarifas estándar. Verifique con las aduanas oficiales.",
+      "evImportCenter": "centro de importación de VE",
+      "popularEvHeading": "Modelos VE e híbridos enchufables populares",
+      "noEvModels": "Aún no hay modelos VE o híbridos enchufables registrados para este mercado.",
+      "noDocs": "No hay requisitos específicos de documentación o certificación registrados. Verifique los requisitos vigentes con las autoridades oficiales antes de operar.",
+      "transitEstimate": "Los tiempos de tránsito son estimaciones del sector, no garantías. Los horarios y tarifas reales varían según el transportista y la temporada.",
+      "thOrigin": "Puerto de origen",
+      "thDestination": "Destino",
+      "thDays": "Días est.",
+      "thMethod": "Método",
+      "inCountry": "{model} en {country}",
+      "segmentFit": "Los modelos populares de este mercado son predominantemente de los segmentos {segments}.",
+      "noSegment": "No hay datos de segmento de vehículo registrados para este mercado.",
+      "importCosts": "El coste en destino se compone del precio del vehículo, el flete, el seguro, el arancel de importación, el IVA y cualquier impuesto especial o tasa de inspección. Para un desglose completo, use la calculadora de coste de importación.",
+      "availableVehicles": "Consulte el stock actual y pregunte por vehículos disponibles para exportar a {country}.",
+      "browseVehicles": "Ver vehículos disponibles →",
+      "requestVehicle": "Solicitar un vehículo →",
+      "browseSuvs": "Ver SUV",
+      "browseSedans": "Ver berlinas",
+      "browseEvs": "Ver vehículos eléctricos",
+      "verificationLastChecked": "Datos de reglas e impuestos de esta página verificados por última vez: {date}",
+      "verificationConfidence": "Confianza: {confirmed} Confirmado · {sourceBacked} Respaldado por fuente · {needsVerification} Requiere verificación · {estimated} Estimado · {unknown} Desconocido.",
+      "toolLandedCost": "Calculadora de coste de importación",
+      "toolDuty": "Calculadora de aranceles de importación",
+      "toolCurrency": "Conversor de divisas",
+      "toolComparison": "Comparador de vehículos",
+      "guideBuy": "Cómo comprar un coche usado de China",
+      "guideProcess": "Proceso de exportación de coches usados de China",
+      "guideDocuments": "Documentos de exportación",
+      "guideShipping": "Envío",
+      "guideLandedCost": "Coste en destino",
+      "guideInspection": "Inspección del vehículo",
+      "verifyCaveat": "Verifique con la autoridad oficial antes de operar."
+    }
+  },
+  "vehicle": {
+    "title": "{model} a {country} — compatibilidad y coste de exportación",
+    "description": "Exportación del {model} ({zh}) a {country}: ajuste del lado del volante, ajuste de la regla de antigüedad, compatibilidad de carga de VE, requisitos de importación y anclas arancelarias — cada afirmación con fuente, confianza y fecha de verificación.",
+    "metaLine": "Compatibilidad y coste de exportación · Última verificación {date}",
+    "disclaimer": "Esta información se ofrece únicamente como orientación general y no constituye asesoramiento legal. Cada afirmación a continuación lleva fuente y nivel de confianza: verifique con las autoridades oficiales antes de operar.",
+    "quickFacts": {
+      "title": "Datos rápidos",
+      "vehicle": "Vehículo",
+      "brand": "Marca",
+      "country": "País",
+      "powertrain": "Propulsión",
+      "driveSideFit": "Ajuste del lado del volante",
+      "ageRuleFit": "Ajuste de la regla de antigüedad",
+      "importDutyRange": "Rango de arancel de importación",
+      "confidence": "Confianza"
+    },
+    "verdict": {
+      "title": "Veredicto de un vistazo",
+      "notEligibleAsIs": "No elegible tal cual",
+      "notEligible": "No elegible",
+      "needsReview": "Requiere revisión",
+      "eligibleNeedsReview": "Elegible / requiere revisión"
+    },
+    "sections": {
+      "buyerDecisionPoints": "Puntos de decisión del comprador",
+      "suitableWhen": "Adecuado cuando",
+      "notSuitableWhen": "No adecuado cuando",
+      "whyFit": "Por qué este vehículo podría encajar",
+      "powertrain": "Propulsión",
+      "driveSide": "Lado del volante",
+      "vehicleAge": "Antigüedad del vehículo",
+      "importRequirements": "Requisitos de importación",
+      "charging": "Carga",
+      "partsService": "Piezas y servicio",
+      "landedCost": "Coste en destino",
+      "knownLimitations": "Limitaciones conocidas",
+      "keyRisks": "Riesgos clave",
+      "practicalChecklist": "Lista de comprobación práctica",
+      "sourcesConfidence": "Fuentes y confianza",
+      "shipping": "Envío",
+      "related": "Relacionado",
+      "thisVehicleOtherCountries": "Este vehículo en otros países",
+      "otherVehiclesInCountry": "Otros vehículos en {country}"
+    },
+    "powertrain": {
+      "ev": "VE (eléctrico de batería)",
+      "phev": "Híbrido enchufable (PHEV)",
+      "erev": "EREV (autonomía extendida)",
+      "ice": "Combustión (ICE)"
+    },
+    "driveFit": {
+      "match": "Coincide",
+      "mismatch": "No coincide",
+      "notAvailable": "No disponible"
+    },
+    "ageFit": {
+      "eligible": "Elegible",
+      "borderline": "Límite",
+      "ineligible": "No elegible",
+      "notAvailable": "No disponible"
+    },
+    "increments": {
+      "drive-side mismatch": "desajuste del lado del volante",
+      "charging compatibility": "compatibilidad de carga",
+      "EV duty relief": "alivio arancelario para VE",
+      "age-rule fit": "ajuste de la regla de antigüedad",
+      "powertrain classification": "clasificación de propulsión"
+    },
+    "decision": {
+      "driveMatch": "Coincidencia de volante a la izquierda: una unidad del mercado chino puede registrarse sin conversión.",
+      "driveConversion": "Hay versión con volante a la derecha disponible: adquiera la unidad RHD en lugar de convertir una unidad LHD de China.",
+      "driveMismatch": "Desajuste del lado del volante: una unidad LHD del mercado chino no puede registrarse tal cual en este mercado RHD.",
+      "ageEligible": "Ajuste de la regla de antigüedad: las unidades de la generación actual cumplen el límite de antigüedad del destino.",
+      "ageBorderline": "Regla de antigüedad en el límite: las primeras unidades de producción rozan o superan el corte de antigüedad; verifique la fecha exacta.",
+      "ageIneligible": "Regla de antigüedad no elegible: la ventana de producción del modelo es anterior al corte de antigüedad del destino.",
+      "evDutyRelief": "Alivio arancelario para VE: la versión eléctrica cumple los requisitos para un arancel reducido o nulo.",
+      "chargingMismatch": "Desajuste del conector de carga: se requiere un adaptador GB/T al estándar del destino y debe confirmarse."
+    },
+    "risks": {
+      "duty": "Los aranceles y el IVA cambian con frecuencia: verifique las cifras vigentes con las aduanas oficiales antes de operar.",
+      "age": "Las reglas de límite de antigüedad pueden ajustarse: confirme el corte vigente antes de adquirir stock.",
+      "conformity": "Los requisitos de conformidad y certificación pueden cambiar: confírmelos antes del embarque.",
+      "charging": "La compatibilidad del conector de carga debe confirmarse frente a la red del destino."
+    },
+    "checklist": {
+      "age": "Confirme que la fecha de producción o registro de la unidad esté dentro del límite de antigüedad del destino.",
+      "rhd": "Confirme la disponibilidad de volante a la derecha con el exportador antes de la compra.",
+      "conformity": "Obtenga la conformidad o certificación requerida: {requirements}.",
+      "adapter": "Confirme la disponibilidad del adaptador de carga para el estándar de conector del destino."
+    },
+    "misc": {
+      "noDecision": "No hay puntos de decisión registrados para este emparejamiento (No disponible).",
+      "noIndependent": "No hay incremento independiente registrado para este emparejamiento.",
+      "incrementsIntro": "Esta página existe porque el emparejamiento {model} × {country} produce información que ninguna página principal expone por sí sola: {increments}.",
+      "noFit": "No hay nota de ajuste modelo–mercado registrada (No disponible).",
+      "noDriveFit": "Ajuste del lado del volante no registrado (No disponible).",
+      "noAgeComputation": "No hay cálculo de regla de antigüedad específico del modelo registrado (No disponible).",
+      "noEligibility": "No hay resumen de elegibilidad de importación registrado para este emparejamiento (No disponible).",
+      "noParts": "No hay nota de piezas/servicio registrada para este emparejamiento (No disponible).",
+      "noDutyAnchors": "No hay anclas arancelarias registradas para este emparejamiento (No disponible).",
+      "noCharging": "No aplicable: no hay versión VE/PHEV/EREV registrada para este emparejamiento (No disponible).",
+      "noShipping": "No hay ruta de envío registrada para este mercado (No disponible).",
+      "noRisks": "No hay riesgos marcados registrados para este emparejamiento; aun así, confirme los requisitos con las autoridades oficiales (Requiere verificación).",
+      "noChecklist": "No hay elementos de lista de comprobación específicos del destino registrados (Requiere verificación).",
+      "powertrainNone": "Datos de propulsión no disponibles para este modelo.",
+      "powertrainRef": "El detalle completo de generación, versión y especificaciones está en la {link}; esta página lo referencia en lugar de duplicar los valores de especificación.",
+      "partsHint": "La disponibilidad de piezas y servicio varía según el destino: confirme el soporte del concesionario local y de repuestos antes de comprar.",
+      "dutyAnchorsIntro": "Anclas arancelarias para esta clase de vehículo en {country}:",
+      "dataModelPage": "página del modelo del sitio DATA",
+      "landedCostHint": "Las tarifas se referencian desde taxrules.json (no se copian). Para un desglose completo del coste en destino (precio, flete, seguro, arancel, IVA e impuestos especiales), use la {link}.",
+      "chargingStd": "Estándar de carga del vehículo",
+      "destinationStd": "Estándar del destino",
+      "adapterNeeded": "Adaptador necesario",
+      "voltage": "Voltaje",
+      "frequency": "Frecuencia",
+      "yes": "Sí",
+      "attribute": "Atributo",
+      "value": "Valor",
+      "charge": "Cargo",
+      "rate": "Tarifa",
+      "sourceConfidenceHint": "La confianza refleja con qué solidez respalda cada afirmación su fuente citada, no una garantía de exactitud actual. Vuelva a verificar con las aduanas oficiales antes de operar.",
+      "checklistHint": "Pasos a completar antes de importar: cada uno respaldado por evidencia para este destino. Verifique con la autoridad oficial antes de operar.",
+      "limitationDriveMismatch": "Desajuste del lado del volante: {country} solo registra {driveSide}; una unidad LHD del mercado chino no puede registrarse tal cual.",
+      "limitationAgeBorderline": "La regla de antigüedad está en el límite: verifique la fecha de corte exacta con las aduanas oficiales antes de adquirir stock.",
+      "limitationAgeIneligible": "La regla de antigüedad hace no elegibles las unidades más antiguas: compruebe la fecha de producción de la unidad concreta.",
+      "limitationCharging": "Desajuste del conector de carga: puede requerirse un adaptador físico y debe confirmarse el soporte de carga rápida DC del destino.",
+      "limitationNone": "No hay bloqueos duros registrados, pero confirme todos los requisitos con las autoridades oficiales antes de operar.",
+      "srcDriveFit": "Ajuste del lado del volante",
+      "srcAgeFit": "Ajuste de la regla de antigüedad",
+      "srcPowertrainFit": "Ajuste de propulsión",
+      "srcCharging": "Carga",
+      "srcEligibility": "Elegibilidad de importación",
+      "srcDuty": "Anclas arancelarias",
+      "srcShipping": "Ruta de envío",
+      "modelPage": "{model} — página completa del modelo (sitio DATA)",
+      "brandPage": "{brand} — página de marca (sitio DATA)",
+      "countryGuide": "{country} — guía de mercado (este sitio)",
+      "toolLandedCostNote": "Calculadora de coste de importación (Herramientas)",
+      "toolDutyNote": "Calculadora de aranceles de importación (Herramientas)",
+      "guideDocumentsNote": "Guía de documentos de exportación (sitio principal)",
+      "verifyCaveat": "Verifique con la autoridad oficial antes de operar.",
+      "chargingCaveat": "Verifique la compatibilidad del conector de carga con la red del destino antes de operar.",
+      "dealerCaveat": "Verifique con el exportador / concesionario de destino antes de operar.",
+      "dutyCaveat": "Verifique las tarifas vigentes con las aduanas oficiales antes de operar.",
+      "transitCaveat": "Las estimaciones de tránsito son indicativas — confírmelas con un transportista."
+    }
+  },
+  "footer": {
+    "disclaimer": "Toda la información se ofrece como referencia. Las regulaciones de importación, los impuestos y los precios cambian: verifique con las autoridades oficiales antes de cualquier transacción.",
+    "lastUpdated": "Última actualización: {date}"
+  },
+  "plurals": {
+    "ruleSuffix": {
+      "one": "{count} regla",
+      "other": "{count} reglas"
+    },
+    "statementsRecorded": {
+      "one": "{count} afirmación de regla e impuesto registrada para {country}.",
+      "other": "{count} afirmaciones de reglas e impuestos registradas para {country}."
+    }
+  }
+}

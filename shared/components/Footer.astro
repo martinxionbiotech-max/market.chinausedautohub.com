@@ -1,13 +1,17 @@
 ---
+import { getTranslations, DEFAULT_LOCALE, type Locale } from "../../src/i18n";
+import { t } from "../../src/i18n";
+
 const { siteUrl, lastUpdated } = Astro.props;
+const locale = (Astro.currentLocale ?? DEFAULT_LOCALE) as Locale;
+const dict = getTranslations(locale);
 ---
 <footer class="site-footer">
   <div class="container">
     <p class="disclaimer">
-      All information is provided for reference. Import regulations, taxes and
-      prices change — verify with official authorities before any transaction.
+      {t(dict, "footer.disclaimer")}
     </p>
-    {lastUpdated && <p class="meta">Last updated: {lastUpdated}</p>}
+    {lastUpdated && <p class="meta">{t(dict, "footer.lastUpdated", { date: lastUpdated })}</p>}
   </div>
 </footer>
 <style>
