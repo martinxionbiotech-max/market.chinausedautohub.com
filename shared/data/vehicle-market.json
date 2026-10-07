@@ -21,7 +21,16 @@
         "confidence": "high",
         "checked_date": "2026-10-06"
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Atto 3 production began 2022; Kazakhstan's age limit was recently adjusted — verify the current cut-off with KGD.",
+        "source": "market sub-site importrules.json (Vehicle age limit (recently adjusted))",
+        "source_url": "https://www.gov.kz/memleket/entities/kgd",
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "Battery-electric (EV) — Kazakhstan's temporary EV customs-duty exemption (0% vs 15% standard) applies to this vehicle class. Confirm current status before trading.",
@@ -113,7 +122,16 @@
         "confidence": "high",
         "checked_date": "2026-10-06"
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Seal production began 2022; Uzbekistan restricts used-vehicle imports by age — confirm current limits with customs.",
+        "source": "market sub-site importrules.json (Vehicle age restrictions)",
+        "source_url": "https://customs.uz",
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "Battery-electric (EV) — Uzbekistan exempts EVs from import duty and excise (0% vs 30% standard). Largest duty-relief delta in the tracked set.",
@@ -412,7 +430,16 @@
         "confidence": "high",
         "checked_date": "2026-10-06"
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Song Plus production began 2020; Uzbekistan restricts used-vehicle imports by age — confirm current limits with customs.",
+        "source": "market sub-site importrules.json (Vehicle age restrictions)",
+        "source_url": "https://customs.uz",
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "PHEV (DM-i) and EV trims — Uzbekistan exempts EVs from import duty + excise (0% vs 30%); confirm whether the PHEV DM-i trim qualifies for the EV exemption (typically BEV-only).",
@@ -505,7 +532,16 @@
         "confidence": "high",
         "checked_date": "2026-10-06"
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "L7 production began 2023; the UAE imposes no general age limit on used-car imports.",
+        "source": "market sub-site importrules.json (No general age limit)",
+        "source_url": "https://www.dubaicustoms.gov.ae",
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "EREV (extended-range electric vehicle) — a distinct class whose EV-incentive / duty treatment differs from BEV and PHEV; UAE records no EV-specific duty, so the increment is charging + incentive eligibility.",
@@ -598,7 +634,16 @@
         "confidence": "high",
         "checked_date": "2026-10-06"
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Atto 3 production began 2022; the UAE imposes no general age limit on used-car imports.",
+        "source": "market sub-site importrules.json (No general age limit)",
+        "source_url": "https://www.dubaicustoms.gov.ae",
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "Battery-electric (EV) — UAE offers EV incentives (DEWA Green Charger, toll exemptions in some emirates) but no EV-specific import duty; 5% standard duty + 5% VAT apply.",
@@ -957,7 +1002,16 @@
         "confidence": "high",
         "checked_date": "2026-10-06"
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Qin Plus production began 2021; Nigeria restricts used-vehicle imports by age and the rule has changed recently — confirm the current limit.",
+        "source": "market sub-site importrules.json (Vehicle age restriction)",
+        "source_url": "https://customs.gov.ng",
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "PHEV (DM-i) and EV trims — Nigeria's EV policy is developing with discussion of duty relief; no confirmed EV-specific duty rate recorded. RHD mismatch is the primary blocker.",
@@ -1153,7 +1207,16 @@
         "confidence": "high",
         "checked_date": "2026-10-06"
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Han production began 2020; Kazakhstan's age limit was recently adjusted — verify the current cut-off with KGD.",
+        "source": "market sub-site importrules.json (Vehicle age limit (recently adjusted))",
+        "source_url": "https://www.gov.kz/memleket/entities/kgd",
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "EV and PHEV (DM-i) trims — Kazakhstan's temporary EV customs-duty exemption (0% vs 15% standard) applies to battery-electric vehicles; confirm whether the PHEV DM-i trim qualifies (the exemption is typically BEV-only). Recent reports indicate the zero-tariff policy has been extended toward end-2028.",
@@ -1245,7 +1308,16 @@
         "confidence": "high",
         "checked_date": "2026-10-06"
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Song Plus production began 2020; Kazakhstan's age limit was recently adjusted — verify the current cut-off with KGD.",
+        "source": "market sub-site importrules.json (Vehicle age limit (recently adjusted))",
+        "source_url": "https://www.gov.kz/memleket/entities/kgd",
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "PHEV (DM-i) and EV trims — Kazakhstan's temporary EV customs-duty exemption (0% vs 15% standard) applies to battery-electric vehicles; confirm whether the PHEV DM-i trim qualifies (typically BEV-only).",
@@ -1337,7 +1409,16 @@
         "confidence": "high",
         "checked_date": "2026-10-06"
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Qin Plus production began 2021; Kazakhstan's age limit was recently adjusted — verify the current cut-off with KGD.",
+        "source": "market sub-site importrules.json (Vehicle age limit (recently adjusted))",
+        "source_url": "https://www.gov.kz/memleket/entities/kgd",
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "PHEV (DM-i) and EV trims — Kazakhstan's temporary EV customs-duty exemption (0% vs 15% standard) applies to battery-electric vehicles; confirm whether the PHEV DM-i trim qualifies (typically BEV-only).",
@@ -1429,7 +1510,16 @@
         "confidence": "high",
         "checked_date": "2026-10-06"
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "L7 production began 2023; Kazakhstan's age limit was recently adjusted — verify the current cut-off with KGD.",
+        "source": "market sub-site importrules.json (Vehicle age limit (recently adjusted))",
+        "source_url": "https://www.gov.kz/memleket/entities/kgd",
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "EREV (extended-range electric vehicle) — a distinct class from BEV and PHEV; Kazakhstan's EV customs-duty exemption (0% vs 15%) is typically scoped to battery-electric vehicles, so confirm whether an EREV qualifies before relying on the 0% rate.",
@@ -1521,7 +1611,16 @@
         "confidence": "high",
         "checked_date": "2026-10-06"
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Han production began 2020; Uzbekistan restricts used-vehicle imports by age — confirm current limits with customs.",
+        "source": "market sub-site importrules.json (Vehicle age restrictions)",
+        "source_url": "https://customs.uz",
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "EV and PHEV (DM-i) trims — Uzbekistan exempts EVs from import duty and excise (0% vs 30% standard); confirm whether the PHEV DM-i trim qualifies (typically BEV-only). Largest duty-relief delta in the tracked set.",
@@ -1614,7 +1713,16 @@
         "confidence": "high",
         "checked_date": "2026-10-06"
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Qin Plus production began 2021; Uzbekistan restricts used-vehicle imports by age — confirm current limits with customs.",
+        "source": "market sub-site importrules.json (Vehicle age restrictions)",
+        "source_url": "https://customs.uz",
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "PHEV (DM-i) and EV trims — Uzbekistan exempts EVs from import duty + excise (0% vs 30% standard); confirm whether the PHEV DM-i trim qualifies (typically BEV-only).",
@@ -1707,7 +1815,16 @@
         "confidence": "high",
         "checked_date": "2026-10-06"
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "L7 production began 2023; Uzbekistan restricts used-vehicle imports by age — confirm current limits with customs.",
+        "source": "market sub-site importrules.json (Vehicle age restrictions)",
+        "source_url": "https://customs.uz",
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "EREV (extended-range electric vehicle) — Uzbekistan's EV import-duty + excise exemption (0% vs 30%) is typically scoped to battery-electric vehicles; confirm whether an EREV qualifies.",
@@ -1992,7 +2109,16 @@
         "confidence": "high",
         "checked_date": "2026-10-06"
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "borderline",
+        "summary": "MG ZS production began 2017; Uzbekistan restricts used-vehicle imports by age — confirm current limits with customs.",
+        "source": "market sub-site importrules.json (Vehicle age restrictions)",
+        "source_url": "https://customs.uz",
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "EV and ICE trims in one model — Uzbekistan's EV exemption (0% import duty + excise) vs 30% standard creates a 30-point duty spread within this single model; the trim choice (EV vs ICE) dominates the landed cost.",
@@ -3046,7 +3172,16 @@
         "checked_date": "2026-10-06",
         "needs_review": true
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "borderline",
+        "summary": "Tiggo 4 production began 2017; Nigeria restricts used-vehicle imports by age and the rule has changed recently — confirm the current limit.",
+        "source": "market sub-site importrules.json (Vehicle age restriction)",
+        "source_url": "https://customs.gov.ng",
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "Combustion (ICE) — subject to standard 20% import duty + 7.5% VAT; no EV-specific relief.",
@@ -3126,7 +3261,16 @@
         "checked_date": "2026-10-06",
         "needs_review": true
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Jolion production began 2020; Nigeria restricts used-vehicle imports by age and the rule has changed recently — confirm the current limit.",
+        "source": "market sub-site importrules.json (Vehicle age restriction)",
+        "source_url": "https://customs.gov.ng",
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "Combustion (ICE) — subject to standard 20% import duty + 7.5% VAT; no EV-specific relief.",
@@ -3206,7 +3350,16 @@
         "checked_date": "2026-10-06",
         "needs_review": true
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Tank 300 production began 2021; Nigeria restricts used-vehicle imports by age and the rule has changed recently — confirm the current limit.",
+        "source": "market sub-site importrules.json (Vehicle age restriction)",
+        "source_url": "https://customs.gov.ng",
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "Combustion (ICE, 4WD) — subject to standard 20% import duty + 7.5% VAT; no EV-specific relief. A PHEV (Hi4-T) variant exists in RHD markets but Nigeria records no EV duty rate.",
@@ -3286,7 +3439,16 @@
         "checked_date": "2026-10-06",
         "needs_review": true
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Dolphin production began 2021; Nigeria restricts used-vehicle imports by age and the rule has changed recently — confirm the current limit.",
+        "source": "market sub-site importrules.json (Vehicle age restriction)",
+        "source_url": "https://customs.gov.ng",
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "Battery-electric (EV) — Nigeria's EV policy is still developing and no EV-specific duty rate is recorded, so the EV pays the standard 20% import duty (unlike Kenya's 10% EAC CET reduced EV rate). This is the key cost delta versus other RHD EV markets.",
@@ -3380,7 +3542,16 @@
         "checked_date": "2026-10-06",
         "needs_review": true
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "borderline",
+        "summary": "MG ZS production began 2017; Nigeria restricts used-vehicle imports by age and the rule has changed recently — confirm the current limit.",
+        "source": "market sub-site importrules.json (Vehicle age restriction)",
+        "source_url": "https://customs.gov.ng",
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "EV and ICE trims in one model — but Nigeria records no EV-specific duty relief, so both trims pay the standard 20% import duty (unlike Uzbekistan, where the EV trim is duty-exempt). The trim choice therefore does not change the landed duty in Nigeria.",
@@ -3474,7 +3645,16 @@
         "checked_date": "2026-10-06",
         "needs_review": true
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Sealion 6 production began 2025; Nigeria restricts used-vehicle imports by age and the rule has changed recently — confirm the current limit.",
+        "source": "market sub-site importrules.json (Vehicle age restriction)",
+        "source_url": "https://customs.gov.ng",
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "PHEV (DM-i) — Nigeria's EV policy is developing and no EV/PHEV duty relief is recorded, so the PHEV pays the standard 20% import duty. Confirm PHEV classification with Nigeria Customs.",
@@ -3568,7 +3748,16 @@
         "checked_date": "2026-10-06",
         "needs_review": true
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Sealion 07 production began 2024; Nigeria restricts used-vehicle imports by age and the rule has changed recently — confirm the current limit.",
+        "source": "market sub-site importrules.json (Vehicle age restriction)",
+        "source_url": "https://customs.gov.ng",
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "Battery-electric (EV) — Nigeria's EV policy is developing and no EV-specific duty rate is recorded, so the EV pays the standard 20% import duty (no relief).",
@@ -3970,7 +4159,16 @@
         "confidence": "high",
         "checked_date": "2026-10-06"
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Song Plus production began 2020; the UAE imposes no general age limit on used-car imports.",
+        "source": "market sub-site importrules.json (No general age limit)",
+        "source_url": "https://www.dubaicustoms.gov.ae",
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "PHEV (DM-i) and EV trims — the UAE records no EV-specific import duty (5% standard + 5% VAT apply), so the powertrain does not change duty; the PHEV classification under UAE EV incentives is the open question.",
@@ -4270,7 +4468,16 @@
         "checked_date": "2026-10-06",
         "needs_review": true
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "G6 production began 2023; Kenya's 8-year age limit (KS 1515:2000) is satisfied by current-generation units.",
+        "source": "market sub-site importrules.json (8-year age limit)",
+        "source_url": "https://www.kra.go.ke",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "Battery-electric (EV) — Kenya applies reduced EV import duty (10% vs 25% standard) under the EAC CET, so the EV trim qualifies for the reduced rate.",
@@ -4364,7 +4571,16 @@
         "checked_date": "2026-10-06",
         "needs_review": true
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "G6 production began 2023; Nigeria restricts used-vehicle imports by age and the rule has changed recently — confirm the current limit.",
+        "source": "market sub-site importrules.json (Vehicle age restriction)",
+        "source_url": "https://customs.gov.ng",
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "Battery-electric (EV) — Nigeria's EV policy is still developing and no EV-specific duty rate is recorded, so the EV pays the standard 20% import duty (unlike Kenya's reduced EV rate).",
@@ -4458,7 +4674,16 @@
         "checked_date": "2026-10-06",
         "needs_review": true
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Zeekr 001 production began 2021; Kenya's 8-year age limit (KS 1515:2000) is satisfied by current-generation units.",
+        "source": "market sub-site importrules.json (8-year age limit)",
+        "source_url": "https://www.kra.go.ke",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "Battery-electric (EV) — Kenya applies reduced EV import duty (10% vs 25% standard) under the EAC CET.",
@@ -4552,7 +4777,16 @@
         "checked_date": "2026-10-06",
         "needs_review": true
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Zeekr 001 production began 2021; Nigeria restricts used-vehicle imports by age and the rule has changed recently — confirm the current limit.",
+        "source": "market sub-site importrules.json (Vehicle age restriction)",
+        "source_url": "https://customs.gov.ng",
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "Battery-electric (EV) — Nigeria's EV policy is developing and no EV-specific duty rate is recorded, so the EV pays the standard 20% import duty.",
@@ -4646,7 +4880,16 @@
         "checked_date": "2026-10-06",
         "needs_review": true
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Deepal S07 production began 2023; Kenya's 8-year age limit (KS 1515:2000) is satisfied by current-generation units.",
+        "source": "market sub-site importrules.json (8-year age limit)",
+        "source_url": "https://www.kra.go.ke",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "Battery-electric (EV) — Kenya applies reduced EV import duty (10% vs 25% standard) under the EAC CET.",
@@ -4740,7 +4983,16 @@
         "checked_date": "2026-10-06",
         "needs_review": true
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Deepal S07 production began 2023; Nigeria restricts used-vehicle imports by age and the rule has changed recently — confirm the current limit.",
+        "source": "market sub-site importrules.json (Vehicle age restriction)",
+        "source_url": "https://customs.gov.ng",
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "Battery-electric (EV) — Nigeria's EV policy is developing and no EV-specific duty rate is recorded, so the EV pays the standard 20% import duty.",
@@ -4834,7 +5086,16 @@
         "checked_date": "2026-10-06",
         "needs_review": true
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "D9 production began 2022; Kenya's 8-year age limit (KS 1515:2000) is satisfied by current-generation units.",
+        "source": "market sub-site importrules.json (8-year age limit)",
+        "source_url": "https://www.kra.go.ke",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "Plug-in hybrid (PHEV / DM-i) — Kenya applies reduced EV import duty (10% vs 25%) under the EAC CET; confirm whether the reduced EV rate covers PHEV or only battery-electric vehicles.",
@@ -4928,7 +5189,16 @@
         "checked_date": "2026-10-06",
         "needs_review": true
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "D9 production began 2022; Nigeria restricts used-vehicle imports by age and the rule has changed recently — confirm the current limit.",
+        "source": "market sub-site importrules.json (Vehicle age restriction)",
+        "source_url": "https://customs.gov.ng",
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "Plug-in hybrid (PHEV / DM-i) — Nigeria's EV policy is developing and no EV-specific duty rate is recorded, so the PHEV pays the standard 20% import duty.",
@@ -5021,7 +5291,16 @@
         "confidence": "high",
         "checked_date": "2026-10-06"
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "L9 production began 2022; Kazakhstan's age limit was recently adjusted — verify the current cut-off with KGD.",
+        "source": "market sub-site importrules.json (Vehicle age limit (recently adjusted))",
+        "source_url": "https://www.gov.kz/memleket/entities/kgd",
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "Extended-range electric vehicle (EREV) — a distinct class from BEV and PHEV. Li Auto has entered Kazakhstan officially (local assembly with Allur, 2025-2026), the brand's first overseas production base. Kazakhstan's EV customs-duty exemption (0% vs 15%) is typically scoped to battery-electric vehicles — confirm whether an EREV qualifies.",
@@ -5113,7 +5392,16 @@
         "confidence": "high",
         "checked_date": "2026-10-06"
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Zeekr 001 production began 2021; Uzbekistan restricts used-vehicle imports by age — confirm current limits with customs.",
+        "source": "market sub-site importrules.json (Vehicle age restrictions)",
+        "source_url": "https://customs.uz",
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "Battery-electric (EV) — Uzbekistan exempts EVs from import duty and excise (0% vs 30% standard), a large duty-relief delta for this EV class.",
@@ -8293,7 +8581,16 @@
         "checked_date": "2026-10-07",
         "needs_review": true
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "U8 production began 2023; the UAE imposes no general age limit on used-car imports.",
+        "source": "market sub-site importrules.json (No general age limit)",
+        "source_url": "https://www.dubaicustoms.gov.ae",
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "Extended-range electric (EREV) — a distinct class from BEV and PHEV; the UAE records no EV-specific duty (5% standard + 5% VAT), so the increment is charging compatibility plus official premium-EREV market entry.",
@@ -8387,7 +8684,16 @@
         "checked_date": "2026-10-07",
         "needs_review": true
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "U8 production began 2023; Saudi Arabia's 5-year used passenger-car age limit is satisfied by a 2023 model.",
+        "source": "market sub-site importrules.json (Used passenger car age limit (5 years))",
+        "source_url": "https://zatca.gov.sa",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "Extended-range electric (EREV) — a distinct class from BEV and PHEV; Saudi Arabia records no EV-specific duty (5% standard + 15% VAT), so the increment is charging compatibility plus official premium-EREV market entry.",
@@ -8791,7 +9097,16 @@
         "checked_date": "2026-10-07",
         "needs_review": true
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Alpha S production began 2021; the UAE imposes no general age limit on used-car imports.",
+        "source": "market sub-site importrules.json (No general age limit)",
+        "source_url": "https://www.dubaicustoms.gov.ae",
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "Battery-electric (EV) — the UAE records no EV-specific import duty (5% standard + 5% VAT), so the increment is charging compatibility plus official GCC market entry of a new premium EV brand.",
@@ -9811,7 +10126,16 @@
         "checked_date": "2026-10-07",
         "needs_review": true
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Atto 3 production began 2022; South Africa has no fixed age cut-off — used imports are gated by permit categories, not age.",
+        "source": "market sub-site importrules.json (No fixed age limit (restricted categories))",
+        "source_url": "https://www.gov.za/services/services-organisations/import/importing-second-hand-or-used-vehicle",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "Battery-electric (EV) — South Africa has no EV-specific duty relief; EVs face the same 25% passenger-vehicle duty (higher than the 18% ICE rate in some classifications) plus 15% VAT.",
@@ -9906,7 +10230,16 @@
         "checked_date": "2026-10-07",
         "needs_review": true
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Haval H6 production began 2020; South Africa has no fixed age cut-off — used imports are gated by permit categories, not age.",
+        "source": "market sub-site importrules.json (No fixed age limit (restricted categories))",
+        "source_url": "https://www.gov.za/services/services-organisations/import/importing-second-hand-or-used-vehicle",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "Combustion (ICE) — subject to the 25% passenger-vehicle import duty plus 15% VAT; no EV-specific treatment. Haval has an established RHD presence in South Africa.",
@@ -9987,7 +10320,16 @@
         "checked_date": "2026-10-07",
         "needs_review": true
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Song Plus production began 2020; Bangladesh applies reconditioned-car age restrictions — confirm the current limit.",
+        "source": "market sub-site importrules.json (Reconditioned-car age restrictions)",
+        "source_url": "https://bangladeshcustoms.gov.bd/",
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "PHEV (DM-i) and EV trims — Bangladesh has proposed import-duty cuts on plug-in hybrids; the PHEV-vs-EV classification will determine the duty treatment as policy is finalised.",
@@ -10080,7 +10422,16 @@
         "confidence": "high",
         "checked_date": "2026-10-07"
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "MG4 EV production began 2022; Chile imposes no import age limit on used vehicles.",
+        "source": "market sub-site importrules.json (No import age limit)",
+        "source_url": "https://www.aduana.cl/importacion-de-vehiculos/aduana/2017-11-22/101502.html",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "Battery-electric (EV) — Chile applies a flat 6% ad valorem duty regardless of powertrain (no EV-specific relief), but has one of Latin America's strongest Chinese-EV markets; no age limit adds stock flexibility.",
@@ -10174,7 +10525,16 @@
         "checked_date": "2026-10-07",
         "needs_review": true
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "ineligible",
+        "summary": "Atto 3 production began 2022; Thailand tightly restricts used-vehicle imports — regular used passenger-car imports are generally not permitted.",
+        "source": "market sub-site importrules.json (Used-vehicle imports tightly restricted)",
+        "source_url": "https://anglosiamlaw.com/blog/importing-car-to-thailand-rules-tax-procedure",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "Battery-electric (EV) — Thailand's EV 3.5 package reduces excise tax from 8% to 2% for BEVs ≤7M baht and provides reduced CBU import duty during 2024–2025.",
@@ -10267,7 +10627,16 @@
         "checked_date": "2026-10-07",
         "needs_review": true
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "ineligible",
+        "summary": "Seal production began 2022; Thailand tightly restricts used-vehicle imports — regular used passenger-car imports are generally not permitted.",
+        "source": "market sub-site importrules.json (Used-vehicle imports tightly restricted)",
+        "source_url": "https://anglosiamlaw.com/blog/importing-car-to-thailand-rules-tax-procedure",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "Battery-electric (EV) — Thailand's EV 3.5 package reduces excise 8%→2% for BEVs ≤7M baht and provides reduced CBU import duty.",
@@ -10360,7 +10729,16 @@
         "checked_date": "2026-10-07",
         "needs_review": true
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "ineligible",
+        "summary": "Dolphin production began 2021; Thailand tightly restricts used-vehicle imports — regular used passenger-car imports are generally not permitted.",
+        "source": "market sub-site importrules.json (Used-vehicle imports tightly restricted)",
+        "source_url": "https://anglosiamlaw.com/blog/importing-car-to-thailand-rules-tax-procedure",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "Battery-electric (EV) — Thailand's EV 3.5 package reduces excise 8%→2% for BEVs ≤7M baht; the Dolphin is a high-volume compact EV in the Thai market.",
@@ -10453,7 +10831,16 @@
         "checked_date": "2026-10-07",
         "needs_review": true
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "ineligible",
+        "summary": "Deepal S07 production began 2023; Thailand tightly restricts used-vehicle imports — regular used passenger-car imports are generally not permitted.",
+        "source": "market sub-site importrules.json (Used-vehicle imports tightly restricted)",
+        "source_url": "https://anglosiamlaw.com/blog/importing-car-to-thailand-rules-tax-procedure",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "Battery-electric (EV) — Thailand's EV 3.5 package reduces excise 8%→2% for BEVs ≤7M baht.",
@@ -11804,7 +12191,16 @@
         "checked_date": "2026-10-07",
         "needs_review": true
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Atto 3 production began 2022; Sri Lanka reopened vehicle imports on 1 Feb 2025, but no single numeric age limit was located in the sources reviewed — verify with Sri Lanka Customs.",
+        "source": "Sri Lanka Customs / LankaBizz (Imports & Exports Control Regs No.01/2025)",
+        "source_url": "https://lankabizz.net/2025/02/01/sri-lanka-updates-motor-vehicle-import-regulations/",
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "Battery-electric (EV) — Sri Lanka levies excise per motor kW (not per cc) under the Feb 2025 regime, a distinct EV treatment from combustion vehicles.",
@@ -11898,7 +12294,16 @@
         "checked_date": "2026-10-07",
         "needs_review": true
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Coolray (Binyue) production began 2018; Sri Lanka reopened vehicle imports on 1 Feb 2025, but no single numeric age limit was located in the sources reviewed — verify with Sri Lanka Customs.",
+        "source": "Sri Lanka Customs / LankaBizz (Imports & Exports Control Regs No.01/2025)",
+        "source_url": "https://lankabizz.net/2025/02/01/sri-lanka-updates-motor-vehicle-import-regulations/",
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "Combustion (ICE) — Sri Lanka's layered duty stack (20% + 50% surcharge + excise + VAT + SSCL) applies to combustion vehicles under the reopened Feb 2025 regime.",
@@ -11978,7 +12383,16 @@
         "checked_date": "2026-10-07",
         "needs_review": true
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Dolphin production began 2021; Sri Lanka reopened vehicle imports on 1 Feb 2025, but no single numeric age limit was located in the sources reviewed — verify with Sri Lanka Customs.",
+        "source": "Sri Lanka Customs / LankaBizz (Imports & Exports Control Regs No.01/2025)",
+        "source_url": "https://lankabizz.net/2025/02/01/sri-lanka-updates-motor-vehicle-import-regulations/",
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "Battery-electric (EV) — Sri Lanka levies excise per motor kW under the Feb 2025 regime; a compact affordable EV with clear market fit.",
@@ -12071,7 +12485,16 @@
         "confidence": "high",
         "checked_date": "2026-10-07"
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Atto 3 production began 2022; no universal age limit was identified for Turkey — cost is driven by the ÖTV/SCT tax stack.",
+        "source": "market sub-site importrules.json (No universal age limit identified)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "unknown",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "Battery-electric (EV) — Turkey's EV SCT (ÖTV) brackets (25% ≤160kW & ≤1.65M TL) are sharply lower than the 90–100%+ combustion rates. EV classification is the key cost lever.",
@@ -12164,7 +12587,16 @@
         "confidence": "high",
         "checked_date": "2026-10-07"
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "L7 production began 2023; no universal age limit was identified for Turkey — cost is driven by the ÖTV/SCT tax stack.",
+        "source": "market sub-site importrules.json (No universal age limit identified)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "unknown",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "EREV (extended-range electric vehicle) — Turkey's ÖTV regime taxes PHEVs at 45–85%; the EREV class is under-explained and its exact SCT bracket must be confirmed with the Ministry of Trade.",
@@ -12464,7 +12896,16 @@
         "checked_date": "2026-10-07",
         "needs_review": true
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Atto 3 production began 2022; New Zealand has no fixed age limit — eligibility is emissions/standards-based.",
+        "source": "market sub-site importrules.json (No fixed age limit (standards-based))",
+        "source_url": "https://www.japan-carrier.com/regulations/new-zealand?lang=en",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "Battery-electric (EV) — New Zealand passenger cars are duty-free (0%) with 15% GST; zero-tailpipe EVs do not incur the Clean Car Standard CO₂ charge. EV imports are standards-based, not age-limited.",
@@ -12939,7 +13380,16 @@
         "checked_date": "2026-10-07",
         "needs_review": true
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Atto 3 production began 2022; Australia has no blanket age limit — eligibility is ADR/import-approval based.",
+        "source": "market sub-site importrules.json (No blanket age limit (standards-based))",
+        "source_url": "https://www.abf.gov.au/importing-exporting-and-manufacturing/importing/how-to-import/types-of-imports/importing-a-motor-vehicle",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "Battery-electric (EV) — Australia grants no EV-specific duty relief (5% duty + 10% GST), but EVs qualify for the higher fuel-efficient Luxury Car Tax threshold (33% LCT only above it). EV adoption is among the fastest in the region.",
@@ -13034,7 +13484,16 @@
         "checked_date": "2026-10-07",
         "needs_review": true
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Sealion 6 production began 2025; Australia has no blanket age limit — eligibility is ADR/import-approval based.",
+        "source": "market sub-site importrules.json (No blanket age limit (standards-based))",
+        "source_url": "https://www.abf.gov.au/importing-exporting-and-manufacturing/importing/how-to-import/types-of-imports/importing-a-motor-vehicle",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "PHEV (plug-in hybrid, DM-i) — PHEV classification is the key open question for Australia: whether the DM-i trim qualifies for the fuel-efficient LCT threshold (≤7L/100km) and the FBT/novated-lease treatment, versus a BEV. No EV-specific duty relief applies.",
@@ -13127,7 +13586,16 @@
         "confidence": "high",
         "checked_date": "2026-10-07"
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "L7 production began 2023; no strict age limit was identified for Russia — EAEU technical certification applies.",
+        "source": "market sub-site importrules.json (No strict age limit identified (EAEU certification applies))",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "unknown",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "EREV (extended-range electric vehicle) — a class whose EAEU utilization-fee and engine-cc duty bracket is under-explained and must be confirmed; EREVs are a fast-growing import segment in Russia. No EV-specific duty relief applies, and EV/hybrid trade faces sanctions sensitivity.",
@@ -13222,7 +13690,16 @@
         "confidence": "high",
         "checked_date": "2026-10-07"
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Han production began 2020; no strict age limit was identified for Russia — EAEU technical certification applies.",
+        "source": "market sub-site importrules.json (No strict age limit identified (EAEU certification applies))",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "unknown",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "EV and PHEV (DM-i) trims — PHEV-vs-EV classification under Russia's utilization-fee and EAEU duty schedule is the key open question; neither class receives EV-specific duty relief, and EV/hybrid trade is sanctions-sensitive (EU bans EV/hybrid exports to Russia).",
@@ -13317,7 +13794,16 @@
         "confidence": "high",
         "checked_date": "2026-10-07"
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Atto 3 production began 2022; Georgia applies a 6-year excise cliff (a tax step-up, not a ban) — current units remain importable.",
+        "source": "market sub-site importrules.json (6-year excise cliff (not a ban))",
+        "source_url": "https://www.wcshipping.com/blog/georgias-6-year-car-import-rule-what-changed-in-poti-2026-update",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "Battery-electric (EV) — Georgia exempts EVs from import duty and the per-cc excise (18% VAT only), versus a nominal duty plus age-cliff excise for combustion vehicles. A strong EV relief delta, reinforced by Georgia's Poti/Batumi re-export corridor.",
@@ -14040,7 +14526,16 @@
         "confidence": "high",
         "checked_date": "2026-10-07"
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Atto 3 production began 2022; no strict age limit was identified for Armenia.",
+        "source": "market sub-site importrules.json (No strict age limit identified)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "unknown",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "Battery-electric (EV) — Armenia's 2026 EV regime (EAEU 15,000-unit duty-free quota + VAT exemption to 31 Dec 2026) applies, versus ~15% EAEU duty + 20% VAT for combustion vehicles. The strongest EV relief delta in the Caucasus/EAEU set.",
@@ -14133,7 +14628,16 @@
         "confidence": "high",
         "checked_date": "2026-10-07"
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "L7 production began 2023; no strict age limit was identified for Armenia.",
+        "source": "market sub-site importrules.json (No strict age limit identified)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "unknown",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "EREV (extended-range electric vehicle) — the EREV class is under-explained in Armenia's EV quota/VAT exemption: whether an EREV (which carries a combustion range-extender) qualifies for the 2026 EV duty-free quota and VAT exemption is unconfirmed and must be clarified with the State Revenue Committee. If classified as a hybrid/combustion, the ~15% + 20% VAT stack applies instead.",
@@ -14226,7 +14730,16 @@
         "confidence": "high",
         "checked_date": "2026-10-07"
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Han production began 2020; no strict age limit was identified for Armenia.",
+        "source": "market sub-site importrules.json (No strict age limit identified)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "unknown",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "EV and PHEV (DM-i) trims — the EV trim may qualify for Armenia's 2026 EV quota + VAT exemption, but the PHEV DM-i trim's classification is unconfirmed (hybrid vs BEV). This EV-vs-PHEV split is the key open question.",
@@ -21309,7 +21822,16 @@
         "checked_date": "2026-10-07",
         "needs_review": true
       },
-      "age_rule_fit": null,
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Atto 3 production began 2022; Timor-Leste's age limit is not clearly documented — confirm with customs before sourcing.",
+        "source": "market sub-site importrules.json (Age limit not clearly documented)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "unknown",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
       "powertrain_fit": {
         "status": "noted",
         "summary": "Battery-electric (EV) — no EV-specific duty relief confirmed; EVs follow the standard import duty + tax structure.",
