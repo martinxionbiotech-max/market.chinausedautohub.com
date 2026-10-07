@@ -811,6 +811,34 @@
       "country_id": "myanmar",
       "type": "destination",
       "note": null
+    },
+    {
+      "port_id": "rw-kigali",
+      "name": "Kigali (via Mombasa/Dar es Salaam transit)",
+      "country_id": "rwanda",
+      "type": "destination",
+      "note": "Landlocked — transit via Mombasa (Kenya) or Dar es Salaam (Tanzania) then road"
+    },
+    {
+      "port_id": "mw-lilongwe",
+      "name": "Lilongwe (via Dar es Salaam transit)",
+      "country_id": "malawi",
+      "type": "destination",
+      "note": "Landlocked — transit via Dar es Salaam (Tanzania) then road"
+    },
+    {
+      "port_id": "al-durres",
+      "name": "Durrës",
+      "country_id": "albania",
+      "type": "destination",
+      "note": "Main RoRo port"
+    },
+    {
+      "port_id": "md-giurgiulesti",
+      "name": "Giurgiulesti",
+      "country_id": "moldova",
+      "type": "destination",
+      "note": "Danube port; sole Moldovan port"
     }
   ]
 }

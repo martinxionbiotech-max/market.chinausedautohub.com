@@ -1151,6 +1151,54 @@
       "source_url": null,
       "last_checked": "2026-10-07",
       "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-rw-kigali",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "rw-kigali",
+      "est_days_min": 20,
+      "est_days_max": 30,
+      "shipping_method": "roro",
+      "source": "Industry route estimates (via Mombasa transit)",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-mw-lilongwe",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "mw-lilongwe",
+      "est_days_min": 26,
+      "est_days_max": 40,
+      "shipping_method": "roro",
+      "source": "Industry route estimates (via Dar es Salaam transit)",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-al-durres",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "al-durres",
+      "est_days_min": 20,
+      "est_days_max": 30,
+      "shipping_method": "roro",
+      "source": "Industry route estimates",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-md-giurgiulesti",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "md-giurgiulesti",
+      "est_days_min": 25,
+      "est_days_max": 35,
+      "shipping_method": "roro",
+      "source": "Industry route estimates (via Black Sea)",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
     }
   ]
 }

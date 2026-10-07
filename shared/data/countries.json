@@ -1013,6 +1013,58 @@
       "source_url": "https://customs.gov.mm/",
       "source_date": "2026-10-07",
       "confidence": "high"
+    },
+    {
+      "country_id": "rwanda",
+      "name": "Rwanda",
+      "name_zh": "卢旺达",
+      "region": "africa",
+      "drive_side": "lhd",
+      "currency": "RWF",
+      "status": "active",
+      "source": "Rwanda Revenue Authority (RRA)",
+      "source_url": "https://www.rra.gov.rw",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "malawi",
+      "name": "Malawi",
+      "name_zh": "马拉维",
+      "region": "africa",
+      "drive_side": "rhd",
+      "currency": "MWK",
+      "status": "active",
+      "source": "Malawi Revenue Authority (MRA)",
+      "source_url": "https://www.mra.mw",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "albania",
+      "name": "Albania",
+      "name_zh": "阿尔巴尼亚",
+      "region": "europe",
+      "drive_side": "lhd",
+      "currency": "ALL",
+      "status": "active",
+      "source": "General Directorate of Customs (DPD)",
+      "source_url": "https://dogana.gov.al",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "moldova",
+      "name": "Moldova",
+      "name_zh": "摩尔多瓦",
+      "region": "europe",
+      "drive_side": "lhd",
+      "currency": "MDL",
+      "status": "active",
+      "source": "Customs Service of the Republic of Moldova",
+      "source_url": "https://customs.gov.md",
+      "source_date": "2026-10-07",
+      "confidence": "high"
     }
   ]
 }

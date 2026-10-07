@@ -1434,4 +1434,77 @@ export const countryContent: Record<string, CountryContent> = {
     evNote:
       "Myanmar has reduced import duties for electric vehicles to encourage adoption, though exact current rates were not confirmed in the sources reviewed. Charging standard should be confirmed against the local network — verify EV treatment with the Ministry of Commerce.",
   },
+  rwanda: {
+    overview:
+      "Rwanda is a left-hand-drive East African market with no fixed vehicle age limit — eligibility is driven by Euro 4 emissions compliance (EAC standard EAS 1047:2022). Imports clear through the Rwanda Electronic Single Window (ReSW) with a Rwanda Standards Board physical inspection, and the landlocked country transits vehicles via Mombasa (Kenya) or Dar es Salaam (Tanzania). Fully electric vehicles enjoy a full tax exemption until 30 June 2028.",
+    considerations: [
+      "Euro 4/IV emissions compliance (EAS 1047:2022) is the eligibility filter rather than a fixed age limit — confirm the certificate of conformity with RRA.",
+      "EVs are fully exempt from duty, VAT, excise and withholding tax until 30 June 2028; hybrids lost their full exemption from July 2025.",
+      "Landlocked — vehicles transit via Mombasa or Dar es Salaam, then travel by road; factor in transit time and cost.",
+    ],
+    faq: [
+      { q: "Is Rwanda right- or left-hand drive?", a: "Left-hand drive (LHD)." },
+      { q: "Is there an age limit?", a: "No fixed age limit — Euro 4 emissions compliance (EAS 1047:2022) is the filter." },
+      { q: "What EV incentive applies?", a: "Fully electric vehicles are exempt from duty, VAT, excise and withholding tax until 30 June 2028." },
+      { q: "Which port handles imports?", a: "Kigali, via Mombasa (Kenya) or Dar es Salaam (Tanzania) transit." },
+    ],
+    popularModelIds: ["byd-atto-3", "byd-seal", "byd-dolphin"],
+    evNote:
+      "Rwanda fully exempts electric vehicles from import duty, VAT, excise and withholding tax until 30 June 2028 — a strong incentive versus the 25% standard duty. Hybrids now pay tiered excise and 18% VAT. Confirm current status with RRA.",
+  },
+  malawi: {
+    overview:
+      "Malawi is a right-hand-drive Southern African market that is landlocked — vehicles ship to Dar es Salaam (Tanzania) by RoRo and travel onward by road. Its 2025 EV import rules exempt fully electric vehicles from import duty, cut EV VAT to 8%, waive excise for EVs under 100 kW and apply no age limit to EVs, making it an increasingly attractive destination for Chinese new-energy vehicles.",
+    considerations: [
+      "RHD is mandatory — source RHD export units.",
+      "Malawi's 2025 EV rules give full EVs 0% import duty + 8% VAT + excise-free (<100 kW) with no age limit; combustion vehicles are reported limited to about 10 years.",
+      "Landlocked — vehicles transit via Dar es Salaam; factor in transit time and cost.",
+    ],
+    faq: [
+      { q: "Is Malawi right- or left-hand drive?", a: "Right-hand drive (RHD)." },
+      { q: "What EV incentive applies?", a: "2025 rules: 0% import duty, 8% VAT and excise-free (<100 kW) for fully electric vehicles, with no age limit." },
+      { q: "What taxes apply to combustion vehicles?", a: "About 25% import duty, 0–110% excise and 16.5% VAT — verify with MRA." },
+      { q: "Which port handles imports?", a: "Lilongwe, via Dar es Salaam (Tanzania) transit." },
+    ],
+    popularModelIds: ["byd-atto-3", "mg-4", "byd-dolphin"],
+    evNote:
+      "Malawi's 2025 EV import rules (0% duty + 8% VAT + excise-free under 100 kW + no age limit) make recent Chinese EVs a strong fit, versus a 25% duty + 16.5% VAT + 0–110% excise stack for combustion vehicles. Confirm current figures with MRA.",
+  },
+  albania: {
+    overview:
+      "Albania is a left-hand-drive European market that restricts used-vehicle imports to about 10 years of age plus Euro 4/5 emissions. Customs clearance runs through the General Directorate of Customs (DPD) on the ASYCUDA World system, with Durrës as the main RoRo port. Vehicles face a 10% MFN duty plus 20% VAT, and the EV VAT exemption is limited to new vehicles only.",
+    considerations: [
+      "About a 10-year age limit plus Euro 4/5 emissions — confirm the current cut-off with DPD before sourcing stock.",
+      "The EV VAT exemption (Article 51(p)) applies to new vehicles only — used EVs pay full 20% VAT.",
+      "Commercial imports require an Albanian NIPT (business tax ID); ASYCUDA World declaration applies.",
+    ],
+    faq: [
+      { q: "Is Albania right- or left-hand drive?", a: "Left-hand drive (LHD)." },
+      { q: "What is the age limit?", a: "About 10 years plus Euro 4/5 emissions — verify with DPD." },
+      { q: "What duty and VAT apply?", a: "10% MFN import duty plus 20% VAT." },
+      { q: "Do EVs get a VAT exemption?", a: "Only new EVs — used EVs pay full 20% VAT (Article 51(p) VAT Law)." },
+      { q: "Which port handles imports?", a: "Durrës." },
+    ],
+    popularModelIds: ["byd-atto-3", "geely-monjaro", "chery-tiggo-8"],
+    evNote:
+      "Albania exempts new electric vehicles from VAT under Article 51(p), but the exemption does not extend to used EVs — used EV imports pay the full 20% VAT plus 10% MFN duty. This is a key cost caveat for the used-EV trade.",
+  },
+  moldova: {
+    overview:
+      "Moldova is a left-hand-drive European market that has had no vehicle age limit since 1 January 2021. Excise duty is keyed to engine displacement and age, so electric vehicles (no displacement) are excise-free; VAT of 20% is set to apply from 2027 under the draft fiscal policy. Vehicles clear through the Danube port of Giurgiulesti.",
+    considerations: [
+      "No age limit since 2021 — model-year flexibility is a key advantage.",
+      "EVs are excise-free (no engine displacement); from 2027 EVs pay 20% VAT plus the 0.4% customs procedures fee.",
+      "Declarations must be submitted within 72 hours of import; clearance is via Giurgiulesti.",
+    ],
+    faq: [
+      { q: "Is Moldova right- or left-hand drive?", a: "Left-hand drive (LHD)." },
+      { q: "Is there an age limit?", a: "No age limit since 1 January 2021." },
+      { q: "What EV incentive applies?", a: "EVs are excise-free (no engine displacement); 20% VAT applies from 2027." },
+      { q: "Which port handles imports?", a: "Giurgiulesti (Danube)." },
+    ],
+    popularModelIds: ["byd-atto-3", "byd-seal", "geely-monjaro"],
+    evNote:
+      "Moldovan excise is engine-displacement based, so electric vehicles are excise-free. From 1 January 2027 (draft fiscal policy) EVs pay 20% VAT plus the 0.4% procedures fee. Confirm current VAT treatment with the Customs Service.",
+  },
 };
