@@ -93,6 +93,16 @@ const sect = (k: string) => t(dict, `country.sections.${k}`);
 const hint = (k: string, v?: Record<string, string | number>) => t(dict, `country.reviewHints.${k}`, v);
 const misc = (k: string, v?: Record<string, string | number>) => t(dict, `country.misc.${k}`, v);
 const verifyCaveat = t(dict, "country.misc.verifyCaveat");
+const qfc = (k: string) => t(dict, `country.quickFacts.${k}`);
+const registrationRules = rulesByCategory(countryId, "registration");
+const commonBrands = (content.commonBrands || []).map((id) => brands.find((b) => b.brand_id === id)).filter(Boolean);
+const brandsToShow = commonBrands.length > 0 ? commonBrands : cnBrands;
+const vatRule = tax.find((x) => x.tax_type === "vat");
+const qfAge = ageRules[0]?.title ?? t(dict, "common.notAvailable");
+const qfDuty = dutyRules[0] ? rl(dutyRules[0]) : t(dict, "common.notAvailable");
+const qfVat = vatRule ? rl(vatRule) : t(dict, "common.notAvailable");
+const qfEv = evRules[0]?.title ?? (evTax.length > 0 ? evTax[0].label : t(dict, "common.notAvailable"));
+const qfRecommended = content.recommendSummary ?? t(dict, "common.notAvailable");
 
 const pageUrl = MARKET_SITE_URL + localizedUrl(`/countries/${country.country_id}/`, locale);
 const title = t(dict, "country.title", { country: country.name });
@@ -151,6 +161,20 @@ const taxMeta = (x: any) => ({
 
   <p class="disclaimer">{t(dict, "country.disclaimer")}</p>
 
+  <!-- Quick Facts (AIO structured block) -->
+  <section class="quick-facts" aria-label={qfc("title")}>
+    <h2>{qfc("title")}</h2>
+    <div class="qf-grid">
+      <div class="qf"><span class="qf-k">{qfc("region")}</span><span class="qf-v">{regionLabel}</span></div>
+      <div class="qf"><span class="qf-k">{qfc("driveSide")}</span><span class="qf-v">{driveSide}</span></div>
+      <div class="qf"><span class="qf-k">{qfc("ageRule")}</span><span class="qf-v">{qfAge}</span></div>
+      <div class="qf"><span class="qf-k">{qfc("importDuty")}</span><span class="qf-v">{qfDuty}</span></div>
+      <div class="qf"><span class="qf-k">{qfc("vat")}</span><span class="qf-v">{qfVat}</span></div>
+      <div class="qf"><span class="qf-k">{qfc("evTreatment")}</span><span class="qf-v">{qfEv}</span></div>
+      <div class="qf qf-wide"><span class="qf-k">{qfc("recommended")}</span><span class="qf-v">{qfRecommended}</span></div>
+    </div>
+  </section>
+
   <!-- Confidence legend (PHASE 6 five-level labels) -->
   <section>
     <h2>{t(dict, "confidence.heading")}</h2>
@@ -201,7 +225,7 @@ const taxMeta = (x: any) => ({
   </section>
 
   <!-- 3. Vehicle Age Rules -->
-  <section>
+  <section id="age-rules">
     <h2>{sect("vehicleAgeRules")}</h2>
     {ageRules.length > 0 ? (
       ageRules.map((r) => {
@@ -242,7 +266,7 @@ const taxMeta = (x: any) => ({
   </section>
 
   <!-- 5. Import Duties -->
-  <section>
+  <section id="import-duties">
     <h2>{sect("importDuties")}</h2>
     <p class="review-hint">{hint("duty")}</p>
     {dutyRules.length > 0 ? (
@@ -265,7 +289,7 @@ const taxMeta = (x: any) => ({
   </section>
 
   <!-- 6. VAT & Taxes -->
-  <section>
+  <section id="vat-taxes">
     <h2>{sect("vatTaxes")}</h2>
     {otherTax.length > 0 ? (
       otherTax.map((x) => {
@@ -384,6 +408,28 @@ const taxMeta = (x: any) => ({
     )}
   </section>
 
+  <!-- 8b. Registration -->
+  <section id="registration">
+    <h2>{sect("registration")}</h2>
+    {registrationRules.length > 0 ? (
+      registrationRules.map((r) => {
+        const m = ruleMeta(r);
+        return (
+          <div class="rule">
+            <div class="rule-head">
+              <h3>{r.title}</h3>
+              {r.needs_review && <span class="badge-review">{t(dict, "common.needsReview")}</span>}
+            </div>
+            <p>{r.rule_text}</p>
+            <SourceNote source={r.source} sourceUrl={r.source_url} sourceDate={r.last_checked} confidenceLabel={m.label} effectiveDate={r.effective_date} jurisdiction={m.jurisdiction} applicability={m.applicability} caveat={m.caveat} />
+          </div>
+        );
+      })
+    ) : (
+      <p>{misc("noRegistration")}</p>
+    )}
+  </section>
+
   <!-- 9. Ports -->
   <section>
     <h2>{sect("ports")}</h2>
@@ -463,16 +509,17 @@ const taxMeta = (x: any) => ({
   </section>
 
   <!-- 12. Chinese Vehicle Brands -->
-  <section>
+  <section id="chinese-brands">
     <h2>{sect("chineseBrands")}</h2>
     <ul class="brand-list">
-      {cnBrands.map((b) => (
+      {brandsToShow.map((b) => (
         <li>
           <a href={DATA_SITE_URL + "/brands/" + b.brand_id + "/"}>{b.name}</a>
           <span class="zh">{b.name_zh}</span>
         </li>
       ))}
     </ul>
+    {content.brandsSource && <p class="checked">{misc("brandsSourceLabel")}: {content.brandsSource}</p>}
   </section>
 
   <!-- 13. Import Costs -->
@@ -489,6 +536,34 @@ const taxMeta = (x: any) => ({
         <li>{c}</li>
       ))}
     </ul>
+  </section>
+
+  <!-- 14b. Market-Specific Risks -->
+  <section id="market-risks">
+    <h2>{sect("marketRisks")}</h2>
+    {content.marketRisks && content.marketRisks.length > 0 ? (
+      <ul>
+        {content.marketRisks.map((r) => (
+          <li>{r}</li>
+        ))}
+      </ul>
+    ) : (
+      <p>{misc("noRisks")}</p>
+    )}
+  </section>
+
+  <!-- 14c. Recommended Vehicle Characteristics -->
+  <section id="recommended-vehicles">
+    <h2>{sect("recommendedCharacteristics")}</h2>
+    {content.recommendedCharacteristics && content.recommendedCharacteristics.length > 0 ? (
+      <ul>
+        {content.recommendedCharacteristics.map((c) => (
+          <li>{c}</li>
+        ))}
+      </ul>
+    ) : (
+      <p>{misc("noRecommendations")}</p>
+    )}
   </section>
 
   <!-- 15. Related Tools -->
@@ -600,5 +675,11 @@ const taxMeta = (x: any) => ({
     .cta-alt { background: var(--color-accent); }
     .related-links { margin-top: var(--space-3); }
     @media (max-width: 600px) { .brand-list { column-count: 1; } }
+    .quick-facts { background: var(--color-bg-alt); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-4); }
+    .qf-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: var(--space-3); margin-top: var(--space-3); }
+    .qf { display: flex; flex-direction: column; }
+    .qf-wide { grid-column: 1 / -1; }
+    .qf-k { font-size: 12px; color: var(--color-text-soft); text-transform: uppercase; letter-spacing: .02em; }
+    .qf-v { font-weight: 600; }
   </style>
 </BaseLayout>

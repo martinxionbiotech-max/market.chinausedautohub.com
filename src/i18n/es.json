@@ -98,7 +98,7 @@
       "vatTaxes": "IVA e impuestos",
       "officialSources": "Fuentes oficiales",
       "evRules": "Reglas para vehículos eléctricos",
-      "requiredDocuments": "Documentos requeridos",
+      "requiredDocuments": "Inspección, certificación y documentos requeridos",
       "ports": "Puertos",
       "shippingFromChina": "Envío desde China",
       "vehicleCompatibility": "Páginas de compatibilidad de vehículos",
@@ -111,7 +111,10 @@
       "relatedGuides": "Guías relacionadas",
       "availableVehicles": "Vehículos disponibles",
       "faq": "Preguntas frecuentes",
-      "verification": "Fecha de verificación y estado de la evidencia"
+      "verification": "Fecha de verificación y estado de la evidencia",
+      "registration": "Registro",
+      "recommendedCharacteristics": "Características recomendadas del vehículo",
+      "marketRisks": "Riesgos específicos del mercado"
     },
     "reviewHints": {
       "eligibility": "Esto no es asesoramiento legal: consulte a las autoridades del país de destino. La normativa son datos de alto riesgo. Cada regla a continuación lleva fuente, fecha de verificación, jurisdicción, aplicabilidad y nivel de confianza. Confirme con las aduanas oficiales antes de operar.",
@@ -163,7 +166,21 @@
       "guideShipping": "Envío",
       "guideLandedCost": "Coste en destino",
       "guideInspection": "Inspección del vehículo",
-      "verifyCaveat": "Verifique con la autoridad oficial antes de operar."
+      "verifyCaveat": "Verifique con la autoridad oficial antes de operar.",
+      "noRegistration": "No hay detalles de registro registrados. Verifique el proceso con la autoridad local.",
+      "noRecommendations": "Aún no hay recomendaciones de vehículos registradas para este mercado.",
+      "noRisks": "Aún no hay riesgos específicos registrados para este mercado.",
+      "brandsSourceLabel": "Fuente"
+    },
+    "quickFacts": {
+      "title": "Datos rápidos",
+      "region": "Región",
+      "driveSide": "Lado del volante",
+      "ageRule": "Regla de antigüedad",
+      "importDuty": "Arancel de importación",
+      "vat": "IVA",
+      "evTreatment": "Trato a VE",
+      "recommended": "Vehículos recomendados"
     }
   },
   "vehicle": {

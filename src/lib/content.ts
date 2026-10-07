@@ -19,6 +19,11 @@ export interface CountryContent {
   popularModelIds: string[];
   evNote: string;
   suvNote?: string;
+  commonBrands?: string[];
+  brandsSource?: string;
+  recommendSummary?: string;
+  recommendedCharacteristics?: string[];
+  marketRisks?: string[];
 }
 
 export const countryContent: Record<string, CountryContent> = {
@@ -39,6 +44,22 @@ export const countryContent: Record<string, CountryContent> = {
     popularModelIds: ["li-auto-l7", "byd-han", "nio-es6"],
     evNote:
       "EV adoption is growing quickly in the UAE, supported by public charging (DEWA Green Charger) and toll exemptions in some emirates. Premium and long-range EVs are in particular demand.",
+    commonBrands: ["byd", "geely", "changan", "chery", "mg", "gac", "haval", "jetour", "hongqi", "baic"],
+    brandsSource:
+      "Chinese brands are distributed in the UAE by established local dealers (e.g. BYD via Al-Futtaim, Geely via AGMC); MG, Changan and Chery have strong Gulf presence. Confirm current distributor line-ups locally.",
+    recommendSummary:
+      "LHD, GCC-spec; no universal age limit; premium SUVs, luxury sedans and long-range EVs.",
+    recommendedCharacteristics: [
+      "Left-hand-drive (LHD) units with GCC (Gulf Cooperation Council) specification to avoid modification before registration.",
+      "No universal age limit, but newer, low-mileage units clear inspection and registration more easily.",
+      "Premium SUVs, luxury sedans and long-range EVs with strong air-conditioning for extreme heat.",
+      "Chinese premium and new-energy brands (BYD, Geely, Changan, Hongqi) are well accepted.",
+    ],
+    marketRisks: [
+      "Non-GCC-specification vehicles may require modification before registration — confirm spec at source.",
+      "The UAE is a re-export hub; demand can shift with regional GCC and African market conditions.",
+      "Extreme ambient heat stresses cooling and battery systems — favour vehicles with robust thermal management.",
+    ],
   },
   "saudi-arabia": {
     overview:
@@ -56,6 +77,22 @@ export const countryContent: Record<string, CountryContent> = {
     popularModelIds: ["geely-monjaro", "changan-cs75-plus", "great-wall-haval-h6"],
     evNote:
       "Saudi Arabia is investing heavily in EV charging and adoption, and SASO maintains EV standards. Long-range premium EVs are entering the market.",
+    commonBrands: ["geely", "changan", "chery", "mg", "haval", "jetour", "byd", "hongqi", "baic"],
+    brandsSource:
+      "Geely, Changan, Chery and MG have strong Saudi sales; BYD, Haval, Jetour and Hongqi are expanding. Reported in Saudi automotive media (2023–2025). Confirm current distributor line-ups locally.",
+    recommendSummary:
+      "LHD, SASO/SABER conformity; passenger cars ≤5 years; SUVs dominate.",
+    recommendedCharacteristics: [
+      "Left-hand-drive (LHD) units with SASO conformity and SABER registration completed before shipment.",
+      "Passenger cars within five years of age — source recent, low-mileage stock.",
+      "SUVs dominate demand; robust cooling and sealed components suit dust and heat.",
+      "Chinese SUVs (Geely, Changan, Haval, Jetour) have strong local acceptance.",
+    ],
+    marketRisks: [
+      "SABER/SASO conformity is mandatory and strict — factor certification time and cost before shipping.",
+      "The five-year passenger-car age limit is a hard filter; confirm the exact cut-off with ZATCA.",
+      "Dust and extreme heat accelerate wear on cooling and sealing components.",
+    ],
   },
   kenya: {
     overview:
@@ -76,6 +113,22 @@ export const countryContent: Record<string, CountryContent> = {
       "Kenya offers reduced duty and excise relief for EVs, and charging networks are expanding in Nairobi. Affordable compact EVs and PHEVs are gaining traction.",
     suvNote:
       "SUVs dominate Kenya's used import market, favored for mixed urban and rough-road use. Compact to mid-size SUVs are the strongest sellers.",
+    commonBrands: ["byd", "chery", "geely", "changan", "great-wall", "haval", "jac", "mg", "jetour", "dongfeng"],
+    brandsSource:
+      "Chinese-brand market presence in Kenya reported in automotive trade media (2023–2025); Chery and BYD have established local distribution/assembly. Confirm current distributor line-ups locally.",
+    recommendSummary:
+      "RHD units within 8 years; compact–mid SUVs and economical sedans; EVs benefit from duty relief.",
+    recommendedCharacteristics: [
+      "Right-hand-drive (RHD) units only — most Chinese brands produce RHD export versions for East Africa.",
+      "Model year within eight years of import (2026 → roughly 2018 and newer) to clear the age rule.",
+      "Compact to mid-size SUVs and economical sedans with durable, simple drivetrains for mixed roads.",
+      "EVs and PHEVs benefit from reduced import duty and excise relief — recent low-mileage EVs are cost-competitive.",
+    ],
+    marketRisks: [
+      "The eight-year age limit is strictly enforced; overage units are rejected at PVoC or port.",
+      "Pre-shipment PVoC (KEBS) is mandatory and strict — factor inspection lead time and rejection risk.",
+      "Kenyan shilling (KES) depreciation and EAC Common External Tariff changes can shift landed cost — verify rates before quoting.",
+    ],
   },
   tanzania: {
     overview:
@@ -93,6 +146,22 @@ export const countryContent: Record<string, CountryContent> = {
     popularModelIds: ["chery-tiggo-8", "geely-monjaro", "gac-gs4"],
     evNote:
       "Tanzania has introduced EV incentives including reduced excise. The market is early-stage with limited charging infrastructure.",
+    commonBrands: ["chery", "byd", "geely", "changan", "great-wall", "jac", "dongfeng", "mg"],
+    brandsSource:
+      "Chery, BYD, Geely, Changan and GWM/JAC have established distribution in Tanzania. Reported in East African automotive media (2023–2025). Confirm current distributor line-ups locally.",
+    recommendSummary:
+      "RHD units; age limit ~8–10 years (verify); SUVs and light commercial vehicles.",
+    recommendedCharacteristics: [
+      "Right-hand-drive (RHD) units only.",
+      "Within roughly eight to ten years of age — verify the current limit with TRA before sourcing.",
+      "SUVs and light commercial vehicles with durable, simple drivetrains for rough roads.",
+      "A PVoC pre-shipment inspection certificate is required before export.",
+    ],
+    marketRisks: [
+      "Dar es Salaam port congestion can add significant lead time — plan for delays.",
+      "The age limit has varied (sources cite 8–10 years) — confirm the current cut-off with TRA.",
+      "PVoC (TBS) inspection is mandatory — factor inspection lead time and rejection risk.",
+    ],
   },
   nigeria: {
     overview:
@@ -112,6 +181,22 @@ export const countryContent: Record<string, CountryContent> = {
       "Nigeria's EV market is early-stage with developing policy and limited charging infrastructure; hybrid and PHEV interest is growing.",
     suvNote:
       "SUVs are in strong demand in Nigeria for durability on varied roads; mid-size SUVs are the most popular import segment.",
+    commonBrands: ["chery", "gac", "geely", "byd", "changan", "great-wall", "haval", "jac", "jetour"],
+    brandsSource:
+      "Chery, GAC, Geely, Changan and Jetour have established Nigerian distribution (GAC and Jetour announced local assembly/partnerships). Reported in Nigerian automotive media (2023–2025). Confirm current distributor line-ups locally.",
+    recommendSummary:
+      "RHD units; confirm current age limit; mid-size SUVs and durable sedans.",
+    recommendedCharacteristics: [
+      "Right-hand-drive (RHD) units only.",
+      "Confirm the current age limit — rules changed recently — and source recent stock.",
+      "Mid-size SUVs and durable sedans with robust suspension for varied roads.",
+      "SONCAP pre-shipment inspection is required before export.",
+    ],
+    marketRisks: [
+      "Nigerian naira (NGN) exchange-rate volatility materially shifts landed cost — re-quote frequently.",
+      "Vehicle age rules have changed in recent years — confirm the current limit with Nigeria Customs.",
+      "Lagos port congestion (Apapa and Tin Can Island) adds lead time and handling cost.",
+    ],
   },
   kazakhstan: {
     overview:
@@ -129,6 +214,22 @@ export const countryContent: Record<string, CountryContent> = {
     popularModelIds: ["chery-tiggo-8", "geely-monjaro", "great-wall-haval-h6"],
     evNote:
       "Kazakhstan temporarily exempts EVs from customs duty and recycling fee; adoption is rising, particularly for affordable EVs.",
+    commonBrands: ["chery", "geely", "changan", "byd", "jetour", "gac", "haval", "tank", "deepal", "zeekr"],
+    brandsSource:
+      "Chery, Geely, Changan and Jetour are locally assembled by Allur Group and have strong Kazakh sales; BYD and other Chinese brands are expanding. Reported in Kazakh/Central Asian automotive media (2023–2025). Confirm current distributor line-ups locally.",
+    recommendSummary:
+      "LHD, EAEU certification; most units arrive by rail; EVs enjoy duty relief.",
+    recommendedCharacteristics: [
+      "Left-hand-drive (LHD) units with EAEU technical certification (OTTC).",
+      "Confirm the current age limit — it has been adjusted in recent years.",
+      "SUVs and crossovers dominate; most units arrive by rail via Khorgos/Alashankou.",
+      "EVs benefit from temporary customs-duty and recycling-fee relief.",
+    ],
+    marketRisks: [
+      "EAEU technical certification (OTTC) is required and adds time and cost.",
+      "The EV duty and recycling-fee exemption is temporary — confirm current status before quoting.",
+      "Rail transit via Khorgos/Alashankou is the main route; schedule and clearance vary.",
+    ],
   },
   uzbekistan: {
     overview:
@@ -146,6 +247,22 @@ export const countryContent: Record<string, CountryContent> = {
     popularModelIds: ["byd-song-plus", "chery-tiggo-8", "geely-monjaro"],
     evNote:
       "Uzbekistan exempts EVs from import duty and excise tax; local assembly and adoption are growing under government incentives.",
+    commonBrands: ["byd", "chery", "changan", "geely", "jetour", "haval", "deepal", "denza"],
+    brandsSource:
+      "BYD operates a local assembly plant in Jizzakh (opened 2024); Chery, Changan, Geely and Jetour also have established distribution. Reported in Uzbek/Central Asian automotive media (2024–2025). Confirm current distributor line-ups locally.",
+    recommendSummary:
+      "LHD, strict import controls; EVs exempt from duty and excise.",
+    recommendedCharacteristics: [
+      "Left-hand-drive (LHD) units; certification and recycling fees apply.",
+      "Strict import controls — confirm current requirements before sourcing.",
+      "EVs are exempt from import duty and excise — recent Chinese EVs are the standout category.",
+      "Compact to mid-size SUVs and economical sedans; rail transit via Khorgos/Alashankou.",
+    ],
+    marketRisks: [
+      "Import controls are strict — certification and recycling fees add cost and delay.",
+      "Local assembly (e.g. BYD Jizzakh) is protected — confirm used-import eligibility before sourcing.",
+      "Uzbek sum (UZS) volatility and the EV exemption's duration should be verified before quoting.",
+    ],
   },
   "south-africa": {
     overview:

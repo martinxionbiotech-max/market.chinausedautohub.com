@@ -24,7 +24,19 @@
         "a": "Jebel Ali, en Dubái, es el principal puerto de entrada."
       }
     ],
-    "evNote": "La adopción de vehículos eléctricos crece con rapidez en los EAU, respaldada por la carga pública (DEWA Green Charger) y las exenciones de peaje en algunos emiratos. Los VE premium y de gran autonomía tienen una demanda especialmente alta."
+    "evNote": "La adopción de vehículos eléctricos crece con rapidez en los EAU, respaldada por la carga pública (DEWA Green Charger) y las exenciones de peaje en algunos emiratos. Los VE premium y de gran autonomía tienen una demanda especialmente alta.",
+    "recommendSummary": "LHD, especificación GCC; sin límite de edad universal; SUV premium, berlinas de lujo y VE de larga autonomía.",
+    "recommendedCharacteristics": [
+      "Unidades con volante a la izquierda (LHD) con especificación del CCG (Gulf Cooperation Council) para evitar modificaciones antes del registro.",
+      "Sin límite de edad universal, pero las unidades más nuevas y de bajo kilometraje superan la inspección y el registro con más facilidad.",
+      "SUV premium, berlinas de lujo y VE de larga autonomía con aire acondicionado potente para el calor extremo.",
+      "Las marcas premium y de nueva energía chinas (BYD, Geely, Changan, Hongqi) están bien aceptadas."
+    ],
+    "marketRisks": [
+      "Los vehículos sin especificación GCC pueden requerir modificaciones antes del registro: confirme la especificación en origen.",
+      "EAU es un centro de reexportación; la demanda puede variar con las condiciones de los mercados del CCG y de África.",
+      "El calor ambiente extremo estresa los sistemas de refrigeración y baterías: prefiera vehículos con buena gestión térmica."
+    ]
   },
   "saudi-arabia": {
     "overview": "Arabia Saudí es el mayor mercado automovilístico del Golfo, con una rápida adopción de vehículos eléctricos y una fuerte demanda de SUV. Es un mercado con volante a la izquierda que aplica las normas GCC/SASO, con Dammam y Yeda como principales puertos marítimos para las importaciones de vehículos.",
@@ -47,7 +59,19 @@
         "a": "Sí: se requieren la conformidad SASO y el registro SABER."
       }
     ],
-    "evNote": "Arabia Saudí está invirtiendo con fuerza en la carga y la adopción de vehículos eléctricos, y SASO mantiene normas para VE. Los VE premium de gran autonomía están entrando en el mercado."
+    "evNote": "Arabia Saudí está invirtiendo con fuerza en la carga y la adopción de vehículos eléctricos, y SASO mantiene normas para VE. Los VE premium de gran autonomía están entrando en el mercado.",
+    "recommendSummary": "LHD, conformidad SASO/SABER; turismos de ≤5 años; dominan los SUV.",
+    "recommendedCharacteristics": [
+      "Unidades con volante a la izquierda (LHD) con conformidad SASO y registro SABER completados antes del embarque.",
+      "Turismos con menos de cinco años de antigüedad: busque stock reciente y de bajo kilometraje.",
+      "Dominan los SUV; la refrigeración robusta y los componentes sellados se adaptan al polvo y al calor.",
+      "Los SUV chinos (Geely, Changan, Haval, Jetour) tienen fuerte aceptación local."
+    ],
+    "marketRisks": [
+      "La conformidad SABER/SASO es obligatoria y estricta: considere el tiempo y el coste de certificación antes de enviar.",
+      "El límite de cinco años para turismos es un filtro estricto; confirme el corte exacto con ZATCA.",
+      "El polvo y el calor extremo aceleran el desgaste de los componentes de refrigeración y sellado."
+    ]
   },
   "kenya": {
     "overview": "Kenia es el mayor mercado de importación de coches usados de África Oriental y un país con volante a la derecha y una estricta regla de ocho años de antigüedad. Mombasa es el principal puerto de entrada. La demanda se concentra en SUV compactos y berlinas económicas, con un interés creciente por los vehículos eléctricos.",
@@ -75,7 +99,19 @@
       }
     ],
     "evNote": "Kenia ofrece arancel e impuesto especial reducidos para los VE, y las redes de carga se están expandiendo en Nairobi. Los VE compactos y los PHEV asequibles están ganando tracción.",
-    "suvNote": "Los SUV dominan el mercado de importación de usados de Kenia, favorecidos por el uso mixto urbano y en carreteras en mal estado. Los SUV compactos y medianos son los más vendidos."
+    "suvNote": "Los SUV dominan el mercado de importación de usados de Kenia, favorecidos por el uso mixto urbano y en carreteras en mal estado. Los SUV compactos y medianos son los más vendidos.",
+    "recommendSummary": "Unidades RHD de menos de 8 años; SUV compactos-medianos y berlinas económicas; los VE se benefician de alivio arancelario.",
+    "recommendedCharacteristics": [
+      "Solo unidades con volante a la derecha (RHD): la mayoría de las marcas chinas producen versiones RHD para África Oriental.",
+      "Año del modelo dentro de los ocho años de importación (2026 → aproximadamente 2018 y posteriores) para cumplir la regla de antigüedad.",
+      "SUV compactos a medianos y berlinas económicas con transmisiones duraderas y sencillas para carreteras mixtas.",
+      "Los VE y PHEV se benefician de arancel de importación e impuesto especial reducidos: los VE recientes de bajo kilometraje son competitivos en coste."
+    ],
+    "marketRisks": [
+      "El límite de ocho años se aplica con rigor; las unidades más antiguas se rechazan en el PVoC o en puerto.",
+      "El PVoC previo al embarque (KEBS) es obligatorio y estricto: considere el plazo de inspección y el riesgo de rechazo.",
+      "La depreciación del chelín keniano (KES) y los cambios del Arancel Externo Común de la EAC pueden alterar el coste final: verifique las tarifas antes de cotizar."
+    ]
   },
   "tanzania": {
     "overview": "Tanzania es un mercado de África Oriental con volante a la derecha que importa vehículos usados principalmente a través de Dar es Salaam. Se aplica un límite de antigüedad de entre ocho y diez años, y se exige inspección previa al embarque. Los SUV y los vehículos comerciales ligeros dominan la demanda.",
@@ -98,7 +134,19 @@
         "a": "Dar es Salaam."
       }
     ],
-    "evNote": "Tanzania ha introducido incentivos para los VE, incluida una reducción del impuesto especial. El mercado se encuentra en una fase inicial, con una infraestructura de carga limitada."
+    "evNote": "Tanzania ha introducido incentivos para los VE, incluida una reducción del impuesto especial. El mercado se encuentra en una fase inicial, con una infraestructura de carga limitada.",
+    "recommendSummary": "Unidades RHD; límite de edad ~8–10 años (verificar); SUV y vehículos comerciales ligeros.",
+    "recommendedCharacteristics": [
+      "Solo unidades con volante a la derecha (RHD).",
+      "Dentro de aproximadamente ocho a diez años de antigüedad: verifique el límite actual con TRA antes de comprar.",
+      "SUV y vehículos comerciales ligeros con transmisiones duraderas y sencillas para carreteras en mal estado.",
+      "Se exige el certificado de inspección previa al embarque PVoC antes de la exportación."
+    ],
+    "marketRisks": [
+      "La congestión del puerto de Dar es Salaam puede añadir plazos importantes: planifique retrasos.",
+      "El límite de edad ha variado (las fuentes citan 8–10 años): confirme el corte actual con TRA.",
+      "La inspección PVoC (TBS) es obligatoria: considere el plazo de inspección y el riesgo de rechazo."
+    ]
   },
   "nigeria": {
     "overview": "Nigeria es el mayor mercado de coches usados de África Occidental y un país con volante a la derecha. Los vehículos entran por Lagos (Apapa y Tin Can Island). Se aplican restricciones de antigüedad que han cambiado en los últimos años, por lo que conviene confirmar las normas con la aduana de Nigeria.",
@@ -122,7 +170,19 @@
       }
     ],
     "evNote": "El mercado de VE de Nigeria está en una fase inicial, con una política en desarrollo y una infraestructura de carga limitada; el interés por los híbridos y PHEV está creciendo.",
-    "suvNote": "Los SUV tienen una fuerte demanda en Nigeria por su durabilidad en carreteras variadas; los SUV medianos son el segmento de importación más popular."
+    "suvNote": "Los SUV tienen una fuerte demanda en Nigeria por su durabilidad en carreteras variadas; los SUV medianos son el segmento de importación más popular.",
+    "recommendSummary": "Unidades RHD; confirme el límite de edad actual; SUV medianos y berlinas duraderas.",
+    "recommendedCharacteristics": [
+      "Solo unidades con volante a la derecha (RHD).",
+      "Confirme el límite de edad actual (las reglas cambiaron recientemente) y busque stock reciente.",
+      "SUV medianos y berlinas duraderas con suspensión robusta para carreteras variadas.",
+      "Se exige la inspección previa al embarque SONCAP antes de la exportación."
+    ],
+    "marketRisks": [
+      "La volatilidad cambiaria del naira nigeriano (NGN) altera significativamente el coste final: revise las cotizaciones con frecuencia.",
+      "Las reglas de antigüedad han cambiado en los últimos años: confirme el límite actual con Aduanas de Nigeria.",
+      "La congestión del puerto de Lagos (Apapa y Tin Can Island) añade plazos y costes de manipulación."
+    ]
   },
   "kazakhstan": {
     "overview": "Kazajistán es un mercado de Asia Central con volante a la izquierda que importa vehículos bajo las normas de la UEEA, y la mayoría de las unidades llegan por ferrocarril desde China. Los límites de antigüedad se han ajustado en los últimos años, y los VE gozan actualmente de alivio arancelario.",
@@ -145,7 +205,19 @@
         "a": "Los VE han tenido alivio temporal de arancel y tasas; confirme el estado vigente."
       }
     ],
-    "evNote": "Kazajistán exime temporalmente a los VE del arancel aduanero y de la tasa de reciclaje; la adopción va en aumento, sobre todo en el caso de VE asequibles."
+    "evNote": "Kazajistán exime temporalmente a los VE del arancel aduanero y de la tasa de reciclaje; la adopción va en aumento, sobre todo en el caso de VE asequibles.",
+    "recommendSummary": "LHD, certificación EAEU; la mayoría llega por ferrocarril; los VE gozan de alivio arancelario.",
+    "recommendedCharacteristics": [
+      "Unidades con volante a la izquierda (LHD) con certificación técnica EAEU (OTTC).",
+      "Confirme el límite de edad actual: se ha ajustado en los últimos años.",
+      "Dominan los SUV y crossovers; la mayoría llega por ferrocarril vía Khorgos/Alashankou.",
+      "Los VE se benefician de la exención temporal de arancel y tasa de reciclaje."
+    ],
+    "marketRisks": [
+      "La certificación técnica EAEU (OTTC) es obligatoria y añade tiempo y coste.",
+      "La exención de arancel y tasa de reciclaje para VE es temporal: confirme el estado actual antes de cotizar.",
+      "El tránsito ferroviario vía Khorgos/Alashankou es la ruta principal; los horarios y el despacho varían."
+    ]
   },
   "uzbekistan": {
     "overview": "Uzbekistán es un mercado de Asia Central con volante a la izquierda y estrictos controles de importación, que incluyen certificación y tasas de reciclaje. La mayoría de los vehículos llegan por ferrocarril desde China. Los VE se benefician de exenciones del arancel de importación y del impuesto especial.",
@@ -168,7 +240,19 @@
         "a": "Los VE están exentos del arancel de importación y del impuesto especial; confirme las tarifas vigentes."
       }
     ],
-    "evNote": "Uzbekistán exime a los VE del arancel de importación y del impuesto especial; el ensamblaje local y la adopción crecen bajo los incentivos gubernamentales."
+    "evNote": "Uzbekistán exime a los VE del arancel de importación y del impuesto especial; el ensamblaje local y la adopción crecen bajo los incentivos gubernamentales.",
+    "recommendSummary": "LHD, controles de importación estrictos; los VE están exentos de arancel e impuesto especial.",
+    "recommendedCharacteristics": [
+      "Unidades con volante a la izquierda (LHD); se aplican certificación y tasas de reciclaje.",
+      "Controles de importación estrictos: confirme los requisitos actuales antes de comprar.",
+      "Los VE están exentos de arancel de importación e impuesto especial: los VE chinos recientes son la categoría destacada.",
+      "SUV compactos a medianos y berlinas económicas; tránsito ferroviario vía Khorgos/Alashankou."
+    ],
+    "marketRisks": [
+      "Los controles de importación son estrictos: la certificación y las tasas de reciclaje añaden coste y demora.",
+      "El ensamblaje local (p. ej. BYD Jizzakh) está protegido: confirme la elegibilidad de importación de usados antes de comprar.",
+      "La volatilidad del sum uzbeko (UZS) y la duración de la exención para VE deben verificarse antes de cotizar."
+    ]
   },
   "south-africa": {
     "overview": "Sudáfrica es el mercado automovilístico más desarrollado del continente y un país con volante a la derecha que protege su base de fabricación local. Las importaciones de vehículos usados están estrictamente limitadas a categorías de permiso definidas (residentes que regresan, inmigrantes, vehículos de uso especial), y Durban es el principal puerto de entrada RoRo.",

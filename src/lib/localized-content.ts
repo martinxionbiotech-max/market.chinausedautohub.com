@@ -28,5 +28,10 @@ export function getCountryContent(countryId: string, locale: string): CountryCon
     popularModelIds: en.popularModelIds,
     evNote: loc.evNote ?? en.evNote,
     suvNote: loc.suvNote ?? en.suvNote,
+    commonBrands: en.commonBrands,
+    brandsSource: en.brandsSource,
+    recommendSummary: loc.recommendSummary ?? en.recommendSummary,
+    recommendedCharacteristics: loc.recommendedCharacteristics ?? en.recommendedCharacteristics,
+    marketRisks: loc.marketRisks ?? en.marketRisks,
   };
 }

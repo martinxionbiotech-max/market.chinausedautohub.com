@@ -98,7 +98,7 @@
       "vatTaxes": "VAT & Taxes",
       "officialSources": "Official Sources",
       "evRules": "EV Rules",
-      "requiredDocuments": "Required Documents",
+      "requiredDocuments": "Inspection, Certification & Required Documents",
       "ports": "Ports",
       "shippingFromChina": "Shipping From China",
       "vehicleCompatibility": "Vehicle Compatibility Pages",
@@ -111,7 +111,10 @@
       "relatedGuides": "Related Guides",
       "availableVehicles": "Available Vehicles",
       "faq": "FAQ",
-      "verification": "Verification Date & Evidence Status"
+      "verification": "Verification Date & Evidence Status",
+      "registration": "Registration",
+      "recommendedCharacteristics": "Recommended Vehicle Characteristics",
+      "marketRisks": "Market-Specific Risks"
     },
     "reviewHints": {
       "eligibility": "This is not legal advice — consult destination-country authorities. Regulations are high-risk data. Every rule below carries a source, date checked, jurisdiction, applicability and confidence level. Confirm with official customs before trading.",
@@ -163,7 +166,21 @@
       "guideShipping": "Shipping",
       "guideLandedCost": "Landed Cost",
       "guideInspection": "Vehicle Inspection",
-      "verifyCaveat": "Verify with the official authority before trading."
+      "verifyCaveat": "Verify with the official authority before trading.",
+      "noRegistration": "No registration details recorded. Verify the registration process with the local authority.",
+      "noRecommendations": "No vehicle recommendations recorded for this market yet.",
+      "noRisks": "No market-specific risks recorded for this market yet.",
+      "brandsSourceLabel": "Source"
+    },
+    "quickFacts": {
+      "title": "Quick Facts",
+      "region": "Region",
+      "driveSide": "Drive side",
+      "ageRule": "Age rule",
+      "importDuty": "Import duty",
+      "vat": "VAT",
+      "evTreatment": "EV treatment",
+      "recommended": "Recommended vehicles"
     }
   },
   "vehicle": {
