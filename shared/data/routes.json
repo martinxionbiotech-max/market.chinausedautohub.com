@@ -719,6 +719,78 @@
       "source_url": null,
       "last_checked": "2026-10-07",
       "confidence": "low"
+    },
+    {
+      "route_id": "cn-tianjin-to-mn-ulaanbaatar",
+      "origin_port_id": "cn-tianjin",
+      "destination_port_id": "mn-ulaanbaatar",
+      "est_days_min": 8,
+      "est_days_max": 14,
+      "shipping_method": "container",
+      "source": "Industry route estimates (rail transit)",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-tianjin-to-kg-bishkek",
+      "origin_port_id": "cn-tianjin",
+      "destination_port_id": "kg-bishkek",
+      "est_days_min": 15,
+      "est_days_max": 24,
+      "shipping_method": "container",
+      "source": "Industry route estimates (rail transit)",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-rs-belgrade",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "rs-belgrade",
+      "est_days_min": 30,
+      "est_days_max": 40,
+      "shipping_method": "roro",
+      "source": "Industry route estimates (via Bar/Thessaloniki)",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-guangzhou-to-sn-dakar",
+      "origin_port_id": "cn-guangzhou",
+      "destination_port_id": "sn-dakar",
+      "est_days_min": 30,
+      "est_days_max": 40,
+      "shipping_method": "roro",
+      "source": "Industry route estimates",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-ci-abidjan",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "ci-abidjan",
+      "est_days_min": 30,
+      "est_days_max": 40,
+      "shipping_method": "roro",
+      "source": "Industry route estimates",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-guangzhou-to-cm-douala",
+      "origin_port_id": "cn-guangzhou",
+      "destination_port_id": "cm-douala",
+      "est_days_min": 28,
+      "est_days_max": 38,
+      "shipping_method": "roro",
+      "source": "Industry route estimates",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
     }
   ]
 }

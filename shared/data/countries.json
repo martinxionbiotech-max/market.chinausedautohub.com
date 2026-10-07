@@ -558,6 +558,84 @@
       "source_url": "https://www.wcshipping.com/blog/ship-a-car-to-panama-or-buy-locally-col%C3%B3n-free-zone-guide",
       "source_date": "2026-10-07",
       "confidence": "high"
+    },
+    {
+      "country_id": "mongolia",
+      "name": "Mongolia",
+      "name_zh": "蒙古",
+      "region": "central-asia",
+      "drive_side": "lhd",
+      "currency": "MNT",
+      "status": "active",
+      "source": "Mongolian Customs General Administration / JP Sheet import guide",
+      "source_url": "https://jpsheet.com/import-guide/mongolia/",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "kyrgyzstan",
+      "name": "Kyrgyzstan",
+      "name_zh": "吉尔吉斯斯坦",
+      "region": "central-asia",
+      "drive_side": "lhd",
+      "currency": "KGS",
+      "status": "active",
+      "source": "State Customs Service of Kyrgyzstan / EAEU Common Customs Tariff / Washin Auto guide",
+      "source_url": "https://washinauto.com/import-guide?country=Kyrgyzstan",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "serbia",
+      "name": "Serbia",
+      "name_zh": "塞尔维亚",
+      "region": "europe",
+      "drive_side": "lhd",
+      "currency": "RSD",
+      "status": "active",
+      "source": "Serbian Customs Administration / Qualitex Trading import regulations",
+      "source_url": "https://www.qualitextrading.com/import-regulations/serbia",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "senegal",
+      "name": "Senegal",
+      "name_zh": "塞内加尔",
+      "region": "africa",
+      "drive_side": "lhd",
+      "currency": "XOF",
+      "status": "active",
+      "source": "Direction Générale des Douanes (Senegal) / Washin Auto guide",
+      "source_url": "https://washinauto.com/import-guide?country=Senegal",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "cote-divoire",
+      "name": "Côte d'Ivoire",
+      "name_zh": "科特迪瓦",
+      "region": "africa",
+      "drive_side": "lhd",
+      "currency": "XOF",
+      "status": "active",
+      "source": "Direction Générale des Douanes (Côte d'Ivoire) / Qualitex Trading import regulations",
+      "source_url": "https://www.qualitextrading.com/import-regulations/ivory-coast",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "cameroon",
+      "name": "Cameroon",
+      "name_zh": "喀麦隆",
+      "region": "africa",
+      "drive_side": "lhd",
+      "currency": "XAF",
+      "status": "active",
+      "source": "Direction Générale des Douanes (Cameroon) / Qualitex Trading import regulations",
+      "source_url": "https://www.qualitextrading.com/import-regulations/cameroon",
+      "source_date": "2026-10-07",
+      "confidence": "high"
     }
   ]
 }

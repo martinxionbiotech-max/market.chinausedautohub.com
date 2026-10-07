@@ -1,7 +1,7 @@
 {
   "meta": {
     "name": "Vehicle x Market relationship layer",
-    "batch": "batch 17 — market-countries6",
+    "batch": "batch 18 — market-countries7",
     "updated": "2026-10-07",
     "vehicle_source": "data.chinausedautohub.com models.json (read-only reference; model_id join key)",
     "market_source": "market.chinausedautohub.com countries/importrules/taxrules/ports/routes",
@@ -15054,6 +15054,1146 @@
       "source_type": "manufacturer",
       "confidence": "low",
       "checked_date": "2026-10-07"
+    },
+    {
+      "vehicle_id": "byd-atto-3",
+      "country_id": "mongolia",
+      "drive_side_fit": {
+        "status": "match",
+        "summary": "China domestic-market production is left-hand drive (LHD); Mongolia registers LHD (RHD JDM permitted only until 1 June 2030) — no conversion required.",
+        "source": "Data sub-site models.json (export intelligence) + Left- and right-hand traffic (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/Left-_and_right-hand_traffic",
+        "source_type": "database",
+        "confidence": "high",
+        "checked_date": "2026-10-07"
+      },
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Mongolia has no fixed age limit (tax rises with age), so current-generation Atto 3 units (2022+) are eligible. The tax climbs with age, so source the newest unit available.",
+        "source": "market sub-site importrules.json (no fixed age limit)",
+        "source_url": "https://suvhub.com/import-rules/mongolia",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Battery-electric (EV) — Mongolia grants up to a 50% excise discount to electric vehicles versus combustion vehicles, a strong tax-side incentive for Chinese EV imports.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "GB/T / CCS2 (mixed, China-influenced)",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": false,
+        "notes": "Mongolia's charging network is heavily China-influenced with GB/T connectors common; confirm the specific charger standard for the intended route. China-market GB/T units are broadly compatible but verify DC fast-charging availability.",
+        "source": "Vehicle: GB/T charging standard (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Rail transit via Tianjin + Erlian/Zamyn-Üüd",
+          "No fixed age limit"
+        ],
+        "notes": "Mongolia is landlocked; vehicles transit Tianjin then rail to Ulaanbaatar. The RHD ban (1 June 2030) does not affect LHD China units.",
+        "source": "market sub-site importrules.json (landlocked + age)",
+        "source_url": "https://jpsheet.com/import-guide/mongolia/",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "mn-duty",
+        "ev_duty_taxrule_id": "mn-duty",
+        "vat_taxrule_id": "mn-vat",
+        "ev_duty_relief": true,
+        "notes": "EV: up to 50% excise discount (not a lower duty rate — the 5% duty and 10% VAT still apply). Referenced from taxrules.json — verify with Mongolian Customs.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://jpsheet.com/import-guide/mongolia/",
+        "source_type": "government",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-mn-ulaanbaatar"
+        ],
+        "notes": "Sea to Tianjin, then rail to Ulaanbaatar via Erlian/Zamyn-Üüd (container).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "BYD Atto 3 is a compact EV SUV; Mongolia's EV excise discount and GB/T-compatible charging network are the key fit points for recent low-mileage Chinese EV stock.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://www.byd.com/eu/car/atto3",
+      "source_type": "manufacturer",
+      "confidence": "medium",
+      "checked_date": "2026-10-07"
+    },
+    {
+      "vehicle_id": "byd-seal",
+      "country_id": "mongolia",
+      "drive_side_fit": {
+        "status": "match",
+        "summary": "China domestic-market production is left-hand drive (LHD); Mongolia registers LHD (RHD JDM permitted only until 1 June 2030) — no conversion required.",
+        "source": "Data sub-site models.json (export intelligence) + Left- and right-hand traffic (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/Left-_and_right-hand_traffic",
+        "source_type": "database",
+        "confidence": "high",
+        "checked_date": "2026-10-07"
+      },
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Mongolia has no fixed age limit; Seal units (2022+) are eligible and the age-based tax rise favors recent stock.",
+        "source": "market sub-site importrules.json (no fixed age limit)",
+        "source_url": "https://suvhub.com/import-rules/mongolia",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Battery-electric (EV) — qualifies for Mongolia's up-to-50% EV excise discount versus combustion vehicles.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "GB/T / CCS2 (mixed, China-influenced)",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": false,
+        "notes": "Mongolia's China-influenced network broadly accepts GB/T; confirm DC fast-charging availability for the intended route.",
+        "source": "Vehicle: GB/T charging standard (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Rail transit via Tianjin + Erlian/Zamyn-Üüd"
+        ],
+        "notes": "Landlocked transit via Tianjin then rail to Ulaanbaatar; the RHD ban does not affect LHD units.",
+        "source": "market sub-site importrules.json (landlocked)",
+        "source_url": "https://jpsheet.com/import-guide/mongolia/",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "mn-duty",
+        "ev_duty_taxrule_id": "mn-duty",
+        "vat_taxrule_id": "mn-vat",
+        "ev_duty_relief": true,
+        "notes": "EV: up to 50% excise discount. Referenced from taxrules.json — verify with Mongolian Customs.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://jpsheet.com/import-guide/mongolia/",
+        "source_type": "government",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-mn-ulaanbaatar"
+        ],
+        "notes": "Sea to Tianjin, then rail to Ulaanbaatar (container).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "BYD Seal is a mid-size EV sedan; Mongolia's EV excise discount and GB/T charging make it a strong recent-EV import.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://www.byd.com/eu/car/seal",
+      "source_type": "manufacturer",
+      "confidence": "medium",
+      "checked_date": "2026-10-07"
+    },
+    {
+      "vehicle_id": "byd-sealion-6",
+      "country_id": "mongolia",
+      "drive_side_fit": {
+        "status": "match",
+        "summary": "China domestic-market production is left-hand drive (LHD); Mongolia registers LHD — no conversion required.",
+        "source": "Data sub-site models.json (export intelligence) + Left- and right-hand traffic (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/Left-_and_right-hand_traffic",
+        "source_type": "database",
+        "confidence": "high",
+        "checked_date": "2026-10-07"
+      },
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Sealion 6 (2025) is a current-generation model; Mongolia's no-fixed-age-limit regime makes it clearly eligible.",
+        "source": "market sub-site importrules.json (no fixed age limit)",
+        "source_url": "https://suvhub.com/import-rules/mongolia",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Plug-in hybrid (PHEV / DM-i) — Mongolia's up-to-50% excise discount applies to hybrids as well as EVs, a tax-side incentive versus pure combustion.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "GB/T / CCS2 (mixed, China-influenced)",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": false,
+        "notes": "PHEV charges on AC GB/T; Mongolia's China-influenced network broadly accepts GB/T. Confirm AC charging point availability.",
+        "source": "Vehicle: GB/T charging standard (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Rail transit via Tianjin + Erlian/Zamyn-Üüd"
+        ],
+        "notes": "Landlocked transit via Tianjin then rail; LHD China units registrable.",
+        "source": "market sub-site importrules.json (landlocked)",
+        "source_url": "https://jpsheet.com/import-guide/mongolia/",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "mn-duty",
+        "ev_duty_taxrule_id": "mn-duty",
+        "vat_taxrule_id": "mn-vat",
+        "ev_duty_relief": true,
+        "notes": "PHEV/hybrid: up to 50% excise discount. Referenced from taxrules.json — verify with Mongolian Customs.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://jpsheet.com/import-guide/mongolia/",
+        "source_type": "government",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-mn-ulaanbaatar"
+        ],
+        "notes": "Sea to Tianjin, then rail to Ulaanbaatar (container).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "BYD Sealion 6 is a PHEV SUV; Mongolia's hybrid excise discount and GB/T charging are the key fit points.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://www.byd.com/eu/car/sealion-6",
+      "source_type": "manufacturer",
+      "confidence": "medium",
+      "checked_date": "2026-10-07"
+    },
+    {
+      "vehicle_id": "chery-tiggo-7",
+      "country_id": "kyrgyzstan",
+      "drive_side_fit": {
+        "status": "match",
+        "summary": "China domestic-market production is left-hand drive (LHD); Kyrgyzstan registers LHD only — no conversion required.",
+        "source": "Data sub-site models.json (export intelligence) + Left- and right-hand traffic (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/Left-_and_right-hand_traffic",
+        "source_type": "database",
+        "confidence": "high",
+        "checked_date": "2026-10-07"
+      },
+      "age_rule_fit": {
+        "status": "ineligible",
+        "summary": "Tiggo 7 production began 2016; Kyrgyzstan's 10-year age limit makes 2016 units ~10 years old (borderline-to-ineligible) in 2026. Source 2017+ units and verify the exact cut-off with the State Customs Service.",
+        "source": "market sub-site importrules.json (10-year age limit)",
+        "source_url": "https://washinauto.com/import-guide?country=Kyrgyzstan",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Combustion (ICE) — subject to EAEU Common Customs Tariff (~15%) plus VAT. No EV relief applies to the ICE trim.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "ev_charging_compat": null,
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "≤10 years old",
+          "EAEU customs clearance"
+        ],
+        "notes": "The 10-year age rule renders 2016 units borderline — the age rule is the primary blocker for this model. No pre-shipment inspection is required.",
+        "source": "market sub-site importrules.json (age + EAEU)",
+        "source_url": "https://washinauto.com/import-guide?country=Kyrgyzstan",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "kg-duty",
+        "ev_duty_taxrule_id": null,
+        "vat_taxrule_id": "kg-vat",
+        "ev_duty_relief": false,
+        "notes": "ICE: ~15% EAEU duty + 12% VAT (estimates). Referenced from taxrules.json — verify with the State Customs Service.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://washinauto.com/import-guide?country=Kyrgyzstan",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-kg-bishkek"
+        ],
+        "notes": "Rail transit via China/Kazakhstan to Bishkek (container).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "Chery Tiggo 7 is an ICE SUV; Kyrgyzstan's 10-year age limit renders 2016 units borderline — the age rule is the primary blocker.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://en.wikipedia.org/wiki/Chery_Tiggo_7",
+      "source_type": "reputable_media",
+      "confidence": "medium",
+      "checked_date": "2026-10-07"
+    },
+    {
+      "vehicle_id": "haval-h9",
+      "country_id": "kyrgyzstan",
+      "drive_side_fit": {
+        "status": "match",
+        "summary": "China domestic-market production is left-hand drive (LHD); Kyrgyzstan registers LHD only — no conversion required.",
+        "source": "Data sub-site models.json (export intelligence) + Left- and right-hand traffic (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/Left-_and_right-hand_traffic",
+        "source_type": "database",
+        "confidence": "high",
+        "checked_date": "2026-10-07"
+      },
+      "age_rule_fit": {
+        "status": "ineligible",
+        "summary": "Haval H9 production began 2015; Kyrgyzstan's 10-year age limit makes 2015 units ~11 years old (ineligible) in 2026. Source 2017+ units and verify the cut-off.",
+        "source": "market sub-site importrules.json (10-year age limit)",
+        "source_url": "https://washinauto.com/import-guide?country=Kyrgyzstan",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Combustion (ICE, ≥2000cc) — subject to EAEU duty plus VAT; the large engine raises the cost base. No EV relief applies.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "ev_charging_compat": null,
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "≤10 years old",
+          "EAEU customs clearance"
+        ],
+        "notes": "The 10-year age rule renders 2015 units ineligible — the age rule is the primary blocker.",
+        "source": "market sub-site importrules.json (age + EAEU)",
+        "source_url": "https://washinauto.com/import-guide?country=Kyrgyzstan",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "kg-duty",
+        "ev_duty_taxrule_id": null,
+        "vat_taxrule_id": "kg-vat",
+        "ev_duty_relief": false,
+        "notes": "ICE: ~15% EAEU duty + 12% VAT (estimates). Referenced from taxrules.json — verify with the State Customs Service.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://washinauto.com/import-guide?country=Kyrgyzstan",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-kg-bishkek"
+        ],
+        "notes": "Rail transit via China/Kazakhstan to Bishkek (container).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "Haval H9 is a large ICE SUV; Kyrgyzstan's 10-year age limit renders 2015 units ineligible — the age rule is the primary blocker.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://en.wikipedia.org/wiki/Haval_H9",
+      "source_type": "reputable_media",
+      "confidence": "medium",
+      "checked_date": "2026-10-07"
+    },
+    {
+      "vehicle_id": "byd-atto-3",
+      "country_id": "serbia",
+      "drive_side_fit": {
+        "status": "match",
+        "summary": "China domestic-market production is left-hand drive (LHD); Serbia registers LHD only — no conversion required.",
+        "source": "Data sub-site models.json (export intelligence) + Left- and right-hand traffic (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/Left-_and_right-hand_traffic",
+        "source_type": "database",
+        "confidence": "high",
+        "checked_date": "2026-10-07"
+      },
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Serbia has no fixed age limit (Euro 3 emission is the binding gate); current-generation Atto 3 units are eligible.",
+        "source": "market sub-site importrules.json (no age limit)",
+        "source_url": "https://www.qualitextrading.com/import-regulations/serbia",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Battery-electric (EV) — Serbia accepts EVs but records no EV-specific import-duty relief (12.5% duty + 20% VAT, AMSS catalog basis). The EV classification avoids Euro 3 combustion concerns.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "CCS2 / Type 2 (Mennekes)",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": true,
+        "notes": "China-market GB/T inlet vs Serbia's European CCS2/Type 2 network — adapter required.",
+        "source": "Vehicle: GB/T charging standard (Wikipedia); Destination: Combined Charging System / Type 2 (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Euro 3 emission standard",
+          "AMSS catalog value assessment"
+        ],
+        "notes": "Serbia's Euro 3 minimum and AMSS-catalog tax base are the key process points; EVs avoid the Euro 3 combustion threshold. Verify with Serbian Customs.",
+        "source": "market sub-site importrules.json (emission + duty)",
+        "source_url": "https://www.qualitextrading.com/import-regulations/serbia",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "rs-duty",
+        "ev_duty_taxrule_id": null,
+        "vat_taxrule_id": "rs-vat",
+        "ev_duty_relief": false,
+        "notes": "EV: 12.5% duty + 20% VAT (no EV relief); taxes use AMSS catalog value. Referenced from taxrules.json — verify with Serbian Customs.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://www.qualitextrading.com/import-regulations/serbia",
+        "source_type": "government",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-shanghai-to-rs-belgrade"
+        ],
+        "notes": "Sea to Bar (Montenegro) or Thessaloniki (Greece), then rail/road to Belgrade (RoRo/container).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "BYD Atto 3 is a compact EV SUV; Serbia's no-age-limit regime, Euro 3 acceptance and CCS2/Type 2 charging (adapter needed) are the key fit points.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://www.byd.com/eu/car/atto3",
+      "source_type": "manufacturer",
+      "confidence": "medium",
+      "checked_date": "2026-10-07"
+    },
+    {
+      "vehicle_id": "mg-4",
+      "country_id": "serbia",
+      "drive_side_fit": {
+        "status": "match",
+        "summary": "China domestic-market production is left-hand drive (LHD); Serbia registers LHD only — no conversion required.",
+        "source": "Data sub-site models.json (export intelligence) + Left- and right-hand traffic (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/Left-_and_right-hand_traffic",
+        "source_type": "database",
+        "confidence": "high",
+        "checked_date": "2026-10-07"
+      },
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Serbia has no fixed age limit; MG4 EV (2022+) is eligible with Euro 3 compliance.",
+        "source": "market sub-site importrules.json (no age limit)",
+        "source_url": "https://www.qualitextrading.com/import-regulations/serbia",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Battery-electric (EV) — no EV-specific duty relief in Serbia (12.5% + 20% VAT), but EVs avoid Euro 3 combustion concerns.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "CCS2 / Type 2 (Mennekes)",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": true,
+        "notes": "China-market GB/T inlet vs Serbia's European CCS2/Type 2 network — adapter required.",
+        "source": "Vehicle: GB/T charging standard (Wikipedia); Destination: Combined Charging System / Type 2 (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Euro 3 emission standard",
+          "AMSS catalog value assessment"
+        ],
+        "notes": "Serbia's Euro 3 minimum and AMSS-catalog tax base apply; EVs avoid the Euro 3 combustion threshold. Verify with Serbian Customs.",
+        "source": "market sub-site importrules.json (emission + duty)",
+        "source_url": "https://www.qualitextrading.com/import-regulations/serbia",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "rs-duty",
+        "ev_duty_taxrule_id": null,
+        "vat_taxrule_id": "rs-vat",
+        "ev_duty_relief": false,
+        "notes": "EV: 12.5% duty + 20% VAT (no EV relief). Referenced from taxrules.json — verify with Serbian Customs.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://www.qualitextrading.com/import-regulations/serbia",
+        "source_type": "government",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-shanghai-to-rs-belgrade"
+        ],
+        "notes": "Sea to Bar (Montenegro) or Thessaloniki (Greece), then rail/road to Belgrade.",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "MG4 EV is a compact hatchback; Serbia's no-age-limit regime and CCS2/Type 2 charging (adapter needed) are the key fit points.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://en.wikipedia.org/wiki/MG4_EV",
+      "source_type": "reputable_media",
+      "confidence": "medium",
+      "checked_date": "2026-10-07"
+    },
+    {
+      "vehicle_id": "geely-monjaro",
+      "country_id": "senegal",
+      "drive_side_fit": {
+        "status": "match",
+        "summary": "China domestic-market production is left-hand drive (LHD); Senegal registers LHD only — no conversion required.",
+        "source": "Data sub-site models.json (export intelligence) + Left- and right-hand traffic (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/Left-_and_right-hand_traffic",
+        "source_type": "database",
+        "confidence": "high",
+        "checked_date": "2026-10-07"
+      },
+      "age_rule_fit": {
+        "status": "ineligible",
+        "summary": "Monjaro production began 2021; Senegal's 3-year (private) / 4-year (manufacture) age rule makes 2021 units ~5 years old (ineligible) in 2026. Only 2023+ units qualify for private import.",
+        "source": "market sub-site importrules.json (3-year age rule)",
+        "source_url": "https://washinauto.com/import-guide?country=Senegal",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Combustion (ICE) — subject to Senegal's duty plus VAT; the strict age rule (not duty) is the primary blocker for this model.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "ev_charging_compat": null,
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "≤3 years old (private)",
+          "Pre-shipment inspection in country of origin",
+          "Prior import approval permit"
+        ],
+        "notes": "Senegal's strict 3-year private age rule and pre-shipment inspection are the hard filters; the age rule renders 2021 units ineligible.",
+        "source": "market sub-site importrules.json (age + inspection)",
+        "source_url": "https://washinauto.com/import-guide?country=Senegal",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "sn-duty",
+        "ev_duty_taxrule_id": null,
+        "vat_taxrule_id": "sn-vat",
+        "ev_duty_relief": false,
+        "notes": "ICE: ~20% duty + 18% VAT (estimates). Referenced from taxrules.json — verify with Senegal Customs.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://washinauto.com/import-guide?country=Senegal",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-guangzhou-to-sn-dakar"
+        ],
+        "notes": "Sea freight to Dakar (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "Geely Monjaro is an ICE SUV; Senegal's strict 3-year private age rule renders 2021 units ineligible — the age rule is the primary blocker.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://en.wikipedia.org/wiki/Geely_Xingyue_L",
+      "source_type": "reputable_media",
+      "confidence": "medium",
+      "checked_date": "2026-10-07"
+    },
+    {
+      "vehicle_id": "chery-tiggo-8",
+      "country_id": "senegal",
+      "drive_side_fit": {
+        "status": "match",
+        "summary": "China domestic-market production is left-hand drive (LHD); Senegal registers LHD only — no conversion required.",
+        "source": "Data sub-site models.json (export intelligence) + Left- and right-hand traffic (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/Left-_and_right-hand_traffic",
+        "source_type": "database",
+        "confidence": "high",
+        "checked_date": "2026-10-07"
+      },
+      "age_rule_fit": {
+        "status": "ineligible",
+        "summary": "Tiggo 8 production began 2018; Senegal's 3-year (private) / 4-year (manufacture) age rule makes 2018 units ~8 years old (ineligible). Only 2023+ units qualify.",
+        "source": "market sub-site importrules.json (3-year age rule)",
+        "source_url": "https://washinauto.com/import-guide?country=Senegal",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Combustion (ICE) — subject to Senegal's duty plus VAT; the strict age rule is the primary blocker.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "ev_charging_compat": null,
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "≤3 years old (private)",
+          "Pre-shipment inspection in country of origin"
+        ],
+        "notes": "Senegal's strict age rule and pre-shipment inspection render 2018 units ineligible — the age rule is the primary blocker.",
+        "source": "market sub-site importrules.json (age + inspection)",
+        "source_url": "https://washinauto.com/import-guide?country=Senegal",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "sn-duty",
+        "ev_duty_taxrule_id": null,
+        "vat_taxrule_id": "sn-vat",
+        "ev_duty_relief": false,
+        "notes": "ICE: ~20% duty + 18% VAT (estimates). Referenced from taxrules.json — verify with Senegal Customs.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://washinauto.com/import-guide?country=Senegal",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-guangzhou-to-sn-dakar"
+        ],
+        "notes": "Sea freight to Dakar (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "Chery Tiggo 8 is an ICE SUV; Senegal's strict age rule renders 2018 units ineligible — the age rule is the primary blocker.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://en.wikipedia.org/wiki/Chery_Tiggo_8",
+      "source_type": "reputable_media",
+      "confidence": "medium",
+      "checked_date": "2026-10-07"
+    },
+    {
+      "vehicle_id": "chery-tiggo-8",
+      "country_id": "cote-divoire",
+      "drive_side_fit": {
+        "status": "match",
+        "summary": "China domestic-market production is left-hand drive (LHD); Côte d'Ivoire registers LHD only — no conversion required.",
+        "source": "Data sub-site models.json (export intelligence) + Left- and right-hand traffic (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/Left-_and_right-hand_traffic",
+        "source_type": "database",
+        "confidence": "high",
+        "checked_date": "2026-10-07"
+      },
+      "age_rule_fit": {
+        "status": "ineligible",
+        "summary": "Tiggo 8 production began 2018; Côte d'Ivoire's 5-year car age limit makes 2018 units ~8 years old (ineligible). Source 2021+ units and verify the cut-off.",
+        "source": "market sub-site importrules.json (5-year age limit)",
+        "source_url": "https://www.qualitextrading.com/import-regulations/ivory-coast",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Combustion (ICE) — subject to ~53% duty plus registration fee; the 5-year age rule is the primary blocker for this model.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "ev_charging_compat": null,
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "≤5 years old (cars)",
+          "No household-goods co-shipment"
+        ],
+        "notes": "The 5-year age rule renders 2018 units ineligible — the age rule is the primary blocker. ~53% duty plus EUR 690 registration fee applies.",
+        "source": "market sub-site importrules.json (age + duty)",
+        "source_url": "https://www.qualitextrading.com/import-regulations/ivory-coast",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "ci-duty",
+        "ev_duty_taxrule_id": null,
+        "vat_taxrule_id": null,
+        "ev_duty_relief": false,
+        "notes": "ICE: ~53% duty (no separate VAT recorded) + EUR 690 registration fee. Referenced from taxrules.json — verify with Côte d'Ivoire Customs.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://www.qualitextrading.com/import-regulations/ivory-coast",
+        "source_type": "government",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-shanghai-to-ci-abidjan"
+        ],
+        "notes": "Sea freight to Abidjan (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "Chery Tiggo 8 is an ICE SUV; Côte d'Ivoire's 5-year age rule renders 2018 units ineligible — the age rule is the primary blocker.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://en.wikipedia.org/wiki/Chery_Tiggo_8",
+      "source_type": "reputable_media",
+      "confidence": "medium",
+      "checked_date": "2026-10-07"
+    },
+    {
+      "vehicle_id": "geely-monjaro",
+      "country_id": "cote-divoire",
+      "drive_side_fit": {
+        "status": "match",
+        "summary": "China domestic-market production is left-hand drive (LHD); Côte d'Ivoire registers LHD only — no conversion required.",
+        "source": "Data sub-site models.json (export intelligence) + Left- and right-hand traffic (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/Left-_and_right-hand_traffic",
+        "source_type": "database",
+        "confidence": "high",
+        "checked_date": "2026-10-07"
+      },
+      "age_rule_fit": {
+        "status": "borderline",
+        "summary": "Monjaro production began 2021; Côte d'Ivoire's 5-year age limit makes 2021 units ~5 years old (borderline) in 2026. Source 2022+ units and verify the exact cut-off.",
+        "source": "market sub-site importrules.json (5-year age limit)",
+        "source_url": "https://www.qualitextrading.com/import-regulations/ivory-coast",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Combustion (ICE) — subject to ~53% duty plus registration fee; the 5-year age rule makes 2021 units borderline.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "ev_charging_compat": null,
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "≤5 years old (cars)",
+          "No household-goods co-shipment"
+        ],
+        "notes": "The 5-year age rule makes 2021 units borderline — source 2022+ units. ~53% duty plus EUR 690 registration fee applies.",
+        "source": "market sub-site importrules.json (age + duty)",
+        "source_url": "https://www.qualitextrading.com/import-regulations/ivory-coast",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "ci-duty",
+        "ev_duty_taxrule_id": null,
+        "vat_taxrule_id": null,
+        "ev_duty_relief": false,
+        "notes": "ICE: ~53% duty + EUR 690 registration fee. Referenced from taxrules.json — verify with Côte d'Ivoire Customs.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://www.qualitextrading.com/import-regulations/ivory-coast",
+        "source_type": "government",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-shanghai-to-ci-abidjan"
+        ],
+        "notes": "Sea freight to Abidjan (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "Geely Monjaro is an ICE SUV; Côte d'Ivoire's 5-year age rule makes 2021 units borderline — source 2022+ units.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://en.wikipedia.org/wiki/Geely_Xingyue_L",
+      "source_type": "reputable_media",
+      "confidence": "medium",
+      "checked_date": "2026-10-07"
+    },
+    {
+      "vehicle_id": "byd-atto-3",
+      "country_id": "cameroon",
+      "drive_side_fit": {
+        "status": "match",
+        "summary": "China domestic-market production is left-hand drive (LHD); Cameroon registers LHD only — no conversion required.",
+        "source": "Data sub-site models.json (export intelligence) + Left- and right-hand traffic (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/Left-_and_right-hand_traffic",
+        "source_type": "database",
+        "confidence": "high",
+        "checked_date": "2026-10-07"
+      },
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Cameroon has no fixed age limit, so current-generation Atto 3 units (2022+) are eligible.",
+        "source": "market sub-site importrules.json (no age limit)",
+        "source_url": "https://www.japan-carrier.com/regulations/cameroon?lang=en",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Battery-electric (EV) — Cameroon's engine-capacity-based duty (58% ≤2000cc / 77% >2000cc) does not cleanly map to EVs, so EV classification and rate are uncertain; confirm with Cameroon Customs.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "CCS2 / Type 2 (Mennekes)",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": true,
+        "notes": "China-market GB/T inlet vs Cameroon's CCS2/Type 2 network — adapter required; EV charging network is early-stage.",
+        "source": "Vehicle: GB/T charging standard (Wikipedia); Destination: Combined Charging System / Type 2 (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "No age limit",
+          "Non-sale certificate",
+          "Documents 1 month before arrival"
+        ],
+        "notes": "Cameroon has no age limit but the engine-capacity duty basis makes EV classification uncertain; a non-sale certificate is required. Verify with Cameroon Customs.",
+        "source": "market sub-site importrules.json (age + duty)",
+        "source_url": "https://www.qualitextrading.com/import-regulations/cameroon",
+        "source_type": "regulatory",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "cm-duty-le2000",
+        "ev_duty_taxrule_id": null,
+        "vat_taxrule_id": null,
+        "ev_duty_relief": false,
+        "notes": "Duty is engine-capacity based (58% ≤2000cc / 77% >2000cc); EV rate uncertain. Referenced from taxrules.json — verify with Cameroon Customs.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://www.qualitextrading.com/import-regulations/cameroon",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-guangzhou-to-cm-douala"
+        ],
+        "notes": "Sea freight to Douala (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "BYD Atto 3 is a compact EV SUV; Cameroon's no-age-limit regime and engine-capacity duty (EV rate uncertain) plus early-stage charging are the key fit questions.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://www.byd.com/eu/car/atto3",
+      "source_type": "manufacturer",
+      "confidence": "low",
+      "checked_date": "2026-10-07"
     }
   ],
   "skipped": [
@@ -15856,6 +16996,76 @@
       "vehicle_id": "chery-tiggo-8",
       "country_id": "uruguay",
       "reason": "ICE × LHD — 2018 start is ~8 years (under the >10-year restriction, no age conflict); returning-citizen-only import is market-level (fails the generation gate)."
+    },
+    {
+      "vehicle_id": "byd-dolphin",
+      "country_id": "mongolia",
+      "reason": "EV × LHD — Mongolia's EV excise-discount delta already represented by byd-atto-3 / byd-seal / byd-sealion-6 × mongolia (mechanical EV cross-product, avoid)."
+    },
+    {
+      "vehicle_id": "mg-4",
+      "country_id": "mongolia",
+      "reason": "EV × LHD — Mongolia EV excise-discount delta already represented (mechanical EV cross-product, avoid)."
+    },
+    {
+      "vehicle_id": "geely-monjaro",
+      "country_id": "mongolia",
+      "reason": "ICE × LHD — no age conflict (Mongolia has no fixed age limit); 5%+10%+excise is a market-level fact (fails the generation gate)."
+    },
+    {
+      "vehicle_id": "chery-tiggo-8",
+      "country_id": "mongolia",
+      "reason": "ICE × LHD — no age conflict (no fixed age limit); duty stack is market-level (fails the generation gate)."
+    },
+    {
+      "vehicle_id": "byd-atto-3",
+      "country_id": "kyrgyzstan",
+      "reason": "EV × LHD — no confirmed EV duty relief in Kyrgyzstan (EAEU member); 10-year age limit satisfied by 2022 start. No independent increment."
+    },
+    {
+      "vehicle_id": "geely-monjaro",
+      "country_id": "kyrgyzstan",
+      "reason": "ICE × LHD — 2021 start is under the 10-year limit (no age conflict); EAEU duty/VAT is market-level (fails the generation gate)."
+    },
+    {
+      "vehicle_id": "chery-tiggo-8",
+      "country_id": "kyrgyzstan",
+      "reason": "ICE × LHD — 2018 start is ~8 years old (under the 10-year limit, no age conflict); EAEU duty is market-level (fails the generation gate)."
+    },
+    {
+      "vehicle_id": "byd-seal",
+      "country_id": "serbia",
+      "reason": "EV × LHD — charging-compat + no-EV-relief delta already represented by byd-atto-3 and mg-4 × serbia (mechanical EV cross-product, avoid)."
+    },
+    {
+      "vehicle_id": "geely-monjaro",
+      "country_id": "serbia",
+      "reason": "ICE × LHD — no age conflict (Serbia has no age limit); 12.5%+20% VAT is market-level (fails the generation gate)."
+    },
+    {
+      "vehicle_id": "byd-atto-3",
+      "country_id": "senegal",
+      "reason": "EV × LHD — 2022 start is ~4 years from manufacture, borderline under the 3yr private rule, but the age-rule delta is already represented by geely-monjaro and chery-tiggo-8 × senegal (mechanical cross-product, avoid)."
+    },
+    {
+      "vehicle_id": "byd-dolphin",
+      "country_id": "cote-divoire",
+      "reason": "EV × LHD — 2021 start is borderline under the 5-year rule, but no EV relief and the age delta is already represented by ICE exemplars (avoid mechanical cross-product)."
+    },
+    {
+      "vehicle_id": "geely-monjaro",
+      "country_id": "cameroon",
+      "reason": "ICE × LHD — engine-capacity duty (58%/77%) is a market-level fact already represented by chery-tiggo-8 × cameroon (mechanical cross-product, avoid)."
+    },
+    {
+      "vehicle_id": "byd-seal",
+      "country_id": "cameroon",
+      "reason": "EV × LHD — EV-rate-uncertain delta already represented by byd-atto-3 × cameroon (mechanical EV cross-product, avoid)."
+    },
+    {
+      "vehicle_id": "chery-tiggo-8",
+      "country_id": "cameroon",
+      "reason": "ICE × LHD — no age conflict (Cameroon has no age limit) and engine-capacity duty (58%/77%) is a market-level fact, not a vehicle×market increment (fails the generation gate)."
     }
   ]
 }

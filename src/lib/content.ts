@@ -780,6 +780,118 @@ export const countryContent: Record<string, CountryContent> = {
     evNote:
       "Uruguay has no EV-specific import-duty relief recorded; the Mercosur CET duty plus 22% VAT applies, with EV adoption promoted through local incentives rather than import-duty relief.",
   },
+  mongolia: {
+    overview:
+      "Mongolia is a left-hand-drive North Asian market that imports heavily from China — uniquely, most vehicles arrive overland by rail through the Erlian/Zamyn-Üüd border crossing rather than by sea. It has no fixed age limit, but excise climbs with age, and electric, hybrid and gas vehicles receive up to a 50% excise discount.",
+    considerations: [
+      "Most vehicles arrive by rail via Tianjin and the Erlian/Zamyn-Üüd crossing, not by sea.",
+      "No fixed age limit — but excise climbs with age, so source the newest stock the budget allows.",
+      "RHD JDM imports are still permitted until a scheduled 1 June 2030 ban; LHD China units are unaffected.",
+    ],
+    faq: [
+      { q: "Is Mongolia right- or left-hand drive?", a: "Left-hand drive (LHD); RHD JDM imports are permitted only until 1 June 2030." },
+      { q: "Is there an age limit?", a: "No fixed age limit, but excise rises with age — confirm the current schedule with Mongolian Customs." },
+      { q: "What taxes apply?", a: "Roughly 5% customs duty + 10% VAT + engine/age-based excise, with up to a 50% excise discount for EV/hybrid/gas vehicles." },
+      { q: "How do vehicles arrive?", a: "By sea to Tianjin, then rail to Ulaanbaatar via Erlian/Zamyn-Üüd." },
+    ],
+    popularModelIds: ["byd-atto-3", "byd-seal", "byd-sealion-6"],
+    evNote:
+      "Mongolia grants up to a 50% excise discount on electric, hybrid and gas vehicles — a meaningful tax-side incentive for recent Chinese EVs, reinforced by a heavily China-influenced GB/T charging network.",
+  },
+  kyrgyzstan: {
+    overview:
+      "Kyrgyzstan is a landlocked, left-hand-drive EAEU member in Central Asia with a 10-year age limit on used imports and no pre-shipment inspection. Vehicles arrive by rail from China/Kazakhstan to Bishkek, and the country serves as a re-export corridor into the wider EAEU space.",
+    considerations: [
+      "The 10-year age limit is the hard filter — source 2017+ stock.",
+      "EAEU Common Customs Tariff plus VAT apply to non-EAEU vehicles.",
+      "No pre-shipment inspection is required, simplifying the export process.",
+    ],
+    faq: [
+      { q: "Is Kyrgyzstan right- or left-hand drive?", a: "Left-hand drive (LHD)." },
+      { q: "What is the age limit?", a: "Vehicles older than 10 years cannot be imported." },
+      { q: "Is inspection required?", a: "No pre-shipment inspection is required." },
+      { q: "What taxes apply?", a: "EAEU Common Customs Tariff plus VAT — verify current rates with the State Customs Service." },
+    ],
+    popularModelIds: ["chery-tiggo-8", "chery-tiggo-7", "haval-h9"],
+    evNote:
+      "Kyrgyzstan's EV import-duty treatment was not confirmed in the sources reviewed; as an EAEU member its EV framework is evolving. Verify with the State Customs Service before trading.",
+    suvNote:
+      "SUVs suit Kyrgyzstan's mountainous terrain and are the dominant import segment; mid-size Chinese SUVs are the strongest sellers.",
+  },
+  serbia: {
+    overview:
+      "Serbia is a left-hand-drive European market that imports around 130,000 used cars annually. It applies a 12.5% customs duty (non-EU origin) plus 20% VAT on an AMSS catalog value, a Euro 3 emission minimum, and no fixed age limit. Belgrade is reached via Bar (Montenegro) or Thessaloniki (Greece).",
+    considerations: [
+      "No fixed age limit — the Euro 3 emission standard is the binding eligibility gate.",
+      "12.5% duty + 20% VAT, with taxes computed on the AMSS catalog value rather than the invoice price.",
+      "All fuel types (petrol, diesel, hybrid, EV) are accepted by Serbian Customs.",
+    ],
+    faq: [
+      { q: "Is Serbia right- or left-hand drive?", a: "Left-hand drive (LHD)." },
+      { q: "Is there an age limit?", a: "No fixed age limit — eligibility is set by the Euro 3 emission standard." },
+      { q: "What taxes apply?", a: "12.5% customs duty (non-EU) + 20% VAT, computed on the AMSS catalog value." },
+      { q: "Which port handles imports?", a: "Belgrade, reached via Bar (Montenegro) or Thessaloniki (Greece)." },
+    ],
+    popularModelIds: ["byd-atto-3", "mg-4", "chery-tiggo-8"],
+    evNote:
+      "Serbia records no EV-specific import-duty relief — EVs face the same 12.5% + 20% VAT but avoid the Euro 3 combustion threshold. Chinese EVs entering via the CCS2/Type 2 network need a charging adapter.",
+  },
+  senegal: {
+    overview:
+      "Senegal is a left-hand-drive West African market with one of the strictest age rules in the region — private vehicles must be under 3 years from registration (4 years from manufacture). Pre-shipment inspection and prior import approval are mandatory, and Dakar is the main port.",
+    considerations: [
+      "The 3-year private age rule is the hard filter — source near-new 2023+ stock.",
+      "Pre-shipment inspection in the country of origin and a prior import approval permit are required.",
+      "Dakar is the main entry port, serving a regional re-export role.",
+    ],
+    faq: [
+      { q: "Is Senegal right- or left-hand drive?", a: "Left-hand drive (LHD)." },
+      { q: "What is the age limit?", a: "Private vehicles must be under 3 years from registration (4 years from manufacture); commercial up to 60 months/6 years." },
+      { q: "What inspection is required?", a: "Pre-delivery inspection in the country of origin." },
+      { q: "Which port handles imports?", a: "Dakar." },
+    ],
+    popularModelIds: ["byd-atto-3", "geely-monjaro", "chery-tiggo-8"],
+    evNote:
+      "Senegal's EV import-duty treatment was not confirmed in the sources reviewed; EV policy is developing and should be verified with Senegal Customs.",
+    suvNote:
+      "Senegal's strict age rule effectively restricts imports to near-new units; recent compact and mid-size SUVs are the strongest fit.",
+  },
+  "cote-divoire": {
+    overview:
+      "Côte d'Ivoire is a left-hand-drive West African market with a 5-year age limit on passenger cars and a heavy ~53% customs duty plus a registration fee. Abidjan is the principal port, and the country is one of West Africa's most dynamic economies.",
+    considerations: [
+      "The 5-year age limit is the hard filter — source 2021+ stock.",
+      "~53% customs duty plus a ~EUR 690 registration fee make the landed cost heavy — budget accordingly.",
+      "Vehicles cannot be shipped in the same container as household goods.",
+    ],
+    faq: [
+      { q: "Is Côte d'Ivoire right- or left-hand drive?", a: "Left-hand drive (LHD)." },
+      { q: "What is the age limit?", a: "Passenger cars are limited to 5 years of age." },
+      { q: "What duty applies?", a: "Approximately 53% customs duty plus a ~EUR 690 registration fee — verify with Côte d'Ivoire Customs." },
+      { q: "Which port handles imports?", a: "Abidjan." },
+    ],
+    popularModelIds: ["chery-tiggo-8", "geely-monjaro", "byd-atto-3"],
+    evNote:
+      "Côte d'Ivoire's EV import-duty treatment was not confirmed in the sources reviewed; EVs are expected to follow the standard ~53% schedule. Verify with Côte d'Ivoire Customs.",
+  },
+  cameroon: {
+    overview:
+      "Cameroon is a left-hand-drive Central African market with no fixed vehicle age limit but a steep engine-capacity-based duty — 58% for engines up to 2000cc and 77% above. Douala is the principal port and a gateway to the landlocked CEMAC interior (Chad, CAR).",
+    considerations: [
+      "No age limit — but the engine-capacity duty (58% ≤2000cc / 77% >2000cc) is the key cost lever.",
+      "A non-sale certificate is required, and documents must be lodged at least one month before arrival.",
+      "Douala serves as a re-export gateway to Chad and the Central African Republic.",
+    ],
+    faq: [
+      { q: "Is Cameroon right- or left-hand drive?", a: "Left-hand drive (LHD)." },
+      { q: "Is there an age limit?", a: "No fixed age limit — but taxes vary by age and engine power." },
+      { q: "What duty applies?", a: "58% (≤2000cc) or 77% (>2000cc) of CIF — verify with Cameroon Customs." },
+      { q: "Which port handles imports?", a: "Douala." },
+    ],
+    popularModelIds: ["chery-tiggo-8", "geely-monjaro", "byd-atto-3"],
+    evNote:
+      "Cameroon's engine-capacity-based duty does not cleanly map to EVs, so EV classification and rate are uncertain — confirm with Cameroon Customs before trading.",
+  },
   panama: {
     overview:
       "Panama is a dollarised, left-hand-drive Central American market and a major regional re-export hub through the Colón Free Zone. Its vehicle age limit is cited inconsistently across sources, clean titles are mandatory, and imports face an ad valorem duty plus 7% ITBMS. Cristóbal (Atlantic) and Balboa (Pacific) are the entry ports.",

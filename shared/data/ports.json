@@ -538,6 +538,48 @@
       "country_id": "panama",
       "type": "destination",
       "note": "Pacific entrance"
+    },
+    {
+      "port_id": "mn-ulaanbaatar",
+      "name": "Ulaanbaatar (via Tianjin + rail transit)",
+      "country_id": "mongolia",
+      "type": "destination",
+      "note": "Landlocked — transit via Tianjin then rail through Erlian/Zamyn-Üüd"
+    },
+    {
+      "port_id": "kg-bishkek",
+      "name": "Bishkek (via rail transit)",
+      "country_id": "kyrgyzstan",
+      "type": "destination",
+      "note": "Landlocked — transit via rail from China/Kazakhstan"
+    },
+    {
+      "port_id": "rs-belgrade",
+      "name": "Belgrade (via Bar / Thessaloniki transit)",
+      "country_id": "serbia",
+      "type": "destination",
+      "note": "Landlocked — transit via Bar (Montenegro) or Thessaloniki (Greece)"
+    },
+    {
+      "port_id": "sn-dakar",
+      "name": "Dakar",
+      "country_id": "senegal",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "ci-abidjan",
+      "name": "Abidjan",
+      "country_id": "cote-divoire",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "cm-douala",
+      "name": "Douala",
+      "country_id": "cameroon",
+      "type": "destination",
+      "note": null
     }
   ]
 }
