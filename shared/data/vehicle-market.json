@@ -198,13 +198,14 @@
       "vehicle_id": "byd-atto-3",
       "country_id": "kenya",
       "drive_side_fit": {
-        "status": "mismatch",
-        "summary": "China domestic-market production is left-hand drive (LHD), but this market registers right-hand drive (RHD) only — confirm RHD availability with the exporter or source a converted unit. Kenya is a right-hand-drive market — a China-market LHD Atto 3 cannot be registered as-is.",
+        "status": "needs_conversion",
+        "summary": "China domestic-market production is left-hand drive (LHD), but Kenya registers right-hand drive (RHD) only — BYD produces the Atto 3 in RHD for export markets (Australia, Thailand), so source an RHD unit rather than converting a China LHD unit. Confirm RHD availability with the exporter.",
         "source": "Data sub-site models.json (export intelligence) + Left- and right-hand traffic (Wikipedia)",
         "source_url": "https://en.wikipedia.org/wiki/Left-_and_right-hand_traffic",
         "source_type": "database",
-        "confidence": "high",
-        "checked_date": "2026-10-06"
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
       },
       "age_rule_fit": {
         "status": "eligible",
@@ -300,13 +301,14 @@
       "vehicle_id": "byd-song-plus",
       "country_id": "kenya",
       "drive_side_fit": {
-        "status": "mismatch",
-        "summary": "China domestic-market production is left-hand drive (LHD), but this market registers right-hand drive (RHD) only — confirm RHD availability with the exporter or source a converted unit. Kenya is RHD — a China-market LHD Song Plus cannot be registered as-is; RHD availability must be confirmed.",
+        "status": "needs_conversion",
+        "summary": "China domestic-market production is left-hand drive (LHD), but Kenya registers right-hand drive (RHD) only — BYD sells the Song Plus as the Sealion 6 in RHD export markets (Australia, Thailand), so source an RHD unit. Confirm RHD availability with the exporter.",
         "source": "Data sub-site models.json (export intelligence) + Left- and right-hand traffic (Wikipedia)",
         "source_url": "https://en.wikipedia.org/wiki/Left-_and_right-hand_traffic",
         "source_type": "database",
-        "confidence": "high",
-        "checked_date": "2026-10-06"
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
       },
       "age_rule_fit": {
         "status": "eligible",
