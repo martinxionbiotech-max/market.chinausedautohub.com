@@ -910,4 +910,113 @@ export const countryContent: Record<string, CountryContent> = {
     evNote:
       "Panama has no EV-specific import-duty relief recorded; the standard duty plus 7% ITBMS applies, with the Colón Free Zone and Pensionado exemption as scheme-specific routes.",
   },
+  lebanon: {
+    overview:
+      "Lebanon is a left-hand-drive Middle East market and a regional re-export hub with an eight-year age limit and a diesel-vehicle ban. Duty is a flat 5 million LBP for vehicles up to 20 million LBP CIF (50% above), plus 10% VAT, and Beirut is the sole entry port.",
+    considerations: [
+      "The 8-year age limit is the key filter — source model-year 2018 and newer.",
+      "Diesel used vehicles are prohibited; petrol, hybrid and electric powertrains are admissible.",
+      "Duty is a flat LBP amount for low-CIF vehicles and 50% above 20M LBP CIF — quote per exact vehicle.",
+    ],
+    faq: [
+      { q: "Is Lebanon right- or left-hand drive?", a: "Left-hand drive (LHD)." },
+      { q: "What is the age limit?", a: "Eight years from the year of manufacture." },
+      { q: "What taxes apply?", a: "Flat 5M LBP (≤20M CIF) or 50% above, plus 10% VAT — verify with Lebanese Customs." },
+      { q: "Which port handles imports?", a: "Beirut." },
+    ],
+    popularModelIds: ["byd-atto-3", "chery-tiggo-8", "geely-monjaro"],
+    evNote:
+      "Lebanon bans diesel used vehicles and has no confirmed EV-specific duty relief; EVs are admissible but follow the standard duty schedule.",
+  },
+  ukraine: {
+    overview:
+      "Ukraine is a large left-hand-drive European market with a Euro-2 emissions gate, no firm age cap (a 20-year cap is proposed), and a duty stack of 10% import duty plus an age/engine-based excise plus 20% VAT. Its full EV exemption expired on 31 December 2025, and Odesa is the principal Black Sea entry port.",
+    considerations: [
+      "Euro-2 compliance is the binding gate — a proposed 20-year age cap is not yet law.",
+      "The excise is a formula (engine type, displacement and age), not a flat percentage — quote per exact model.",
+      "The full EV exemption (0% duty/excise/VAT) ended 31 Dec 2025 — EVs now face up to 10% duty + €1/kWh excise + 20% VAT.",
+    ],
+    faq: [
+      { q: "Is Ukraine right- or left-hand drive?", a: "Left-hand drive (LHD)." },
+      { q: "Is there an age limit?", a: "No firm cap (Euro-2 is the gate); a 20-year cap is proposed." },
+      { q: "What taxes apply?", a: "10% duty + age/engine-based excise + 20% VAT — verify with the State Customs Service." },
+      { q: "What EV treatment applies?", a: "The full EV exemption ended 31 Dec 2025." },
+      { q: "Which port handles imports?", a: "Odesa, with Chornomorsk as an alternative." },
+    ],
+    popularModelIds: ["byd-atto-3", "li-auto-l7", "geely-monjaro"],
+    evNote:
+      "Ukraine's full EV exemption ended 31 December 2025, so EVs now face the standard duty + €1/kWh excise + 20% VAT — the previous EV cost advantage has narrowed.",
+  },
+  belarus: {
+    overview:
+      "Belarus is a left-hand-drive EAEU gateway that offers a 20,000-unit duty-free quota for pure electric vehicles (plus 0% individual EV VAT through 2028) and single customs clearance across the EAEU. There is no hard age ban — the individual unified rate scales with age and engine size — and the country is landlocked, transiting via Klaipėda/Riga or Brest.",
+    considerations: [
+      "The 20,000-unit EV duty-free quota is first-come-first-served and was over 40% consumed by April 2026 — confirm quota availability before purchase.",
+      "Pure EVs pay 0% duty + 0% individual VAT; hybrids are excluded and pay 15% duty + 20% VAT.",
+      "EAEU single clearance lets a cleared car move across Russia, Kazakhstan, Kyrgyzstan and Armenia without re-paying duty (Russia still levies a recycling fee).",
+    ],
+    faq: [
+      { q: "Is Belarus right- or left-hand drive?", a: "Left-hand drive (LHD)." },
+      { q: "Is there an age limit?", a: "No hard age ban — the unified rate scales with age and engine size." },
+      { q: "What EV incentive applies?", a: "A 20,000-unit duty-free quota plus 0% individual EV VAT through 2028." },
+      { q: "How do vehicles arrive?", a: "Overland via Brest or through the Klaipėda/Riga seaports to Minsk." },
+    ],
+    popularModelIds: ["byd-atto-3", "byd-seal", "zeekr-001"],
+    evNote:
+      "Belarus's 20,000-unit duty-free EV quota plus 0% individual EV VAT through 2028 make it a high-value EV corridor, but the quota is limited and resets annually.",
+  },
+  bolivia: {
+    overview:
+      "Bolivia is a left-hand-drive landlocked Latin American market with one of the region's strictest used-vehicle age rules — one model year old since December 2014 (some sources cite up to two years) — which effectively bars used imports. Imports face the NANDINA tariff plus 14.94% IVA, and vehicles transit via Iquique/Antofagasta (Chile) or Matarani/Ilo (Peru).",
+    considerations: [
+      "The ~1-model-year age rule is a near-total bar to used imports — only brand-new/current-model-year units qualify.",
+      "Import requires a locally registered entity with NIT and a licensed customs broker (Agente Despachante) above USD 1,000.",
+      "Landlocked transit via Chile or Peru adds cost and lead time.",
+    ],
+    faq: [
+      { q: "Is Bolivia right- or left-hand drive?", a: "Left-hand drive (LHD)." },
+      { q: "What is the age limit?", a: "~1 model year (some sources cite 2) — verify with Aduana Nacional." },
+      { q: "What taxes apply?", a: "NANDINA tariff plus 14.94% IVA." },
+      { q: "How do vehicles arrive?", a: "Via Iquique/Antofagasta (Chile) or Matarani/Ilo (Peru)." },
+    ],
+    popularModelIds: ["geely-monjaro", "chery-tiggo-8", "byd-atto-3"],
+    evNote:
+      "Bolivia has no confirmed EV-specific import-duty relief, and the strict age rule makes it a market to monitor rather than a current used-export destination.",
+  },
+  "costa-rica": {
+    overview:
+      "Costa Rica is a left-hand-drive Latin American market with no age limit but a sharply age-tiered import tax (52.29% ≤3 years, 63.91% at 4 years, 79.03% at 6+ years) and a full import-tax exemption for fully electric vehicles under Law 9518. Puerto Limón (Atlantic) and Caldera (Pacific) are the entry ports.",
+    considerations: [
+      "The zero EV import tax (Law 9518) versus 52–79% tiered ICE tax is the strongest EV relief in the tracked Latin American set.",
+      "No age limit — but age drives the duty tier, and older vehicles need more frequent RITEVE inspections.",
+      "Hybrids do not receive the full EV exemption — confirm the current hybrid treatment.",
+    ],
+    faq: [
+      { q: "Is Costa Rica right- or left-hand drive?", a: "Left-hand drive (LHD)." },
+      { q: "Is there an age limit?", a: "No — but import tax rises sharply with age." },
+      { q: "What EV incentive applies?", a: "Fully electric vehicles are exempt from import tax (Law 9518)." },
+      { q: "Which ports handle imports?", a: "Puerto Limón (Atlantic) and Caldera (Pacific)." },
+    ],
+    popularModelIds: ["byd-atto-3", "byd-seal", "mg-4"],
+    evNote:
+      "Costa Rica's zero import tax on fully electric vehicles (Law 9518) makes it a standout EV destination; hybrids receive only partial relief.",
+  },
+  guatemala: {
+    overview:
+      "Guatemala is a left-hand-drive Central American market with a ~10-year age limit (cited inconsistently) and a layered tax stack of DAI import duty (0–15%), 12% VAT and a ~20% first-registration IPRIMA tax. Puerto Quetzal (Pacific) and Santo Tomás de Castilla (Atlantic) are the entry ports.",
+    considerations: [
+      "The 10-year age limit is cited inconsistently — confirm with SAT or a licensed broker before sourcing stock.",
+      "The DAI + 12% VAT + ~20% IPRIMA stack is layered — budget the full stack.",
+      "No EV-specific import-duty relief is recorded.",
+    ],
+    faq: [
+      { q: "Is Guatemala right- or left-hand drive?", a: "Left-hand drive (LHD)." },
+      { q: "What is the age limit?", a: "~10 years (cited inconsistently) — verify with SAT." },
+      { q: "What taxes apply?", a: "DAI duty (0–15%) + 12% VAT + ~20% IPRIMA." },
+      { q: "Which ports handle imports?", a: "Puerto Quetzal (Pacific) and Santo Tomás de Castilla (Atlantic)." },
+    ],
+    popularModelIds: ["byd-atto-3", "chery-tiggo-8", "geely-monjaro"],
+    evNote:
+      "Guatemala has no confirmed EV-specific import-duty relief; EVs follow the standard DAI + VAT + IPRIMA stack.",
+  },
 };

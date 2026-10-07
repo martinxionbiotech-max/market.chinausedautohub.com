@@ -791,6 +791,78 @@
       "source_url": null,
       "last_checked": "2026-10-07",
       "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-lb-beirut",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "lb-beirut",
+      "est_days_min": 22,
+      "est_days_max": 32,
+      "shipping_method": "roro",
+      "source": "Industry route estimates (Suez / East Mediterranean)",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-ua-odesa",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "ua-odesa",
+      "est_days_min": 24,
+      "est_days_max": 34,
+      "shipping_method": "roro",
+      "source": "Industry route estimates (Black Sea)",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-by-minsk",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "by-minsk",
+      "est_days_min": 30,
+      "est_days_max": 42,
+      "shipping_method": "container",
+      "source": "Industry route estimates (sea to Klaipėda/Riga + road transit)",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-bo-santa-cruz",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "bo-santa-cruz",
+      "est_days_min": 32,
+      "est_days_max": 46,
+      "shipping_method": "roro",
+      "source": "Industry route estimates (via Iquique/Arica + rail/road transit)",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-cr-puerto-limon",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "cr-puerto-limon",
+      "est_days_min": 26,
+      "est_days_max": 36,
+      "shipping_method": "roro",
+      "source": "Industry route estimates",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
+    },
+    {
+      "route_id": "cn-shanghai-to-gt-puerto-quetzal",
+      "origin_port_id": "cn-shanghai",
+      "destination_port_id": "gt-puerto-quetzal",
+      "est_days_min": 26,
+      "est_days_max": 36,
+      "shipping_method": "roro",
+      "source": "Industry route estimates",
+      "source_url": null,
+      "last_checked": "2026-10-07",
+      "confidence": "low"
     }
   ]
 }

@@ -636,6 +636,84 @@
       "source_url": "https://www.qualitextrading.com/import-regulations/cameroon",
       "source_date": "2026-10-07",
       "confidence": "high"
+    },
+    {
+      "country_id": "lebanon",
+      "name": "Lebanon",
+      "name_zh": "黎巴嫩",
+      "region": "middle-east",
+      "drive_side": "lhd",
+      "currency": "LBP",
+      "status": "active",
+      "source": "Lebanese Customs / JapanCarTrade import guide",
+      "source_url": "https://blog.japanesecartrade.com/558-lebanon-import-regulation-for-japan-used-cars/",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "ukraine",
+      "name": "Ukraine",
+      "name_zh": "乌克兰",
+      "region": "europe",
+      "drive_side": "lhd",
+      "currency": "UAH",
+      "status": "active",
+      "source": "State Customs Service of Ukraine / Law No. 2612-VIII",
+      "source_url": "https://cargoline.com.ua/en/customs-clearance-cars/",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "belarus",
+      "name": "Belarus",
+      "name_zh": "白俄罗斯",
+      "region": "europe",
+      "drive_side": "lhd",
+      "currency": "BYN",
+      "status": "active",
+      "source": "State Customs Committee of Belarus / EAEU EEC Decision 107 / Carawon import guide",
+      "source_url": "https://carawon.com/en/import-to-belarus",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "bolivia",
+      "name": "Bolivia",
+      "name_zh": "玻利维亚",
+      "region": "latin-america",
+      "drive_side": "lhd",
+      "currency": "BOB",
+      "status": "active",
+      "source": "Aduana Nacional de Bolivia / US trade.gov (Bolivia trade barriers)",
+      "source_url": "https://www.privacyshield.gov/ps/article?id=Bolivia-Trade-Barriers",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "costa-rica",
+      "name": "Costa Rica",
+      "name_zh": "哥斯达黎加",
+      "region": "latin-america",
+      "drive_side": "lhd",
+      "currency": "CRC",
+      "status": "active",
+      "source": "Costa Rica Customs (Dirección General de Aduanas) / Law 9518 / trade.gov",
+      "source_url": "https://www.trade.gov/market-intelligence/costa-rica-electric-vehicles",
+      "source_date": "2026-10-07",
+      "confidence": "high"
+    },
+    {
+      "country_id": "guatemala",
+      "name": "Guatemala",
+      "name_zh": "危地马拉",
+      "region": "latin-america",
+      "drive_side": "lhd",
+      "currency": "GTQ",
+      "status": "active",
+      "source": "SAT (Superintendencia de Administración Tributaria) / West Coast Shipping guide",
+      "source_url": "https://www.wcshipping.com/blog/guatemala-vehicle-import-rules-2025-sat-regulations-vs-reality-guide",
+      "source_date": "2026-10-07",
+      "confidence": "high"
     }
   ]
 }

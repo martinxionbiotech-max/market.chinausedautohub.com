@@ -580,6 +580,69 @@
       "country_id": "cameroon",
       "type": "destination",
       "note": null
+    },
+    {
+      "port_id": "lb-beirut",
+      "name": "Beirut",
+      "country_id": "lebanon",
+      "type": "destination",
+      "note": null
+    },
+    {
+      "port_id": "ua-odesa",
+      "name": "Odesa",
+      "country_id": "ukraine",
+      "type": "destination",
+      "note": "Black Sea — principal container/RoRo entry"
+    },
+    {
+      "port_id": "ua-chornomorsk",
+      "name": "Chornomorsk",
+      "country_id": "ukraine",
+      "type": "destination",
+      "note": "Black Sea (near Odesa)"
+    },
+    {
+      "port_id": "by-minsk",
+      "name": "Minsk (via Klaipėda/Riga or Brest transit)",
+      "country_id": "belarus",
+      "type": "destination",
+      "note": "Landlocked — transit via Klaipėda (Lithuania) / Riga (Latvia) or Brest (Poland) road"
+    },
+    {
+      "port_id": "bo-santa-cruz",
+      "name": "Santa Cruz (via Iquique/Antofagasta transit)",
+      "country_id": "bolivia",
+      "type": "destination",
+      "note": "Landlocked — transit via Iquique/Antofagasta (Chile) or Matarani/Ilo (Peru)"
+    },
+    {
+      "port_id": "cr-puerto-limon",
+      "name": "Puerto Limón",
+      "country_id": "costa-rica",
+      "type": "destination",
+      "note": "Atlantic (Caribbean) coast"
+    },
+    {
+      "port_id": "cr-caldera",
+      "name": "Caldera",
+      "country_id": "costa-rica",
+      "type": "destination",
+      "note": "Pacific coast"
+    },
+    {
+      "port_id": "gt-puerto-quetzal",
+      "name": "Puerto Quetzal",
+      "country_id": "guatemala",
+      "type": "destination",
+      "note": "Pacific coast"
+    },
+    {
+      "port_id": "gt-santo-tomas",
+      "name": "Santo Tomás de Castilla",
+      "country_id": "guatemala",
+      "type": "destination",
+      "note": "Atlantic (Caribbean) coast"
     }
   ]
 }
