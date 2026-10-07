@@ -1,7 +1,7 @@
 {
   "meta": {
     "name": "Vehicle x Market relationship layer",
-    "batch": "P3.8 (phase2/49 - Vehicle x Market Intelligence, batch 9 — vehicle-market-b9)",
+    "batch": "P3.8 (phase2/49 - Vehicle x Market Intelligence, batch 10 — vehicle-market-b10)",
     "updated": "2026-10-07",
     "vehicle_source": "data.chinausedautohub.com models.json (read-only reference; model_id join key)",
     "market_source": "market.chinausedautohub.com countries/importrules/taxrules/ports/routes",
@@ -8466,6 +8466,315 @@
       "source_type": "database",
       "confidence": "medium",
       "checked_date": "2026-10-07"
+    },
+    {
+      "vehicle_id": "tesla-model-3",
+      "country_id": "kenya",
+      "drive_side_fit": {
+        "status": "needs_conversion",
+        "summary": "Kenya registers RHD only. Tesla Model 3 is produced in right-hand drive at Giga Shanghai for the UK, Australia, New Zealand, Japan and Singapore — source a RHD unit rather than converting a China LHD unit.",
+        "source": "Tesla Model 3 RHD production (see model page)",
+        "source_url": "https://www.teslarati.com/tesla-model-3-highland-rhd-export-fleet-shanghai-south-port-video/",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Model 3 production began in 2017; the destination age limit is satisfied by current-generation units.",
+        "source": "market sub-site importrules.json (age limit)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Battery-electric (EV) — Kenya applies reduced EV import duty (10% vs 25%) under the EAC CET.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "CCS2 / CHAdeMO",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": true,
+        "notes": "China-market GB/T inlet vs Kenya CCS2/CHAdeMO network — adapter required; RHD export units (UK/AU/NZ) carry CCS2 (confirm the sourced unit).",
+        "source": "Vehicle: GB/T charging standard (Wikipedia); Destination: CCS2/CHAdeMO (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Pre-Export Verification of Conformity (PVoC)"
+        ],
+        "notes": "PVoC pre-shipment inspection required; EV duty relief (10% vs 25%) applies under the EAC CET.",
+        "source": "market sub-site importrules.json (PVoC, KEBS)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "ke-duty",
+        "ev_duty_taxrule_id": "ke-ev-duty",
+        "vat_taxrule_id": "ke-vat",
+        "ev_duty_relief": true,
+        "notes": "EV: 10% (EAC CET reduced) vs 25% standard + 16% VAT. Referenced from taxrules.json — verify with KRA.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://www.kra.go.ke",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-ke-mombasa",
+          "cn-shanghai-to-ke-mombasa"
+        ],
+        "notes": "Sea freight to Mombasa (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "Tesla Model 3 is an electric vehicle; RHD production makes Kenya sourcing viable — confirm whether the sourced unit carries a GB/T or CCS2 inlet.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/tesla-model-3/",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://data.chinausedautohub.com/models/",
+      "source_type": "database",
+      "confidence": "medium",
+      "checked_date": "2026-10-07"
+    },
+    {
+      "vehicle_id": "tesla-model-3",
+      "country_id": "nigeria",
+      "drive_side_fit": {
+        "status": "needs_conversion",
+        "summary": "Nigeria registers RHD only. Tesla Model 3 is produced in right-hand drive at Giga Shanghai for the UK, Australia, New Zealand, Japan and Singapore — source a RHD unit rather than converting a China LHD unit.",
+        "source": "Tesla Model 3 RHD production (see model page)",
+        "source_url": "https://www.teslarati.com/tesla-model-3-highland-rhd-export-fleet-shanghai-south-port-video/",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Model 3 production began in 2017; the destination age limit is satisfied by current-generation units.",
+        "source": "market sub-site importrules.json (age limit)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Battery-electric (EV) — Nigeria's EV duty policy is developing; no confirmed EV-specific duty rate recorded. RHD availability is the primary increment.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "CCS2 / CHAdeMO",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": true,
+        "notes": "China-market GB/T inlet vs Nigeria CCS2/CHAdeMO network — adapter required; RHD export units (UK/AU/NZ) carry CCS2 (confirm the sourced unit).",
+        "source": "Vehicle: GB/T charging standard (Wikipedia); Destination: CCS2/CHAdeMO (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Pre-shipment inspection (SONCAP / Form M)"
+        ],
+        "notes": "Nigeria import clearance and pre-shipment inspection (SONCAP/Form M) apply; EV duty policy developing.",
+        "source": "market sub-site importrules.json (SONCAP / Form M)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "ng-duty",
+        "ev_duty_taxrule_id": null,
+        "vat_taxrule_id": "ng-vat",
+        "ev_duty_relief": false,
+        "notes": "EV/ICE: 20% standard + 7.5% VAT; no confirmed EV-specific duty rate. Referenced from taxrules.json — verify with Nigeria Customs.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://customs.gov.ng",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-ng-lagos",
+          "cn-guangzhou-to-ng-tincan"
+        ],
+        "notes": "Sea freight to Lagos (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "Tesla Model 3 is an electric vehicle; RHD production makes Nigeria sourcing viable — confirm whether the sourced unit carries a GB/T or CCS2 inlet.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/tesla-model-3/",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://data.chinausedautohub.com/models/",
+      "source_type": "database",
+      "confidence": "medium",
+      "checked_date": "2026-10-07"
+    },
+    {
+      "vehicle_id": "tesla-model-3",
+      "country_id": "tanzania",
+      "drive_side_fit": {
+        "status": "needs_conversion",
+        "summary": "Tanzania registers RHD only. Tesla Model 3 is produced in right-hand drive at Giga Shanghai for the UK, Australia, New Zealand, Japan and Singapore — source a RHD unit rather than converting a China LHD unit.",
+        "source": "Tesla Model 3 RHD production (see model page)",
+        "source_url": "https://www.teslarati.com/tesla-model-3-highland-rhd-export-fleet-shanghai-south-port-video/",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "age_rule_fit": {
+        "status": "eligible",
+        "summary": "Model 3 production began in 2017; the destination age limit is satisfied by current-generation units.",
+        "source": "market sub-site importrules.json (age limit)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "powertrain_fit": {
+        "status": "noted",
+        "summary": "Battery-electric (EV) — Tanzania has introduced reduced EV excise but records no EV-specific import-duty rate (25% standard duty + 18% VAT). Confirm current EV policy with TRA.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/",
+        "source_type": "database",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "ev_charging_compat": {
+        "standard": "GB/T",
+        "destination_standard": "CCS2 / CHAdeMO",
+        "connector": "GB/T AC / GB/T DC (vehicle inlet)",
+        "voltage": null,
+        "frequency": null,
+        "needs_adapter": true,
+        "notes": "China-market GB/T inlet vs Tanzania CCS2/CHAdeMO network — adapter required; RHD export units (UK/AU/NZ) carry CCS2 (confirm the sourced unit).",
+        "source": "Vehicle: GB/T charging standard (Wikipedia); Destination: CCS2/CHAdeMO (Wikipedia)",
+        "source_url": "https://en.wikipedia.org/wiki/GB/T_charging_standard",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "import_eligibility": {
+        "status": "conformity_required",
+        "requirements": [
+          "Pre-shipment inspection (PVoC)"
+        ],
+        "notes": "Tanzania import clearance and pre-shipment inspection (PVoC) apply; EV excise incentives introduced but no EV-specific duty rate recorded.",
+        "source": "market sub-site importrules.json (PVoC, TBS)",
+        "source_url": null,
+        "source_type": "regulatory",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "duty_anchors": {
+        "standard_duty_taxrule_id": "tz-duty",
+        "ev_duty_taxrule_id": null,
+        "vat_taxrule_id": "tz-vat",
+        "ev_duty_relief": false,
+        "notes": "EV/ICE: 25% standard + 18% VAT; no EV-specific duty rate recorded. Referenced from taxrules.json — verify with TRA.",
+        "source": "market sub-site taxrules.json (referenced, not copied)",
+        "source_url": "https://www.tra.go.tz",
+        "source_type": "government",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "shipping_route": {
+        "route_ids": [
+          "cn-tianjin-to-tz-dar-es-salaam",
+          "cn-shanghai-to-tz-dar-es-salaam"
+        ],
+        "notes": "Sea freight to Dar es Salaam (RoRo).",
+        "source": "market sub-site routes.json (referenced, not copied)",
+        "source_url": null,
+        "source_type": "industry",
+        "confidence": "low",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "model_considerations": {
+        "status": "noted",
+        "summary": "Tesla Model 3 is an electric vehicle; RHD production makes Tanzania sourcing viable — confirm whether the sourced unit carries a GB/T or CCS2 inlet.",
+        "source": "Data sub-site models.json (export intelligence)",
+        "source_url": "https://data.chinausedautohub.com/models/tesla-model-3/",
+        "source_type": "reputable_media",
+        "confidence": "medium",
+        "checked_date": "2026-10-07",
+        "needs_review": true
+      },
+      "source": "Data sub-site models.json + market sub-site taxrules/importrules (joined)",
+      "source_url": "https://data.chinausedautohub.com/models/",
+      "source_type": "database",
+      "confidence": "medium",
+      "checked_date": "2026-10-07"
     }
   ],
   "skipped": [
@@ -8903,6 +9212,56 @@
       "vehicle_id": "faw-bestune-t90",
       "country_id": "kenya",
       "reason": "ICE × RHD — FAW brand RHD already represented by faw-bestune-t77 × kenya/nigeria; mechanical brand cross-product (avoid)."
+    },
+    {
+      "vehicle_id": "tesla-model-y",
+      "country_id": "kenya",
+      "reason": "EV × RHD — Tesla brand RHD already represented by tesla-model-3 × kenya/nigeria/tanzania; mechanical brand cross-product (avoid)."
+    },
+    {
+      "vehicle_id": "tesla-model-y",
+      "country_id": "nigeria",
+      "reason": "EV × RHD — Tesla brand RHD already represented by tesla-model-3; mechanical brand cross-product (avoid)."
+    },
+    {
+      "vehicle_id": "tesla-model-y",
+      "country_id": "tanzania",
+      "reason": "EV × RHD — Tesla brand RHD already represented by tesla-model-3; mechanical brand cross-product (avoid)."
+    },
+    {
+      "vehicle_id": "tesla-model-3",
+      "country_id": "kazakhstan",
+      "reason": "EV × LHD — EV-duty delta already represented by byd-atto-3 × kazakhstan; Tesla's RHD increment is covered by the Kenya/Nigeria/Tanzania pairs (avoid mechanical EV cross-product)."
+    },
+    {
+      "vehicle_id": "li-auto-l6",
+      "country_id": "kazakhstan",
+      "reason": "EREV × LHD — EREV classification already represented by li-auto-l7/l9 (Li Auto brand); L6 adds no new increment (avoid)."
+    },
+    {
+      "vehicle_id": "aito-m7",
+      "country_id": "kazakhstan",
+      "reason": "EREV × LHD — EREV classification already represented by li-auto-l7 (EREV×LHD exemplar); AITO is LHD-only with no RHD production (avoid)."
+    },
+    {
+      "vehicle_id": "aito-m9",
+      "country_id": "kazakhstan",
+      "reason": "EREV × LHD — EREV classification already represented by li-auto-l7 (EREV×LHD exemplar); AITO is LHD-only with no RHD production (avoid)."
+    },
+    {
+      "vehicle_id": "seres-5",
+      "country_id": "uae",
+      "reason": "EV/EREV × LHD — no UAE EV duty relief recorded; EREV×LHD already represented; Seres is LHD-only with no RHD production (avoid)."
+    },
+    {
+      "vehicle_id": "xiaomi-yu7",
+      "country_id": "kazakhstan",
+      "reason": "EV × LHD-only — no RHD production and overseas export programme only emerging; EV-duty delta already represented by byd-atto-3 × kazakhstan (avoid)."
+    },
+    {
+      "vehicle_id": "fangchengbao-bao-5",
+      "country_id": "kenya",
+      "reason": "PHEV × RHD — sold overseas as the Denza B5; Denza brand RHD already represented by denza-d9/n7, and Bao 5 RHD production is unconfirmed (avoid)."
     }
   ]
 }

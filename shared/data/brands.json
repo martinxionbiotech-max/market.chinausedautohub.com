@@ -713,6 +713,24 @@
       "source_url": "https://www.yangwangauto.com/",
       "source_date": "2026-10-07",
       "confidence": "high"
+    },
+    {
+      "brand_id": "tesla",
+      "name": "Tesla",
+      "name_zh": "特斯拉",
+      "origin_country": "US",
+      "founded": 2003,
+      "powertrains": [
+        "ev"
+      ],
+      "vehicle_types": [
+        "suv",
+        "sedan"
+      ],
+      "source": "Official brand history",
+      "source_url": "https://www.tesla.cn/",
+      "source_date": "2026-10-07",
+      "confidence": "high"
     }
   ]
 }

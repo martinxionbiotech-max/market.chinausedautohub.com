@@ -2718,6 +2718,50 @@
    "source_url": "https://www.auto-data.net/en/yangwang-u8-2.0t-1197hp-extended-range-pure-electric-4wd-51283",
    "source_date": "2026-10-07",
    "confidence": "medium"
+  },
+  {
+   "model_id": "tesla-model-3",
+   "brand_id": "tesla",
+   "name": "Model 3",
+   "name_zh": "特斯拉Model 3",
+   "body_type": "sedan",
+   "status": "active",
+   "generations": [
+    {
+     "generation_id": "tesla-model-3-g1",
+     "name": "First Generation",
+     "production_years": [
+      2017,
+      2025
+     ],
+     "trims": [
+      {
+       "trim_id": "tesla-model-3-g1-ev",
+       "name": "RWD 60 kWh",
+       "powertrain": "ev",
+       "production_years": [
+        2017,
+        2025
+       ],
+       "specs": {
+        "motor_power_kw": 208,
+        "battery_capacity_kwh": 60,
+        "range_km": 438,
+        "drive_type": "rwd",
+        "seats": 5
+       },
+       "spec_source": "Automotive specifications database",
+       "spec_source_url": "https://www.ultimatespecs.com/car-specs/Tesla/136950/Tesla-Model-3-2023-RWD-60-kWh.html",
+       "spec_source_date": "2026-10-06",
+       "confidence": "medium"
+      }
+     ]
+    }
+   ],
+   "source": "Automotive specifications database",
+   "source_url": "https://www.ultimatespecs.com/car-specs/Tesla/136950/Tesla-Model-3-2023-RWD-60-kWh.html",
+   "source_date": "2026-10-06",
+   "confidence": "medium"
   }
  ]
 }
