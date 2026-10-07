@@ -281,8 +281,8 @@
       "drive_side": "lhd",
       "currency": "ETB",
       "status": "active",
-      "source": "Ethiopian Customs Commission / EV-only policy (Feb 2024)",
-      "source_url": "https://ethiopiauto.com/2026/09/20/customs-clearance-vehicles-ethiopia/",
+      "source": "Ethiopian Ministry of Finance (Customs Commission) / EV-only policy (Feb 2024)",
+      "source_url": "https://www.mofed.gov.et",
       "source_date": "2026-10-07",
       "confidence": "high"
     },
@@ -489,8 +489,8 @@
       "drive_side": "lhd",
       "currency": "KWD",
       "status": "active",
-      "source": "Kuwait General Administration of Customs / GCC framework",
-      "source_url": "https://www.customs.gov.kw/",
+      "source": "Kuwait Ministry of Finance (General Administration of Customs) / GCC framework",
+      "source_url": "https://www.mof.gov.kw",
       "source_date": "2026-10-07",
       "confidence": "high"
     },

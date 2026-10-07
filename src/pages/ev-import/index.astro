@@ -2,7 +2,7 @@
 import BaseLayout from "../../../shared/components/BaseLayout.astro";
 import SourceNote from "../../../shared/components/SourceNote.astro";
 import { MARKET_SITE_URL } from "../../../shared/config/config";
-import { countries, rules, getTaxRules } from "../../lib/market";
+import { countries, rules, getTaxRules, rateLabel } from "../../lib/market";
 
 const siteTitle = "China Used Car Export Markets";
 
@@ -101,7 +101,7 @@ const evTaxByCountry = countries.map((c) => ({
                 <tr>
                   <td><a href={`/countries/${country.country_id}/#ev-rules`}>{country.name}</a></td>
                   <td>{t.label}</td>
-                  <td>{t.rate_pct}%</td>
+                  <td>{rateLabel(t)}</td>
                   <td>{t.basis}</td>
                   <td>{t.needs_review ? <span class="badge-review">Review</span> : "—"}</td>
                 </tr>

@@ -154,9 +154,9 @@
       "rate_pct": 7.5,
       "basis": "CIF + duty",
       "effective_date": null,
-      "last_checked": "2026-10-04",
-      "source": "Federal Inland Revenue Service (FIRS)",
-      "source_url": "https://www.firs.gov.ng",
+      "last_checked": "2026-10-07",
+      "source": "Nigeria Revenue Service (NRS)",
+      "source_url": "https://www.nrs.gov.ng",
       "confidence": "medium",
       "needs_review": false
     },
@@ -168,9 +168,9 @@
       "rate_pct": 15,
       "basis": "CIF value",
       "effective_date": null,
-      "last_checked": "2026-10-04",
+      "last_checked": "2026-10-07",
       "source": "State Revenue Committee (KGD)",
-      "source_url": "https://kgd.gov.kz",
+      "source_url": "https://www.gov.kz/memleket/entities/kgd",
       "confidence": "low",
       "needs_review": true,
       "notes": "Uncertain / changes frequently — verify with official authorities before purchase."
@@ -183,9 +183,9 @@
       "rate_pct": 12,
       "basis": "CIF + duty",
       "effective_date": null,
-      "last_checked": "2026-10-04",
+      "last_checked": "2026-10-07",
       "source": "State Revenue Committee (KGD)",
-      "source_url": "https://kgd.gov.kz",
+      "source_url": "https://www.gov.kz/memleket/entities/kgd",
       "confidence": "medium",
       "needs_review": false
     },
@@ -197,9 +197,9 @@
       "rate_pct": 0,
       "basis": "CIF value",
       "effective_date": null,
-      "last_checked": "2026-10-04",
+      "last_checked": "2026-10-07",
       "source": "State Revenue Committee (KGD)",
-      "source_url": "https://kgd.gov.kz",
+      "source_url": "https://www.gov.kz/memleket/entities/kgd",
       "confidence": "low",
       "needs_review": true,
       "notes": "Uncertain / changes frequently — verify with official authorities before purchase."
@@ -227,9 +227,9 @@
       "rate_pct": 12,
       "basis": "CIF + duty",
       "effective_date": null,
-      "last_checked": "2026-10-04",
-      "source": "State Tax Committee",
-      "source_url": "https://soliq.uz",
+      "last_checked": "2026-10-07",
+      "source": "Ministry of Economy and Finance (successor to State Tax Committee)",
+      "source_url": "https://www.imv.uz",
       "confidence": "medium",
       "needs_review": false
     },
@@ -605,7 +605,7 @@
       "country_id": "mexico",
       "tax_type": "import_duty",
       "label": "Import duty (used vehicles)",
-      "rate_pct": 20,
+      "rate_pct": null,
       "basis": "CIF value",
       "effective_date": null,
       "last_checked": "2026-10-07",
@@ -613,7 +613,9 @@
       "source_url": "https://dutiable.io/duty-rates/mexico/used-cars",
       "confidence": "low",
       "needs_review": true,
-      "notes": "Dutiable.io lists a 15–50% range for used cars by HS category; USMCA/NAFTA origin may be duty-free. Verify with Mexican customs (SAT)."
+      "notes": "Tiered 15–50% by vehicle age/type (HS category); USMCA/NAFTA origin may be duty-free. Verify with Mexican customs (SAT).",
+      "value_min": 15,
+      "value_max": 50
     },
     {
       "taxrule_id": "mx-vat",
@@ -1100,7 +1102,7 @@
       "source_url": "https://taxsummaries.pwc.com/qatar/corporate/other-taxes",
       "confidence": "high",
       "needs_review": false,
-      "notes": "Qatar imposes no VAT as of 2025; a 5% GCC-framework VAT is expected in future."
+      "notes": "VAT not yet implemented as of 2026-10-07 — 0% reflects \"not implemented\", not a zero rate. A 5% GCC-framework VAT is expected in future."
     },
     {
       "taxrule_id": "az-vat",

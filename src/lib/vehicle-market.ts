@@ -4,7 +4,7 @@
 // neither the vehicle page (data sub-site) nor the country page (market sub-site)
 // already states. This is the "independent-information-increment" gate (model doc §3).
 import relationsData from "../../shared/data/vehicle-market.json";
-import { taxrules, getTaxRules, getCountry } from "./market";
+import { taxrules, getTaxRules, getCountry, rateLabel } from "./market";
 
 export interface RelationField {
   status?: string;
@@ -111,9 +111,9 @@ export function passesGate(rel: Relation): boolean {
 // ---- Duty anchors resolved from taxrules (reference, not copy) ---------------
 
 export interface DutyAnchorView {
-  standard: { label: string; rate_pct: number } | null;
-  ev: { label: string; rate_pct: number } | null;
-  vat: { label: string; rate_pct: number } | null;
+  standard: { label: string; rate: string } | null;
+  ev: { label: string; rate: string } | null;
+  vat: { label: string; rate: string } | null;
   rangeLabel: string;
 }
 
@@ -123,14 +123,14 @@ export function dutyAnchorsFor(rel: Relation): DutyAnchorView | null {
   const byId = (id?: string | null) => {
     if (!id) return null;
     const t = taxrules.find((x) => (x as any).taxrule_id === id);
-    return t ? { label: t.label, rate_pct: t.rate_pct } : null;
+    return t ? { label: t.label, rate: rateLabel(t) } : null;
   };
   const standard = byId(a.standard_duty_taxrule_id);
   const ev = byId(a.ev_duty_taxrule_id);
   const vat = byId(a.vat_taxrule_id);
-  let rangeLabel = standard ? `${standard.rate_pct}%` : "Not available";
-  if (ev && standard && ev.rate_pct !== standard.rate_pct) {
-    rangeLabel = `${ev.rate_pct}% (EV) – ${standard.rate_pct}% (standard)`;
+  let rangeLabel = standard ? standard.rate : "Not available";
+  if (ev && standard && ev.rate !== standard.rate) {
+    rangeLabel = `${ev.rate} (EV) – ${standard.rate} (standard)`;
   }
   return { standard, ev, vat, rangeLabel };
 }

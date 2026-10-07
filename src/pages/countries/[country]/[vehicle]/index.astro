@@ -431,9 +431,9 @@ const sameVehicleOtherCountries = rel
         <table class="data-table">
           <thead><tr><th>Charge</th><th>Rate</th></tr></thead>
           <tbody>
-            {duty.standard && <tr><td>{duty.standard.label}</td><td>{duty.standard.rate_pct}%</td></tr>}
-            {duty.ev && <tr><td>{duty.ev.label}</td><td>{duty.ev.rate_pct}%</td></tr>}
-            {duty.vat && <tr><td>{duty.vat.label}</td><td>{duty.vat.rate_pct}%</td></tr>}
+            {duty.standard && <tr><td>{duty.standard.label}</td><td>{duty.standard.rate}</td></tr>}
+            {duty.ev && <tr><td>{duty.ev.label}</td><td>{duty.ev.rate}</td></tr>}
+            {duty.vat && <tr><td>{duty.vat.label}</td><td>{duty.vat.rate}</td></tr>}
           </tbody>
         </table>
         {rel?.duty_anchors && (

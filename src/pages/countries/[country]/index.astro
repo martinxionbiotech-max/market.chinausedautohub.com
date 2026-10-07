@@ -23,6 +23,7 @@ import {
   jurisdictionFor,
   applicabilityForCategory,
   applicabilityForTaxType,
+  rateLabel,
 } from "../../../lib/market";
 import { countryContent, regionMeta } from "../../../lib/content";
 import { getRelationsForCountry } from "../../../lib/vehicle-market";
@@ -293,7 +294,7 @@ const taxMeta = (t: any) => ({
         return (
           <div class="rule">
             <div class="rule-head">
-              <h3>{t.label} — {t.rate_pct}%</h3>
+              <h3>{t.label} — {rateLabel(t)}</h3>
               {t.needs_review && <span class="badge-review">Review</span>}
             </div>
             <p>Basis: {t.basis}</p>
@@ -324,7 +325,7 @@ const taxMeta = (t: any) => ({
         return (
           <div class="rule">
             <div class="rule-head">
-              <h3>{t.label} — {t.rate_pct}%</h3>
+              <h3>{t.label} — {rateLabel(t)}</h3>
               {t.needs_review && <span class="badge-review">Review</span>}
             </div>
             <p>Basis: {t.basis}</p>
@@ -410,7 +411,7 @@ const taxMeta = (t: any) => ({
         return (
           <div class="rule">
             <div class="rule-head">
-              <h3>{t.label} — {t.rate_pct}%</h3>
+              <h3>{t.label} — {rateLabel(t)}</h3>
               {t.needs_review && <span class="badge-review">Review</span>}
             </div>
             <p>Basis: {t.basis}</p>

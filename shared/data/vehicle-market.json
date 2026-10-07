@@ -67,10 +67,10 @@
         "ev_duty_relief": true,
         "notes": "EV trims: 0% (temporary exemption) vs 15% standard import duty. Referenced from taxrules.json — verify current rates with KGD.",
         "source": "market sub-site taxrules.json (referenced, not copied)",
-        "source_url": "https://kgd.gov.kz",
+        "source_url": "https://www.gov.kz/memleket/entities/kgd",
         "source_type": "government",
         "confidence": "low",
-        "checked_date": "2026-10-06",
+        "checked_date": "2026-10-07",
         "needs_review": true
       },
       "shipping_route": {
@@ -1199,10 +1199,10 @@
         "ev_duty_relief": true,
         "notes": "EV trims: 0% (temporary exemption) vs 15% standard import duty; PHEV DM-i classification to be confirmed. Referenced from taxrules.json.",
         "source": "market sub-site taxrules.json (referenced, not copied)",
-        "source_url": "https://kgd.gov.kz",
+        "source_url": "https://www.gov.kz/memleket/entities/kgd",
         "source_type": "government",
         "confidence": "low",
-        "checked_date": "2026-10-06",
+        "checked_date": "2026-10-07",
         "needs_review": true
       },
       "shipping_route": {
@@ -1291,10 +1291,10 @@
         "ev_duty_relief": true,
         "notes": "EV trims: 0% (temporary exemption) vs 15% standard; PHEV DM-i classification to be confirmed. Referenced from taxrules.json.",
         "source": "market sub-site taxrules.json (referenced, not copied)",
-        "source_url": "https://kgd.gov.kz",
+        "source_url": "https://www.gov.kz/memleket/entities/kgd",
         "source_type": "government",
         "confidence": "low",
-        "checked_date": "2026-10-06",
+        "checked_date": "2026-10-07",
         "needs_review": true
       },
       "shipping_route": {
@@ -1383,10 +1383,10 @@
         "ev_duty_relief": true,
         "notes": "EV trims: 0% (temporary exemption) vs 15% standard; PHEV DM-i classification to be confirmed. Referenced from taxrules.json.",
         "source": "market sub-site taxrules.json (referenced, not copied)",
-        "source_url": "https://kgd.gov.kz",
+        "source_url": "https://www.gov.kz/memleket/entities/kgd",
         "source_type": "government",
         "confidence": "low",
-        "checked_date": "2026-10-06",
+        "checked_date": "2026-10-07",
         "needs_review": true
       },
       "shipping_route": {
@@ -1475,10 +1475,10 @@
         "ev_duty_relief": true,
         "notes": "EREV class: 0% EV rate may not apply (BEV-only scope) — confirm. Referenced from taxrules.json.",
         "source": "market sub-site taxrules.json (referenced, not copied)",
-        "source_url": "https://kgd.gov.kz",
+        "source_url": "https://www.gov.kz/memleket/entities/kgd",
         "source_type": "government",
         "confidence": "low",
-        "checked_date": "2026-10-06",
+        "checked_date": "2026-10-07",
         "needs_review": true
       },
       "shipping_route": {
@@ -5067,10 +5067,10 @@
         "ev_duty_relief": true,
         "notes": "EV: 0% (temporary exemption) vs 15% standard; EREV classification to be confirmed. Referenced from taxrules.json — verify with KGD.",
         "source": "market sub-site taxrules.json (referenced, not copied)",
-        "source_url": "https://kgd.gov.kz",
+        "source_url": "https://www.gov.kz/memleket/entities/kgd",
         "source_type": "government",
         "confidence": "low",
-        "checked_date": "2026-10-06",
+        "checked_date": "2026-10-07",
         "needs_review": true
       },
       "shipping_route": {
@@ -11378,7 +11378,7 @@
         ],
         "notes": "Ethiopia only permits EV imports since Feb 2024; combustion units are not eligible. Transit via Djibouti.",
         "source": "market sub-site importrules.json (EV-only policy)",
-        "source_url": "https://ethiopiauto.com/2026/09/20/customs-clearance-vehicles-ethiopia/",
+        "source_url": "https://www.mofed.gov.et",
         "source_type": "regulatory",
         "confidence": "high",
         "checked_date": "2026-10-07",

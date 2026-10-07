@@ -92,6 +92,16 @@ export function applicabilityForTaxType(taxType: string): string {
       return "General import charge";
   }
 }
+// Format a tax rule rate for display: prefer a value_min/value_max range
+// (tiered by age/type) over a single rate_pct; fall back to "Not available".
+export function rateLabel(t: any): string {
+  if (t?.value_min != null && t?.value_max != null) {
+    return `${t.value_min}–${t.value_max}%`;
+  }
+  if (t?.rate_pct != null) return `${t.rate_pct}%`;
+  return "Not available";
+}
+
 export const getRules = (countryId: string) => rules.filter((r) => r.country_id === countryId);
 export const rulesByCategory = (countryId: string, category: string) =>
   rules.filter((r) => r.country_id === countryId && r.category === category);

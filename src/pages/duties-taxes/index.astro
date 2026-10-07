@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../../../shared/components/BaseLayout.astro";
 import { MARKET_SITE_URL } from "../../../shared/config/config";
-import { countries, taxrules } from "../../lib/market";
+import { countries, taxrules, rateLabel } from "../../lib/market";
 
 const siteTitle = "China Used Car Export Markets";
 
@@ -79,7 +79,7 @@ const grouped = countries.map((c) => ({
               <tr>
                 <td>{taxTypeLabel[t.tax_type] ?? t.tax_type}</td>
                 <td>{t.label}</td>
-                <td>{t.rate_pct}%</td>
+                <td>{rateLabel(t)}</td>
                 <td>{t.basis}</td>
                 <td>{t.source_url ? <a href={t.source_url} rel="noopener">{t.source}</a> : t.source}</td>
                 <td>{t.source_date ?? "—"}</td>
