@@ -966,7 +966,20 @@
         "a": "Vladivostok (mar) y el cruce terrestre de Manzhouli/Zabaykalsk."
       }
     ],
-    "evNote": "Rusia no concede alivio arancelario específico para VE, y el comercio de VE/híbridos es sensible a sanciones (la UE prohíbe las exportaciones de VE/híbridos a Rusia). Aun así, los vehículos chinos de nueva energía dominan el mercado; los EREV y PHEV son los segmentos de importación de más rápido crecimiento."
+    "evNote": "Rusia no concede alivio arancelario específico para VE, y el comercio de VE/híbridos es sensible a sanciones (la UE prohíbe las exportaciones de VE/híbridos a Rusia). Aun así, los vehículos chinos de nueva energía dominan el mercado; los EREV y PHEV son los segmentos de importación de más rápido crecimiento.",
+    "suvNote": "Los SUV y crossover dominan el mercado ruso; los SUV EREV/PHEV chinos (Li Auto L7/L9, Chery, Geely) son el segmento de importación de mayor crecimiento tras la salida de las marcas occidentales.",
+    "recommendSummary": "LHD, certificación EAEU; tasa de utilización + arancel por cilindrada + impuesto especial + IVA del 20%; dominan los SUV y EREV.",
+    "recommendedCharacteristics": [
+      "Unidades con volante a la izquierda (LHD) con certificación técnica EAEU (OTTC) y activación del pasaporte electrónico EPTS.",
+      "SUV y crossover EREV/PHEV: los segmentos de importación dominantes y de mayor crecimiento.",
+      "Presupueste la tasa de utilización (reciclaje) creciente más el arancel personal por cilindrada, el impuesto especial por potencia y el IVA del 20%.",
+      "Obtenga una revisión jurídica de sanciones y cumplimiento antes de operar: se aplican fricciones bancarias/de pago y escrutinio de control de exportaciones."
+    ],
+    "marketRisks": [
+      "Riesgo de sanciones: los fabricantes occidentales prohíben exportar a Rusia, la UE prohíbe exportar coches de lujo (>1.900 cc) y VE/híbridos, y se aplican fricciones bancarias/de pago y escrutinio de cumplimiento.",
+      "La tasa de utilización (reciclaje) ha aumentado desde 2024 y es un componente de coste importante y variable: recalcule con frecuencia.",
+      "El arancel de importación personal se fija por cilindrada más impuesto especial e IVA: cotice por modelo exacto, no por porcentaje fijo."
+    ]
   },
   "georgia": {
     "overview": "Georgia es un mercado del Cáucaso Sur con volante a la izquierda y uno de los regímenes aduaneros más ligeros de la región: un arancel nominal por cc, un impuesto especial por cc con un escalón a los 6 años y un IVA del 18%. Los vehículos eléctricos están exentos de arancel e impuesto especial, y el corredor de Poti/Batumi convierte a Georgia en un centro de reexportación hacia Armenia, Azerbaiyán y Asia Central.",
@@ -1047,7 +1060,20 @@
         "a": "Sohar y Salalah."
       }
     ],
-    "evNote": "No se registra un alivio específico del arancel de importación para VE en Omán; el arancel fijo del 5% más el IVA del 5% se aplica a todos los vehículos."
+    "evNote": "No se registra un alivio específico del arancel de importación para VE en Omán; el arancel fijo del 5% más el IVA del 5% se aplica a todos los vehículos.",
+    "suvNote": "Los SUV y crossover dominan el mercado omaní, donde las marcas chinas de SUV de valor (MG, Changan, Chery) han ganado cuota frente a las marcas japonesas ya establecidas.",
+    "recommendSummary": "LHD, especificación GCC; vehículos privados de menos de 7 años; arancel del 5% + IVA del 5%; SUV de valor y crossover duraderos.",
+    "recommendedCharacteristics": [
+      "Unidades con volante a la izquierda (LHD) con especificación estándar GCC (obligatoria para la matriculación).",
+      "Vehículos privados de menos de 7 años: adquiera stock reciente y de bajo kilometraje para superar la regla de antigüedad.",
+      "SUV de valor y crossover duraderos con aire acondicionado potente para el calor extremo del Golfo.",
+      "Las marcas chinas de valor (MG, Changan, Chery, Geely) están bien aceptadas; presupueste el arancel fijo del 5% + IVA del 5%."
+    ],
+    "marketRisks": [
+      "El límite de antigüedad de 7 años para vehículos privados es un filtro estricto: las unidades que lo superan son rechazadas.",
+      "La especificación estándar GCC es obligatoria; las unidades no conformes pueden requerir modificación o evaluación.",
+      "Un mercado pequeño y sensible al precio del petróleo: la demanda de importaciones usadas puede variar con las condiciones regionales."
+    ]
   },
   "bahrain": {
     "overview": "Baréin es un pequeño mercado del Golfo de altos ingresos, con volante a la izquierda, que sigue la especificación GCC. Aplica un arancel aduanero del 5% más un IVA del 10% (el más alto del GCC) y restringe los vehículos importados a unos cinco años de antigüedad, pagando las unidades de 5 a 10 años una tasa de 1.000 BHD. Khalifa Bin Salman Port (Hidd) es el principal punto de entrada.",
@@ -1101,7 +1127,20 @@
         "a": "Los puertos de Shuwaikh y Shuaiba."
       }
     ],
-    "evNote": "No se registra un alivio específico del arancel de importación para VE en Kuwait en las fuentes revisadas; el arancel fijo del 5% se aplica a todos los vehículos, con la adopción de VE impulsada por la infraestructura de carga más que por el alivio arancelario."
+    "evNote": "No se registra un alivio específico del arancel de importación para VE en Kuwait en las fuentes revisadas; el arancel fijo del 5% se aplica a todos los vehículos, con la adopción de VE impulsada por la infraestructura de carga más que por el alivio arancelario.",
+    "suvNote": "Los SUV dominan el mercado kuwaití, y las marcas chinas (MG, Changan, Geely) están ganando cuota en el segmento de SUV de valor frente a las marcas japonesas y coreanas establecidas.",
+    "recommendSummary": "LHD, especificación GCC; límite de antigüedad de ~5 años; arancel del 5% sin IVA: una carga fiscal total de importación ligera.",
+    "recommendedCharacteristics": [
+      "Unidades con volante a la izquierda (LHD) con especificación estándar GCC (obligatoria).",
+      "Turismos usados con menos de ~5 años de fabricación: adquiera stock reciente para superar la regla de antigüedad.",
+      "SUV y berlinas premium; aire acondicionado potente para el calor extremo del Golfo.",
+      "Las marcas chinas de valor (MG, Changan, Geely) están bien aceptadas; el arancel del 5% sin IVA mantiene bajo el coste en destino."
+    ],
+    "marketRisks": [
+      "El límite de antigüedad de ~5 años para turismos usados es más estricto que en otros estados del Golfo: el stock más antiguo no es elegible.",
+      "La conformidad con la especificación GCC es obligatoria; los vehículos sin especificación GCC pueden requerir modificación o evaluación.",
+      "Un mercado de altos ingresos sensible al precio del petróleo, donde la demanda puede variar con las condiciones económicas regionales."
+    ]
   },
   "armenia": {
     "overview": "Armenia es un mercado del Cáucaso sin litoral, con volante a la izquierda, y miembro de la UEEA que despacha los vehículos no UEEA bajo el Arancel Aduanero Común de la UEEA (~15% más 20% de IVA). Su régimen de VE de 2026 (una cuota libre de arancel de la UEEA más una exención de IVA hasta el 31 de diciembre de 2026) lo convierte en el mercado con mayor alivio para VE del Cáucaso, con vehículos que transitan vía Poti (Georgia) hasta Ereván.",

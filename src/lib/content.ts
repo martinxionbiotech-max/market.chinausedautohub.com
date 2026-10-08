@@ -734,6 +734,24 @@ export const countryContent: Record<string, CountryContent> = {
     popularModelIds: ["li-auto-l7", "geely-monjaro", "chery-tiggo-8"],
     evNote:
       "Russia grants no EV-specific import-duty relief, and EV/hybrid trade is sanctions-sensitive (the EU bans EV/hybrid exports to Russia). Chinese new-energy vehicles nonetheless dominate the market; EREVs and PHEVs are the fastest-growing import segments.",
+    suvNote:
+      "SUVs and crossovers dominate Russia's market; Chinese EREV/PHEV SUVs (Li Auto L7/L9, Chery, Geely) are the fastest-growing import segment after Western brands exited.",
+    commonBrands: ["chery", "haval", "geely", "changan", "jac", "li-auto", "tank", "jetour", "zeekr", "deepal"],
+    brandsSource:
+      "Chinese brands held roughly 50–57% of Russia's new-car market in 2025 (Autostat via Izvestia / Xinhua); the top groups are Chery Group, Great Wall (Haval), Geely and Changan, with Haval the top-selling Chinese brand in May 2025. Confirm current distributor line-ups locally.",
+    recommendSummary:
+      "LHD, EAEU certification; utilization fee + engine-cc duty + excise + 20% VAT; SUVs and EREVs dominate.",
+    recommendedCharacteristics: [
+      "Left-hand-drive (LHD) units with EAEU technical certification (OTTC) and EPTS electronic-passport activation.",
+      "SUVs and EREV/PHEV crossovers — the dominant and fastest-growing import segments.",
+      "Budget the escalating utilization (recycling) fee plus engine-cc personal-import duty, engine-power excise and 20% VAT.",
+      "Obtain sanctions and compliance legal review before trading — banking/payment friction and export-control scrutiny apply.",
+    ],
+    marketRisks: [
+      "Sanctions risk: Western automakers prohibit Russia exports, the EU bans luxury-car (>1,900cc) and EV/hybrid exports, and banking/payment friction plus compliance scrutiny apply.",
+      "The utilization (recycling) fee has escalated since 2024 and is a major, variable cost component — re-quote frequently.",
+      "Personal-import duty is keyed to engine displacement plus excise and VAT — quote per exact model, not a flat percentage.",
+    ],
   },
   georgia: {
     overview:
@@ -787,7 +805,25 @@ export const countryContent: Record<string, CountryContent> = {
     ],
     popularModelIds: ["chery-tiggo-8", "geely-monjaro", "great-wall-haval-h6"],
     evNote:
-      "Oman has no EV-specific import-duty relief recorded; the flat 5% duty plus 5% VAT applies to all vehicles.",
+      "Oman has no EV-specific import-duty relief recorded; the flat 5% duty plus 5% VAT applies to all vehicles. EV adoption is early-stage and driven by charging rollout rather than duty relief.",
+    suvNote:
+      "SUVs and crossovers dominate Oman's market, where Chinese value-SUV brands (MG, Changan, Chery) have gained share against Japanese incumbents.",
+    commonBrands: ["mg", "changan", "chery", "geely", "byd", "haval", "jetour", "gac"],
+    brandsSource:
+      "MG reached the #3 spot in Oman's Q1 2024 new-car sales (Best Selling Cars Blog); Changan, Chery, Geely and BYD maintain GCC dealer networks. Reported in Omani/GCC automotive media (2023–2025). Confirm current distributor line-ups locally.",
+    recommendSummary:
+      "LHD, GCC specification; private vehicles under 7 years; 5% duty + 5% VAT; value SUVs and durable crossovers.",
+    recommendedCharacteristics: [
+      "Left-hand-drive (LHD) units with GCC standard specification (mandatory for registration).",
+      "Private vehicles under 7 years old — source recent, low-mileage stock to clear the age rule.",
+      "Value SUVs and durable crossovers with strong air-conditioning for extreme Gulf heat.",
+      "Chinese value brands (MG, Changan, Chery, Geely) are well accepted; budget the flat 5% duty + 5% VAT.",
+    ],
+    marketRisks: [
+      "The 7-year age limit for private vehicles is a hard filter — overage units are rejected.",
+      "GCC standard specification is mandatory; non-conforming units may require modification or assessment.",
+      "A small, oil-price-sensitive market — demand for used imports can shift with regional conditions.",
+    ],
   },
   bahrain: {
     overview:
@@ -824,6 +860,24 @@ export const countryContent: Record<string, CountryContent> = {
     popularModelIds: ["geely-monjaro", "chery-tiggo-8", "great-wall-haval-h6"],
     evNote:
       "Kuwait has no EV-specific import-duty relief recorded in the sources reviewed; the flat 5% duty applies to all vehicles, with EV adoption driven by charging infrastructure rather than duty relief.",
+    suvNote:
+      "SUVs dominate Kuwait's market, and Chinese brands (MG, Changan, Geely) are gaining share in the value-SUV segment against Japanese and Korean incumbents.",
+    commonBrands: ["mg", "changan", "geely", "chery", "byd", "haval", "jetour"],
+    brandsSource:
+      "MG Kuwait (mgkuwait.com) and Changan Kuwait (changankuwait.com) operate official dealer networks; Geely, Chery and BYD also have Gulf presence. Reported in Kuwait/GCC automotive media (2023–2025). Confirm current distributor line-ups locally.",
+    recommendSummary:
+      "LHD, GCC specification; ~5-year age limit; 5% duty with no VAT — a light total import tax burden.",
+    recommendedCharacteristics: [
+      "Left-hand-drive (LHD) units with GCC standard specification (mandatory).",
+      "Used passenger cars within ~5 years of manufacture — source recent stock to clear the age rule.",
+      "SUVs and premium sedans; strong air-conditioning for extreme Gulf heat.",
+      "Chinese value brands (MG, Changan, Geely) are well accepted; the 5% duty with no VAT keeps landed cost low.",
+    ],
+    marketRisks: [
+      "The ~5-year age limit on used passenger cars is stricter than several other Gulf states — older stock is ineligible.",
+      "GCC specification conformity is mandatory; non-GCC-spec vehicles may require modification or assessment.",
+      "An oil-price-sensitive, high-income market where demand can shift with regional economic conditions.",
+    ],
   },
   armenia: {
     overview:
